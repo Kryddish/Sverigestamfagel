@@ -1,86 +1,141 @@
 <?php
 /**
- * Sveriges Tamfågelförening functions and definitions
+ * sverigestamfagel functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Sveriges_Tamfågelförening
+ * @package sverigestamfagel
  */
 
 if ( ! function_exists( 'sverigestamfagel_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function sverigestamfagel_setup() {
+	/*
+	 * Make theme available for translation.
+	 * Translations can be filed in the /languages/ directory.
+	 * If you're building a theme based on sverigestamfagel, use a find and replace
+	 * to change 'sverigestamfagel' to the name of your theme in all the template files.
 	 */
-	function sverigestamfagel_setup() { 
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Sveriges Tamfågelförening, use a find and replace
-		 * to change 'sverigestamfagel' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'sverigestamfagel', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'sverigestamfagel', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
 
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
-		add_theme_support( 'title-tag' );
+	/*
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 */
+	add_theme_support( 'title-tag' );
 
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-		add_theme_support( 'post-thumbnails' );
+	/*
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 */
+	add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Header', 'sverigestamfagel' ),
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus( array(
+		'primary' => esc_html__( 'Header', 'sverigestamfagel' ),
+		'social' => esc_html__( 'Social Media Menu', 'sverigestamfagel' ),
 		) );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'sverigestamfagel_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 90,
-			'width'       => 90,
-			'flex-width'  => true
-		) );
-	}
+	// Set up the WordPress core custom background feature.
+	add_theme_support( 'custom-background', apply_filters( 'sverigestamfagel_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
+	
+	// Add theme support for Custom Logo
+	add_theme_support( 'custom-logo', array(
+		'width' => 90,
+		'height' => 90,
+		'flex-width' => true,
+	));
+	
+}
 endif;
 add_action( 'after_setup_theme', 'sverigestamfagel_setup' );
+
+
+/**
+ * Register custom fonts.
+ */
+function sverigestamfagel_fonts_url() {
+	$fonts_url = '';
+
+	/**
+	 * Translators: If there are characters in your language that are not
+	 * supported by Source Sans Pro and PT Serif, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'sverigestamfagel' );
+	$pt_serif = _x( 'on', 'PT Serif font: on or off', 'sverigestamfagel' );
+
+	$font_families = array();
+	
+	if ( 'off' !== $source_sans_pro ) {
+		$font_families[] = 'Source Sans Pro:400,400i,700,900';
+	}
+	
+	if ( 'off' !== $pt_serif ) {
+		$font_families[] = 'PT Serif:400,400i,700,700i';
+	}
+	
+	
+	if ( in_array( 'on', array($source_sans_pro, $pt_serif) ) ) {
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function sverigestamfagel_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'sverigestamfagel-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'sverigestamfagel_resource_hints', 10, 2 );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -116,13 +171,16 @@ add_action( 'widgets_init', 'sverigestamfagel_widgets_init' );
  * Enqueue scripts and styles.
  */
 function sverigestamfagel_scripts() {
-
-	// Enque google fonts: Source Sans Pro and PT serif
-	wp_enqueue_style( 'sverigestamfagel-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Source+Sans+Pro:400,400i,600,900' );
-
+	// Enqueue Google Fonts: Source Sans Pro and PT Serif
+	wp_enqueue_style( 'sverigestamfagel-fonts', sverigestamfagel_fonts_url() );
+	
 	wp_enqueue_style( 'sverigestamfagel-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'sverigestamfagel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'sverigestamfagel-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script( 'sverigestamfagel-navigation', 'sverigestamfagelScreenReaderText', array(
+		'expand' => __( 'Expand child menu', 'sverigestamfagel'),
+		'collapse' => __( 'Collapse child menu', 'sverigestamfagel'),
+	));
 
 	wp_enqueue_script( 'sverigestamfagel-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -143,9 +201,8 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Functions which enhance the theme by hooking into WordPress.
+ * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
@@ -155,6 +212,4 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
+require get_template_directory() . '/inc/jetpack.php';

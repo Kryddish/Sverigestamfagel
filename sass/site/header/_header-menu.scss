@@ -78,7 +78,6 @@ button.dropdown-toggle {
 	position: absolute;
 	right: 0;
 	border: none;
-	background: inherit;
 	color: white;
 	line-height: 1.5em;
 	padding: .4em 1em .4em .5em;
@@ -98,8 +97,7 @@ button.dropdown-toggle {
 }
 
 /* Toggle small menu and sub-menus on */
-.toggled-on ul,
-.sub-menu.toggled-on {
+ul.children.toggled-on {
 	display: block;
 }
 

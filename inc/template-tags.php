@@ -48,13 +48,7 @@ if ( ! function_exists( 'sverigestamfagel_entry_footer' ) ) :
 	function sverigestamfagel_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'sverigestamfagel' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'sverigestamfagel' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
+		
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'sverigestamfagel' ) );
 			if ( $tags_list ) {
@@ -100,3 +94,13 @@ if ( ! function_exists( 'sverigestamfagel_entry_footer' ) ) :
 		);
 	}
 endif;
+
+/* Display category list */
+function sverigestamfagel_the_category_list () {
+	/* translators: used between list items, there is a space after the comma */
+	$categories_list = get_the_category_list( esc_html__( ', ', 'sverigestamfagel' ) );
+	if ( $categories_list ) {
+		/* translators: 1: list of categories. */
+		printf( '<span class="cat-links">' . esc_html__( '%1$s', 'sverigestamfagel' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+	}
+}

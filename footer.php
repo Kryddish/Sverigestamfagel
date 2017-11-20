@@ -14,7 +14,12 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+
+	<nav class="social-menu">
+	<?php wp_nav_menu( array('theme_location' => 'social')); ?>		
+	</nav>
+
+	<div class="site-info">
 			<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( '%s', 'sverigestamfagel' ), 'Sveriges tamfågelförening' );

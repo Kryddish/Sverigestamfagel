@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php sverigestamfagel_the_category_list(); ?>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
