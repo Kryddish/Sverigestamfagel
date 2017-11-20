@@ -15,14 +15,14 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sverigestamfagel' ) ); ?>"><?php
+			<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sverigestamfagel' ), 'WordPress' );
-			?></a>
+				printf( esc_html__( '%s', 'sverigestamfagel' ), 'Sveriges tamfågelförening' );
+			?>
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sverigestamfagel' ), 'sverigestamfagel', '<a href="http://www.memlisen.se">Emmelie Sundell</a>' );
+				printf( esc_html__( 'Utvecklad av %2$s', 'sverigestamfagel' ), 'sverigestamfagel', '<a href="http://www.memlisen.se">Emmelie Sundell</a> och <a href="http://www.maxtrewhitt.se">Max Trewhitt</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
