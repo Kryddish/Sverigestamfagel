@@ -1,6 +1,6 @@
 .header-image {
 
-    max-height: 60vh;
+    max-height: 65vh;
     overflow: hidden;
 
     img {
@@ -75,9 +75,14 @@
 
     .site-branding {
         width: 35%;
+        flex: 1 0 auto;
     }
 
     .site-navigation {
         width: 55%;
     }
 }
+
+/* Header Menu */
+
+@import "header-menu";

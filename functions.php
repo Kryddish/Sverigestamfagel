@@ -44,7 +44,7 @@ if ( ! function_exists( 'sverigestamfagel_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'sverigestamfagel' ),
+			'menu-1' => esc_html__( 'Header', 'sverigestamfagel' ),
 		) );
 
 		/*
@@ -74,10 +74,9 @@ if ( ! function_exists( 'sverigestamfagel_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
+			'height'      => 90,
+			'width'       => 90,
+			'flex-width'  => true
 		) );
 	}
 endif;
