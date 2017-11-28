@@ -1,20 +1,20 @@
 @charset "UTF-8";
 /*!
-Theme Name: Sveriges Tamfågelförening
-Theme URI: https://github.com/memlisen/sverigestamfagel
-Author: Emmelie Sundell and Max Trewhitt
-Author URI: --
+Theme Name: Humescores
+Theme URI: https://github.com/mor10/humescores/
+Author: Morten Rand-Hendriksen
+Author URI: https://mor10.com/courses
 Description: A new theme for a new time. This theme showcases the best of WordPress and Underscores and is the project for the Building Themes From Scratch Using Underscores course at LinkedIn Learning and Lynda.com.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: STF
+Text Domain: humescores
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-sverigestamfagelforening is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Humescores is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -740,13 +740,14 @@ a:hover, a:active {
 ## Header
 --------------------------------------------------------------*/
 .header-image {
-	max-height: 60vh;
+	max-height: 30vh;
 	overflow: hidden;
 }
 
 .header-image img {
 	display: block;
 	width: 100vw;
+	height: 11em;
 }
 
 .site-header {
@@ -1258,7 +1259,7 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+	margin: 1.5em 0;
 }
 
 .gallery-item {
@@ -1266,6 +1267,31 @@ object {
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
+	padding: 1em;
+}
+
+.gallery-item img {
+	display: block;
+}
+
+.gallery-item a {
+	display: inline-block;
+	border-bottom: none;
+}
+
+.gallery-item a:hover, .gallery-item a:focus {
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.gallery-item a:hover img, .gallery-item a:focus img {
+	border-color: #b51c35;
+}
+
+.gallery-item a img {
+	padding: .5em;
+	margin: 0 auto;
+	border: 1px solid #fff;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -1302,6 +1328,9 @@ object {
 
 .gallery-caption {
 	display: block;
+	margin: 0;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	border: none;
 }
 
 /*# sourceMappingURL=../sverigestamfagelforening/sass/maps/style.css.map */

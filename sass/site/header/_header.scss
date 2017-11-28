@@ -1,10 +1,11 @@
 .header-image {
-	max-height: 60vh;
+	max-height: 30vh;
 	overflow: hidden;
 	
 	img {
 		display: block;
 		width: 100vw;
+		height: 11em;
 	}
 }
 .site-header {
@@ -13,7 +14,7 @@
 	font-family: $font__sans;
 	color: #fff;
 	background-color: $color__skin;
-	
+	 
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
 	}
@@ -22,7 +23,7 @@
 .site-branding {
 	display: flex;
 	min-height: 65px;
-}
+}  
 
 .custom-logo-link {
 	margin-right: 1em;
