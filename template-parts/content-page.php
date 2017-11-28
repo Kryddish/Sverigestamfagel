@@ -1,10 +1,10 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying page content in page.php.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Sveriges_Tamfågelförening
+ * @package sverigestamfagelforening
  */
 
 ?>
@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sverigestamfagel' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sverigestamfagelforening' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -30,16 +30,9 @@
 			<?php
 				edit_post_link(
 					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'sverigestamfagel' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
+						/* translators: %s: Name of current post */
+						esc_html__( 'Edit %s', 'sverigestamfagelforening' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
 					'</span>'
@@ -47,4 +40,4 @@
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post-## -->

@@ -1,4 +1,4 @@
-/* global sverigestamfagelScreenReaderText */
+/* global sverigestamfagelforeningScreenReaderText */
 /**
  * Theme functions file.
  *
@@ -12,17 +12,16 @@
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-		.append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )
-		.append( sverigestamfagelScreenReaderText.icon )
-		.append( $( '<span />', { 'class': 'screen-reader-text', text: sverigestamfagelScreenReaderText.expand }) );
+			.append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )
+			.append( $( '<span />', { 'class': 'screen-reader-text', text: sverigestamfagelforeningScreenReaderText.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
-				dropdownSymbol = _this.find('.dropdown-symbol');
-				dropdownSymbol.text(dropdownSymbol.text() === '-' ? '+' : '-');
+				dropdownSymbol = _this.find( '.dropdown-symbol' );
+				dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-');
 
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
@@ -30,8 +29,7 @@
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
-			screenReaderSpan.text( screenReaderSpan.text() === sverigestamfagelScreenReaderText.expand ? sverigestamfagelScreenReaderText.collapse : sverigestamfagelScreenReaderText.expand );
-			
+			screenReaderSpan.text( screenReaderSpan.text() === sverigestamfagelforeningScreenReaderText.expand ? sverigestamfagelforeningScreenReaderText.collapse : sverigestamfagelforeningScreenReaderText.expand );
 		});
 	}
 
@@ -52,7 +50,7 @@
 		// Add an initial values for the attribute.
 		menuToggle.add( siteNavigation ).attr( 'aria-expanded', 'false' );
 
-		menuToggle.on( 'click.sverigestamfagel', function() {
+		menuToggle.on( 'click.sverigestamfagelforening', function() {
 			$( siteNavigation.closest( '.main-navigation' ), this ).toggleClass( 'toggled-on' );
 
 			$( this )
@@ -71,14 +69,14 @@
 		function toggleFocusClassTouchScreen() {
 			if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
 
-				$( document.body ).on( 'touchstart.sverigestamfagel', function( e ) {
+				$( document.body ).on( 'touchstart.sverigestamfagelforening', function( e ) {
 					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				});
 
 				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-					.on( 'touchstart.sverigestamfagel', function( e ) {
+					.on( 'touchstart.sverigestamfagelforening', function( e ) {
 						var el = $( this ).parent( 'li' );
 
 						if ( ! el.hasClass( 'focus' ) ) {
@@ -89,16 +87,16 @@
 					});
 
 			} else {
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.sverigestamfagel' );
+				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.sverigestamfagelforening' );
 			}
 		}
 
 		if ( 'ontouchstart' in window ) {
-			$( window ).on( 'resize.sverigestamfagel', toggleFocusClassTouchScreen );
+			$( window ).on( 'resize.sverigestamfagelforening', toggleFocusClassTouchScreen );
 			toggleFocusClassTouchScreen();
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.sverigestamfagel blur.sverigestamfagel', function() {
+		siteNavigation.find( 'a' ).on( 'focus.sverigestamfagelforening blur.sverigestamfagelforening', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
@@ -126,8 +124,8 @@
 	}
 
 	$( document ).ready( function() {
-		$( window ).on( 'load.sverigestamfagel', onResizeARIA );
-		$( window ).on( 'resize.sverigestamfagel', onResizeARIA );
+		$( window ).on( 'load.sverigestamfagelforening', onResizeARIA );
+		$( window ).on( 'resize.sverigestamfagelforening', onResizeARIA );
 	});
 
 })( jQuery );

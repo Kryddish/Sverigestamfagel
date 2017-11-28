@@ -1,22 +1,24 @@
 @charset "UTF-8";
 /*!
 Theme Name: Sveriges Tamfågelförening
-Author: Emmelie Sundell och  Max Trewhitt
-Description: En webbsida åt Sveriges Tamfågelförening.
+Theme URI: https://github.com/memlisen/sverigestamfagel
+Author: Emmelie Sundell and Max Trewhitt
+Author URI: --
+Description: A new theme for a new time. This theme showcases the best of WordPress and Underscores and is the project for the Building Themes From Scratch Using Underscores course at LinkedIn Learning and Lynda.com.
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: sverigestamfagel
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: STF
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Sveriges Tamfågelförening is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+sverigestamfagelforening is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -261,21 +263,19 @@ body,
 button,
 input,
 select,
-optgroup,
 textarea {
-	color: #404040;
+	color: #000;
 	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 	body,
 	button,
 	input,
 	select,
-	optgroup,
 	textarea {
 		font-size: 20px;
 		font-size: 1.25rem;
@@ -283,8 +283,10 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+	margin-top: .75em;
+	margin-bottom: .25em;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	clear: both;
 }
 
 h1 {
@@ -312,7 +314,8 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-top: .5em;
+	margin-bottom: 1em;
 }
 
 dfn, cite, em, i {
@@ -320,7 +323,22 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	position: relative;
+	margin: 0 0 1em;
+	background: #eee;
+	padding: 1em 2em .5em 5em;
+	font-style: italic;
+}
+
+blockquote:before {
+	position: absolute;
+	top: -.2em;
+	left: -.13em;
+	content: "“";
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 12em;
+	line-height: 100%;
+	color: white;
 }
 
 address {
@@ -369,13 +387,17 @@ html {
 *,
 *:before,
 *:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
 body {
 	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
 }
 
 hr {
@@ -386,7 +408,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em;
 }
 
 ul {
@@ -400,7 +422,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: .5em;
 }
 
 dt {
@@ -424,8 +446,42 @@ figure {
 }
 
 table {
+	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+thread th {
+	border-bottom: 2px solid #bbb;
+	padding-bottom: .5em;
+}
+
+td,
+th {
+	vertical-align: top;
+}
+
+th {
+	padding: .4em;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid #eee;
+}
+
+td {
+	padding: .4em;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+	padding-right: 0;
 }
 
 /*--------------------------------------------------------------
@@ -435,32 +491,29 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 15px;
-	font-size: 0.9375rem;
+	border: 2px solid;
+	border-color: black;
+	background: transparent;
+	color: black;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: .5em 1em;
 }
 
-button:hover,
+button:hover, button:active, button:focus,
 input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-}
-
-button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
+input[type="reset"]:hover,
 input[type="reset"]:active,
 input[type="reset"]:focus,
+input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	background: white;
+	color: black;
 }
 
 input[type="text"],
@@ -519,15 +572,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #000;
 }
 
 a:visited {
-	color: purple;
+	color: #000;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #b51c35;
 }
 
 a:focus {
@@ -536,6 +589,24 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+}
+
+.page-content a,
+.entry-content a,
+.entry-summary a,
+.comment-content a {
+	text-decoration: none;
+	border-bottom: 3px solid #b51c35;
+}
+
+.page-content a:focus, .page-content a:hover,
+.entry-content a:focus,
+.entry-content a:hover,
+.entry-summary a:focus,
+.entry-summary a:hover,
+.comment-content a:focus,
+.comment-content a:hover {
+	color: #b51c35;
 }
 
 /*--------------------------------------------------------------
@@ -568,18 +639,11 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
-	        clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
 	position: absolute !important;
+	height: 1px;
 	width: 1px;
-	word-wrap: normal !important;
-	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	overflow: hidden;
 }
 
 .screen-reader-text:focus {
@@ -587,9 +651,7 @@ a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	-webkit-clip-path: none;
-	        clip-path: none;
-	color: #21759b;
+	color: #000;
 	display: block;
 	font-size: 17.5px;
 	font-size: 1.09375rem;
@@ -678,7 +740,7 @@ a:hover, a:active {
 ## Header
 --------------------------------------------------------------*/
 .header-image {
-	max-height: 65vh;
+	max-height: 60vh;
 	overflow: hidden;
 }
 
@@ -702,10 +764,10 @@ a:hover, a:active {
 }
 
 .site-branding {
-	min-height: 65px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	min-height: 65px;
 }
 
 .custom-logo-link {
@@ -776,7 +838,9 @@ a:hover, a:active {
 	}
 }
 
-/* Header Menu */
+/*
+Header Menu
+*/
 .main-navigation {
 	display: block;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
@@ -838,7 +902,7 @@ a:hover, a:active {
 }
 
 .main-navigation .menu-item-has-children,
-.main-navigation .page-item-has-children {
+.main-navigation .page_item_has_children {
 	min-width: 218px;
 }
 
@@ -851,6 +915,7 @@ button.dropdown-toggle {
 	position: absolute;
 	right: 0;
 	border: none;
+	background: inherit;
 	color: white;
 	line-height: 1.5em;
 	padding: .4em 1em .4em .5em;
@@ -869,8 +934,9 @@ button.dropdown-toggle {
 	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Toggle small menu and sub-menus on */
-ul.children.toggled-on {
+/* Toggle small menu and children on */
+.toggled-on ul,
+.sub-menu.toggled-on {
 	display: block;
 }
 
@@ -917,7 +983,121 @@ ul.children.toggled-on {
 		    -ms-flex-pack: end;
 		        justify-content: flex-end;
 		padding-top: 0;
+		/* If you want dropdowns to open on hover, uncomment this: */
+		/*
+			li:hover > ul,
+				li:focus > ul {
+				display: block;
+			}
+			*/
 	}
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.entry-header {
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.cat-links {
+	font-size: 90%;
+	font-weight: 700;
+}
+
+.cat-links a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #b51c35;
+}
+
+.cat-links a:focus, .cat-links a:hover {
+	background-color: #b51c35;
+	color: white;
+}
+
+.entry-title {
+	margin: .125em 0 .25em;
+	font-size: 2.5em;
+}
+
+@media screen and (min-width: 900px) {
+	.entry-title {
+		font-size: 3em;
+	}
+}
+
+.entry-title a {
+	text-decoration: none;
+	color: black;
+}
+
+.entry-title a:focus, .entry-title a:hover {
+	border-bottom: 5px solid #b51c35;
+}
+
+.entry-meta,
+.entry-footer {
+	font-size: 90%;
+}
+
+.entry-meta a,
+.entry-footer a {
+	font-weight: 700;
+	text-decoration: none;
+	color: black;
+}
+
+.entry-meta a:focus, .entry-meta a:hover,
+.entry-footer a:focus,
+.entry-footer a:hover {
+	color: black;
+	border-bottom: 3px solid #b51c35;
+}
+
+.byline::after {
+	content: "|";
+	margin: 0 .5em;
+}
+
+.comments-link::before,
+.edit-link::before {
+	content: "|";
+	margin: 0 .5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-footer {
+	margin: 1.5em 0;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -953,10 +1133,12 @@ ul.children.toggled-on {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	list-style-type: none;
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
@@ -1018,17 +1200,20 @@ object {
 	max-width: 100%;
 }
 
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-	display: inline-block;
-}
-
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;
 	max-width: 100%;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-size: 90%;
+	color: #666666;
+	text-align: center;
+}
+
+.wp-caption a {
+	color: inherit;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1038,11 +1223,35 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: .5em 0 1.5em 1em;
 }
 
-.wp-caption-text {
-	text-align: center;
+@media screen and (min-width: 600px) {
+	.wp-caption .wp-caption-text {
+		margin-left: 2em;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.wp-caption .wp-caption-text {
+		margin-left: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+.wp-caption.aligncenter,
+.centered-image {
+	max-width: 100vw;
+	margin: 0 -1em;
+}
+
+@media screen and (min-width: 600px) {
+	.wp-caption.aligncenter,
+	.centered-image {
+		margin: 0 -2em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1095,4 +1304,4 @@ object {
 	display: block;
 }
 
-/*# sourceMappingURL=../sverigestamfagel/sass/maps/style.css.map */
+/*# sourceMappingURL=../sverigestamfagelforening/sass/maps/style.css.map */

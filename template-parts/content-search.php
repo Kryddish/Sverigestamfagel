@@ -1,10 +1,10 @@
 <?php
 /**
- * Template part for displaying results in search pages
+ * Template part for displaying results in search pages.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Sveriges_Tamfågelförening
+ * @package sverigestamfagelforening
  */
 
 ?>
@@ -15,7 +15,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php sverigestamfagel_posted_on(); ?>
+			<?php sverigestamfagelforening_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -25,6 +25,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php sverigestamfagel_entry_footer(); ?>
+		<?php sverigestamfagelforening_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article><!-- #post-## -->
