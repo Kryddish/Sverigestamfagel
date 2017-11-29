@@ -10,6 +10,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+  
+<!-- Place somewhere in the <body> of your page -->
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="http://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" />
+    </li>
+    <li>
+      <img src="http://www.petmd.com/sites/default/files/petmd-cat-happy-13.jpg" />
+    </li>
+    </ul>
+</div>
+
+
+
 	<header class="entry-header">
 		<?php sverigestamfagelforening_the_category_list(); ?>
 		<?php
@@ -40,7 +57,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div>.entry-content
 
 	<footer class="entry-footer">
 		<?php sverigestamfagelforening_entry_footer(); ?>
