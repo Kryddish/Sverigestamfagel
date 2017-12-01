@@ -14,6 +14,20 @@
 
 get_header(); ?>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+<!-- Place somewhere in the <body> of your page -->
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="http://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" />
+    </li>
+    <li>
+      <img src="http://www.petmd.com/sites/default/files/petmd-cat-happy-13.jpg" />
+    </li>
+    </ul>
+</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

@@ -45,7 +45,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import "https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css";
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -1243,10 +1242,6 @@ object {
 /*--------------------------------------------------------------
 ## Slider
 --------------------------------------------------------------*/
-body {
-	font-family: avenir, sans-serif;
-}
-
 .flex-caption {
 	background: tomato;
 	color: white;
@@ -1255,6 +1250,14 @@ body {
 	padding: 1em;
 	width: 50vh;
 	height: 50vh;
+}
+
+.flexslider .slides img {
+	width: auto;
+}
+
+.flex-control-nav {
+	width: 50%;
 }
 
 /*--------------------------------------------------------------

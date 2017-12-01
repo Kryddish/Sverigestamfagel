@@ -1,7 +1,3 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css";
-
-body { font-family: avenir, sans-serif; }
-
 .flex-caption { 
   background: tomato; 
   color: white;
@@ -9,5 +5,13 @@ body { font-family: avenir, sans-serif; }
   bottom: 0;
   padding: 1em;
   width: 50vh;
-  height: 50vh;
+  height: 50vh; 
+}
+
+.flexslider .slides img {
+  width: auto;
+}
+
+.flex-control-nav {
+  width: 50%;
 }
