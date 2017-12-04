@@ -1118,15 +1118,62 @@ button.dropdown-toggle {
 	text-align: center;
 }
 
+.site-footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	text-decoration: underline;
+}
+
+.site-footer .container {
+	padding: 4% 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.site-footer .social-menu {
+	width: 180px;
+}
+
+.site-footer .social-menu ul li {
+	width: 100%;
+}
+
+.site-footer .social-menu .fa::before {
+	pointer-events: none;
+	margin-top: 8px;
+	font-size: 2em;
+	float: left;
+	width: 30px;
+}
+
+.site-footer .social-menu a {
+	padding: .5em 0 .5em 1.2em;
+	font-family: "Averia Sans Libre";
+	font-size: 1.5em;
+}
+
 .site-footer .site-info {
 	color: #8A8A8A;
 	padding: 0.5em 0;
 	background-color: black;
 }
 
-.site-footer .site-info a {
-	color: #fff;
-	text-decoration: none;
+.site-footer .donate {
+	font-size: 1.5em;
+}
+
+.site-footer .email {
+	text-align: right;
+	font-size: 1.5em;
 }
 
 .social-menu ul {
