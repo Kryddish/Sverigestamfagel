@@ -20,21 +20,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sverigestamfagelforening' ); ?></a>
 
-	<?php if ( get_header_image() && is_front_page() ) : ?>
-	<figure class="header-image">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-		</a>
-	</figure><!-- .header-image -->
-	<?php endif; // End header image check. ?>
-	
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			
-			<?php the_custom_logo(); ?>
+
+<?php the_custom_logo(); ?>
 			<div class="site-branding__text">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -52,6 +40,12 @@
 			</div><!-- .site-branding__text -->
 		</div><!-- .site-branding -->
 
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sverigestamfagelforening' ); ?></a>
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'sverigestamfagelforening' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
