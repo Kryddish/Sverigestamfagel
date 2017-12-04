@@ -1,20 +1,19 @@
 @charset "UTF-8";
 /*!
-Theme Name: Humescores
-Theme URI: https://github.com/mor10/humescores/
-Author: Morten Rand-Hendriksen
-Author URI: https://mor10.com/courses
+Theme Name: Sverigestamfågel
+Theme URI: https://github.com/Memlisen/Sverigestamfagel
+Author: Emmelie and Max
 Description: A new theme for a new time. This theme showcases the best of WordPress and Underscores and is the project for the Building Themes From Scratch Using Underscores course at LinkedIn Learning and Lynda.com.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: humescores
+Text Domain: sverigestamfagelforening
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Humescores is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Sverigestamfågel is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -1122,12 +1121,22 @@ button.dropdown-toggle {
 --------------------------------------------------------------*/
 .site-footer {
 	position: relative;
-	padding: 0.5em 0;
 	font-size: .8em;
 	font-family: "Averia Sans Libre";
 	color: #fff;
-	background-color: #002254;
+	background-color: #08082E;
 	text-align: center;
+}
+
+.site-footer .site-info {
+	color: #8A8A8A;
+	padding: 0.5em 0;
+	background-color: black;
+}
+
+.site-footer .site-info a {
+	color: #fff;
+	text-decoration: none;
 }
 
 .social-menu ul {

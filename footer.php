@@ -16,12 +16,24 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php
 		// Make sure there is a social menu to display.
-		if ( has_nav_menu( 'social' ) ) { ?>
-		<nav class="social-menu">
-		<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
-		</nav><!-- .social-menu -->
-		<?php } ?>
+		if ( has_nav_menu( 'social' ) ) : ?>
+			<nav class="social-menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
+			</nav><!-- .social-menu -->
+		<?php endif; ?>
+		<div class="">
+			<div>
 
+			</div>
+			<div>
+				Vill du stödja vår förening?</br>
+				Swisha till +46 72 123 45 67
+			</div>
+			<div>
+
+			</div>
+		</div>
+		
 		<div class="site-info">
 			<?php _e( '© 2017 Sveriges Tamfågelförening. All rights reserved', 'sverigestamfagelforening' ); ?>
 			<span class="sep"> | </span>
