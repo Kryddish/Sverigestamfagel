@@ -265,7 +265,7 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: "Averia Sans Libre";
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
@@ -282,10 +282,15 @@ textarea {
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin-top: .75em;
 	margin-bottom: .25em;
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	font-family: "Averia Sans Libre";
 	clear: both;
 }
 
@@ -1117,17 +1122,12 @@ button.dropdown-toggle {
 --------------------------------------------------------------*/
 .site-footer {
 	position: relative;
-	padding: 1em;
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	padding: 0.5em 0;
+	font-size: .8em;
+	font-family: "Averia Sans Libre";
 	color: #fff;
 	background-color: #002254;
 	text-align: center;
-}
-
-@media screen and (min-width: 600px) {
-	.site-footer {
-		padding: 1em 2em;
-	}
 }
 
 .social-menu ul {
@@ -1354,4 +1354,4 @@ object {
 	border: none;
 }
 
-/*# sourceMappingURL=../sverigestamfagel/sass/maps/style.css.map */
+/*# sourceMappingURL=../Sverigestamfagel/sass/maps/style.css.map */

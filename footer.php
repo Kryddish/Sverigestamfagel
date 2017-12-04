@@ -23,9 +23,9 @@
 		<?php } ?>
 
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sverigestamfagelforening' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'sverigestamfagelforening' ), 'WordPress' ); ?></a>
+			<?php _e( '© 2017 Sveriges Tamfågelförening. All rights reserved', 'sverigestamfagelforening' ); ?>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sverigestamfagelforening' ), 'sverigestamfagelforening', '<a href="https://mor10.com/courses" rel="designer">Morten Rand-Hendriksen</a>' ); ?>
+			<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'sverigestamfagelforening' ), '<a href="https://memlisen.se" rel="designer">Emmelie</a>', '<a href="https://maxtrewhitt.se" rel="coder">Max</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

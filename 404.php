@@ -7,7 +7,7 @@
  * @package sverigestamfagelforening
  */
 
-get_header(); ?>
+get_header(); ?> 
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -20,7 +20,7 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'sverigestamfagelforening' ); ?></p>
 
-					<?php
+					<?php 
 						get_search_form();
 
 						the_widget( 'WP_Widget_Recent_Posts' );
