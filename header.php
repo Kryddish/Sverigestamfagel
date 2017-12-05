@@ -40,6 +40,10 @@
 			</div><!-- .site-branding__text -->
 		</div><!-- .site-branding -->
 
+		<div class="contact-header">
+			<p class="email-icon"></p>
+		</div>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sverigestamfagelforening' ); ?></a>
 	

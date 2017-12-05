@@ -774,6 +774,7 @@ a:hover, a:active {
 	width: 10%;
 	margin-left: 5%;
 	margin-top: 1%;
+	margin-bottom: 2%;
 	height: auto;
 }
 
@@ -801,7 +802,8 @@ a:hover, a:active {
 
 .site-description {
 	margin: 0;
-	font-size: .9em;
+	padding-top: 2%;
+	font-size: 25px;
 	font-style: italic;
 	font-weight: 100;
 }
@@ -824,6 +826,19 @@ a:hover, a:active {
 	.site-navigation {
 		width: 55%;
 	}
+}
+
+.contact-header .email-icon {
+	font-family: FontAwesome;
+	font-size: 40px;
+	color: white;
+	background-color: #2E2EEE;
+	width: 50px;
+	height: 50px;
+	float: right;
+	border-radius: 10%;
+	margin: auto;
+	text-align: center;
 }
 
 /*
