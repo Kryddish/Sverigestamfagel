@@ -21,14 +21,17 @@
 
 <body <?php body_class(); ?>>
 
-
 <?php the_custom_logo(); ?>
 			<div class="site-branding__text">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<div class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<h1><?php bloginfo( 'name' ); ?></h1>
+					</a>
+				</div>
 			<?php
 			endif;
 

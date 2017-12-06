@@ -401,7 +401,8 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul, ol {
+ul,
+ol {
 	margin: 0 0 1.5em;
 }
 
@@ -1393,4 +1394,4 @@ object {
 	border: none;
 }
 
-/*# sourceMappingURL=../sverigestamfagelforening/sass/maps/style.css.map */
+/*# sourceMappingURL=../sverigestamfagel/sass/maps/style.css.map */
