@@ -22,25 +22,29 @@
 <body <?php body_class(); ?>>
 
 <div class="main-header">
-<?php the_custom_logo(); ?>
-	<div class="site-branding__text">
-		<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php
-			endif;
+	<div class="site-branding">
+		
+		<?php the_custom_logo(); ?>
 
-		$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-		<?php
-			endif; ?>
-		</div><!-- .site-branding__text -->
-		<div class="contact-header">
-			<p class="email-icon"></p>
-			<a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>
+		<div class="site-branding__text">
+			<?php
+				if ( is_front_page() && is_home() ) : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+				endif;
+
+			$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+				endif; ?>
+			</div><!-- .site-branding__text -->
+			<div class="contact-header">
+				<span class="fa fa-envelope"></span>
+				<a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>
+			</div>
 		</div>
 	</div><!-- .site-branding -->
 </div>
