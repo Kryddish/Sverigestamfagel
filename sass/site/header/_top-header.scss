@@ -1,0 +1,84 @@
+.custom-logo-link {
+    width: 15%;
+    display: inline-block;
+    margin-right: 1em;
+    img {
+        height: 100%;
+    }
+}
+
+.top-header {
+    padding: 1em 3em;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    .site-branding {
+        .text {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 2%;
+            .site-title {
+                margin: 0;
+                padding: 0;
+                font-weight: 900;
+                line-height: 1em;
+                a {
+                    color: #000;
+                }
+            }
+            .site-description {
+                margin: 0;
+                padding-top: 2%;
+                font-style: italic;
+                font-weight: 100;
+                display: inline-block;
+            }
+        }
+    }
+    .contact-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            color: black;
+            position: relative;
+            span {
+                position: absolute;
+                top: 0;
+                left: -40px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .top-header {
+        .contact-header {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1022px) {
+    .site-branding {
+        .text {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 2%;
+            .site-title {
+                @include font-size(2);
+            }
+            .site-description {
+                @include font-size(1);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .top-header {
+        display: none;
+    }
+}

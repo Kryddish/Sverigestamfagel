@@ -7,8 +7,6 @@
 		display: none;
 		list-style: none;
 		margin: 0;
-		padding-top: 1em;
-		padding-left: 0;
 		ul {
 			display: none;
 			top: 1.5em;
@@ -38,7 +36,7 @@
 	a {
 		display: inline-block;
 		width: 100%;
-		padding: .5em 1em .5em 0;
+		padding: 1em 1.5em;
 		text-decoration: none;
 		color: #fff;
 	}
@@ -117,11 +115,6 @@ button.dropdown-toggle {
 					}
 				}
 			}
-			li {
-				a {
-					padding: .4em 1em;
-				}
-			}
 		}
 	}
 }
@@ -129,7 +122,6 @@ button.dropdown-toggle {
 @media screen and (min-width: $query__medium) {
 	.main-navigation {
 		ul {
-			justify-content: flex-end;
 			padding-top: 0;
 		}
 	}
