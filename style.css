@@ -1141,6 +1141,20 @@ button.dropdown-toggle {
 	width: 180px;
 }
 
+.site-footer .social-menu ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
 .site-footer .social-menu ul li {
 	width: 100%;
 }
@@ -1157,6 +1171,14 @@ button.dropdown-toggle {
 	padding: .5em 0 .5em 1.2em;
 	font-family: "Averia Sans Libre";
 	font-size: 1.5em;
+	display: block;
+	padding: .5em 1em;
+	color: white;
+	text-decoration: none;
+}
+
+.site-footer .social-menu a:hover, .site-footer .social-menu a:focus {
+	text-decoration: underline;
 }
 
 .site-footer .site-info {
@@ -1172,31 +1194,6 @@ button.dropdown-toggle {
 .site-footer .email {
 	text-align: right;
 	font-size: 1.5em;
-}
-
-.social-menu ul {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.social-menu ul a {
-	display: block;
-	padding: .5em 1em;
-	color: white;
-	text-decoration: none;
-}
-
-.social-menu ul a:hover, .social-menu ul a:focus {
-	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
