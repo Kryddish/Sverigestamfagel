@@ -13,9 +13,9 @@
 		text-decoration: none;
 	}
 	.container {
-		padding: 4% 0;
+		padding: 1.5em 2em;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 	}
 	.social-menu {
@@ -61,7 +61,26 @@
 		font-size: 1.5em;
 	}
 	.email {
+		order: 1;
 		text-align: right;
 		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.site-footer {
+		.container {
+			padding: 1em;
+			display: block;
+			>* {
+				margin: 10px;
+			}
+			.social-menu {
+				@include font-size(0.7);
+			}
+			.email {
+				@include font-size(1);
+			}
+		}
 	}
 }
