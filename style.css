@@ -1017,7 +1017,8 @@ button.dropdown-toggle {
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
-	display: block;
+	display: inline-block;
+	width: 60%;
 }
 
 .hentry {
@@ -1243,6 +1244,10 @@ button.dropdown-toggle {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
+}
+
+aside#secondary.widget-area {
+	float: right;
 }
 
 /*--------------------------------------------------------------
