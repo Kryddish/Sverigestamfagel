@@ -8,7 +8,6 @@
  *
  * @package sverigestamfagelforening
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -34,14 +33,15 @@
 						</h1>
 						
 						<?php
-
 						$description = get_bloginfo( 'description', 'display' );
+
 							if ( $description || is_customize_preview() ) : ?>
 								<h5 class="site-description">
 									<?php echo $description; /* WPCS: xss ok. */ ?>
 								</h5>
-						<?php
+							<?php
 							endif; ?>
+
 					</div><!-- .text -->
 				</div><!-- .site-branding -->
 				<div class="contact-header">
@@ -51,7 +51,12 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'sverigestamfagelforening' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu'
+				) ); ?>
 			</nav><!-- .main-navigation -->
 
 		</header><!-- .site-header -->

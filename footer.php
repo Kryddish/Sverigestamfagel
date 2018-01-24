@@ -24,7 +24,7 @@
 			<?php endif; ?>
 			<div class="email">
 				Har du frågor?</br>
-				<a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>
+				<span class="fa fa-envelope"></span><a href="mailto:info@sverigestamfagel.se"><?php _e( 'Maila oss!', 'sverigestamfagelforening' ); ?></a>
 			</div>
 			<div class="donate">
 				Vill du stödja vår förening?</br>
@@ -32,9 +32,11 @@
 			</div>
 		</div>
 		<div class="site-info">
-			<?php _e( '© 2017 Sveriges Tamfågelförening. All rights reserved', 'sverigestamfagelforening' ); ?>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'sverigestamfagelforening' ), '<a href="https://memlisen.se" rel="designer">Emmelie</a>', '<a href="https://maxtrewhitt.se" rel="coder">Max</a>' ); ?>
+			<span>
+				<?php _e( '© 2018 Sveriges Tamfågelförening. All rights reserved', 'sverigestamfagelforening' ); ?>
+				<span class="sep"> | </span>
+				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'sverigestamfagelforening' ), '<a href="https://memlisen.se" rel="designer">Emmelie</a>', '<a href="https://maxtrewhitt.se" rel="coder">Max</a>' ); ?>
+			</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

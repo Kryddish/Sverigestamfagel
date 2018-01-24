@@ -1,0 +1,33 @@
+.home {
+    .site-content {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        .entry-content {
+            .top-info {
+                display: flex;
+                img {
+                    padding-right: 2em;
+                }
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    div {
+                        padding: 0 2em 0;
+                        flex: 50%; 
+                        &:first-child {
+                            background-color: #41CA86;
+                            margin-bottom: 1em;
+                        }
+                        &:last-child {
+                            margin-top: 1em;
+                            background-color: #F9EA09;
+                        }
+                        h2 {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }      
+    }
+}

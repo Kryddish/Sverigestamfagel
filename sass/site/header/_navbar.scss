@@ -3,10 +3,36 @@
 	font-family: $font__sans;
 	font-weight: 400;
 	clear: left;
+	background-color: $color__skin;
 	ul {
+		padding: 0;
+		position: relative;
 		display: none;
 		list-style: none;
 		margin: 0;
+
+		a {
+			transition: background-color 0.2s ease-out;
+			&:hover {
+				background-color: #41CA86;
+			}
+		}
+
+		.cta {
+			margin-left: 1.5em;
+			a {
+				margin-top: 12.5px;
+				background-color: #41CA86;
+				border-radius: 5px;
+				padding: 0.5em 1em;
+				text-transform: uppercase;
+				font-size: 18px;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
 		ul {
 			display: none;
 			top: 1.5em;
@@ -39,10 +65,6 @@
 		padding: 1em 1.5em;
 		text-decoration: none;
 		color: #fff;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
 	}
 	.current_page_item>a,
 	.current-menu-item>a,
@@ -89,6 +111,10 @@ button.dropdown-toggle {
 }
 
 .main-navigation {
+	.menu-navigation-container {
+		max-width: $size__page;
+		margin: auto;
+	}
 	.menu-item-has-children>a,
 	.page_item_has_children>a {
 		padding-right: 2em;

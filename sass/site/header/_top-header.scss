@@ -1,5 +1,7 @@
 .top-header {
-    padding: 1em 3em;
+    max-width: $size__page;
+    margin: 0 auto;
+    padding: 1em 0;
     color: black;
     background-color: white;
     display: flex;
@@ -75,7 +77,6 @@
 
 @media screen and (max-width: 1160px) {
     .top-header {
-        padding: 0.5em 1.5em;
         .site-branding {
             .text {
                 display: inline-block;
