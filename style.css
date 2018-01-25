@@ -574,12 +574,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #fff;
 	text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
-	color: #b51c35;
+	color: #41CA86;
 	text-decoration: underline;
 }
 
@@ -596,7 +595,6 @@ a:hover, a:active {
 .entry-summary a,
 .comment-content a {
 	text-decoration: none;
-	border-bottom: 3px solid #b51c35;
 }
 
 .page-content a:focus, .page-content a:hover,
@@ -606,7 +604,7 @@ a:hover, a:active {
 .entry-summary a:hover,
 .comment-content a:focus,
 .comment-content a:hover {
-	color: #b51c35;
+	color: #41CA86;
 }
 
 /*--------------------------------------------------------------
@@ -887,10 +885,14 @@ a:hover, a:active {
 }
 
 .main-navigation ul a {
-	transition: background-color 0.2s ease-out;
+	transition: background-color 0.15s ease-out;
 }
 
 .main-navigation ul a:hover {
+	background-color: #41CA86;
+}
+
+.main-navigation ul .current-menu-item {
 	background-color: #41CA86;
 }
 
@@ -899,16 +901,20 @@ a:hover, a:active {
 }
 
 .main-navigation ul .cta a {
-	margin-top: 12.5px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	background-color: #41CA86;
 	border-radius: 5px;
-	padding: 0.5em 1em;
+	padding: 0.5em 1.5em;
 	text-transform: uppercase;
 	font-size: 18px;
 }
 
 .main-navigation ul .cta a:hover {
 	text-decoration: none;
+	opacity: 0.8;
 }
 
 .main-navigation ul ul {
@@ -1056,11 +1062,11 @@ button.dropdown-toggle {
 .cat-links a {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #b51c35;
+	color: #41CA86;
 }
 
 .cat-links a:focus, .cat-links a:hover {
-	background-color: #b51c35;
+	background-color: #41CA86;
 	color: white;
 }
 
@@ -1081,7 +1087,7 @@ button.dropdown-toggle {
 }
 
 .entry-title a:focus, .entry-title a:hover {
-	border-bottom: 5px solid #b51c35;
+	border-bottom: 5px solid #41CA86;
 }
 
 .entry-meta,
@@ -1100,7 +1106,7 @@ button.dropdown-toggle {
 .entry-footer a:focus,
 .entry-footer a:hover {
 	color: black;
-	border-bottom: 3px solid #b51c35;
+	border-bottom: 3px solid #41CA86;
 }
 
 .byline::after {
@@ -1134,6 +1140,10 @@ button.dropdown-toggle {
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
+.main-post {
+	background-color: #fff;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1158,12 +1168,13 @@ button.dropdown-toggle {
 }
 
 .site-footer a {
+	transition: color 0.15s ease-out;
 	color: #fff;
 	text-decoration: none;
 }
 
-.site-footer a:hover {
-	text-decoration: underline;
+.site-footer a:focus, .site-footer a:hover {
+	color: #41CA86;
 }
 
 .site-footer .container {
@@ -1217,12 +1228,7 @@ button.dropdown-toggle {
 	font-size: 1.5em;
 	display: block;
 	padding: .5em 1em;
-	color: white;
 	text-decoration: none;
-}
-
-.site-footer .social-menu a:hover, .site-footer .social-menu a:focus {
-	text-decoration: underline;
 }
 
 .site-footer .site-info {
@@ -1245,7 +1251,13 @@ button.dropdown-toggle {
 	font-size: 1.4em;
 }
 
-.site-footer .email span {
+.site-footer .email a {
+	position: relative;
+}
+
+.site-footer .email a span {
+	position: absolute;
+	left: -40px;
 	font-size: 30px;
 	margin-right: 10px;
 }
@@ -1568,7 +1580,7 @@ object {
 }
 
 .gallery-item a:hover img, .gallery-item a:focus img {
-	border-color: #b51c35;
+	border-color: #41CA86;
 }
 
 .gallery-item a img {

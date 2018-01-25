@@ -40,8 +40,22 @@
 					</div>
 				</div>
 			</div>
+			<div class="page-content">
+				<h1>Aktuellt</h1>
 
-			<?php
+				<div class="main-post">
+					<a href="#">
+						<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/stf_logo.png' ?>" alt="">
+						<h4>Nya styrelsen</h4>
+						<p>
+							Lo-fi cray kinfolk readymade pug quinoa actually small batch narwhal celiac slow-carb vexillologist.
+							Hell of etsy hashtag kale chips sriracha occupy jianbing vape...
+						</p>
+						<span>Publiserad November 19, 2017   </span>
+					</a>
+				</div>
+
+				<?php
 			$args = array(
 				'posts_per_page' => 5
 			);
@@ -63,11 +77,11 @@
 						<p><?php the_excerpt(); ?></p>
 					</div>
 				<?php
-				endif; ?>
+				endif;
+			endforeach; 
+			wp_reset_postdata(); ?>
 
-			<?php endforeach; 
-			wp_reset_postdata();
-			?>
+			</div>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

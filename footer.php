@@ -24,7 +24,7 @@
 			<?php endif; ?>
 			<div class="email">
 				Har du frågor?</br>
-				<span class="fa fa-envelope"></span><a href="mailto:info@sverigestamfagel.se"><?php _e( 'Maila oss!', 'sverigestamfagelforening' ); ?></a>
+				<a href="mailto:info@sverigestamfagel.se"><span class="fa fa-envelope"></span><?php _e( 'Maila oss!', 'sverigestamfagelforening' ); ?></a>
 			</div>
 			<div class="donate">
 				Vill du stödja vår förening?</br>

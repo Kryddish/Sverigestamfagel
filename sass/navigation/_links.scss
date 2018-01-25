@@ -1,5 +1,4 @@
 a {
-	color: $color__link;
 	text-decoration: none;
 	&:visited {}
 	&:hover,
@@ -23,7 +22,6 @@ a {
 .comment-content {
 	a {
 		text-decoration: none;
-		border-bottom: 3px solid $color__interactive;
 		&:focus,
 		&:hover {
 			color: $color__interactive;
