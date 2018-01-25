@@ -45,13 +45,16 @@
 
 				<div class="main-post">
 					<a href="#">
-						<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/stf_logo.png' ?>" alt="">
-						<h4>Nya styrelsen</h4>
-						<p>
-							Lo-fi cray kinfolk readymade pug quinoa actually small batch narwhal celiac slow-carb vexillologist.
-							Hell of etsy hashtag kale chips sriracha occupy jianbing vape...
-						</p>
-						<span>Publiserad November 19, 2017   </span>
+						<img class="main-post-img" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image.png' ?>" alt="">
+						<div class="main-post-text">
+							<span class="publiced-date">Publicerad November 19, 2017   </span>
+							<span class="category">FÅGELTRÄFFAR </span>	
+								<h4>Nya styrelsen</h4>
+								<p>
+									Lo-fi cray kinfolk readymade pug quinoa actually small batch narwhal celiac slow-carb vexillologist.
+									Hell of etsy hashtag kale chips sriracha occupy jianbing vape...
+								</p>							
+						</div>
 					</a>
 				</div>
 

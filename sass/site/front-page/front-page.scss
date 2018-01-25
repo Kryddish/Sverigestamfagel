@@ -28,6 +28,55 @@
                     }
                 }
             }
-        }      
+            .page-content {
+                width: 100%;
+                text-align: center;
+                h1 {
+                    text-align: left;
+                    &:before {
+                        content: '\f135';
+                    }                    
+                }
+                .main-post {
+                    
+                    position:relative;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    img {
+                        width: 1200px;
+                        height: 600px;
+                        margin: auto;
+                    }
+                    .main-post-text {
+                        color: $color__text-main;
+                        text-align: left;
+                        padding: 3em;
+                        width: 650px;
+                        height: 350px;
+                        float: right;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                        background-color: #FFFFFF;
+                        opacity: 0.9;
+                    }
+                    .publiced-date {
+                        font-size: 25px;
+                        font-weight: bold;
+                        font-family: $font__averia;
+                    }
+                    .category {
+                        padding: 0;
+                        color: #2E2EEE;
+                        font-weight: bold;
+                        float: right;
+                        font-size: 25px;
+                        margin: -2em;
+                    }
+                    &:hover {
+                        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.21);
+                    }
+                }
+            }      
+        }
     }
 }
