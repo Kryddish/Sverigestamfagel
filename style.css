@@ -725,7 +725,7 @@ a:hover, a:active {
 ## Global layouts
 --------------------------------------------------------------*/
 .site-content {
-	max-width: 1280px;
+	max-width: 1200px;
 	margin: auto;
 }
 
@@ -742,7 +742,7 @@ a:hover, a:active {
  *	Header with site info
 */
 .top-header {
-	max-width: 1280px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 1em 0;
 	color: black;
@@ -996,7 +996,7 @@ button.dropdown-toggle {
 }
 
 .main-navigation .menu-navigation-container {
-	max-width: 1280px;
+	max-width: 1200px;
 	margin: auto;
 }
 
@@ -1179,7 +1179,7 @@ button.dropdown-toggle {
 
 .site-footer .container {
 	padding: 5em 0;
-	max-width: 1280px;
+	max-width: 1200px;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1336,6 +1336,68 @@ aside#secondary.widget-area {
 	margin: 0;
 }
 
+.home .site-content .entry-content .page-content {
+	width: 100%;
+	text-align: center;
+}
+
+.home .site-content .entry-content .page-content h1 {
+	text-align: left;
+}
+
+.home .site-content .entry-content .page-content .main-post {
+	transition: 150ms box-shadow ease-out, 150ms border ease-out, 150ms -webkit-transform ease-out;
+	transition: 150ms box-shadow ease-out, 150ms transform ease-out, 150ms border ease-out;
+	transition: 150ms box-shadow ease-out, 150ms transform ease-out, 150ms border ease-out, 150ms -webkit-transform ease-out;
+	position: relative;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home .site-content .entry-content .page-content .main-post img {
+	width: 1200px;
+	height: 600px;
+	margin: auto;
+}
+
+.home .site-content .entry-content .page-content .main-post .main-post-text {
+	color: #000;
+	text-align: left;
+	padding: 3em;
+	width: 650px;
+	height: 350px;
+	float: right;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	background-color: #FFFFFF;
+	opacity: 0.9;
+}
+
+.home .site-content .entry-content .page-content .main-post .publiced-date {
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "Averia Sans Libre";
+}
+
+.home .site-content .entry-content .page-content .main-post .category {
+	padding: 0;
+	color: #2E2EEE;
+	font-weight: bold;
+	float: right;
+	font-size: 25px;
+	margin: -2em;
+}
+
+.home .site-content .entry-content .page-content .main-post:hover {
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.21);
+	-webkit-transform: scale(1.02);
+	        transform: scale(1.02);
+	border: 1px solid #41CA86;
+}
+
+/*--------------------------------------------------------------
+## Slider
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -1628,4 +1690,4 @@ object {
 	border: none;
 }
 
-/*# sourceMappingURL=../sverigestamfagel/sass/maps/style.css.map */
+/*# sourceMappingURL=../Sverigestamfagelforening/src/sass/maps/style.css.map */
