@@ -21,7 +21,10 @@
 			) ); ?>
 
 			<div class="top-info">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/parrot.png'?>" alt="Parrot image">
+				<div class="stf-slider">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/parrot.png'?>" alt="Parrot image">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/parrot.png'?>" alt="Parrot image">
+				</div>
 				<div class="container">
 					<div>
 						<h2>Bli medlem</h2>
