@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="page-content">
-				<h1>Aktuellt</h1>
+			<h1><span class="fa fa-calendar"></span> Aktuellt</h1>
 
 				<div class="main-post">
 					<a href="#">
@@ -62,6 +62,26 @@
 						</div>
 					</a>
 				</div>
+
+				<div class="basic-post">
+					<a href="#">
+							<img class="post-img" src="<?php echo get_stylesheet_directory_uri() . '/dist/img/image.png' ?>" alt="">
+							<div class="post-text">
+								<span class="publiced-date">Publicerad November 19, 2017   </span>
+								<span class="category">FÅGELTRÄFFAR </span>	
+									<div class="post-content">
+									<h4>Nya styrelsen</h4>
+									<p>
+										Lo-fi cray kinfolk readymade pug quinoa actually small batch narwhal celiac slow-carb vexillologist.
+										Hell of etsy hashtag kale chips sriracha occupy jianbing vape...
+									</p>	
+									</div>						
+							</div>
+					</a>
+				</div>
+				<button class="more-post">Visa fler</button>
+
+			</div>
 
 				<?php
 			$args = array(
