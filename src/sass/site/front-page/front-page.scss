@@ -113,6 +113,11 @@
                 margin-top: -2em;
                 padding-right: .8em;
             }
+            &:hover {
+                box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.21);
+                transition: 150ms box-shadow ease-out, 150ms transform ease-out, 150ms border ease-out;
+                transform: scale(1.02);
+            }
         } 
         .more-post {
             margin-top: 50px;
@@ -125,6 +130,10 @@
                 font-size: 20px;
                 color: #FFFFFF;
                 border: none;
+                &:hover {
+                    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.21);
+                    transition: 150ms box-shadow ease-out, 150ms transform ease-out, 150ms border ease-out;
+                }
         }
     }
 }
