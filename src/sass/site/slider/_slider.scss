@@ -1,3 +1,29 @@
 .stf-slider {
-    //width: 100px;
+    display: block;
+    position: relative;
+    margin-right: 2em;
+    width: 100%;
+    overflow: hidden;
+    ul {
+        animation: 6s slidy infinite; 
+        position: relative;
+        left: 0;
+        width: 200%;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        height: 100%;
+        img {
+            position: relative;
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    50% { left: 0%; }
+    100% { left: -100%; }
 }

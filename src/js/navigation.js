@@ -4,7 +4,6 @@
  *
  * Contains handlers for navigation and widget area.
  */
-
 (function( $ ) {
 	var masthead, menuToggle, siteNavigation;
 
