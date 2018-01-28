@@ -75,7 +75,44 @@
                         border: 1px solid #41CA86;
                     }
                 }
-            }      
+            }
+                
         }
+        .basic-post {
+            height: 309px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 50px;
+            .post-img {
+                float: left;
+                height: 309px;
+                width: 600px;
+            }
+            .post-text {
+                margin-top: 3em;
+                color: $color__text-main;
+                text-align: left;
+                padding-left: 3em;
+                float: right;
+                width: 600px;
+                h4 {
+                    margin-top: .1em;
+                }
+            }
+            .publiced-date {
+                font-size: 20px;
+                font-weight: bold;
+                font-family: $font__averia;
+            }
+            .category {
+                padding: 0;
+                color: #2E2EEE;
+                font-weight: bold;
+                float: right;
+                font-size: 25px;
+                margin-top: -2em;
+                padding-right: .8em;
+            }
+        } 
     }
 }
