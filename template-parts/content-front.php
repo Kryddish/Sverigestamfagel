@@ -77,6 +77,7 @@
 							</div>
 					</a>
 				</div>
+				<button class="more-post">Visa fler</button>
 
 			</div>
 

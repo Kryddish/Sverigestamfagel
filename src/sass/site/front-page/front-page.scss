@@ -114,5 +114,17 @@
                 padding-right: .8em;
             }
         } 
+        .more-post {
+            margin-top: 50px;
+            position: relative;
+				transform: translateY(-50%);
+				background-color: #41CA86;
+				border-radius: 5px;
+				padding: 0.5em 1.5em;
+				text-transform: uppercase;
+                font-size: 20px;
+                color: #FFFFFF;
+                border: none;
+        }
     }
 }
