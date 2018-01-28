@@ -44,7 +44,7 @@
 				</div>
 			</div>
 			<div class="page-content">
-				<h1>Aktuellt</h1>
+			<h1><span class="fa fa-calendar"></span> Aktuellt</h1>
 
 				<div class="main-post">
 					<a href="#">
