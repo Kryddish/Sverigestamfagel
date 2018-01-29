@@ -132,36 +132,19 @@
 					</a>
 				</div>
 				<button class="more-post">Visa fler</button>
+				<div class="instagram-feed">
 
-			</div><!-- .main-post -->
+					<?php
+					$instaResult = file_get_contents('https://www.instagram.com/sverigestamfagelforening/?__a=1');
+					$insta = json_decode($instaResult, true);
+					$media = $insta['user']['media']['nodes'];
 
-			<?php
-			$args = array(
-				'posts_per_page' => 5
-			);
+					foreach( $media as $image ) : ?>
+						<img src="<?php echo $image['thumbnail_src']; ?>" alt="">
+					<?php
+					endforeach; ?>
 
-			$myposts = get_posts( $args );
-			$i = 0;
-			foreach ( $myposts as $post ) : setup_postdata( $post );
-
-				if( $i === 0 ) : ?>
-					<div class="main-post">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-						<p><?php the_excerpt(); ?></p>
-					</div>
-				<?php
-				$i = 1;
-				else: ?>
-					<div class="post">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-						<p><?php the_excerpt(); ?></p>
-					</div>
-				<?php
-				endif;
-			endforeach; 
-			wp_reset_postdata(); ?>
-
-			</div>
+				</div>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

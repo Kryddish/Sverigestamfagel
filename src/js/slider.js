@@ -6,7 +6,7 @@
     nextBtn = $('.stf-slider .next'),
     index = 0,
     left = 0,
-    delay = 8000;
+    delay = 12 * 1000; // Time in milliseconds
 
     // Start timer
     var timer = setInterval(nextSlide, delay);    

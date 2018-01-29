@@ -76,7 +76,17 @@
                     }
                 }
             }
-                
+            .instagram-feed {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
         }
         .basic-post {
             height: 309px;
