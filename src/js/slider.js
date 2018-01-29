@@ -1,12 +1,15 @@
-(function( $ ) {
-
+(function($) {
     var slider = $('.stf-slider'),
     list = $('.stf-slider ul'),
     slides = $('.stf-slider ul .slide'),
     prevBtn = $('.stf-slider .previous'),
     nextBtn = $('.stf-slider .next'),
     index = 0,
-    left = 0;
+    left = 0,
+    delay = 8000;
+
+    // Start timer
+    var timer = setInterval(nextSlide, delay);    
 
     // Remove arrows if no more than one image
     if(slides.length === 1) {
@@ -15,19 +18,29 @@
     }
 
     // Adjust width of container after amount of slides
-    list.css({
-        'width': 100 * slides.length + '%'
-    });
+    list.css({ 'width': 100 * slides.length + '%' });
 
     // Adjust image size after amount of slides
-    slides.css({
-        'width': 100 / slides.length + '%'
-    });
+    slides.css({ 'width': 100 / slides.length + '%' });
 
     // Add current class to first slide
     $(slides[index]).find('div').addClass('current');
 
+    /* Add click listeners */
     prevBtn.click(function() {
+        prevSlide();
+        clearInterval(timer);
+        timer = setInterval(nextSlide, delay);
+    });
+    nextBtn.click(function() {
+        nextSlide();
+        clearInterval(timer);
+        timer = setInterval(nextSlide, delay);
+    });
+
+    /* Functions */
+
+    function prevSlide() {
 
         // Remove current class
         $(slides[index]).find('div').removeClass('current');
@@ -53,9 +66,9 @@
                 'left': left + '%'
             });
         }
-    });
+    }
 
-    nextBtn.click(function() {
+    function nextSlide() {
 
         // Remove current class
         $(slides[index]).find('div').removeClass('current');
@@ -81,6 +94,5 @@
                 'left': left
             });
         }
-    });
-
-} )( jQuery );
+    }
+})(jQuery);

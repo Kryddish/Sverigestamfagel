@@ -20,12 +20,17 @@
             float: left;
             height: 100%;
             img {
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
                 min-height: 100%;
+                width: 100%;
             }
             div {
                 &.current {
                     animation-name: slide;
-                    animation-duration: 800ms;
+                    animation-duration: 600ms;
                     animation-timing-function: ease-out;
                     animation-iteration-count: 1;
                     animation-fill-mode: forwards;

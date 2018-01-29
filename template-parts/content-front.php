@@ -69,20 +69,16 @@
 					<button class="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 				</div>
 				<div class="container">
+					<?php
+					$top_info = get_field('top_info'); ?>
+
 					<div>
-						<h2>Bli medlem</h2>
-						<p>
-							Vi är en ideell förening för alla tamfågelälskare.
-							Oavsett fågel eller vart du befinner dig är du välkommen som medlem.
-							Bli medlem idag och ta del av rabatter samt medlemstidningen “Fågelhobby”.
-						</p>
+						<h2><?php if( $top_info ) : echo $top_info['top']['headline']; endif; ?></h2>
+						<p><?php if( $top_info ) : echo $top_info['top']['text']; endif; ?></p>
 					</div>
 					<div>
-						<h2>Facebook</h2>
-						<p>
-							Har du en fågel? Eller kanske vill du skaffa en fågel?
-							Glöm inte att gå med i vår facebookgrupp för att få tips och råd bland andra med samma intresse!
-						</p>
+						<h2><?php if( $top_info ) : echo $top_info['bottom']['headline']; endif; ?></h2>
+						<p><?php if( $top_info ) : echo $top_info['bottom']['text']; endif; ?></p>
 					</div>
 				</div>
 			</div>
