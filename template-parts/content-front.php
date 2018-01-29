@@ -26,7 +26,34 @@
 						if( have_rows('slider') ):
 							while ( have_rows('slider') ) : the_row(); ?>
 
-								<img src="<?php the_sub_field('bild'); ?>" alt="Parrot image">
+								<div class="slide">
+									<img src="<?php the_sub_field('bild'); ?>" alt="Parrot image">
+									<div>
+
+										<?php 
+										if( get_sub_field('headline') ) : ?>
+
+											<h4><?php the_sub_field('headline'); ?></h4>
+
+										<?php
+										endif;
+
+										if( get_sub_field('text') ) : ?>
+
+											<p><?php the_sub_field('text'); ?></p>
+
+										<?php
+										endif;
+
+										if( get_sub_field('button') ) : ?>
+
+											<a href="<?php if( get_sub_field('link') ) : the_sub_field('link'); else: echo '#'; endif; ?>"><?php the_sub_field('button'); ?></a>
+
+										<?php
+										endif; ?>
+
+									</div>
+								</div>
 
 							<?php
 							endwhile;

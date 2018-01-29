@@ -2,36 +2,52 @@
 
     var slider = $('.stf-slider'),
     list = $('.stf-slider ul'),
-    images = $('.stf-slider ul img'),
+    slides = $('.stf-slider ul .slide'),
     prevBtn = $('.stf-slider .previous'),
     nextBtn = $('.stf-slider .next'),
+    index = 0,
     left = 0;
 
     // Remove arrows if no more than one image
-    if(images.length === 1) {
+    if(slides.length === 1) {
         prevBtn.css({'display': 'none'});
         nextBtn.css({'display': 'none'});
     }
 
-    // Adjust width of container after amount of images
+    // Adjust width of container after amount of slides
     list.css({
-        'width': 100 * images.length + '%'
+        'width': 100 * slides.length + '%'
     });
 
-    // Adjust image size after amount of images
-    images.css({
-        'width': 100 / images.length + '%'
+    // Adjust image size after amount of slides
+    slides.css({
+        'width': 100 / slides.length + '%'
     });
+
+    // Add current class to first slide
+    $(slides[index]).find('div').addClass('current');
 
     prevBtn.click(function() {
+
+        // Remove current class
+        $(slides[index]).find('div').removeClass('current');
+
         if(left < 0) {
+            index--;
             left += 100;
+
+            // Add current class to next slide
+            $(slides[index]).find('div').addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left + '%'
             });
         } else {
-            left = -(images.length * 100) + 100;
+            index = slides.length -1;
+            left = -(slides.length * 100) + 100;
+
+            // Add current class to last slide
+            $(slides[index]).find('div').addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left + '%'
@@ -40,14 +56,26 @@
     });
 
     nextBtn.click(function() {
-        if(left > -((images.length * 100) - 100)) {
+
+        // Remove current class
+        $(slides[index]).find('div').removeClass('current');
+
+        if(left > -((slides.length * 100) - 100)) {
+            index++;
             left -= 100;
+
+            // Add current class to next slide
+            $(slides[index]).find('div').addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left + '%'
             });
         } else {
+            index = 0;
             left = 0;
+
+            // Add current class to last slide
+            $(slides[index]).find('div').addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left
