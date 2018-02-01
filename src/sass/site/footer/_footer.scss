@@ -57,6 +57,13 @@
 		color: #8A8A8A;
 		padding: 1.5em 0;
 		background-color: black;
+		a {
+			font-weight: bold;
+			color: rgb(190, 190, 190);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 	.donate {
 		font-size: 1.4em;

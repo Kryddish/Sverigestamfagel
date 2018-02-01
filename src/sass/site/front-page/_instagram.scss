@@ -1,0 +1,21 @@
+.instagram-feed {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+
+    a {
+        transition: 150ms transform ease-out;
+        padding: 4px;
+        display: block;
+        width: calc(100% / 6);
+
+        img {
+            min-height: 100%;
+        }
+
+        &:hover {
+            transform: scale(1.04);
+        }
+    }
+}

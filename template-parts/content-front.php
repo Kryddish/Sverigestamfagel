@@ -69,78 +69,81 @@
 					<button class="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 				</div>
 				<div class="container">
-					<?php
-					$top_info = get_field('top_info'); ?>
+
+					<?php $top_info = get_field('top_info'); ?>
 
 					<div>
-						<h2><?php if( $top_info ) : echo $top_info['top']['headline']; endif; ?></h2>
-						<p><?php if( $top_info ) : echo $top_info['top']['text']; endif; ?></p>
+						<h2>
+							<?php
+							if( $top_info['top']['headline'] ) {
+								echo $top_info['top']['headline'];
+							} ?>
+						</h2>
+						<p>
+							<?php
+							if( $top_info['top']['text'] ) {
+								echo $top_info['top']['text'];
+							} ?>
+						</p>
 					</div>
 					<div>
-						<h2><?php if( $top_info ) : echo $top_info['bottom']['headline']; endif; ?></h2>
-						<p><?php if( $top_info ) : echo $top_info['bottom']['text']; endif; ?></p>
+						<h2>
+							<?php
+							if( $top_info['bottom']['headline'] ) {
+								echo $top_info['bottom']['headline'];
+							} ?>
+						</h2>
+						<p>
+							<?php
+							if( $top_info['bottom']['text'] ) {
+								echo $top_info['bottom']['text'];
+							} ?>
+						</p>
 					</div>
 				</div>
 			</div>
+			<hr>
 			<div class="page-content">
-			<h1><span class="fa fa-calendar"></span> Aktuellt</h1>
+				<h3>
+					<span class="fa fa-calendar"></span> Aktuellt
+				</h3>
+				<div class="posts-container">
 
-				<div class="main-post">
-					<a href="#">
-						<img class="main-post-img" src="<?php echo get_stylesheet_directory_uri() . '/dist/img/image.png' ?>" alt="">
-						<div class="main-post-text">
-							<span class="publiced-date">November 19, 2017   </span>
-							<span class="category">FÅGELTRÄFFAR </span>	
-								<h4>Nya styrelsen</h4>
-								<p>
-									Lo-fi cray kinfolk readymade pug quinoa actually small batch narwhal celiac slow-carb vexillologist.
-									Hell of etsy hashtag kale chips sriracha occupy jianbing vape...
-								</p>							
-						</div>
-					</a>
+					<?php
+					$posts = get_posts( array(
+						'post_type' => array( 'meets' )
+					) );
+
+					foreach( $posts as $post ) : setup_postdata( $post );
+						get_template_part( 'template-parts/content' );
+					endforeach; 
+					wp_reset_postdata(); ?>
+					
 				</div>
-				<div class="basic-post">
-					<a href="#">
-							<img class="post-img" src="<?php echo get_stylesheet_directory_uri() . '/dist/img/image.png' ?>" alt="">
-							<div class="post-text">
-								<span class="publiced-date">November 19, 2017   </span>
-								<span class="category">FÅGELTRÄFFAR </span>	
-									<div class="post-content">
-									<h4>Nya styrelsen</h4>
-									<p>
-										Lo-fi cray kinfolk readymade pug quinoa actually small batch narwhal celiac slow-carb vexillologist.
-										Hell of etsy hashtag kale chips sriracha occupy jianbing vape...
-									</p>	
-									</div>						
-							</div>
-					</a>
-				</div>
-				<div class="basic-post">
-					<a href="#">
-							<img class="post-img" src="<?php echo get_stylesheet_directory_uri() . '/dist/img/image.png' ?>" alt="">
-							<div class="post-text">
-								<span class="publiced-date">November 19, 2017   </span>
-								<span class="category">FÅGELTRÄFFAR </span>	
-									<div class="post-content">
-									<h4>Nya styrelsen</h4>
-									<p>
-										Lo-fi cray kinfolk readymade pug quinoa actually small batch narwhal celiac slow-carb vexillologist.
-										Hell of etsy hashtag kale chips sriracha occupy jianbing vape...
-									</p>	
-									</div>						
-							</div>
-					</a>
-				</div>
-				<button class="more-post">Visa fler</button>
+
+				<button class="show-more">Visa fler</button>
+
+				<h3>
+					<span class="fa fa-instagram"></span> Instagram
+				</h3>
 				<div class="instagram-feed">
 
 					<?php
-					$instaResult = file_get_contents('https://www.instagram.com/sverigestamfagelforening/?__a=1');
-					$insta = json_decode($instaResult, true);
-					$media = $insta['user']['media']['nodes'];
+					$insta_feed = get_field( 'instagram_feed' );
 
-					foreach( $media as $image ) : ?>
-						<img src="<?php echo $image['thumbnail_src']; ?>" alt="">
+					if( $insta_feed ) {
+						$user = $insta_feed['user'];
+					} else {
+						$user = 'sverigestamfagelforening';
+					}
+
+					$instaResult = file_get_contents('https://www.instagram.com/' . $user . '/?__a=1');
+
+					$insta = json_decode($instaResult, true);
+					$images = $insta['user']['media']['nodes'];
+
+					foreach( $images as $image ) : ?>
+						<a href="<?php echo 'https://www.instagram.com/p/' . $image['code'] . '/'; ?>"><img src="<?php echo $image['thumbnail_src']; ?>" alt=""></a>
 					<?php
 					endforeach; ?>
 

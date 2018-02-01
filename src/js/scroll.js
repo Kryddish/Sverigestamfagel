@@ -1,5 +1,5 @@
 (function( $ ) {
-    var header = $('header'),
+    var header = $('.site-header'),
         scrollTop = $('html, body').scrollTop(),
         navbar = $('.main-navigation'),
         navHeight = navbar.height(),
