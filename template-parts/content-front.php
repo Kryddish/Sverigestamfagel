@@ -158,7 +158,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Redigera %s', 'sverigestamfagelforening' ),
+					esc_html__( 'Redigera sida %s', 'sverigestamfagelforening' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

@@ -16,8 +16,8 @@ else:
 endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
-	<a href="<?php the_permalink(); ?>">
-		<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
+	<a class="link" href="<?php the_permalink(); ?>">
+		<img src="<?php if( get_the_post_thumbnail_url() ) : the_post_thumbnail_url(); else: echo get_stylesheet_directory() . '/dist/img/image.png'; endif; ?>" alt="Post image">
 		<div class="text">
 			<header>
 				<h5 class="date"><?php the_field( 'date' ); ?></h5>
@@ -28,13 +28,22 @@ endif; ?>
 		</div>
 	</a>
 
-	<?php
-	wp_link_pages( array(
-		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sverigestamfagelforening' ),
-		'after'  => '</div>',
-	) ); ?>
+	<?php if ( get_edit_post_link() ) : ?>
+		<footer class="entry-footer">
+			<span>Senast ändrad <?php the_modified_date(); ?></span>
 
-	<footer class="entry-footer">
-		<?php sverigestamfagelforening_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+			<?php
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post */
+					esc_html__( 'Redigera inlägg %s', 'sverigestamfagelforening' ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				),
+				'<span class="edit-link">',
+				'</span>'
+			); ?>
+
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
+
 </article>
