@@ -121,8 +121,6 @@
 					
 				</div>
 
-				<button class="show-more">Visa fler</button>
-
 				<h3>
 					<span class="fa fa-instagram"></span> Instagram
 				</h3>
@@ -143,7 +141,7 @@
 					$images = $insta['user']['media']['nodes'];
 
 					foreach( $images as $image ) : ?>
-						<a href="<?php echo 'https://www.instagram.com/p/' . $image['code'] . '/'; ?>"><img src="<?php echo $image['thumbnail_src']; ?>" alt=""></a>
+						<a <?php if( $insta_feed['new_window'] ) : echo 'target="_blank"'; endif;?> href="<?php echo 'https://www.instagram.com/p/' . $image['code'] . '/'; ?>"><img src="<?php echo $image['thumbnail_src']; ?>" alt=""></a>
 					<?php
 					endforeach; ?>
 

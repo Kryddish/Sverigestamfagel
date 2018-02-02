@@ -1,0 +1,58 @@
+.single {
+    .site-content {
+        .post-navigation,
+        .entry-header {
+            a {
+                font-weight: 700;
+                text-decoration: none;
+                color: #000;
+    
+                &:hover {
+                    border-bottom: 3px solid $color__interactive;
+                }
+            }
+        }
+        .entry-header {
+            margin-top: 2em;
+            text-align: center;
+        }
+        .entry-info {
+            display: flex;
+
+            div:first-child {
+                padding: 0 1em;
+                background-color: rgb(238, 238, 238);
+                flex: 30%;
+
+                span {
+                    font-size: 24px;
+                    font-weight: normal;
+                }
+            }
+            div:last-child {
+                flex: 70%;
+
+                img {
+                    min-height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+            column-count: 3;
+            column-gap: 0;
+
+            li {
+                break-inside: avoid;
+                padding: 5px;
+
+                img {
+                    border-radius: 5px;                    
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

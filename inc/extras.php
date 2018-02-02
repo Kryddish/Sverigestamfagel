@@ -53,3 +53,17 @@ function stf_custom_fonts() {
 		}
 	</style>';
 }
+
+// Register Google API
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+// Custom excerpt length
+function custom_excerpt_length( $length ) {
+	return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

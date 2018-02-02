@@ -1,6 +1,6 @@
 .posts-container {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
 
     .main-post,
     .post {
@@ -22,33 +22,12 @@
             font-size: 25px;
         }
         .entry-footer {
-            margin: 0;
-        }
-    }
-
-    .main-post {
-        height: 600px;
-        position:relative;
-
-        img {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            height: 100%;
-            min-width: 100%;
+            margin: 5px 0 0 0;
         }
         .text {
-            border-radius: 5px 0 0 0;
-            color: $color__text-main;
             text-align: left;
-            padding: 0.5em 1em 0;
-            width: 50%;
-            float: right;
-            position: absolute;
-            right: 0px;
-            bottom: 0px;
-            background-color: rgba(255, 255, 255, 0.7);
+            color: $color__text-main;
+            padding: 0 1.5em;
         }
         header {
             display: flex;
@@ -68,6 +47,28 @@
         }
     }
 
+    .main-post {
+        height: 600px;
+        position:relative;
+
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: 100%;
+            min-width: 100%;
+        }
+        .text {
+            border-radius: 5px 0 0 0;
+            width: 50%;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
     .post {
         height: 309px;
         background-color: #FFFFFF;
@@ -79,15 +80,8 @@
             width: 50%;
         }
         .text {
-            margin-top: 3em;
-            color: $color__text-main;
-            text-align: left;
-            padding: 0 1.5em;
             float: left;
             width: 50%;
-            h4 {
-                margin-top: .1em;
-            }
         }
         .date {
             font-weight: bold;
@@ -99,8 +93,6 @@
             font-weight: bold;
             float: right;
             font-size: 25px;
-            margin-top: -2em;
-            padding-right: .8em;
         }
     }
 }

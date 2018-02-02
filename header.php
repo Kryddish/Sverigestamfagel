@@ -15,6 +15,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
+<?php if( is_single() ) :?>
+	<style type="text/css">
+		.acf-map {
+			width: 100%;
+			height: 400px;
+			border: #ccc solid 1px;
+			margin: 20px 0;
+		}
+
+		.acf-map img {
+			max-width: inherit !important;
+		}
+	</style>
+<?php endif; ?>
+
 <?php wp_head(); ?>
 </head>
 
