@@ -97,7 +97,7 @@
             <?php foreach( $images as $image ): ?>
                 <li>
                     <a target="_blank" href="<?php echo $image['url']; ?>">
-                        <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </a>
                 </li>
             <?php endforeach; ?>

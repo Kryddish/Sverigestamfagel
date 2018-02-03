@@ -18,8 +18,8 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'single' );
 
 				the_post_navigation( array(
-					'prev_text'                  => __( 'Tidigare inlägg:' ),
-					'next_text'                  => __( 'Nästa inlägg:' )
+					'prev_text'                  => __( 'Tidigare inlägg' ),
+					'next_text'                  => __( 'Nästa inlägg' )
 				) );
 
 			endwhile; ?>
