@@ -43,9 +43,9 @@
 					<?php the_custom_logo(); ?>
 
 					<div class="text">
-						<h1 class="site-title">
+						<h2 class="site-title">
 							<?php bloginfo( 'name' ); ?>
-						</h1>
+						</h2>
 						
 						<?php
 						$description = get_bloginfo( 'description', 'display' );

@@ -159,3 +159,13 @@ button.dropdown-toggle {
 		}
 	}
 }
+
+.single {
+	.main-navigation {
+		.menu {
+			li:nth-of-type(3) {
+				background-color: #41CA86;
+			}
+		}
+	}
+}
