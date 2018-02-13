@@ -67,3 +67,9 @@
         }
     }
 }
+
+@media screen and (max-width: $query__small) {
+    .top-header {
+        display: none;
+    }
+}

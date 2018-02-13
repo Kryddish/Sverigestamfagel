@@ -23,8 +23,8 @@
 				dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-');
 
 			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+			_this.toggleClass( 'toggled' );
+			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled' );
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
@@ -50,7 +50,7 @@
 		menuToggle.add( siteNavigation ).attr( 'aria-expanded', 'false' );
 
 		menuToggle.on( 'click.sverigestamfagelforening', function() {
-			$( siteNavigation.closest( '.main-navigation' ), this ).toggleClass( 'toggled-on' );
+			$( siteNavigation.closest( '.main-navigation' ), this ).toggleClass( 'toggled' );
 
 			$( this )
 				.add( siteNavigation )
@@ -104,13 +104,13 @@
 	function onResizeARIA() {
 		if ( 'block' === $( '.menu-toggle' ).css( 'display' ) ) {
 
-			if ( menuToggle.hasClass( 'toggled-on' ) ) {
+			if ( menuToggle.hasClass( 'toggled' ) ) {
 				menuToggle.attr( 'aria-expanded', 'true' );
 			} else {
 				menuToggle.attr( 'aria-expanded', 'false' );
 			}
 
-			if ( siteNavigation.closest( '.main-navigation' ).hasClass( 'toggled-on' ) ) {
+			if ( siteNavigation.closest( '.main-navigation' ).hasClass( 'toggled' ) ) {
 				siteNavigation.attr( 'aria-expanded', 'true' );
 			} else {
 				siteNavigation.attr( 'aria-expanded', 'false' );

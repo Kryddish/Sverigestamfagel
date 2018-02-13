@@ -84,20 +84,31 @@
 	}
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: $query__small) {
 	.site-footer {
 		.container {
 			padding: 1em;
-			display: block;
+			flex-wrap: wrap;
+			
 			>* {
-				margin: 10px;
+				margin: 20px 0;
 			}
 			.social-menu {
+				order: 2;
 				@include font-size(0.7);
 			}
 			.email {
+				order: 3;
 				@include font-size(1);
 			}
+			.donate {
+				order: 1;
+				width: 100%;
+			}
+		}
+		.site-info {
+			padding-left: 15%;
+			padding-right: 15%
 		}
 	}
 }

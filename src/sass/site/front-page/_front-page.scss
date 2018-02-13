@@ -45,3 +45,30 @@
         }
     }
 }
+
+@media screen and (max-width: $query__small) {
+    .home {
+        .site-content {
+            .entry-content {
+                .top-info {
+                    display: block;
+                    max-height: 100%;
+                    
+                    .stf-slider {
+                        height: 400px;
+                    }
+                    .container {
+                        margin: 0;
+
+                        div {
+                            &:first-child,
+                            &:last-child {
+                                margin: 0;                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
