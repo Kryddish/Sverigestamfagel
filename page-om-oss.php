@@ -22,8 +22,7 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', 'none' );
 
-			endwhile; // End of the loop.
-			?>
+			endwhile; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
