@@ -6,7 +6,7 @@
     nextBtn = $('.stf-slider .next'),
     index = 0,
     left = 0,
-    delay = 12 * 1000; // Time in milliseconds
+    delay = 7 * 1000; // Time in milliseconds
 
     // Start timer
     var timer = setInterval(nextSlide, delay);    
@@ -17,16 +17,16 @@
         nextBtn.css({'display': 'none'});
     }
 
-    // Adjust width of container after amount of slides
+    // Calculate width of container
     list.css({ 'width': 100 * slides.length + '%' });
 
-    // Adjust image size after amount of slides
+    // Calculate image width
     slides.css({ 'width': 100 / slides.length + '%' });
 
-    // Add current class to first slide
+    // Add class to first slide
     $(slides[index]).find('div').addClass('current');
 
-    /* Add click listeners */
+    /* Add event listeners */
     prevBtn.click(function() {
         prevSlide();
         clearInterval(timer);

@@ -165,4 +165,4 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load custom post types
  */
-require get_template_directory() . '/inc/custom-post-types.php';
+require get_template_directory() . '/inc/custom-post-types/custom-post-types.php';

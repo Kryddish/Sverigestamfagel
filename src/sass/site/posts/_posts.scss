@@ -3,7 +3,7 @@
     margin: 0 auto 100px;
 
     .main-post,
-    .post {
+    .stf-post {
         position: relative;
         transition: 150ms box-shadow ease-out, 150ms transform ease-out;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -16,6 +16,10 @@
             height: 100%;
             display: block;
             overflow: auto;
+
+            img {
+                object-fit: cover;
+            }
         }
         .date {
             position: relative;
@@ -29,18 +33,14 @@
             color: $color__text-main;
             padding: 0.5em 1.5em;
 
+            h5 {}
+
             p {
-                margin-bottom: 35px;
+                font-size: 18px;
+                margin-bottom: 0;
             }
 
-            .location {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                margin-right: 1.5em;
-                margin-bottom: 0.5em;
-                margin-top: 0;
-            }
+            .location {}
         }
         header {
             display: flex;
@@ -62,7 +62,7 @@
     }
 
     .main-post {
-        height: 600px;
+        min-height: 500px;
         position:relative;
 
         img {
@@ -74,6 +74,7 @@
             min-width: 100%;
         }
         .text {
+            max-height: 100%;
             border-radius: 5px 0 0 0;
             width: 50%;
             position: absolute;
@@ -83,8 +84,8 @@
         }
     }
 
-    .post {
-        height: 309px;
+    .stf-post {
+        min-height: 309px;
         background-color: #FFFFFF;
         margin-top: 50px;
 
@@ -94,7 +95,6 @@
             width: 50%;
         }
         .text {
-            height: 100%;
             float: left;
             width: 50%;
         }

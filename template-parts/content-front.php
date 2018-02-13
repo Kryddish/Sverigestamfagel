@@ -111,8 +111,11 @@
 
 					<?php
 					$posts = get_posts( array(
-						'post_type' => array( 'meets', 'post' ),
-						'posts_per_page' => 3
+						'post_type' 		=> 	array( 'meets', 'post' ),
+						'posts_per_page'	=> 	3,
+						'meta_key' 			=> 	'date',
+						'orderby' 			=> 	'meta_value',
+						'order'				=>	'DESC'
 					) );
 
 					foreach( $posts as $post ) : setup_postdata( $post );
@@ -144,7 +147,7 @@
 					wp_reset_postdata(); ?>
 					
 				</div>
-
+				<hr>
 				<h3>
 					<span class="fa fa-instagram"></span> Instagram
 				</h3>
