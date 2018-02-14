@@ -1,0 +1,35 @@
+.stf-post {
+    min-height: 300px;
+    background-color: #FFFFFF;
+    margin-top: 50px;
+
+    img {
+        float: left;
+        
+        @media screen and (min-width: $query__small) {
+            width: 50%;
+            height: 300px;
+        }
+        @media screen and (max-width: $query__small) {
+            height: 200px;
+        }
+    }
+    .text {
+        float: left;
+
+        @media screen and (max-width: $query__small) {
+            width: 100%;
+            padding: .3em 1em;
+        }
+    }
+    .date {
+        font-weight: bold;
+        font-family: $font__averia;
+    }
+    .category {
+        padding: 0;
+        color: #2E2EEE;
+        font-weight: bold;
+        float: right;
+    }
+}

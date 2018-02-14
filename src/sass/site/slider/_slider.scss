@@ -7,13 +7,19 @@
     overflow: hidden;
 
     ul {
-        transition: left 800ms ease-out;
         position: relative;
         left: 0;
         margin: 0;
         padding: 0;
         list-style-type: none;
         height: 100%;
+
+        @media screen and (min-width: $query__small) {
+            transition: left .8s ease-out;
+        }
+        @media screen and (max-width: $query__small) {
+            transition: left .4s ease-out;
+        }
 
         .slide {
             position: relative;
@@ -75,8 +81,7 @@
     }
     .previous,
     .next {
-        outline: none;        
-        transition: color 150ms ease-out;
+        outline: none;
         color: white;
         font-size: 1.5em;
         position: absolute;
@@ -86,10 +91,13 @@
         border: none;
         height: 100%;
         padding: 0 2%;
-        
-        &:hover {
-            color: $color__interactive;
-            background-color: transparent;
+
+        @media screen and (min-width: $query__small) {
+            transition: color 150ms ease-out;
+
+            &:hover {
+                color: $color__interactive;
+            }
         }
     }
     .previous {

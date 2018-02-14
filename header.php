@@ -65,8 +65,10 @@
 			</div><!-- .top-header -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'sverigestamfagelforening' ); ?></button>
-				
+				<div class="mobile-navbar">
+					<?php the_custom_logo(); ?>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'sverigestamfagelforening' ); ?></button>
+				</div>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',

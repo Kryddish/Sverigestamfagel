@@ -1,0 +1,36 @@
+.main-post {
+    position:relative;
+
+    @media screen and (min-width: $query__small) {
+        min-height: 500px;
+    }
+    @media screen and (max-width: $query__small) {
+        min-height: 300px;            
+    }
+
+    img {
+        height: 100%;
+        min-width: 100%;
+
+        @media screen and (min-width: $query__small) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+        @media screen and (max-width: $query__small) {
+            height: 300px;
+        }
+    }
+    .text {
+        max-height: 100%;
+        border-radius: 5px 0 0 0;
+        background-color: rgba(255, 255, 255, 0.7);
+
+        @media screen and (min-width: $query__small) {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+    }
+}
