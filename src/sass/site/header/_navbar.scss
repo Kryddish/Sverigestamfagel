@@ -5,7 +5,7 @@
 	clear: left;
 	background-color: $color__skin;
 
-	@media screen and (max-width: $query__small) {
+	@media screen and (max-width: $mobile) {
 		z-index: 100;
 		position: fixed;
 		top: 0;
@@ -25,9 +25,15 @@
 	}
 
 	.menu-navigation-container {
-		@media screen and (min-width: $query__small) {
-			max-width: $size__page;
+		@media screen and (min-width: $mobile) {
+			max-width: $page;
 			margin: auto;
+		}
+	}
+
+	&.toggled {
+		.menu {
+			display: flex;			
 		}
 	}
 
@@ -39,6 +45,15 @@
 		list-style: none;
 		margin: 0;
 
+		@media screen and (max-width: $mobile) {
+			display: none;
+			height: calc(100vh - 60px);
+			background-color: $color__skin;
+			flex-direction: column;
+			justify-content: center;
+			padding-bottom: 60px;
+		}
+
 		a {
 			transition: background-color 0.15s ease-out;
 			display: inline-block;
@@ -46,6 +61,11 @@
 			padding: 1em 1.5em;
 			text-decoration: none;
 			color: #fff;
+
+			@media screen and (max-width: $mobile) {
+				text-align: center;
+				padding: 1.5em 0;
+			}
 
 			&:hover {
 				background-color: #41CA86;
@@ -57,16 +77,22 @@
 		}
 
 		.cta {
-			margin-left: 1.5em;
+			@media screen and (min-width: $mobile) {
+				margin-left: 1.5em;
+			}
 			a {
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
 				background-color: #41CA86;
 				border-radius: 5px;
 				padding: 0.5em 1.5em;
 				text-transform: uppercase;
 				font-size: 18px;
+
+				@media screen and (min-width: $mobile) {
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
 				&:hover {
 					text-decoration: none;
 					opacity: 0.8;

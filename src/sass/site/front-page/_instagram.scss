@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (max-width: $query__small) {
+@media screen and (max-width: $mobile) {
     .instagram-feed {
         a {
             width: calc(100% / 3);

@@ -2,7 +2,7 @@
     .site-content {
         margin-bottom: 2em;
 
-        @media screen and (min-width: $query__small) {
+        @media screen and (min-width: $mobile) {
             margin-top: 2em;
         }
 
@@ -49,7 +49,7 @@
     }
 }
 
-@media screen and (max-width: $query__small) {
+@media screen and (max-width: $mobile) {
     .home {
         .site-content {
             .entry-content {

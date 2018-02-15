@@ -23,7 +23,7 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 
-	@media screen and (max-width: $query__small) {
+	@media screen and (max-width: $mobile) {
 		display: none;
 	}
 }

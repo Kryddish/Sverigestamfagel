@@ -1,9 +1,9 @@
 .site-content {
-	max-width: $size__page;
+	max-width: $page;
 	margin: auto;
 	min-height: 1000px;
 
-	@media screen and (max-width: $query__small) {
+	@media screen and (max-width: $mobile) {
 		margin-top: 60px;
 	}
 }

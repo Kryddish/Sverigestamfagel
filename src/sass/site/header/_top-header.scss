@@ -1,5 +1,5 @@
 .top-header {
-    max-width: $size__page;
+    max-width: $page;
     margin: 0 auto;
     padding: 1em 0;
     color: black;
@@ -72,7 +72,7 @@
     }
 }
 
-@media screen and (max-width: $query__small) {
+@media screen and (max-width: $mobile) {
     .top-header {
         display: none;
     }

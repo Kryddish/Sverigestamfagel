@@ -2,7 +2,7 @@
     display: none;
     height: 100%;
 
-    @media screen and (max-width: $query__small) {
+    @media screen and (max-width: $mobile) {
         display: flex;
         justify-content: space-between;
     }
@@ -11,7 +11,7 @@
         padding: 0 0 0 .8em;
         width: 60px;
 
-        @media screen and (min-width: $query__small) {
+        @media screen and (min-width: $mobile) {
             display: none;
         }
 
@@ -31,7 +31,7 @@
         color: #fff;
         border: none;
     
-        @media screen and (max-width: $query__small) {
+        @media screen and (max-width: $mobile) {
             display: block;
         }
     

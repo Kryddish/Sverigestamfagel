@@ -6,18 +6,18 @@
     img {
         float: left;
         
-        @media screen and (min-width: $query__small) {
+        @media screen and (min-width: $mobile) {
             width: 50%;
             height: 300px;
         }
-        @media screen and (max-width: $query__small) {
+        @media screen and (max-width: $mobile) {
             height: 200px;
         }
     }
     .text {
         float: left;
 
-        @media screen and (max-width: $query__small) {
+        @media screen and (max-width: $mobile) {
             width: 100%;
             padding: .3em 1em;
         }

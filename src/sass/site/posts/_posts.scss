@@ -1,5 +1,5 @@
 .posts-container {
-    @media screen and (min-width: $query__small) {
+    @media screen and (min-width: $mobile) {
         width: 80%;
         margin: 0 auto 100px;
     }
@@ -9,7 +9,7 @@
         position: relative;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
-        @media screen and (min-width: $query__small) {
+        @media screen and (min-width: $mobile) {
             transition: 150ms box-shadow ease-out, 150ms transform ease-out;
 
             &:hover,
@@ -27,7 +27,7 @@
             img {
                 object-fit: cover;
 
-                @media screen and (max-width: $query__small) {
+                @media screen and (max-width: $mobile) {
                     width: 100%;
                 }
             }
@@ -44,7 +44,7 @@
             color: $color__text-main;
             padding: 0.5em 1.5em;
 
-            @media screen and (min-width: $query__small) {
+            @media screen and (min-width: $mobile) {
                 width: 50%;                
             }
 

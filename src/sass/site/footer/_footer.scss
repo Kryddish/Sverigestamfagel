@@ -16,7 +16,7 @@
 	}
 	.container {
 		padding: 5em 0;
-		max-width: $size__page;
+		max-width: $page;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
@@ -84,7 +84,7 @@
 	}
 }
 
-@media screen and (max-width: $query__small) {
+@media screen and (max-width: $mobile) {
 	.site-footer {
 		.container {
 			padding: 1em;

@@ -14,10 +14,10 @@
         list-style-type: none;
         height: 100%;
 
-        @media screen and (min-width: $query__small) {
+        @media screen and (min-width: $mobile) {
             transition: left .8s ease-out;
         }
-        @media screen and (max-width: $query__small) {
+        @media screen and (max-width: $mobile) {
             transition: left .4s ease-out;
         }
 
@@ -92,7 +92,7 @@
         height: 100%;
         padding: 0 2%;
 
-        @media screen and (min-width: $query__small) {
+        @media screen and (min-width: $mobile) {
             transition: color 150ms ease-out;
 
             &:hover {
