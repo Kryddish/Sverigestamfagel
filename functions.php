@@ -106,6 +106,24 @@ function sverigestamfagelforening_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar archive', 'sverigestamfagelforening' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
+		'before_widget' => '<div id="%1$s" class="archive-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Custom-video', 'sverigestamfagelforening' ),
+		'id'            => 'custom-video',
+		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
+		'before_widget' => '<div id="%1$s" class="custom-video">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'sverigestamfagelforening_widgets_init' );
 
