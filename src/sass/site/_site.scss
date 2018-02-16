@@ -38,31 +38,34 @@
 --------------------------------------------------------------*/
 @import "posts/posts";
 
-.side-archive {
-    background-color: #fff;
-    width: 40%;
-    float: right;
-    padding: 0 50px;
-    margin: 50px auto;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1), 0 9px 30px 0 rgba(0, 0, 0, 0.2);
 
-    .search-form {
-        padding: 10px;
-        .search-submit {
-            float: right;
+.page-template-archive {
+    .side-archive {
+        background-color: #fff;
+        width: 40%;
+        float: right;
+        padding: 0 50px;
+        margin: 50px auto;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1), 0 9px 30px 0 rgba(0, 0, 0, 0.2);
+    
+        .search-form {
+            padding: 10px;
+            .search-submit {
+                float: right;
+            }
         }
+    
     }
-
-}
-
-.archive-widget {
-    border-bottom: 1px solid grey;
-}
-
-.archive-post {
-    background-color: #fff;
-    width: 55%;
-    padding: 20px;
-    float: left;
-    margin-top: 50px;
+    
+    .archive-widget {
+        border-bottom: 1px solid grey;
+    }
+    
+    .stf-post {
+        background-color: #fff;
+        width: 55%;
+        padding: 20px;
+        float: left;
+        margin-top: 50px;
+    }
 }

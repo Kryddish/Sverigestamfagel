@@ -1,48 +1,67 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package sverigestamfagelforening
+ * 
+ * Template name: Archives
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
+			
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			dynamic_sidebar( 'custom-video' );
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+			$posts = get_posts( array(
+				'post_type' 		=> 	array( 'meets', 'post', 'articles' ),
+				'posts_per_page'	=> 	3,
+				'meta_key' 			=> 	'date',
+				'orderby' 			=> 	'meta_value',
+				'order'				=>	'DESC'
+			) );
 
-			endwhile;
+			foreach( $posts as $post ) : setup_postdata( $post );
 
-			the_posts_navigation();
+				get_template_part( 'template-parts/content' );
 
-		else :
+				if ( get_edit_post_link() ) : ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+					<footer class="entry-footer">
+						<span>Senast ändrad <?php the_modified_date(); ?></span>
 
-		endif; ?>
+						<?php
+						edit_post_link(
+							sprintf(
+								/* translators: %s: Name of current post */
+								esc_html__( 'Redigera inlägg %s', 'sverigestamfagelforening' ),
+								the_title( '<span class="screen-reader-text">"', '"</span>', false )
+							),
+							'<span class="edit-link">',
+							'</span>'
+						); ?>
 
+					</footer><!-- .entry-footer -->
+
+				<?php
+				endif;
+				
+			endforeach; 
+			wp_reset_postdata(); ?>
+			
+			<div class="side-archive">				
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div>
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

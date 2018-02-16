@@ -9,22 +9,13 @@
 ?>
 
 <?php
-if( $post === reset($posts) ) :
+if( $post === reset($posts) && is_front_page() ) :
 	$class = 'main-post';
 else:
 	$class = 'stf-post';
 endif;
 
-$location = get_field( 'location' );
-
-if( !empty( $location['address'] ) ) :
-	$address = $location['address'];
-	$address = explode(',', $address);
-	array_pop( $address );
-	$num = array(0,1,2,3,4,5,6,7,8,9);
-	$address[1] = str_replace($num, '', $address[1]);
-	$address = implode('', $address);
-endif; ?>
+$location = get_field( 'location' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
 
@@ -63,8 +54,8 @@ endif; ?>
 			<h5><?php the_title(); ?></h5>
 			<?php the_excerpt();
 
-			if( $address ) : ?>
-				<h6 class="location"><?php echo $address; ?></h6>
+			if( !empty( $location['adress'] ) ) : ?>
+				<h6 class="location"><?php echo $location['adress']; ?></h6>
 			<?php
 			endif; ?>
 
