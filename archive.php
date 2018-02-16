@@ -20,11 +20,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			
 			<?php
-			dynamic_sidebar( 'custom-video' );
-
+			dynamic_sidebar( 'custom-video' ); ?> 
+		
+		<div class="archive-post">
+			<?php
 			$posts = get_posts( array(
 				'post_type' 		=> 	array( 'meets', 'post', 'articles' ),
-				'posts_per_page'	=> 	3,
+				'posts_per_page'	=> 	-1,
 				'meta_key' 			=> 	'date',
 				'orderby' 			=> 	'meta_value',
 				'order'				=>	'DESC'
@@ -36,28 +38,14 @@ get_header(); ?>
 
 				if ( get_edit_post_link() ) : ?>
 
-					<footer class="entry-footer">
-						<span>Senast ändrad <?php the_modified_date(); ?></span>
-
-						<?php
-						edit_post_link(
-							sprintf(
-								/* translators: %s: Name of current post */
-								esc_html__( 'Redigera inlägg %s', 'sverigestamfagelforening' ),
-								the_title( '<span class="screen-reader-text">"', '"</span>', false )
-							),
-							'<span class="edit-link">',
-							'</span>'
-						); ?>
-
-					</footer><!-- .entry-footer -->
-
 				<?php
 				endif;
 				
 			endforeach; 
 			wp_reset_postdata(); ?>
 			
+		</div>
+		<?php posts_nav_link(); ?>
 			<div class="side-archive">				
 				<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			</div>

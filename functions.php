@@ -112,8 +112,8 @@ function sverigestamfagelforening_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
 		'before_widget' => '<div id="%1$s" class="archive-widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Custom-video', 'sverigestamfagelforening' ),
@@ -121,8 +121,8 @@ function sverigestamfagelforening_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
 		'before_widget' => '<div id="%1$s" class="custom-video">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'sverigestamfagelforening_widgets_init' );
