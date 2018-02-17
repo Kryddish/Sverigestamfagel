@@ -1,0 +1,30 @@
+.contact-container {
+    margin-top: 50px;
+}  
+
+input[type=text], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-submit {
+    background-color: #41CA86;
+    border-radius: 5px;
+    padding: 0.5em 1.5em;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    border: none;
+    vertical-align: middle;
+}
+
+textarea {
+    width: 50%;
+    display: block;
+    padding: 12px 20px;
+    margin: 8px 0;
+}

@@ -38,11 +38,16 @@
 --------------------------------------------------------------*/
 @import "posts/posts";
 
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+@import "contact-page/contact-page";
+
 
 .page-template-archive {
     .side-archive {
         background-color: #fff;
-        width: 40%;
+        width: 40%; 
         float: right;
         padding: 0 50px;
         margin: 50px auto;
