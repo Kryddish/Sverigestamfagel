@@ -44,10 +44,6 @@ add_action('admin_head', 'stf_custom_fonts');
 function stf_custom_fonts() {
 	echo '
 	<style>
-		body {
-			font-family: "Averia Sans Libre";
-			font-size: 12px;
-		}
 		.menu-icon-meets img {
 			opacity: 1 !important;
 		}
@@ -67,3 +63,15 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+	global $post;
+
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );

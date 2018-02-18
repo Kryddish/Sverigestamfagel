@@ -12,19 +12,19 @@
  * @package sverigestamfagelforening
  */
 
-get_header(); ?>
+get_header();
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-		<section id="contact">
-	
-			<div class="contact-container">
-				
-			</div>
-		</section>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	while ( have_posts() ) : the_post(); ?>
+
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
+				<?php the_content(); ?>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+	<?php
+	endwhile ?>
 
 <?php
-// get_sidebar();
+get_sidebar();
 get_footer();

@@ -17,13 +17,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+			<?php 	if( have_rows('headline') ):
+						while ( have_rows('headline') ) : the_row(); ?>
+					<h2><?php the_field(); ?></h2>
 
-				get_template_part( 'template-parts/content', 'none' );
-
-			endwhile; // End of the loop.
-			?>
+					<?php endwhile; endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
