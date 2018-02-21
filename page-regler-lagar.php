@@ -12,18 +12,19 @@
  * @package sverigestamfagelforening
  */
 
-get_header();
+get_header(); ?>
 
-	while ( have_posts() ) : the_post(); ?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
-				<?php the_content(); ?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
+			<?php 	if( have_rows('headline') ):
+						while ( have_rows('headline') ) : the_row(); ?>
+					<h2><?php the_field(); ?></h2>
 
-	<?php
-	endwhile ?>
+					<?php endwhile; endif; ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php
 get_sidebar();

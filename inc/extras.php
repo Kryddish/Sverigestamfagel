@@ -38,6 +38,18 @@ function sverigestamfagelforening_pingback_header() {
 }
 add_action( 'wp_head', 'sverigestamfagelforening_pingback_header' );
 
+// Custom admin CSS
+add_action('admin_head', 'stf_custom_fonts');
+
+function stf_custom_fonts() {
+	echo '
+	<style>
+		.menu-icon-meets img {
+			opacity: 1 !important;
+		}
+	</style>';
+}
+
 // Register Google API
 function my_acf_init() {
 	
@@ -51,3 +63,15 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+	global $post;
+
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
