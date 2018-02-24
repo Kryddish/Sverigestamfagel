@@ -38,18 +38,6 @@ function sverigestamfagelforening_pingback_header() {
 }
 add_action( 'wp_head', 'sverigestamfagelforening_pingback_header' );
 
-// Custom admin CSS
-add_action('admin_head', 'stf_custom_fonts');
-
-function stf_custom_fonts() {
-	echo '
-	<style>
-		.menu-icon-meets img {
-			opacity: 1 !important;
-		}
-	</style>';
-}
-
 // Register Google API
 function my_acf_init() {
 	

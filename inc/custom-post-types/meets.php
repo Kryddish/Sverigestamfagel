@@ -32,7 +32,7 @@ $args = array(
     'label'                 => __( 'Fågelträff', 'sverigestamfagelforening' ),
     'description'           => __( 'Post Type Description', 'sverigestamfagelforening' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ),
+    'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
     'taxonomies'            => array(),
     'hierarchical'          => false,
     'public'                => true,
@@ -48,6 +48,6 @@ $args = array(
     'capability_type'       => 'post',
     'show_in_rest'          => true,
     'rest_base'             => 'meets',
-    'menu_icon'				=> 'http://localhost/~max/lightweb/wp-content/uploads/2018/02/meets-icon.png'
+    'menu_icon'				=> 'dashicons-twitter'
 );
 register_post_type( 'meets', $args );

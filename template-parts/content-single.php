@@ -33,62 +33,95 @@
 
     </header><!-- .entry-footer -->
     <div class="entry">
-        <div class="image">
-            <img src="<?php
-            if( get_the_post_thumbnail_url() ) :
-                the_post_thumbnail_url();
+
+            <?php
+            if( get_the_post_thumbnail_url() ) : ?>
+                <div class="image">
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
+                </div>
+            <?php
             else:
                 $images = get_field('images');
     
-                if( $images ):
-                    echo $images[0]['url'];
-                else :
-                    echo get_stylesheet_directory_uri() . '/dist/img/stf_logo.png';				
+                if( $images ): ?>
+                    <div class="image">
+                        <img src="<?php echo $images[0]['url']; ?>" alt="Post image">
+                    </div>
+                <?php
                 endif;
 
-            endif; ?>" alt="Post image">
-        </div>
+            endif; ?>
+
         <div class="event">
-            <div class="text">
 
-                <?php
-                $location = get_field( 'location' );
+            <?php
+            if( get_field( 'time' ) || get_field( 'date' ) || get_field( 'location' ) ) : ?>
 
-                if( get_post_type_object('meets') ) : ?>
-
-                    <h5 class="category">Typ av event:</h5>
-                    <p><?php echo get_post_type_object('meets')->labels->singular_name; ?></p>
-                    <h5 class="date">När:</h5>
-                    <p>
-                        <?php
-                        if( get_field( 'time' ) ) : ?>
-                            Kl. <?php the_field( 'time' ); ?>, 
-                        <?php
-                        endif; ?>
-
-                        <?php the_field( 'date' ); ?>
-                    </p>
+                <div class="text">
 
                     <?php
-                    if( !empty( $location['address'] ) ) : ?>
-                        <h5>Var:</h5>
-                        <p><?php echo $location['address'] ?></p>
-                    <?php
-                    endif;
-                    
-                endif; ?>
+                    $location = get_field( 'location' );
 
-            </div>
-            <div class="info">
+                    if( get_post_type_object('meets') ) : ?>
 
-                <?php
-                if( get_the_excerpt() ) : ?>
-                    <h5>Info:</h5>
+                        <h5 class="category">
+
+                            <?php
+                            $post_type = get_post_type();
+
+                            if( $post_type != 'post' ) :
+                                echo get_post_type_object( $post_type )->labels->singular_name;
+                            else:
+                                $categories = get_the_category();
+                                foreach($categories as $category) :
+                                    echo $category->name . ' ';
+                                endforeach;
+                            endif; ?>
+
+                        </h5>
+
+                        <?php 
+                        if( get_field( 'time' ) || get_field( 'date' ) ) : ?>
+
+                            <h5 class="date">När:</h5>
+                            <p>
+
+                                <?php
+                                if( get_field( 'time' ) ) : ?>
+                                    Kl. <?php the_field( 'time' ); ?><br>
+                                <?php
+                                endif;
+                                if( get_field( 'date' ) ) :
+                                    the_field( 'date' );
+                                endif; ?>
+                                
+                            </p>
+
+                        <?php
+                        endif;
+
+                        if( !empty( $location['address'] ) ) : ?>
+                            <h5>Var:</h5>
+                            <p><?php echo $location['address'] ?></p>
+                        <?php
+                        endif;
+                        
+                    endif; ?>
+
+                </div>
+
+            <?php
+            endif; ?>
+
+            <?php
+            if( get_the_excerpt() ) : ?>
+
+                <div class="info">
                     <?php the_content(); ?>
-                <?php
-                endif; ?>
-            
-            </div>
+                </div>
+
+            <?php
+            endif; ?>
         </div>
     </div>
 

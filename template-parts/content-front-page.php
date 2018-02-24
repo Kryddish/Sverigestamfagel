@@ -109,12 +109,26 @@
 			<div class="posts-container">
 
 				<?php
+				$post_types = 
+				get_post_types( array(
+					'public' => true
+				) );
+				unset($post_types['attachment'], $post_types['page']);
+
 				$posts = get_posts( array(
-					'post_type' 		=> 	array( 'meets', 'post' ),
+					'post_type' 		=> 	$post_types,
 					'posts_per_page'	=> 	3,
-					'meta_key' 			=> 	'date',
-					'orderby' 			=> 	'meta_value',
-					'order'				=>	'DESC'
+					'meta_query'  		=> array(
+						'relation' => 'OR',
+						array(
+							'key'			=> 'date',
+							'compare'		=> 'EXISTS',
+						),
+						array(
+							'key'		=> 'post_date',
+							'compare' 	=> 'NOT EXISTS',
+						)
+					)
 				) );
 
 				foreach( $posts as $post ) : setup_postdata( $post );

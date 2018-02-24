@@ -36,7 +36,14 @@ $location = get_field( 'location' ); ?>
 
 		<div class="text">
 			<header>
-				<h6 class="date"><?php the_field( 'date' ); ?></h6>
+				<h6 class="date">
+					<?php
+					if(get_field( 'date' )) :
+						the_field( 'date' ); 
+					else : 
+						the_date();
+					endif;?>
+				</h6>
 				<h6 class="category">
 
 					<?php
@@ -46,7 +53,9 @@ $location = get_field( 'location' ); ?>
 						echo get_post_type_object( $post_type )->labels->singular_name;
 					else:
 						$categories = get_the_category();
-						echo $categories[0]->name;
+						foreach($categories as $category) :
+							echo $category->name . ' ';
+						endforeach;
 					endif; ?>
 
 				</h6>
