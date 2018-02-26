@@ -29,7 +29,7 @@ $location = get_field( 'location' ); ?>
 			if( $images ):
 				echo $images[0]['url'];
 			else :
-				echo get_stylesheet_directory_uri() . '/dist/img/stf_logo.png';				
+				echo get_stylesheet_directory_uri() . '/dist/img/placeholder.png';				
 			endif;
 
 		endif; ?>" alt="Post image">
@@ -39,9 +39,9 @@ $location = get_field( 'location' ); ?>
 				<h6 class="date">
 					<?php
 					if(get_field( 'date' )) :
-						the_field( 'date' ); 
-					else : 
-						the_date();
+						the_field( 'date' );
+					else :
+						echo get_the_date();
 					endif;?>
 				</h6>
 				<h6 class="category">
@@ -51,11 +51,8 @@ $location = get_field( 'location' ); ?>
 
 					if( $post_type != 'post' ) :
 						echo get_post_type_object( $post_type )->labels->singular_name;
-					else:
-						$categories = get_the_category();
-						foreach($categories as $category) :
-							echo $category->name . ' ';
-						endforeach;
+					else :
+						_e('Inlägg', 'sverigestamfagelforening');
 					endif; ?>
 
 				</h6>

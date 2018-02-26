@@ -117,6 +117,28 @@ function sverigestamfagelforening_categorized_blog() {
 }
 
 /**
+ * Print out an array or object so it could be read easily.
+ */
+function stf_pre($array) {
+	echo '<pre>' . print_r( $array, true ) . '</pre>';
+}
+
+function stf_sort_date($array) {
+	foreach ($array as $key => $part) {
+		$date = get_post_meta($part->ID, 'date', true);
+
+		if ( !empty( $date ) ) {
+			$sort[$key] = strtotime($date);
+		} else {
+			$sort[$key] = strtotime($part->post_date);
+		}
+	}
+	array_multisort($sort, SORT_DESC, $array);
+	
+	return $array;
+}
+
+/**
  * Flush out the transients used in sverigestamfagelforening_categorized_blog.
  */
 function sverigestamfagelforening_category_transient_flusher() {

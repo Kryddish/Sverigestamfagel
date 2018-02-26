@@ -30,6 +30,21 @@
         endif; ?>
 
         <h3><?php the_title(); ?></h3>            
+        <h5 class="category">
+
+            <?php
+
+            $categories = get_the_category();
+
+            foreach($categories as $category) :
+                if( reset($categories) === $category) {
+                    echo $category->name;
+                } else {
+                    echo ', ' . $category->name;                    
+                }
+            endforeach; ?>
+
+        </h5>
 
     </header><!-- .entry-footer -->
     <div class="entry">

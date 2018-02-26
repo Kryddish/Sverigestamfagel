@@ -117,19 +117,20 @@
 
 				$posts = get_posts( array(
 					'post_type' 		=> 	$post_types,
-					'posts_per_page'	=> 	3,
-					'meta_query'  		=> array(
-						'relation' => 'OR',
-						array(
-							'key'			=> 'date',
-							'compare'		=> 'EXISTS',
-						),
-						array(
-							'key'		=> 'post_date',
-							'compare' 	=> 'NOT EXISTS',
-						)
-					)
+					'posts_per_page'	=> 	3
 				) );
+
+				// Sort posts
+				foreach ($posts as $key => $part) {
+					$date = get_post_meta($part->ID, 'date', true);
+
+					if ( !empty( $date ) ) {
+						$sort[$key] = strtotime($date);
+					} else {
+						$sort[$key] = strtotime($part->post_date);
+					}
+				}
+				array_multisort($sort, SORT_DESC, $posts);
 
 				foreach( $posts as $post ) : setup_postdata( $post );
 
