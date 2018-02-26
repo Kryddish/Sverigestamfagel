@@ -24,16 +24,16 @@
 		width: 100%;
 	}
 
+	&.toggled {
+		.menu {
+			display: flex;			
+		}
+	}
+
 	.menu-navigation-container {
 		@media screen and (min-width: $mobile) {
 			max-width: $page;
 			margin: auto;
-		}
-	}
-
-	&.toggled {
-		.menu {
-			display: flex;			
 		}
 	}
 
@@ -54,48 +54,79 @@
 			padding-bottom: 60px;
 		}
 
-		a {
-			transition: background-color 0.15s ease-out;
-			display: inline-block;
-			width: 100%;
-			padding: 1em 1.5em;
-			text-decoration: none;
-			color: #fff;
+		.menu-item {
+			position: relative;
 
-			@media screen and (max-width: $mobile) {
-				text-align: center;
-				padding: 1.5em 0;
-			}
-
-			&:hover {
+			&.current-menu-item {
 				background-color: #41CA86;
 			}
-		}
-
-		.current-menu-item {
-			background-color: #41CA86;
-		}
-
-		.cta {
-			@media screen and (min-width: $mobile) {
-				margin-left: 1.5em;
+			&.cta {
+				@media screen and (min-width: $mobile) {
+					margin-left: 1.5em;
+				}
+				a {
+					background-color: #41CA86;
+					border-radius: 5px;
+					padding: 0.5em 1.5em;
+					text-transform: uppercase;
+					font-size: 18px;
+	
+					@media screen and (min-width: $mobile) {
+						position: relative;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+	
+					&:hover {
+						text-decoration: none;
+						opacity: 0.8;
+					}
+				}
 			}
 			a {
-				background-color: #41CA86;
-				border-radius: 5px;
-				padding: 0.5em 1.5em;
-				text-transform: uppercase;
-				font-size: 18px;
-
-				@media screen and (min-width: $mobile) {
-					position: relative;
-					top: 50%;
-					transform: translateY(-50%);
+				transition: background-color 0.15s ease-out;
+				display: inline-block;
+				width: 100%;
+				padding: 1em 1.5em;
+				text-decoration: none;
+				color: #fff;
+	
+				@media screen and (max-width: $mobile) {
+					text-align: center;
+					padding: 1.5em 0;
 				}
-
+	
 				&:hover {
-					text-decoration: none;
-					opacity: 0.8;
+					background-color: #41CA86;
+				}
+				&:after {
+					content:  ' +';
+				}
+				&:only-child:after {
+					content: '';
+				}
+			}
+			.menu-toggle {
+				display: none;
+			}
+			.sub-menu {
+				transform-origin: top;
+				opacity: 0;
+				transition: transform .2s ease, opacity .2s ease;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				z-index: 1;
+				background-color: $color__skin;
+				transform: scaleY(0);
+				position: absolute;
+				top: 100%;
+				left: 0;
+			}
+			&:hover {
+				.sub-menu {
+					transform: scaleY(1);
+					opacity: 1;
 				}
 			}
 		}
