@@ -33,7 +33,6 @@
         <h5 class="category">
 
             <?php
-
             $categories = get_the_category();
 
             foreach($categories as $category) :
@@ -77,25 +76,7 @@
                     <?php
                     $location = get_field( 'location' );
 
-                    if( get_post_type_object('meets') ) : ?>
-
-                        <h5 class="category">
-
-                            <?php
-                            $post_type = get_post_type();
-
-                            if( $post_type != 'post' ) :
-                                echo get_post_type_object( $post_type )->labels->singular_name;
-                            else:
-                                $categories = get_the_category();
-                                foreach($categories as $category) :
-                                    echo $category->name . ' ';
-                                endforeach;
-                            endif; ?>
-
-                        </h5>
-
-                        <?php 
+                    if( get_post_type_object('meets') ) :
                         if( get_field( 'time' ) || get_field( 'date' ) ) : ?>
 
                             <h5 class="date">När:</h5>

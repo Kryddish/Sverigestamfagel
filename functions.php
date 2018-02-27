@@ -116,10 +116,10 @@ function sverigestamfagelforening_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Custom-video', 'sverigestamfagelforening' ),
-		'id'            => 'custom-video',
+		'name'          => esc_html__( 'Banner', 'sverigestamfagelforening' ),
+		'id'            => 'banner',
 		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
-		'before_widget' => '<div id="%1$s" class="custom-video">',
+		'before_widget' => '<div id="%1$s" class="banner">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',

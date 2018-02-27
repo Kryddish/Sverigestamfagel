@@ -1,7 +1,12 @@
-.page-template-archive {
+.archive, .page-template-archive {
+
+    .title {
+        padding: 0 100px;
+    }
 
     // Main-content
-    .archive-post {
+    .posts-container {
+        padding: 0 100px;
         float: left;
 
         @media screen and (min-width: $mobile) {
@@ -10,17 +15,6 @@
 
         .archive-widget:not(:last-child) {
             border-bottom: 1px solid grey;
-        }
-        .stf-post {
-            background-color: #fff;
-            padding: 20px;
-            margin-top: 50px;
-    
-            img {
-                width: 100%;
-                margin: auto;
-                text-align: center;
-            }
         }
         .posts-navigation {
             text-align: center;
@@ -35,11 +29,13 @@
         background-color: #fff;
         float: right;
         padding: 0 50px;
-        margin: 50px auto;
         border: 1px solid rgba($color: #000, $alpha: 0.2);
 
+        @media screen and (min-width: $mobile) {
+            margin-top: 50px;
+        }
         @media screen and (max-width: $mobile) {
-            display: none;
+            width: 100%;
         }
 
         h3 {

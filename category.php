@@ -30,16 +30,7 @@ get_header(); ?>
 			<div class="archive-post">
 
 				<h3 class="title">
-					<?php
-					if( is_day() ) {
-						echo get_the_date();
-					}
-					elseif( is_month() ) {
-						echo get_the_date('F Y');
-					}
-					elseif( is_year() ) {
-						echo get_the_date('Y');
-					} ?>
+					<?php single_cat_title(); ?>
 				</h3>
 
 				<?php
@@ -47,34 +38,36 @@ get_header(); ?>
 				get_post_types( array(
 					'public' => true
 				) );
-				unset($post_types['attachment'], $post_types['page']);
+				unset( $post_types['attachment'], $post_types['page'], $post_types['meets'] );
 
-				if( get_field( 'posts_per_page' ) ) {
-					$ppp = get_field( 'posts_per_page' );
-				} else {
-					$ppp = 5;
-				}
+				$Qobject = get_queried_object();
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-				$loop = new WP_Query( array(
+				$wp_query = new WP_Query( array(
 					'post_type' 		=> $post_types,
-					'paged'				=> get_query_var( 'paged' ),
-					'posts_per_page'	=> $ppp,
+					'paged'				=> $paged,
+					'category_name'		=> $Qobject->slug,
+					'posts_per_page'	=> 1,
 				) );
 
-				$loop->posts = stf_sort_date($loop->posts);
+				$wp_query->posts = stf_sort_date($wp_query->posts);
 
-				if( $loop->have_posts() ) : ?>
+				if( $wp_query->have_posts() ) : ?>
 					<div class="posts-container">
 						<?php
-						while( $loop->have_posts() ) : $loop->the_post();
+						while( $wp_query->have_posts() ) : $wp_query->the_post();
 
 							get_template_part( 'template-parts/content' );
 							
 						endwhile; ?>
 						<div class="posts-navigation">
-						<?php
+							<?php
+							$big = 999999999;
 							echo paginate_links(array(
-								'total' 			=> $loop->max_num_pages,
+								'base' 				=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+								'format' 			=> '/page/%#%',
+								'current' 			=> max(1, $paged),
+								'total' 			=> $wp_query->max_num_pages,
 								'prev_text'         => __('« Föregående sida', 'sverigestamfagelforening'),
 								'next_text'         => __('Nästa sida »', 'sverigestamfagelforening'),
 								'mid_size'          => 2,

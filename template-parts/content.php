@@ -20,19 +20,22 @@ $location = get_field( 'location' ); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
 
 	<a class="link" href="<?php the_permalink(); ?>">
-		<img src="<?php
-		if( get_the_post_thumbnail_url() ) :
-			the_post_thumbnail_url();
+		<?php
+		if( get_the_post_thumbnail() ) : ?>
+			<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
+		<?php
 		else:
 			$images = get_field('images');
 
-			if( $images ):
-				echo $images[0]['url'];
-			else :
-				echo get_stylesheet_directory_uri() . '/dist/img/placeholder.png';				
+			if( $images ): ?>
+				<img src="<?php echo $images[0]['url']; ?>" alt="Post image">
+			<?php
+			elseif( is_front_page() ) : ?>
+				<img src="<?php echo get_stylesheet_directory_uri() . '/dist/img/placeholder.png'; ?>" alt="Post image">
+			<?php
 			endif;
 
-		endif; ?>" alt="Post image">
+		endif; ?>
 
 		<div class="text">
 			<header>

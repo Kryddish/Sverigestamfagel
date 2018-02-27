@@ -14,11 +14,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'sverigestamfagelforening' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Ojsan! Den där sidan kunde inte hittas.', 'sverigestamfagelforening' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'sverigestamfagelforening' ); ?></p>
+					<p><?php esc_html_e( 'Det verkar som att ingenting hittades på denna plats. Kanske prova en av länkarna nedan eller med en sökning?', 'sverigestamfagelforening' ); ?></p>
 
 					<?php 
 						get_search_form();
@@ -48,7 +48,7 @@ get_header(); ?>
 						endif;
 
 						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'sverigestamfagelforening' ), convert_smilies( ':)' ) ) . '</p>';
+						$archive_content = '<p>' . sprintf( esc_html__( 'Prova att leta i månadsarkiven. %1$s', 'sverigestamfagelforening' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
 						the_widget( 'WP_Widget_Tag_Cloud' );

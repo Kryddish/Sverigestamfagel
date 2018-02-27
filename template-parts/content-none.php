@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'sverigestamfagelforening' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Inget hittat', 'sverigestamfagelforening' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,17 +20,18 @@
 
 			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'sverigestamfagelforening' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
-		<?php elseif ( is_search() ) : ?>
+		<?php
+		elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sverigestamfagelforening' ); ?></p>
+			<p><?php esc_html_e( 'Ledsen, men din sökning gav inga träffar. Var vänlig prova igen med andra sökord.', 'sverigestamfagelforening' ); ?></p>
 			<?php
 				get_search_form();
 
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'sverigestamfagelforening' ); ?></p>
-			<?php
-				get_search_form();
+			<p><?php esc_html_e( 'Det verkar som vi inte kan hitta det du letade efter. Kanske en sökning hjälper till.', 'sverigestamfagelforening' ); ?></p>
+			
+			<?php get_search_form();
 
 		endif; ?>
 	</div><!-- .page-content -->

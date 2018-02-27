@@ -24,6 +24,10 @@
             display: block;
             overflow: auto;
 
+            &:hover {
+                text-decoration: none;
+            }
+
             img {
                 object-fit: cover;
 
@@ -42,11 +46,7 @@
         .text {
             text-align: left;
             color: $color__text-main;
-            padding: 0.5em 1.5em;
-
-            @media screen and (min-width: $mobile) {
-                width: 50%;                
-            }
+            padding: 1em 1.5em;
 
             header {
                 display: flex;

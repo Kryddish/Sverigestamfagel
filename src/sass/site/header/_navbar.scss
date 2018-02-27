@@ -57,7 +57,8 @@
 		.menu-item {
 			position: relative;
 
-			&.current-menu-item {
+			&.current-menu-item,
+			&.current-menu-parent {
 				background-color: #41CA86;
 			}
 			&.cta {

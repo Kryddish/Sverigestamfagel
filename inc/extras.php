@@ -63,3 +63,9 @@ function add_slug_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+// Pagination
+function mg_news_pagination_rewrite() {
+	add_rewrite_rule(get_option('category_base').'/page/?([0-9]{1,})/?$', 'index.php?pagename='.get_option('category_base').'&paged=$matches[1]', 'top');
+}
+add_action('init', 'mg_news_pagination_rewrite');
