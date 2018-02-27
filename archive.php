@@ -19,13 +19,9 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			
-			<?php
-			if( dynamic_sidebar( 'banner' ) ) : ?>
-				<div>
-					<?php dynamic_sidebar( 'banner' ); ?> 				
-				</div>
-			<?php
-			endif; ?>
+			<div>
+				<?php dynamic_sidebar( 'banner' ); ?> 				
+			</div>
 
 			<div class="archive-post">
 

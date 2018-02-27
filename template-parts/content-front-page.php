@@ -172,7 +172,8 @@
 		</section>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
+	<?php
+	if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<span>Senast ändrad <?php the_modified_date(); ?></span>
 
@@ -188,5 +189,6 @@
 			); ?>
 
 		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+	<?php
+	endif; ?>
 </article><!-- #post-## -->

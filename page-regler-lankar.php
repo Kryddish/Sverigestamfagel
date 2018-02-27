@@ -10,10 +10,10 @@ get_header(); ?>
 
 			<?php
 			if( have_rows('headline') ):
-				while ( have_rows('headline') ) : the_row(); ?>
-					<h2><?php the_field(); ?></h2>
+				while ( have_rows('headline') ) : the_row();
 
-				<?php
+				get_template_part( 'template-parts/content', 'none' );
+
 				endwhile;
 			endif; ?>
 
