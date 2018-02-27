@@ -118,7 +118,7 @@
 				if( get_field( 'posts_per_page' ) ) {
 					$ppp = get_field( 'posts_per_page' );
 				} else {
-					$ppp = 5;
+					$ppp = 3;
 				}
 
 				$posts = get_posts( array(

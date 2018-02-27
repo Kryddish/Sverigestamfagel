@@ -18,7 +18,7 @@ get_header();
 
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
-				<?php the_content(); ?>
+				<?php echo do_shortcode( '[contact-form-7 id="2145" title="Kontakt"]' ); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 

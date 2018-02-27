@@ -6,11 +6,11 @@
 
     // Main-content
     .posts-container {
-        padding: 0 100px;
         float: left;
 
         @media screen and (min-width: $mobile) {
             width: 70%;
+            padding: 0 100px;
         }
 
         .archive-widget:not(:last-child) {

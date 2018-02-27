@@ -22,10 +22,6 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
-
-	@media screen and (max-width: $mobile) {
-		display: none;
-	}
 }
 
 @import "lists";

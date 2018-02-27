@@ -5,6 +5,10 @@
     .link {
         display: flex;
         
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;
+        }
+        
         img  {
             width: 100%;
         }
