@@ -16,7 +16,20 @@
     // Add class to first slide
     $(slides[index]).addClass('current');
 
-    $('.bli-medlem .next-slide').click(function() {
+    // Submit contact form
+    $('.wpcf7').on('wpcf7mailsent', function() {
+        nextSlide();
+    });
+
+    // Previous buttons
+    $('.buttons .previous').click(function() {
+        if(index > 0) {
+            prevSlide();
+        }
+    });
+
+    // Next buttons
+    $('.bli-medlem .begin').click(function() {
         if(slides.length-1 > index) {
             nextSlide();
         }
@@ -32,13 +45,13 @@
         slideIndex++;
     });
 
-    nav.find('div').click(function() {
+    nav.find('div:not(:last-child)').click(function() {
 
-        if(index < $(this).index()) {
+        if( index < $(this).index() ) {
             $(this).removeClass('active');
             navigate($(this).index());
         }
-        if(index > $(this).index()) {
+        if( index > $(this).index() ) {
             $(this).removeClass('active');
             navigate($(this).index());
         }
@@ -63,6 +76,8 @@
 
             $(document.querySelectorAll('.bli-medlem .slide-navigation div')[index]).addClass('active');
         }
+
+        changeElements();
     }
 
     function nextSlide() {
@@ -84,6 +99,8 @@
 
             $(document.querySelectorAll('.bli-medlem .slide-navigation div')[index]).addClass('active');
         }
+
+        changeElements();
     }
 
     function navigate(i) {
@@ -104,14 +121,43 @@
 
         $(document.querySelectorAll('.bli-medlem .slide-navigation div')[index]).addClass('active');
 
-        if(left > -((slides.length * 100) - 100)) {
-            
+        changeElements();
+    }
 
-            
+    function changeElements() {
 
-            
+        // First slide
+        if(index === 0) {
+            $('.previous').fadeOut();
+            $('.container h4:nth-of-type(2)').fadeOut();
 
+            setTimeout(function() {
+                $('.buttons .begin').fadeIn();
+                $('.container h4:nth-of-type(1)').fadeIn();
+            }, 400);
+        } else {
             
+            // Middle slide
+            if(index != slides.length-1) {
+                $('.buttons .begin').fadeOut();
+                $('.container h4:nth-of-type(1)').fadeOut();
+
+                setTimeout(function() {
+                    $('.container h4:nth-of-type(2)').fadeIn();
+                    $('.previous').fadeIn();
+                }, 400);
+            }
+
+            // Last slide
+            else {
+                nav.fadeOut();
+                $('.container h4:nth-of-type(2)').fadeOut();
+                $('.buttons .previous').fadeOut();
+
+                setTimeout(function() {
+                    $('.container h4:nth-of-type(3)').fadeIn();
+                }, 400);
+            }
         }
     }
 })(jQuery);
