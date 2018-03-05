@@ -33,7 +33,7 @@ get_header(); ?>
 					<p>
 						På sommarna träffas vi utomhus i vårt stora friflygningstält. Här ges fåglarna möjlighet att umgås med varandra, flyga runt och tränas socialt. Under vinterhalvåret anordnar vi friflygningar inomhus, filmvisningar, studiebesök och föredrag av olika slag. <br>
 						Som medlem i STF blir du automatiskt medlem i Riksförbundet Svensk Fågelhobby (SF). Medlemskapet ger dig även vår populära medlemstidning "Fågelhobby" kostnadsfritt tio gånger per år.
-					</p>
+					</p> 
 					<p>Passa på att bli medlem för att snabbt ta del av våra Medemsförmåner. Mer info kan du hitta här</p>
 					</div>
 					
