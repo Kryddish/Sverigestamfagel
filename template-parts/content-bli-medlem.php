@@ -10,11 +10,36 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="container">
-		<h4><?php the_field('heading'); ?></h4>
+		<h4>
+			<?php
+			if( get_field('heading1') ) :
+				the_field('heading1'); 
+			else : ?>
+				Såhär går det till...
+			<?php
+			endif; ?>
+		</h4>
+		<h4>
+			<?php
+			if( get_field('heading2') ) :
+				the_field('heading2');
+			else : ?>
+				Vi behöver veta lite om dig...
+			<?php
+			endif; ?>
+		</h4>
+		<h4>
+			<?php
+			if( get_field('heading3') ) :
+				the_field('heading3'); 
+			else : ?>
+				Nu var det nästan klart!
+			<?php
+			endif; ?>
+		</h4>
 		<div class="onboard-slider">
 			<div class="holder">
 				<div class="slide info">
-
 					<?php
 					if( have_rows('intro') ):
 
@@ -75,9 +100,20 @@
 		</div>
 		<div class="meta">
 			<hr>
-			<span>Behöver du läsa mer om medlemskapet? Klicka <a href="#">här</a></span>
+			<span>
+				<?php
+				if( get_field('info') ) :
+					the_field('info');
+				else : ?>
+					Behöver du läsa mer om medlemskapet? Klicka <a href="<?php echo site_url() . '/om-oss/medlemskapet/'; ?>">här</a>					
+				<?php
+				endif; ?>
+			</span>
 		</div>
-		<button class="next-slide">Börja</button>
+		<div class="buttons">
+			<button class="begin"><?php _e('Börja', 'sverigestamfagelforening'); ?></button>
+			<button class="previous"><?php _e('Föregående', 'sverigestamfagelforening'); ?></button>
+		</div>
 		<div class="slide-navigation"></div>
 	</div>
 	<?php
