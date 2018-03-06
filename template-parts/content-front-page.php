@@ -113,7 +113,7 @@
 				get_post_types( array(
 					'public' => true
 				) );
-				unset($post_types['attachment'], $post_types['page']);
+				unset($post_types['attachment'], $post_types['page'], $post_types['articles']);
 
 				if( get_field( 'posts_per_page' ) ) {
 					$ppp = get_field( 'posts_per_page' );

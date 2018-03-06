@@ -1,70 +1,115 @@
 .single {
     .site-content {
-        .post-navigation,
-        .entry-header {
-            a {
-                font-weight: 700;
-                text-decoration: none;
-                color: #000;
-    
-                &:hover {
-                    border-bottom: 3px solid $color__interactive;
-                }
-            }
-        }
-        .entry-header {
-            margin-top: 2em;
-            text-align: center;
-        }
-        .entry {
-            .image {
-                border-radius: 5px 5px 0 0;
-                height: 600px;
-                overflow: hidden;
+        article {
+            .post-navigation,
+            .entry-header {
+                overflow: auto;
+                padding: 0 1em;
 
-                img {
-                    position: relative;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    object-fit: cover;
-                    min-height: 100%;
-                    width: 100%;
-                }
-            }
-            .event {
-                border-radius: 5px;
-                padding: 1em 2em;
-                display: flex;
-                background-color: rgb(238, 238, 238);
-
-                .text {
-                    flex: 1;
-                    padding-right: 1em;
-                }
-                .info {
-                    flex: 2;
-                    padding-left: 1em;
-    
-                    h5 {
-                        text-align: center;
-                        margin-top: 0;
+                a {
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: #000;
+                    border-bottom: 3px solid transparent;
+        
+                    &:hover {
+                        border-bottom: 3px solid $color__interactive;
                     }
                 }
             }
-        }
-        ul {
-            padding: 0;
-            list-style-type: none;
-            column-count: 3;
-            column-gap: 0;
+            .entry-header {
+                margin-top: 2em;
+                text-align: center;
 
-            li {
-                break-inside: avoid;
-                padding: 5px;
+                .title {
+                    @media screen and (max-width: $mobile) {
+                        font-size: 24px;
+                    }
+                }
 
-                img {
-                    border-radius: 5px;                    
-                    width: 100%;
+                .category {
+                    margin: 0 0 .75em;
+                }
+            }
+            .entry {
+                .image {
+                    border-radius: 5px 5px 0 0;
+                    height: 600px;
+                    overflow: hidden;
+
+                    @media screen and (max-width: $mobile) {
+                        height: 300px;
+                    }
+
+                    img {
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        object-fit: cover;
+                        min-height: 100%;
+                        width: 100%;
+                    }
+                }
+                .event {
+                    border-radius: 5px;
+                    padding: 2em;
+                    display: flex;
+                    background-color: rgb(238, 238, 238);
+
+                    @media screen and (max-width: $mobile) {
+                        flex-direction: column;
+                    }
+
+                    .text {
+                        flex: 1;
+
+                        @media screen and (min-width: $mobile) {
+                            padding-right: 2em;
+                            border-right: 1px solid rgba(0, 0, 0, 0.1)
+                        }
+                    }
+                    .info {
+                        flex: 2;
+
+                        @media screen and (min-width: $mobile) {
+                            padding-left: 2em;
+                        }
+        
+                        h5 {
+                            text-align: center;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            ul {
+                padding: 0;
+                list-style-type: none;
+                column-count: 3;
+                column-gap: 0;
+
+                @media screen and (max-width: $mobile) {
+                    column-count: 2;
+                }
+
+                li {
+                    break-inside: avoid;
+                    padding: 5px;
+
+                    img {
+                        border-radius: 5px;                    
+                        width: 100%;
+                    }
+                }
+            }
+            .post-navigation {
+                overflow: auto;
+                margin: 1em 0;
+                padding: 0;
+
+                a {
+                    display: inline-block;
+                    font-size: 20px;
                 }
             }
         }

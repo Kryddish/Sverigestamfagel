@@ -1,6 +1,5 @@
 .main-navigation {
 	display: block;
-	font-family: $font__sans;
 	font-weight: 400;
 	clear: left;
 	background-color: $color__skin;
@@ -15,14 +14,6 @@
 	}
 
 	@import 'mobile-navbar'; // .mobile-navbar
-
-	&.stick {
-		z-index: 100;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
 
 	&.toggled {
 		.menu {
@@ -51,28 +42,31 @@
 			background-color: $color__skin;
 			flex-direction: column;
 			justify-content: center;
-			padding-bottom: 60px;
 		}
 
 		.menu-item {
 			position: relative;
 
-			&.current-menu-item,
-			&.current-menu-parent {
+			&.current-menu-item {
 				background-color: #41CA86;
+			}
+			&.current-menu-parent {
+				@media screen and (min-width: $mobile) {
+					background-color: #41CA86;
+				}
 			}
 			&.cta {
 				@media screen and (min-width: $mobile) {
 					margin-left: 1.5em;
 				}
 				a {
-					background-color: #41CA86;
 					border-radius: 5px;
 					padding: 0.5em 1.5em;
 					text-transform: uppercase;
-					font-size: 18px;
+					font-size: 20px;
 	
 					@media screen and (min-width: $mobile) {
+						background-color: #41CA86;
 						position: relative;
 						top: 50%;
 						transform: translateY(-50%);
@@ -85,23 +79,30 @@
 				}
 			}
 			a {
-				transition: background-color 0.15s ease-out;
+				font-size: 16px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-family: 'Open Sans';
+				font-weight: bold;
+				transition: 
+					background-color .15s ease-out;
 				display: inline-block;
 				width: 100%;
-				padding: 1em 1.5em;
+				padding: 1.2em 1.5em;
 				text-decoration: none;
 				color: #fff;
 	
 				@media screen and (max-width: $mobile) {
 					text-align: center;
-					padding: 1.5em 0;
-				}
-	
-				&:hover {
-					background-color: #41CA86;
+					padding: .8em 0;
 				}
 				&:after {
 					content:  ' +';
+				}
+				&:hover {
+					@media screen and (min-width: $mobile) {
+						background-color: #41CA86;
+					}
 				}
 				&:only-child:after {
 					content: '';
@@ -112,17 +113,29 @@
 			}
 			.sub-menu {
 				transform-origin: top;
-				opacity: 0;
-				transition: transform .2s ease, opacity .2s ease;
+				transition:
+					transform .2s ease, opacity .2s ease;
 				margin: 0;
 				padding: 0;
 				list-style-type: none;
 				z-index: 1;
 				background-color: $color__skin;
-				transform: scaleY(0);
-				position: absolute;
 				top: 100%;
 				left: 0;
+
+				@media screen and (min-width: $mobile) {
+					position: absolute;
+					transform: scaleY(0);
+					opacity: 0;
+				}
+				@media screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+			&.focus {
+				.sub-menu {
+					display: block;
+				}
 			}
 			&:hover {
 				.sub-menu {
@@ -131,5 +144,12 @@
 				}
 			}
 		}
+	}
+	&.stick {
+		z-index: 100;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 	}
 }

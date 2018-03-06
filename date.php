@@ -11,6 +11,7 @@
  *
  * @package sverigestamfagelforening
  * 
+ * Template name: Archives
  */
 
 get_header(); ?>
@@ -24,7 +25,28 @@ get_header(); ?>
 
 			<div class="archive-post">
 
+				<h3 class="title">
+					<?php
+					if( is_day() ) {
+						echo get_the_date('l, j F Y');
+					}
+					elseif( is_month() ) {
+						echo get_the_date('F Y');
+					}
+					elseif( is_year() ) {
+						echo get_the_date('Y');
+					} ?>
+				</h3>
+
 				<?php
+				global $wp_query;
+
+				// $year = get_query_var('year');
+				// $month = get_query_var('monthnum');
+				// $day = get_query_var('day');
+
+				stf_pre($year);
+					
 				$post_types = 
 				get_post_types( array(
 					'public' => true

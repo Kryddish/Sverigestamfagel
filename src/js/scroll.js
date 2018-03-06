@@ -11,22 +11,23 @@
             scrollTop = $('html, body').scrollTop();
             
             /* Stick navbar */
-            setTimeout(function() {
-                
-                if(scrollTop > navTop) {
-                    navbar.addClass('stick');
-                    header.css({
-                        'padding-bottom': navHeight
-                    });
-                } else {
-                    navbar.removeClass('stick');
-                    header.css({
-                        'padding-bottom': 0
-                    });
-                }
-            }, 20);
+            if(scrollTop > navTop) {
+                navbar.addClass('stick');
+                header.css({
+                    'padding-bottom': navHeight
+                });
+            } else {
+                navbar.removeClass('stick');
+                header.css({
+                    'padding-bottom': 0
+                });
+            }
         });
     }
+
+    // Lazy load images
+    $('.lazy').Lazy();
+
 })( jQuery );
 
 function isMobile() {

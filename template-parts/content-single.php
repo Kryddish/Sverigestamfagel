@@ -29,7 +29,7 @@
         <?php 
         endif; ?>
 
-        <h3><?php the_title(); ?></h3>            
+        <h3 class="title"><?php the_title(); ?></h3>            
         <h5 class="category">
 
             <?php
@@ -108,16 +108,24 @@
 
             <?php
             endif; ?>
+            
+            <div class="info">
+                <?php
+                if( get_the_excerpt() ) : ?>
 
-            <?php
-            if( get_the_excerpt() ) : ?>
+                    
+                        <?php the_content(); ?>
+                    
 
-                <div class="info">
-                    <?php the_content(); ?>
-                </div>
-
-            <?php
-            endif; ?>
+                <?php
+                else : ?>
+                
+                    <h5>
+                        <?php _e('Inget innehåll hittades.', 'sverigestamfagelforening'); ?>
+                    </h5>
+                <?php
+                endif; ?>
+            </div>
         </div>
     </div>
 
@@ -141,7 +149,7 @@
             <?php foreach( $images as $image ): ?>
                 <li>
                     <a target="_blank" href="<?php echo $image['url']; ?>">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </a>
                 </li>
             <?php endforeach; ?>
@@ -149,5 +157,11 @@
 
     <?php
     endif; ?>
+
+    <div class="post-navigation">
+        <?php
+        next_post_link('<span class="nav-next">Tidigare inlägg:<br> %link</span>');
+        previous_post_link('<span class="nav-previous">Nästa inlägg:<br> %link</span>'); ?>
+    </div>
 
 </article>

@@ -12,29 +12,26 @@
 	<div class="container">
 		<h4>
 			<?php
-			if( get_field('heading1') ) :
-				the_field('heading1'); 
-			else : ?>
-				Såhär går det till...
-			<?php
+			if( have_rows('headings') ): 
+				while( have_rows('headings') ): the_row();
+					the_sub_field('intro');
+				endwhile;
+			endif; ?>
+		</h4>
+		<h4>
+		<?php
+			if( have_rows('headings') ): 
+				while( have_rows('headings') ): the_row();
+					the_sub_field('form');
+				endwhile;
 			endif; ?>
 		</h4>
 		<h4>
 			<?php
-			if( get_field('heading2') ) :
-				the_field('heading2');
-			else : ?>
-				Vi behöver veta lite om dig...
-			<?php
-			endif; ?>
-		</h4>
-		<h4>
-			<?php
-			if( get_field('heading3') ) :
-				the_field('heading3'); 
-			else : ?>
-				Nu var det nästan klart!
-			<?php
+			if( have_rows('headings') ): 
+				while( have_rows('headings') ): the_row();
+					the_sub_field('confirm');
+				endwhile;
 			endif; ?>
 		</h4>
 		<div class="onboard-slider">
@@ -60,33 +57,6 @@
 							endforeach;
 
 						endwhile;
-
-					else : ?>
-
-						<div class="step">
-							<div>
-								<span></span>
-							</div>
-							<p>Du fyller i namn, e-postadress, adress, postnummer och postadress</p>
-						</div>
-						<div class="step">
-							<div>
-								<span></span>
-							</div>
-							<p>
-								Du betalar in medlemsavgiften
-								medlemskap: 300 kr / år
-								familjemedlemskap: 70 kr / år
-							</p>
-						</div>
-						<div class="step">
-							<div>
-								<span></span>
-							</div>
-							<p>Du får ett mail när registreringen har genomförts och du är nu medlem i föreningen</p>
-						</div>
-
-						<?php
 					endif; ?>
 
 				</div>
@@ -104,9 +74,6 @@
 				<?php
 				if( get_field('info') ) :
 					the_field('info');
-				else : ?>
-					Behöver du läsa mer om medlemskapet? Klicka <a href="<?php echo site_url() . '/om-oss/medlemskapet/'; ?>">här</a>					
-				<?php
 				endif; ?>
 			</span>
 		</div>

@@ -15,18 +15,13 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'single' );
+				get_template_part( 'template-parts/content', 'single' ); ?>
 
-				the_post_navigation( array(
-					'prev_text'                  => __( 'Tidigare inlägg' ),
-					'next_text'                  => __( 'Nästa inlägg' )
-				) );
-
+			<?php
 			endwhile; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
