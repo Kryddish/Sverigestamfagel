@@ -2,10 +2,10 @@
     position:relative;
 
     @media screen and (min-width: $mobile) {
-        min-height: 500px;
+        min-height: 400px;
     }
     @media screen and (max-width: $mobile) {
-        min-height: 300px;            
+        min-height: 250px;            
     }
 
     .link {
