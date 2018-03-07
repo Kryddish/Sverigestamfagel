@@ -133,14 +133,14 @@ add_action( 'widgets_init', 'sverigestamfagelforening_widgets_init' );
 function sverigestamfagelforening_scripts() {
 	
 	// Stylesheet
-	wp_enqueue_style( 'sverigestamfagelforening-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'sverigestamfagelforening-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
 	// Google fonts
 	wp_enqueue_style( 'sverigestamfagel-fonts', 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|Open+Sans:400,700' );
 	wp_enqueue_script( 'sverigestamfagelforening-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY', '1.0', true );
 
 	//JS Bundle
-	wp_enqueue_script( 'sverigestamfagelforening-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), '1.0', true );
+	wp_enqueue_script( 'sverigestamfagelforening-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), filemtime( get_stylesheet_directory() . '/dist/js/bundle.js' ), true );
 	wp_localize_script( 'sverigestamfagelforening-bundle', 'sverigestamfagelforeningScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'sverigestamfagelforening'),
 		'collapse' => __( 'Collapse child menu', 'sverigestamfagelforening'),

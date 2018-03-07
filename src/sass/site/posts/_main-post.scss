@@ -12,6 +12,7 @@
         img {
             height: 100%;
             min-width: 100%;
+            border-radius: 10px;
     
             @media screen and (min-width: $mobile) {
                 position: absolute;
@@ -25,7 +26,7 @@
         }
         .text {
             max-height: 100%;
-            border-radius: 5px 0 0 0;
+            border-radius: 10px 0 10px 0;
             background-color: rgba(255, 255, 255, 0.7);
     
             @media screen and (min-width: $mobile) {

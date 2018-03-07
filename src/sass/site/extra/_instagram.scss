@@ -12,11 +12,13 @@
         width: calc(100% / 6);
 
         img {
+            border-radius: 10px;
             min-height: 100%;
         }
-
-        &:hover {
-            transform: scale(1.04);
+        @media screen and (min-width: $mobile) {
+            &:hover {
+                transform: scale(1.04);
+            }
         }
     }
 }
