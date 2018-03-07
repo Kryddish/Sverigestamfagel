@@ -1,11 +1,5 @@
 .home {
     .site-content {
-        margin-bottom: 2em;
-
-        @media screen and (min-width: $mobile) {
-            margin-top: 2em;
-        }
-
         .entry-content {
             .top-info {
                 max-height: 500px;
@@ -41,8 +35,6 @@
                 background-color: rgba(0, 0, 0, 0.1)
             }
             .page-content {
-                width: 100%;
-                text-align: center;
                 @import "../extra/instagram";
             }
         }
