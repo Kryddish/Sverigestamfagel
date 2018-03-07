@@ -1,6 +1,5 @@
 .stf-post {
     background-color: #FFFFFF;
-    margin-top: 50px;
 
     .link {
         display: flex;
@@ -11,6 +10,7 @@
         
         img  {
             width: 100%;
+            border-radius: 10px 0 0 10px;
         }
         .text {
             width: 100%;

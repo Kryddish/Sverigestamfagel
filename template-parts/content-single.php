@@ -11,24 +11,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         
     <header class="entry-header">
-
-        <?php if ( get_edit_post_link() ) : ?>
-            <span>Senast ändrad <?php the_modified_date(); ?></span>
-
-            <?php
-            edit_post_link(
-                sprintf(
-                    /* translators: %s: Name of current post */
-                    esc_html__( 'Redigera inlägg %s', 'sverigestamfagelforening' ),
-                    the_title( '<span class="screen-reader-text">"', '"</span>', false )
-                ),
-                '<span class="edit-link">',
-                '</span>'
-            ); ?>
-
-        <?php 
-        endif; ?>
-
         <h3 class="title"><?php the_title(); ?></h3>            
         <h5 class="category">
 
@@ -44,7 +26,6 @@
             endforeach; ?>
 
         </h5>
-
     </header><!-- .entry-footer -->
     <div class="entry">
 

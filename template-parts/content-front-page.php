@@ -147,48 +147,8 @@
 					
 			</div>
 		<hr>
-		<h3><span class="fa fa-instagram"></span> Instagram</h3>
-		<section class="instagram-feed">
+		
+		<?php include( get_stylesheet_directory() . '/template-parts/instagram.php' ); ?>
 
-			<?php
-			$insta_feed = get_field( 'instagram_feed' );
-
-			if( $insta_feed ) {
-				$user = $insta_feed['user'];
-			} else {
-				$user = 'sverigestamfagelforening';
-			}
-
-			$instaResult = file_get_contents('https://www.instagram.com/' . $user . '/?__a=1');
-
-			$insta = json_decode($instaResult, true);
-			$images = $insta['user']['media']['nodes'];
-
-			foreach( $images as $image ) : ?>
-				<a <?php if( $insta_feed['new_window'] ) : echo 'target="_blank"'; endif;?> href="<?php echo 'https://www.instagram.com/p/' . $image['code'] . '/'; ?>"><img src="<?php echo $image['thumbnail_src']; ?>" alt=""></a>
-			<?php
-			endforeach; ?>
-
-		</section>
 	</div><!-- .entry-content -->
-
-	<?php
-	if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<span>Senast ändrad <?php the_modified_date(); ?></span>
-
-			<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Redigera sida %s', 'sverigestamfagelforening' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			); ?>
-
-		</footer><!-- .entry-footer -->
-	<?php
-	endif; ?>
 </article><!-- #post-## -->
