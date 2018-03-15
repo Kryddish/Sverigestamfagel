@@ -1,11 +1,12 @@
 (function( $ ) {
-    if(!isMobile()) {
-        var header = $('.site-header'),
-            scrollTop = $('html, body').scrollTop(),
-            navbar = $('.main-navigation'),
-            navHeight = navbar.height(),
-            navTop = navbar.offset().top;
+    var
+        header = $('.site-header'),
+        scrollTop = $('html, body').scrollTop(),
+        navbar = $('.main-navigation'),
+        navHeight = navbar.height(),
+        navTop = navbar.offset().top;
 
+    if(!isMobile()) {
         $(window).scroll(function() {
 
             scrollTop = $('html, body').scrollTop();
@@ -22,6 +23,10 @@
                     'padding-bottom': 0
                 });
             }
+        });
+    } else {
+        header.css({
+            'padding-bottom': navHeight
         });
     }
 

@@ -35,7 +35,7 @@ get_header(); ?>
 				unset( $post_types['attachment'], $post_types['page'], $post_types['meets'] );
 
 				$Qobject = get_queried_object();
-				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$paged = ( get_query_var( 'page_val' ) ) ? get_query_var( 'page_val' ) : 1;
 
 				$wp_query = new WP_Query( array(
 					'post_type' 		=> $post_types,

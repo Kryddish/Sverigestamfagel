@@ -59,7 +59,7 @@ get_header(); ?>
 					$ppp = 5;
 				}
 
-				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$paged = ( get_query_var( 'page_val' ) ) ? get_query_var( 'page_val' ) : 1;
 
 				$wp_query = new WP_Query( array(
 					'post_type' 		=> $post_types,

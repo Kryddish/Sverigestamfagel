@@ -127,4 +127,14 @@
 		$( window ).on( 'resize.sverigestamfagelforening', onResizeARIA );
 	});
 
+	var dropdown = $( '.menu-item-has-children' );
+
+	dropdown.click(function() {
+		if( !dropdown.hasClass('toggle') ) {
+			$(this).find('ul').toggleClass('toggle');
+		} else {
+			$(this).find('ul').toggleClass('toggle');
+		}
+	});
+
 })( jQuery );
