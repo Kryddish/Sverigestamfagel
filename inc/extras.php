@@ -64,18 +64,28 @@ function add_slug_body_class( $classes ) {
 }
 add_filter( 'body_class', 'add_slug_body_class' );
 
-// Pagination
-function mg_news_pagination_rewrite() {
-	add_rewrite_rule(get_option('category_base').'/page/?([0-9]{1,})/?$', 'index.php?pagename='.get_option('category_base').'&paged=$matches[1]', 'top');
-}
-add_action('init', 'mg_news_pagination_rewrite');
+function custom_post_type_archive( $query ) {
 
-function custom_pre_get_posts($query)
-{
-    if ($query->is_main_query() && !$query->is_feed() && !is_admin() && is_category()) {
-        $query->set('page_val', get_query_var('paged'));
-        $query->set('paged', 0);
-    }
-}
+	$post_types = 
+	get_post_types( array(
+		'public' => true
+	) );
+	unset($post_types['attachment'], $post_types['page']);
 
-add_action('pre_get_posts', 'custom_pre_get_posts');
+	if( $query->is_main_query()  && is_home() ) {
+		$query->set( 'post_type', $post_types );
+	}
+	else {
+		if( !$query->is_main_query() ) {
+			return;
+		}
+		elseif( is_category() ) {
+			$query->set( 'post_type', $post_types );
+		}
+		elseif( is_date() ) {
+			$query->set( 'post_type', $post_types );
+		}
+
+	}
+}
+add_action( 'pre_get_posts', 'custom_post_type_archive' );

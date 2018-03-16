@@ -1,29 +1,22 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package sverigestamfagelforening
+ * Kontakt
  */
 
-get_header();
+get_header(); ?>
 
-	while ( have_posts() ) : the_post(); ?>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
-				<?php echo do_shortcode( '[contact-form-7 title="Kontakt"]' ); ?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
+		<?php
+		while ( have_posts() ) : the_post();
+		
+			get_template_part( 'template-parts/pages/content', 'kontakt' );
+			
+		endwhile ?>
 
-	<?php
-	endwhile ?>
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
 get_sidebar();
