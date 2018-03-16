@@ -14,7 +14,7 @@
         $instaResult = file_get_contents('https://www.instagram.com/' . $user . '/?__a=1');
 
         $insta = json_decode($instaResult, true);
-        $images = $insta['user']['media']['nodes'];
+        $images = $insta['graphql']['user']['edge_owner_to_timeline_media']['edges'];
 
         foreach( $images as $image ) : ?>
             <a
@@ -22,7 +22,7 @@
             if( $insta_feed['new_window'] ) :
                 echo 'target="_blank"';
             endif;
-            ?> href="<?php echo 'https://www.instagram.com/p/' . $image['code'] . '/'; ?>"><img src="<?php echo $image['thumbnail_src']; ?>" alt=""></a>
+            ?> href="<?php echo 'https://www.instagram.com/p/' . $image['node']['shortcode'] . '/'; ?>"><img src="<?php echo $image['node']['thumbnail_src']; ?>" alt=""></a>
         <?php
         endforeach; ?>
 

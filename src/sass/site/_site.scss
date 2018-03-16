@@ -49,19 +49,11 @@
 @import "archive/archive";
 
 /*--------------------------------------------------------------
-## Föreningen
+## Om oss
 --------------------------------------------------------------*/
-@import "about/about";
+@import "om-oss/om-oss";
 
-// styrelsen
-.board-members {
-    .member {
-        display: inline-block;           
-            padding: 2em;
-
-            img {
-                width: 200px;
-            }
-    }
-}
-
+/*--------------------------------------------------------------
+## Instagram
+--------------------------------------------------------------*/
+@import "inc/instagram";

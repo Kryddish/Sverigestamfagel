@@ -103,8 +103,10 @@
 						background-color: #41CA86;
 					}
 				}
-				&:only-child:after {
-					content: '';
+				&:only-child {
+					&:after {
+						content: '';
+					}
 				}
 			}
 			.menu-toggle {

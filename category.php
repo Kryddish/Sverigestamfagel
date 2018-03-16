@@ -41,7 +41,7 @@ get_header(); ?>
 					'post_type' 		=> $post_types,
 					'paged'				=> $paged,
 					'category_name'		=> $Qobject->slug,
-					'posts_per_page'	=> 1,
+					'posts_per_page'	=> 5,
 				) );
 
 				$wp_query->posts = stf_sort_date($wp_query->posts);

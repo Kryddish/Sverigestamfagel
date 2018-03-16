@@ -40,12 +40,9 @@ get_header(); ?>
 
 				<?php
 				global $wp_query;
-
-				// $year = get_query_var('year');
-				// $month = get_query_var('monthnum');
-				// $day = get_query_var('day');
-
-				stf_pre($year);
+				global $year;
+				global $month;
+				global $day;
 					
 				$post_types = 
 				get_post_types( array(

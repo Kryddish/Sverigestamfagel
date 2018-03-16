@@ -61,7 +61,7 @@
 
 				</div>
 				<div class="slide form">
-					<?php echo do_shortcode('[contact-form-7 id="2278" title="Bli medlem"]'); ?>
+					<?php echo do_shortcode('[contact-form-7 title="Bli medlem"]'); ?>
 				</div>
 				<div class="slide confirmation">
 					<h4>Tack, nu återstår bara det sista...</h4>
