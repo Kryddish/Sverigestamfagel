@@ -24,9 +24,6 @@ $location = get_field( 'location' ); ?>
 			if( $images ): ?>
 				<img src="<?php echo $images[0]['url']; ?>" alt="Post image">
 			<?php
-			elseif( is_front_page() ) : ?>
-				<img src="<?php echo get_stylesheet_directory_uri() . '/dist/img/placeholder.png'; ?>" alt="Post image">
-			<?php
 			endif;
 
 		endif; ?>

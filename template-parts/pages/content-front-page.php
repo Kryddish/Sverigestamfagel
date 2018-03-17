@@ -103,40 +103,70 @@
 		</section>
 		<hr>
 		<div class="page-content">
+
+			<?php
+			$post_types = 
+			get_post_types( array(
+				'public' => true
+			) );
+			unset($post_types['attachment'], $post_types['page']);
+
+			if( get_field( 'meets_count' ) ) {
+				$meets_count = get_field( 'meets_count' );
+			} else {
+				$meets_count = 3;
+			}
+
+			if( get_field( 'news_count' ) ) {
+				$news_count = get_field( 'news_count' );
+			} else {
+				$news_count = 3;
+			}
+
+			$posts = get_posts( array(
+				'post_type' 		=> 	$post_types,
+				'posts_per_page'	=>  -1
+			) ); ?>
 			
 			<div class="posts-container">
-			<h4>Senaste fågelträffarna</h4>
+				<h4>Senaste fågelträffarna</h4>
+
 				<?php
-				$post_types = 
-				get_post_types( array(
-					'public' => true
-				) );
-				unset($post_types['attachment'], $post_types['page'], $post_types['articles']);
-
-				if( get_field( 'posts_per_page' ) ) {
-					$ppp = get_field( 'posts_per_page' );
-				} else {
-					$ppp = 3;
-				}
-
-				$posts = get_posts( array(
-					'post_type' 		=> 	$post_types,
-					'posts_per_page'	=> 	$ppp
-				) );
-
-				stf_sort_date( $posts );
-
+				$index = 0;
 				foreach( $posts as $post ) : setup_postdata( $post );
 
-					get_template_part( 'template-parts/content' );
-					
-				endforeach; 
+					if( $post->post_type === 'meets' ) :
+						if( $index < $meets_count ) :
+							get_template_part( 'template-parts/content' );
+							$index++;
+						else:
+							break;
+						endif;
+					endif;
+
+				endforeach;
 				wp_reset_postdata(); ?>
-					
 			</div>
 
 			<div class="article-container">
-				<h4>Senaste artiklarna</h4>
+				<h4>Senaste nyheterna</h4>
+
+				<?php
+				$index = 0;
+				foreach( $posts as $post ) : setup_postdata( $post );
+
+					if( $post->post_type !== 'meets' ) :
+						if( $index < $news_count ) :
+							get_template_part( 'template-parts/content' );
+							$index++;
+						else:
+							break;
+						endif;
+					endif;
+					
+				endforeach;
+				wp_reset_postdata(); ?>
+
 			</div>
 		
 		
