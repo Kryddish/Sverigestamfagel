@@ -4,17 +4,14 @@
             .top-info {
                 max-height: 500px;
                 display: flex;
-
                 .container {
                     margin-left: 1em;
                     display: flex;
                     flex-direction: column;
                     flex: 50%;
-
                     div {
                         padding: 0 2em 0;
-                        flex: 50%; 
-
+                        flex: 50%;
                         &:first-child {
                             background-color: $color__interactive;
                             margin-bottom: 1em;
@@ -45,17 +42,15 @@
                 .top-info {
                     display: block;
                     max-height: 100%;
-                    
                     .stf-slider {
                         height: 400px;
                     }
                     .container {
                         margin: 0;
-
                         div {
                             &:first-child,
                             &:last-child {
-                                margin: 0;                                
+                                margin: 0;
                             }
                         }
                     }
@@ -67,4 +62,9 @@
             }
         }
     }
+}
+
+.article-container {
+    width: 40%;
+    float: right;
 }

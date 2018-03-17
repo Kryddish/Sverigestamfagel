@@ -9,15 +9,9 @@
 ?>
 
 <?php
-if( $post === reset($posts) && is_front_page() ) :
-	$class = 'main-post';
-else:
-	$class = 'stf-post';
-endif;
-
 $location = get_field( 'location' ); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('stf-post'); ?>>
 
 	<a class="link" href="<?php the_permalink(); ?>">
 		<?php
@@ -39,6 +33,40 @@ $location = get_field( 'location' ); ?>
 
 		<div class="text">
 			<header>
+				<?php
+				if( !is_front_page() ) : ?>
+					<h6 class="date">
+						<?php
+						if(get_field( 'date' )) :
+							the_field( 'date' );
+						else :
+							echo get_the_date();
+						endif;?>
+					</h6>
+				<?php
+				endif;
+				if( !is_front_page() ) : ?>
+				
+					<h6 class="category">
+
+						<?php
+						$post_type = get_post_type();
+
+						if( $post_type != 'post' ) :
+							echo get_post_type_object( $post_type )->labels->singular_name;
+						else :
+							_e('Inlägg', 'sverigestamfagelforening');
+						endif; ?>
+
+					</h6>
+
+				<?php
+				endif; ?>
+			</header>
+			<h5><?php the_title(); ?></h5>
+			<?php the_excerpt();
+
+			if( is_front_page() ) : ?>
 				<h6 class="date">
 					<?php
 					if(get_field( 'date' )) :
@@ -47,21 +75,8 @@ $location = get_field( 'location' ); ?>
 						echo get_the_date();
 					endif;?>
 				</h6>
-				<h6 class="category">
-
-					<?php
-					$post_type = get_post_type();
-
-					if( $post_type != 'post' ) :
-						echo get_post_type_object( $post_type )->labels->singular_name;
-					else :
-						_e('Inlägg', 'sverigestamfagelforening');
-					endif; ?>
-
-				</h6>
-			</header>
-			<h5><?php the_title(); ?></h5>
-			<?php the_excerpt();
+			<?php
+			endif;
 
 			if( !empty( $location['adress'] ) ) : ?>
 				<h6 class="location"><?php echo $location['adress']; ?></h6>

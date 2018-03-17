@@ -1,38 +1,6 @@
 .stf-post {
-    background-color: #FFFFFF;
-
-    .link {
-        display: flex;
-        
-        @media screen and (max-width: $mobile) {
-            flex-direction: column;
-        }
-        
-        img  {
-            max-height: 250px;
-            border-radius: 10px 0 0 10px;
-
-            @media screen and (min-width: $mobile) {
-                width: 50%;
-            }
-        }
-        .text {
-            @media screen and (min-width: $mobile) {
-                width: 50%;
-            }
-            @media screen and (max-width: $mobile) {
-                padding: .3em 1em;
-            }
-        }
-        .date {
-            font-weight: bold;
-            font-family: $font__averia;
-        }
-        .category {
-            padding: 0;
-            color: #2E2EEE;
-            font-weight: bold;
-            float: right;
-        }
+    .date {
+        font-weight: bold;
+        font-family: $font__averia;
     }
 }

@@ -103,11 +103,9 @@
 		</section>
 		<hr>
 		<div class="page-content">
-			<h3>
-				<span class="fa fa-calendar"></span> Aktuellt
-			</h3>
+			
 			<div class="posts-container">
-
+			<h4>Senaste fågelträffarna</h4>
 				<?php
 				$post_types = 
 				get_post_types( array(
@@ -126,17 +124,7 @@
 					'posts_per_page'	=> 	$ppp
 				) );
 
-				// Sort posts
-				foreach ($posts as $key => $part) {
-					$date = get_post_meta($part->ID, 'date', true);
-
-					if ( !empty( $date ) ) {
-						$sort[$key] = strtotime($date);
-					} else {
-						$sort[$key] = strtotime($part->post_date);
-					}
-				}
-				array_multisort($sort, SORT_DESC, $posts);
+				stf_sort_date( $posts );
 
 				foreach( $posts as $post ) : setup_postdata( $post );
 
@@ -146,7 +134,11 @@
 				wp_reset_postdata(); ?>
 					
 			</div>
-		<hr>
+
+			<div class="article-container">
+				<h4>Senaste artiklarna</h4>
+			</div>
+		
 		
 		<?php include( get_stylesheet_directory() . '/template-parts/instagram.php' ); ?>
 
