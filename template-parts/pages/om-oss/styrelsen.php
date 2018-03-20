@@ -1,8 +1,11 @@
-<h2>STFs Styrelse. </h2>
-<p>
-    Var vänlig och kontakta oss under våra mailadresser nedan om du vill komma i kontakt med en av oss i styrelsen. Alternativt maila till 
-    vår infobrevlåda under info@sverigestamfagel.se eller använda kontaktformuläret på den här hemsidan.
-</p>
+<div class="header">
+    <h2>STF:s Styrelse. </h2>
+    <p>
+        Vill du komma i kontakt med någon i styrelsen? Här når du oss enskilt,
+        annars maila till <a href="mailto:<?php echo get_bloginfo( 'admin_email' ); ?>"><?php echo get_bloginfo( 'admin_email' ); ?></a>
+        eller använd <a href="<?php echo site_url(); ?>/kontakt">kontaktformuläret</a>.
+    </p>
+</div>
 
 <div class="board-members">
     

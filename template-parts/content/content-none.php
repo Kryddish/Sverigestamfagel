@@ -24,9 +24,7 @@
 		elseif ( is_search() ) : ?>
 
 			<p><?php esc_html_e( 'Ledsen, men din sökning gav inga träffar. Var vänlig prova igen med andra sökord.', 'sverigestamfagelforening' ); ?></p>
-			<?php
-				get_search_form();
-
+		<?php
 		else : ?>
 
 			<p><?php esc_html_e( 'Det verkar som vi inte kan hitta det du letade efter. Kanske en sökning hjälper till.', 'sverigestamfagelforening' ); ?></p>
