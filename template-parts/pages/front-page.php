@@ -137,7 +137,7 @@
 
 					if( $post->post_type === 'meets' ) :
 						if( $index < $meets_count ) :
-							get_template_part( 'template-parts/content' );
+							get_template_part( 'template-parts/content/content' );
 							$index++;
 						else:
 							break;
@@ -157,7 +157,7 @@
 
 					if( $post->post_type !== 'meets' ) :
 						if( $index < $news_count ) :
-							get_template_part( 'template-parts/content' );
+							get_template_part( 'template-parts/content/content' );
 							$index++;
 						else:
 							break;
@@ -168,6 +168,7 @@
 				wp_reset_postdata(); ?>
 
 			</div>
+		</div>
 		
 		
 		<?php include( get_stylesheet_directory() . '/template-parts/instagram.php' ); ?>

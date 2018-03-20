@@ -141,8 +141,8 @@
 
     <div class="post-navigation">
         <?php
-        next_post_link('<span class="nav-next">Tidigare inlägg:<br> %link</span>');
-        previous_post_link('<span class="nav-previous">Nästa inlägg:<br> %link</span>'); ?>
+        next_post_link('<span class="nav-next">Senare fågelträff:<br> %link</span>');
+        previous_post_link('<span class="nav-previous">Tidigare fågelträff:<br> %link</span>'); ?>
     </div>
 
 </article>

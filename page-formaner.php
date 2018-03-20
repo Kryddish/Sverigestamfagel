@@ -11,7 +11,7 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/pages/om-oss/content', 'foreningen' );
+			get_template_part( 'template-parts/pages/om-oss/formaner' );
 
 		endwhile; // End of the loop.
 		?>

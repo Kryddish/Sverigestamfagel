@@ -1,5 +1,5 @@
 <section class="instagram-feed">
-    <h3><span class="fa fa-instagram"></span> Instagram</h3>
+    <h3><i class="fab fa-instagram"></i> Instagram</h3>
     <div>
 
         <?php

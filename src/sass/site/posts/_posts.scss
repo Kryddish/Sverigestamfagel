@@ -1,13 +1,16 @@
 .posts-container {
     width: 55%;
     float: left;
+
     .stf-post {
         margin-top: 50px;
         padding-bottom: 30px;
         top: 0;
+
         .link {
             height: 100%;
             display: block;
+
             img {
                 object-fit: cover;
                 width: 100%;
@@ -25,6 +28,7 @@
         .text {
             text-align: left;
             color: $color__text-main;
+            
             .date {
                 font-weight: bold;
                 font-family: $font__averia;
@@ -43,5 +47,4 @@
     }
 }
 
-@import 'main-post';
 @import 'post';

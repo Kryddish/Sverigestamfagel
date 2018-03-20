@@ -60,7 +60,7 @@
 					</div><!-- .text -->
 				</div><!-- .site-branding -->
 				<div class="contact-header">
-					<a href="mailto:info@sverigestamfagel.se"><span class="fa fa-envelope"></span>info@sverigestamfagel.se</a>
+					<a href="mailto:info@sverigestamfagel.se"><i class="fa fa-envelope"></i> info@sverigestamfagel.se</a>
 				</div><!-- .contact-header -->
 			</div><!-- .top-header -->
 

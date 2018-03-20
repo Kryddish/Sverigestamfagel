@@ -1,12 +1,23 @@
-
-// Styrelsen
 .board-members {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     .member {
-        display: inline-block;           
+        width: calc(100% / 3);
         padding: 2em;
 
         img {
+            object-fit: cover;
+            border-radius: 50%;
             width: 200px;
+            height: 200px;
+            display: block;
+            margin: auto;
+        }
+        .member-info {
+            text-align: center;
         }
     }
 }

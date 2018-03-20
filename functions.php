@@ -150,7 +150,7 @@ function sverigestamfagelforening_scripts() {
 	wp_enqueue_script( 'sverigestamfagelforening-bundle', get_template_directory_uri() . '/dist/js/jquery.lazy.min.js', array('jquery'), '1.0', true );
 
 	// Font awesome JS
-	wp_enqueue_script( 'sverigestamfagelforening-fontawesome', 'https://use.fontawesome.com/e215d690f8.js' );
+	wp_enqueue_script( 'sverigestamfagelforening-fontawesome', get_template_directory_uri() . '/dist/js/fontawesome-all.min.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -4,14 +4,17 @@
             .top-info {
                 max-height: 500px;
                 display: flex;
+
                 .container {
                     margin-left: 1em;
                     display: flex;
                     flex-direction: column;
                     flex: 50%;
+
                     div {
                         padding: 0 2em 0;
                         flex: 50%;
+
                         &:first-child {
                             background-color: $color__interactive;
                             margin-bottom: 1em;
@@ -25,6 +28,9 @@
                         }
                     }
                 }
+            }
+            .page-content {
+                overflow: auto;
             }
             hr {
                 margin: 3em 0;
