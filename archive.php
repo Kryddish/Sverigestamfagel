@@ -11,6 +11,34 @@
 				<div class="posts-container">
 
 					<?php
+					$qobject = get_queried_object();
+					if( is_category() ) : ?>
+
+						<h2><?php echo $qobject->name ?></h2>
+
+					<?php
+					elseif( is_date() ) : ?>
+					
+						<h2>
+							<?php
+							$length = strlen( $monthnum );
+
+							if( $length < 2 ) {
+								$monthStr = '0' . (string)$monthnum;
+							} else {
+								$monthStr = (string)$monthnum;
+							}
+
+							if( $day !== 0 ) : 
+								echo $day . ' ' . $month[$monthStr] . ', ' . $year;
+							else: 
+								echo $month[$monthStr] . ' ' . $year;
+							endif; ?>
+						</h2>
+					<?php
+					endif; ?>
+
+					<?php
 					global $wp_query;
 					$wp_query->posts = stf_sort_date( $wp_query->posts );
 

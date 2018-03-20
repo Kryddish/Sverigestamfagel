@@ -47,7 +47,8 @@
 		.menu-item {
 			position: relative;
 
-			&.current-menu-item {
+			&.current-menu-item,
+			&.current_page_parent {
 				background-color: #41CA86;
 			}
 			&.current-menu-parent {

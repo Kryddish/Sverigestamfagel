@@ -48,7 +48,7 @@ add_action('acf/init', 'my_acf_init');
 
 // Custom excerpt length
 function custom_excerpt_length( $length ) {
-	return 20;
+	return 40;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -89,3 +89,8 @@ function custom_post_type_archive( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'custom_post_type_archive' );
+
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
