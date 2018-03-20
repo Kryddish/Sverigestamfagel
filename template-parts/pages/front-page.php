@@ -147,6 +147,8 @@
 				endforeach;
 				wp_reset_postdata(); ?>
 			</div>
+			
+			<div class="vl"></div>
 
 			<div class="article-container">
 				<h4>Senaste nyheterna</h4>
