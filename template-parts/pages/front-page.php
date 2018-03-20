@@ -147,9 +147,7 @@
 				endforeach;
 				wp_reset_postdata(); ?>
 			</div>
-			
-			<div class="vl"></div>
-
+		
 			<div class="article-container">
 				<h4>Senaste nyheterna</h4>
 
@@ -162,7 +160,7 @@
 							<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
 							<?php the_excerpt();
 								the_category();
-								the_date(); ?> 
+								?><h6 class="article-date"> <?php the_date(); ?> </h6>
 								<hr>
 								<?php
 							 $index++;
