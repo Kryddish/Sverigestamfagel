@@ -49,20 +49,23 @@ $location = get_field( 'location' ); ?>
 				</a>
 			<?php
 			endif;
-			if( !is_front_page() ) : ?>
-			
-				<h6 class="category">
+			if( !is_front_page() ) : 
+				$post_type = get_post_type();
 
-					<?php
-					$post_type = get_post_type();
-
-					if( $post_type != 'post' ) :
-						echo get_post_type_object( $post_type )->labels->singular_name;
-					else :
-						_e('Inlägg', 'sverigestamfagelforening');
-					endif; ?>
-
-				</h6>
+				if( $post_type != 'post' ) : ?>
+					
+					<h6 class="category">
+						<a href="<?php echo site_url() . '/' . get_post_type_object( $post_type )->name ?>">
+							<?php echo get_post_type_object( $post_type )->labels->singular_name; ?>
+						</a>
+					</h6>
+				<?php
+				else : ?>
+					<h6 class="category">
+						<?php _e('Inlägg', 'sverigestamfagelforening'); ?>
+					</h6>
+				<?php
+				endif; ?>
 
 			<?php
 			endif; ?>

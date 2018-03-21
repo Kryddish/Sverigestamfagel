@@ -12,12 +12,7 @@
 
 					<?php
 					$qobject = get_queried_object();
-					if( is_category() ) : ?>
-
-						<h2><?php echo $qobject->name ?></h2>
-
-					<?php
-					elseif( is_date() ) : ?>
+					if( is_date() ) : ?>
 					
 						<h2>
 							<?php
@@ -36,6 +31,14 @@
 							endif; ?>
 						</h2>
 					<?php
+					else : 
+						if( $qobject->label ) : ?>
+							<h2><?php echo $qobject->label ?></h2>
+						<?php
+						else : ?>
+							<h2><?php echo $qobject->name ?></h2>
+						<?php
+						endif;
 					endif; ?>
 
 					<?php
