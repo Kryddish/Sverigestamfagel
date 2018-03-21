@@ -147,9 +147,7 @@
 				endforeach;
 				wp_reset_postdata(); ?>
 			</div>
-			
-			<div class="vl"></div>
-
+		
 			<div class="article-container">
 				<h4>Senaste nyheterna</h4>
 
@@ -160,10 +158,11 @@
 					if( $post->post_type !== 'meets' ) :
 						if( $index < $news_count ) : ?>
 							<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-							<a href="<?php echo get_category_link( get_the_category()[0]->cat_ID ) ?>"><?php echo get_the_category()[0]->name; ?></a>
-							<?php the_date(); ?> 
-							<hr>
-							<?php
+							<?php the_excerpt(); ?>
+								<a href="<?php echo get_category_link( get_the_category()[0]->cat_ID ) ?>"><?php echo get_the_category()[0]->name; ?></a>
+								<h6 class="article-date"> <?php the_date(); ?> </h6>
+								<hr>
+								<?php
 							 $index++;
 						else:
 							break;

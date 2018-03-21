@@ -3,11 +3,6 @@
     float: left;
 }
 
-// // .vl {
-// //     border-left: 2px dashed grey;
-// //     height: 500px;
-// }
-
 .page-content {
     h4 {
         margin: 0;
@@ -15,8 +10,27 @@
     }
 }
 
-.article-conatiner {
+.article-container {
+    &::before {
+        position: absolute;
+        left: -30px;
+        content: "";
+        border-left: 2px dashed rgba(41, 42, 43, 0.5);
+        height: 100%;
+    }
 
+    hr {
+        margin: 0;
+        padding: 0;
+    }
+    .post-categories  {
+     
+    }
+    .article-date {
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 @import 'post';
