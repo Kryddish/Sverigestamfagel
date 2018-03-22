@@ -1,6 +1,8 @@
 .posts-container {
-    width: 55%;
-    float: left;
+    @media screen and (min-width: $mobile) {
+        width: 55%;
+        float: left;
+    }
 }
 
 .page-content {
@@ -22,9 +24,6 @@
     hr {
         margin: 0;
         padding: 0;
-    }
-    .post-categories  {
-     
     }
     .article-date {
         text-align: right;

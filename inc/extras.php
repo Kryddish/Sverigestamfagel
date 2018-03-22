@@ -83,7 +83,55 @@ function custom_post_type_archive( $query ) {
 			$query->set( 'post_type', $post_types );
 		}
 		elseif( is_date() ) {
+
+			// Prevent default date filtering
+			unset($query->query_vars['year']);
+			unset($query->query_vars['monthnum']);
+			unset($query->query_vars['day']);
+
+			// Query date posts
+			if( !empty($query->query['monthnum']) && !empty($query->query['day']) ) {
+				$queryDate = date( 'Ymd', mktime(0, 0, 0, $query->query['monthnum'], $query->query['day'], $query->query['year']) );
+
+				$query->set( 'meta_query', array(
+					array(
+						'key' => 'date',
+						'value' => $queryDate,
+						'compare' => '=',
+						'type' => 'DATE'
+					)
+				) );
+			}
+			else {
+
+				// Query month posts
+				if( !empty($query->query['monthnum']) ) {
+					$queryDate = mktime(0, 0, 0, $query->query['monthnum']+1, 0, $query->query['year']);
+					
+					$start_date = date('Y'.$query->query['monthnum'].'01'); // First day of the month
+					$end_date = date('Y'.$query->query['monthnum'].'t'); // 't' gets the last day of the month
+				}
+				else {
+					$queryDate = mktime(0, 0, 0, 0, 0, $query->query['year']);
+					
+					$start_date = date($query->query['year'].'0101'); // First day of the month
+					$end_date = date($query->query['year'].'12t'); // 't' gets the last day of the month
+				}
+
+				$query->set( 'meta_query', array(
+					array(
+						'key'       => 'date',
+						'value'     => array($start_date, $end_date),
+						'compare'   => 'BETWEEN',
+						'type'      => 'DATE'
+					)
+				) );
+			}
+			
+			$query->set( 'posts_per_page', 5 );
 			$query->set( 'post_type', $post_types );
+
+			// echo '<pre>' . print_r($query, true) . '</pre>';
 		}
 	}
 }

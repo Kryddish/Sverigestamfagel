@@ -74,4 +74,8 @@
 .article-container {
     width: 40%;
     float: right;
+
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
 }

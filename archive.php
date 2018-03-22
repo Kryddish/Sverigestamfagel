@@ -24,11 +24,11 @@
 								$monthStr = (string)$monthnum;
 							}
 
-							if( $day !== 0 ) : 
-								echo $day . ' ' . $month[$monthStr] . ', ' . $year;
-							else: 
-								echo $month[$monthStr] . ' ' . $year;
-							endif; ?>
+							// if( $day !== 0 ) : 
+							// 	echo $day . ' ' . $month[$monthStr] . ', ' . $year;
+							// else: 
+							// 	echo $month[$monthStr] . ' ' . $year;
+							// endif; ?>
 						</h2>
 					<?php
 					else : 
