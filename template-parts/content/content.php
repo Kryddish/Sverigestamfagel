@@ -70,7 +70,7 @@ $location = get_field( 'location' ); ?>
 			<?php
 			endif; ?>
 		</header>
-		<h5><?php the_title(); ?></h5>
+		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 		<?php the_excerpt();
 
 		if( is_front_page() ) : ?>

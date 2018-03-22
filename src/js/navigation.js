@@ -1,4 +1,4 @@
-/* global sverigestamfagelforeningScreenReaderText */
+/* global stf */
 /**
  * Theme functions file.
  *
@@ -12,7 +12,7 @@
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'menu-toggle', 'aria-expanded': false })
 			.append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: sverigestamfagelforeningScreenReaderText.expand }) );
+			.append( $( '<span />', { 'class': 'screen-reader-text', text: stf.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
@@ -28,7 +28,7 @@
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
-			screenReaderSpan.text( screenReaderSpan.text() === sverigestamfagelforeningScreenReaderText.expand ? sverigestamfagelforeningScreenReaderText.collapse : sverigestamfagelforeningScreenReaderText.expand );
+			screenReaderSpan.text( screenReaderSpan.text() === stf.expand ? stf.collapse : stf.expand );
 		});
 	}
 

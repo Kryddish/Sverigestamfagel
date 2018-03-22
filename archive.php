@@ -43,14 +43,16 @@
 
 					<?php
 					global $wp_query;
-					$wp_query->posts = stf_sort_date( $wp_query->posts );
-
 					if ( $wp_query->have_posts() ) :
+						$wp_query->posts = stf_sort_date( $wp_query->posts );
+
 						while ( $wp_query->have_posts() ) : $wp_query->the_post();
 
 							get_template_part( 'template-parts/content/content' );
 						
 						endwhile;
+					else :
+						get_template_part( 'template-parts/content/content', 'none' );
 					endif; ?>
 					
 					<div class="posts-navigation">

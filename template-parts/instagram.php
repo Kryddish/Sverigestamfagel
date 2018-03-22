@@ -1,10 +1,17 @@
+<?php
+if( get_field( 'instagram_feed' ) ) :
+    $insta_feed = get_field( 'instagram_feed' );
+    
+    if( !empty( $insta_feed['hide'] ) ) :
+        return;
+    endif;
+endif; ?>
+
 <section class="instagram-feed">
     <h3><i class="fab fa-instagram"></i> Instagram</h3>
     <div>
 
         <?php
-        $insta_feed = get_field( 'instagram_feed' );
-
         if( $insta_feed ) {
             $user = $insta_feed['user'];
         } else {

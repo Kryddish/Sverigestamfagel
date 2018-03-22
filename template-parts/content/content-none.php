@@ -25,12 +25,14 @@
 
 			<p><?php esc_html_e( 'Ledsen, men din sökning gav inga träffar. Var vänlig prova igen med andra sökord.', 'sverigestamfagelforening' ); ?></p>
 		<?php
-		else : ?>
+		elseif ( is_404() ) : ?>
 
-			<p><?php esc_html_e( 'Det verkar som vi inte kan hitta det du letade efter. Kanske en sökning hjälper till.', 'sverigestamfagelforening' ); ?></p>
-			
-			<?php get_search_form();
+			<p><?php _e( 'Det verkar som sidan du letade efter finns inte. Kontrollera URL:en och försök igen.', 'sverigestamfagelforening' ); ?></p>
+		<?php
+		else: ?>
 
+			<p><?php esc_html_e( 'Det verkar inte finnas något innehåll ännu.', 'sverigestamfagelforening' ); ?></p>
+		<?php
 		endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

@@ -85,7 +85,6 @@ function custom_post_type_archive( $query ) {
 		elseif( is_date() ) {
 			$query->set( 'post_type', $post_types );
 		}
-
 	}
 }
 add_action( 'pre_get_posts', 'custom_post_type_archive' );

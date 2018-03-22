@@ -141,7 +141,7 @@ function sverigestamfagelforening_scripts() {
 
 	//JS Bundle
 	wp_enqueue_script( 'sverigestamfagelforening-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), filemtime( get_stylesheet_directory() . '/dist/js/bundle.js' ), true );
-	wp_localize_script( 'sverigestamfagelforening-bundle', 'sverigestamfagelforeningScreenReaderText', array(
+	wp_localize_script( 'sverigestamfagelforening-bundle', 'stf', array(
 		'expand' => __( 'Expand child menu', 'sverigestamfagelforening'),
 		'collapse' => __( 'Collapse child menu', 'sverigestamfagelforening'),
 	));
