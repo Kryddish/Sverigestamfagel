@@ -1,3 +1,10 @@
-/dist
-/style.css
-/src/sass/maps
+
+# Misc
+/languages
+/upgrade
+/uploads
+
+# Theme
+/themes/sverigestamfagel/dist
+/themes/sverigestamfagel/style.css
+/themes/sverigestamfagel/src/sass/maps
