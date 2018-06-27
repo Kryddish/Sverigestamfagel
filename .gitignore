@@ -8,3 +8,6 @@
 /themes/sverigestamfagel/dist
 /themes/sverigestamfagel/style.css
 /themes/sverigestamfagel/src/sass/maps
+
+# Gulp
+/themes/sverigestamfagel/gulp/node_modules
