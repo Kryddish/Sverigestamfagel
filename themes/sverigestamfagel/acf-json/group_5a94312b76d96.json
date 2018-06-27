@@ -1,0 +1,64 @@
+{
+    "key": "group_5a94312b76d96",
+    "title": "Startsida - Sida - Inläggsflöde",
+    "fields": [
+        {
+            "key": "field_5a94317bc6387",
+            "label": "Antal fågelträffar som visas",
+            "name": "meets_count",
+            "type": "range",
+            "instructions": "Antal inlägg som visas per sida.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "min": 1,
+            "max": 20,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5ab120b035cef",
+            "label": "Antal artiklar som visas",
+            "name": "news_count",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "min": 1,
+            "max": 20,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "425"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1530128081
+}

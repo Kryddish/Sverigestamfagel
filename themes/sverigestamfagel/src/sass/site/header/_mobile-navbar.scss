@@ -1,0 +1,42 @@
+.mobile-navbar {
+    display: none;
+    height: 100%;
+
+    @media screen and (max-width: $mobile) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .custom-logo-link {
+        padding: 0 0 0 .8em;
+        width: 60px;
+
+        @media screen and (min-width: $mobile) {
+            display: none;
+        }
+
+        img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+        }
+    }
+    .menu-toggle {
+        outline: none;
+        font-size: 18px;
+        display: none;
+        padding: 0 .8em;
+        text-transform: uppercase;
+        color: #fff;
+        border: none;
+    
+        @media screen and (max-width: $mobile) {
+            display: block;
+        }
+    
+        &:hover {
+            color: #fff;
+        }
+    }
+}

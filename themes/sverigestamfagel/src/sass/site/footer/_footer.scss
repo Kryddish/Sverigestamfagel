@@ -1,0 +1,130 @@
+.site-footer {
+	position: relative;
+	font-size: .8em;
+	font-family: $font__averia;
+	color: #fff;
+	background-color: #08082E;
+	text-align: center;
+
+	a {
+		transition: color 0.15s ease-out;
+		color: #fff;
+		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			color: #41CA86;
+		}
+	}
+	.container {
+		padding: 5em 0;
+		max-width: $page;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.social-menu {
+		width: 180px;
+
+		ul {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				width: 100%;
+
+				&:first-child a::before {
+					content: " ";
+					font-family: 'fontawesome';
+				}
+				&:last-child a::before {
+					content: " ";
+					font-family: 'fontawesome';
+				}
+			}
+		}
+		.fa::before {
+			pointer-events: none;
+			margin-top: 8px;
+			font-size: 2em;
+			float: left;
+			width: 30px;
+		}
+		a {
+			padding: .5em 0 .5em 1.2em;
+			font-family: $font__averia;
+			font-size: 1.5em;
+			display: block;
+			padding: .5em 1em;
+			text-decoration: none;
+		}
+	}
+	.site-info {
+		font-family: $font__open;
+		font-size: 12px;
+		color: rgb(85, 85, 85);
+		padding: 1em 0;
+		background-color: black;
+
+		a {
+			font-weight: bold;
+			color: rgb(105, 105, 105);
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.donate {
+		font-size: 1.4em;
+	}
+	.email {
+		order: 1;
+		text-align: right;
+		font-size: 1.4em;
+		
+		a {
+			position: relative;	
+
+			span {
+				position: absolute;
+				left: -40px;
+				font-size: 30px;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.site-footer {
+		.container {
+			padding: 1em;
+			flex-wrap: wrap;
+			
+			>* {
+				margin: 20px 0;
+			}
+			.social-menu {
+				order: 2;
+				@include font-size(0.7);
+			}
+			.email {
+				order: 3;
+				@include font-size(1);
+			}
+			.donate {
+				order: 1;
+				width: 100%;
+			}
+		}
+		.site-info {
+			padding-left: 15%;
+			padding-right: 15%
+		}
+	}
+}
