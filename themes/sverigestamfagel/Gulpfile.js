@@ -20,7 +20,7 @@ const
 	cssnano = require('cssnano'),
 
 	// Get main project paths
-	root = '../',
+	root = '/',
 	src = root + 'src/',
 	dist = root + 'dist/',
 
