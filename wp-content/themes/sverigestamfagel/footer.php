@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 
 ?>
@@ -15,16 +15,15 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
-			<?php
-			// Make sure there is a social menu to display.
-			if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-menu">
-					<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
-				</nav><!-- .social-menu -->
-			<?php endif; ?>
+
+			<div class="social-menu">
+				<a href="#">Facebook</a>
+				<a href="#">Instagram</a>
+			</div>
+
 			<div class="email">
 				Har du frågor?</br>
-				<a href="mailto:info@sverigestamfagel.se"><i class="fa fa-envelope"></i> <?php _e( 'Maila oss!', 'sverigestamfagelforening' ); ?></a>
+				<a href="mailto:info@sverigestamfagel.se"><i class="fa fa-envelope"></i> <?php _e( 'Maila oss!', 'stf' ); ?></a>
 			</div>
 			<div class="donate">
 				Vill du stödja vår förening?</br>
@@ -33,9 +32,9 @@
 		</div>
 		<div class="site-info">
 			<span>
-				<?php _e( '© 2018 Sveriges Tamfågelförening. All rights reserved', 'sverigestamfagelforening' ); ?>
+				<?php _e( '© 2018 Sveriges Tamfågelförening. All rights reserved', 'stf' ); ?>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'sverigestamfagelforening' ), '<a href="https://memlisen.se" rel="designer">Emmelie</a>', '<a href="https://maxtrewhitt.se" rel="coder">Max</a>' ); ?>
+				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="https://memlisen.se" rel="designer">Emmelie</a>', '<a href="https://maxtrewhitt.se" rel="coder">Max</a>' ); ?>
 			</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

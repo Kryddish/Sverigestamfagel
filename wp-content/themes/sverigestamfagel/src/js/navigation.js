@@ -49,7 +49,7 @@
 		// Add an initial values for the attribute.
 		menuToggle.add( siteNavigation ).attr( 'aria-expanded', 'false' );
 
-		menuToggle.on( 'click.sverigestamfagelforening', function() {
+		menuToggle.on( 'click.stf', function() {
 			$( siteNavigation.closest( '.main-navigation' ), this ).toggleClass( 'toggled' );
 
 			$( this )
@@ -68,14 +68,14 @@
 		function toggleFocusClassTouchScreen() {
 			if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
 
-				$( document.body ).on( 'touchstart.sverigestamfagelforening', function( e ) {
+				$( document.body ).on( 'touchstart.stf', function( e ) {
 					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
 					}
 				});
 
 				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-					.on( 'touchstart.sverigestamfagelforening', function( e ) {
+					.on( 'touchstart.stf', function( e ) {
 						var el = $( this ).parent( 'li' );
 
 						if ( ! el.hasClass( 'focus' ) ) {
@@ -86,16 +86,16 @@
 					});
 
 			} else {
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.sverigestamfagelforening' );
+				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.stf' );
 			}
 		}
 
 		if ( 'ontouchstart' in window ) {
-			$( window ).on( 'resize.sverigestamfagelforening', toggleFocusClassTouchScreen );
+			$( window ).on( 'resize.stf', toggleFocusClassTouchScreen );
 			toggleFocusClassTouchScreen();
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.sverigestamfagelforening blur.sverigestamfagelforening', function() {
+		siteNavigation.find( 'a' ).on( 'focus.stf blur.stf', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
@@ -123,8 +123,8 @@
 	}
 
 	$( document ).ready( function() {
-		$( window ).on( 'load.sverigestamfagelforening', onResizeARIA );
-		$( window ).on( 'resize.sverigestamfagelforening', onResizeARIA );
+		$( window ).on( 'load.stf', onResizeARIA );
+		$( window ).on( 'resize.stf', onResizeARIA );
 	});
 
 	var dropdown = $( '.menu-item-has-children' );

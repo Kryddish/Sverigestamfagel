@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses sverigestamfagelforening_header_style()
+ * @uses stf_header_style()
  */
-function sverigestamfagelforening_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'sverigestamfagelforening_custom_header_args', array(
+function stf_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'stf_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 2000,
 		'height'                 => 850,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'sverigestamfagelforening_header_style',
+		'wp-head-callback'       => 'stf_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'sverigestamfagelforening_custom_header_setup' );
+add_action( 'after_setup_theme', 'stf_custom_header_setup' );
 
-if ( ! function_exists( 'sverigestamfagelforening_header_style' ) ) :
+if ( ! function_exists( 'stf_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see sverigestamfagelforening_custom_header_setup().
+ * @see stf_custom_header_setup().
  */
-function sverigestamfagelforening_header_style() {
+function stf_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

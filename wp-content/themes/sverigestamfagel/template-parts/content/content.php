@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 ?>
 
@@ -15,13 +15,17 @@ $location = get_field( 'location' ); ?>
 
 	<?php
 	if( get_the_post_thumbnail() ) : ?>
-		<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="Post image"></a>
+		<a class="image" href="<?php the_permalink(); ?>">
+			<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
+		</a>
 	<?php
 	else:
 		$images = get_field('images');
 
 		if( $images ): ?>
-			<a href="<?php the_permalink(); ?>"><img src="<?php echo $images[0]['url']; ?>" alt="Post image"></a>
+			<a class="image" href="<?php the_permalink(); ?>">
+				<img src="<?php echo $images[0]['url']; ?>" alt="Post image">
+			</a>
 		<?php
 		endif;
 
@@ -62,28 +66,38 @@ $location = get_field( 'location' ); ?>
 				<?php
 				else : ?>
 					<h6 class="category">
-						<?php _e('Inlägg', 'sverigestamfagelforening'); ?>
+						<?php _e('Inlägg', 'stf'); ?>
 					</h6>
 				<?php
 				endif; ?>
 
 			<?php
 			endif; ?>
+
+			<h5>
+				<a href="<?php the_permalink(); ?>">
+					<?php the_title(); ?>
+				</a>
+			</h5>
 		</header>
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+		
 		<?php the_excerpt();
 
 		if( is_front_page() ) : ?>
-			<a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day ); ?>">
-				<h6 class="date">
-					<?php
-					if(get_field( 'date' )) :
-						the_field( 'date' );
-					else :
-						echo get_the_date();
-					endif;?>
-				</h6>
-			</a>
+			<footer>
+				<a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day ); ?>">
+					<h6 class="date">
+						
+							<?php
+							if(get_field( 'date' )) :
+								the_field( 'date' );
+							else :
+								echo get_the_date();
+							endif;?>
+						
+					</h6>
+				</a>
+			</footer>
 		<?php
 		endif;
 

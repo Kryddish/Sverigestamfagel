@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 ?>
 
@@ -13,7 +13,7 @@
 	<div class="entry-content">
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sverigestamfagelforening' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stf' ),
 			'after'  => '</div>',
 		) ); ?>
 
@@ -31,23 +31,17 @@
 
 									<?php
 									if( get_sub_field('headline') ) : ?>
-
 										<h4><?php the_sub_field('headline'); ?></h4>
-
 									<?php
 									endif;
 
 									if( get_sub_field('text') ) : ?>
-
 										<p><?php the_sub_field('text'); ?></p>
-
 									<?php
 									endif;
 
 									if( get_sub_field('button') ) : ?>
-
 										<a href="<?php if( get_sub_field('link') ) : the_sub_field('link'); else: echo '#'; endif; ?>"><?php the_sub_field('button'); ?></a>
-
 									<?php
 									endif; ?>
 
@@ -57,9 +51,7 @@
 						<?php
 						endwhile;
 					else : ?>
-
 						<img src="<?php echo get_stylesheet_directory_uri() . '/dist/img/parrot.png'?>" alt="Parrot image">
-
 					<?php
 					endif; ?>
 
@@ -124,7 +116,7 @@
 			}
 
 			$posts = get_posts( array(
-				'post_type' 		=> 	$post_types,
+				'post_type' 		=> 	'meets',
 				'posts_per_page'	=>  -1
 			) ); ?>
 
@@ -135,13 +127,11 @@
 				$index = 0;
 				foreach( $posts as $post ) : setup_postdata( $post );
 
-					if( $post->post_type === 'thc-events' ) :
-						if( $index < $meets_count ) :
-							get_template_part( 'template-parts/content/content' );
-							$index++;
-						else:
-							break;
-						endif;
+					if( $index < $meets_count ) :
+						get_template_part( 'template-parts/content/content' );
+						$index++;
+					else:
+						break;
 					endif;
 
 				endforeach;
@@ -151,25 +141,24 @@
 			<div class="article-container">
 				<h4>Senaste nyheterna</h4>
 
-				<?php dynamic_sidebar( 'sidebar-1' ); ?>
-
 				<?php
+				dynamic_sidebar( 'sidebar-1' );
+
+				$posts = get_posts( array(
+					'post_type' 		=> 	'articles',
+					'posts_per_page'	=>  $news_count
+				) );
 				$index = 0;
 				foreach( $posts as $post ) : setup_postdata( $post );
 
-					if( $post->post_type !== 'meets' ) :
-						if( $index < $news_count ) : ?>
-							<a href="<?php the_permalink(); ?>"><h6><?php the_title(); ?></h6></a>
-								<a href="<?php echo get_category_link( get_the_category()[0]->cat_ID ) ?>"><?php echo get_the_category()[0]->name; ?></a>
-								<h6 class="article-date">
-									<?php echo get_the_date(); ?>
-								</h6>
-								<hr>
-								<?php
-							 $index++;
-						else:
-							break;
-						endif;
+					if( $post->post_type !== 'meets' ) : ?>
+						<a href="<?php the_permalink(); ?>"><h6><?php the_title(); ?></h6></a>
+						<a href="<?php echo get_category_link( get_the_category()[0]->cat_ID ) ?>"><?php echo get_the_category()[0]->name; ?></a>
+						<h6 class="article-date">
+							<?php echo get_the_date(); ?>
+						</h6>
+						<hr>
+						<?php
 					endif;
 
 				endforeach;

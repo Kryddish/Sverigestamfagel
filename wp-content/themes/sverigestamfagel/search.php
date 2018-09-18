@@ -36,8 +36,8 @@
 							'format' 			=> '/page/%#%',
 							'current' 			=> max(1, $paged),
 							'total' 			=> $wp_query->max_num_pages,
-							'prev_text'         => __('« Föregående sida', 'sverigestamfagelforening'),
-							'next_text'         => __('Nästa sida »', 'sverigestamfagelforening'),
+							'prev_text'         => __('« Föregående sida', 'stf'),
+							'next_text'         => __('Nästa sida »', 'stf'),
 							'mid_size'          => 2,
 							'end_size'          => 0,
 						)); ?>

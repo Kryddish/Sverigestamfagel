@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 ?>
 
@@ -102,7 +102,7 @@
                 else : ?>
                 
                     <h5>
-                        <?php _e('Inget innehåll hittades.', 'sverigestamfagelforening'); ?>
+                        <?php _e('Inget innehåll hittades.', 'stf'); ?>
                     </h5>
                 <?php
                 endif; ?>

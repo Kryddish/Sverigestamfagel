@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 ?>
 
@@ -78,8 +78,8 @@
 			</span>
 		</div>
 		<div class="buttons">
-			<button class="begin"><?php _e('Börja', 'sverigestamfagelforening'); ?></button>
-			<button class="previous"><?php _e('Föregående', 'sverigestamfagelforening'); ?></button>
+			<button class="begin"><?php _e('Börja', 'stf'); ?></button>
+			<button class="previous"><?php _e('Föregående', 'stf'); ?></button>
 		</div>
 		<div class="slide-navigation"></div>
 	</div>

@@ -15,7 +15,7 @@ endif; ?>
         if( $insta_feed ) {
             $user = $insta_feed['user'];
         } else {
-            $user = 'sverigestamfagelforening';
+            $user = 'stf';
         }
 
         $instaResult = file_get_contents('https://www.instagram.com/' . $user . '/?__a=1');

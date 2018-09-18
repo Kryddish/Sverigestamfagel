@@ -122,4 +122,4 @@ gulp.task('build', gulp.series('clean', gulp.parallel('js', 'sass', 'img')));
 
 
 // Default task (runs at initiation: gulp --verbose)
-gulp.task('default', gulp.parallel('watch'));
+gulp.task('default', gulp.series('clean', 'build', 'watch'));

@@ -1,13 +1,13 @@
 <?php
 /**
- * sverigestamfagelforening functions and definitions.
+ * stf functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 
-if ( ! function_exists( 'sverigestamfagelforening_setup' ) ) :
+if ( ! function_exists( 'stf_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'sverigestamfagelforening_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function sverigestamfagelforening_setup() {
+function stf_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on sverigestamfagelforening, use a find and replace
-	 * to change 'sverigestamfagelforening' to the name of your theme in all the template files.
+	 * If you're building a theme based on stf, use a find and replace
+	 * to change 'stf' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'sverigestamfagelforening', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'stf', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,8 +44,7 @@ function sverigestamfagelforening_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Header', 'sverigestamfagelforening' ),
-		'social' => esc_html__( 'Social Media Menu', 'sverigestamfagelforening' ),
+		'primary' => esc_html__( 'Huvudmeny', 'stf' )
 	) );
 
 	/*
@@ -61,7 +60,7 @@ function sverigestamfagelforening_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'sverigestamfagelforening_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'stf_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -75,7 +74,7 @@ function sverigestamfagelforening_setup() {
 	
 }
 endif;
-add_action( 'after_setup_theme', 'sverigestamfagelforening_setup' );
+add_action( 'after_setup_theme', 'stf_setup' );
 
 
 /**
@@ -85,10 +84,10 @@ add_action( 'after_setup_theme', 'sverigestamfagelforening_setup' );
  *
  * @global int $content_width
  */
-function sverigestamfagelforening_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'sverigestamfagelforening_content_width', 640 );
+function stf_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'stf_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'sverigestamfagelforening_content_width', 0 );
+add_action( 'after_setup_theme', 'stf_content_width', 0 );
 
 
 /**
@@ -96,67 +95,67 @@ add_action( 'after_setup_theme', 'sverigestamfagelforening_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function sverigestamfagelforening_widgets_init() {
+function stf_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'sverigestamfagelforening' ),
+		'name'          => esc_html__( 'Sidebar', 'stf' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
+		'description'   => esc_html__( 'Add widgets here.', 'stf' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar archive', 'sverigestamfagelforening' ),
+		'name'          => esc_html__( 'Sidebar archive', 'stf' ),
 		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
+		'description'   => esc_html__( 'Add widgets here.', 'stf' ),
 		'before_widget' => '<div id="%1$s" class="archive-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Banner', 'sverigestamfagelforening' ),
+		'name'          => esc_html__( 'Banner', 'stf' ),
 		'id'            => 'banner',
-		'description'   => esc_html__( 'Add widgets here.', 'sverigestamfagelforening' ),
+		'description'   => esc_html__( 'Add widgets here.', 'stf' ),
 		'before_widget' => '<div id="%1$s" class="banner">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'sverigestamfagelforening_widgets_init' );
+add_action( 'widgets_init', 'stf_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function sverigestamfagelforening_scripts() {
+function stf_scripts() {
 	
 	// Stylesheet
-	wp_enqueue_style( 'sverigestamfagelforening-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+	wp_enqueue_style( 'stf-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
 	// Google fonts
 	wp_enqueue_style( 'sverigestamfagel-fonts', 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|Open+Sans:400,700' );
-	wp_enqueue_script( 'sverigestamfagelforening-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY', '1.0', true );
+	wp_enqueue_script( 'stf-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY', '1.0', true );
 
 	//JS Bundle
-	wp_enqueue_script( 'sverigestamfagelforening-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery') );
-	wp_localize_script( 'sverigestamfagelforening-bundle', 'stf', array(
-		'expand' => __( 'Expand child menu', 'sverigestamfagelforening'),
-		'collapse' => __( 'Collapse child menu', 'sverigestamfagelforening'),
+	wp_enqueue_script( 'stf-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery') );
+	wp_localize_script( 'stf-bundle', 'stf', array(
+		'expand' => __( 'Expand child menu', 'stf'),
+		'collapse' => __( 'Collapse child menu', 'stf'),
 	));
 
 	// Jquery Lazy plugin
-	wp_enqueue_script( 'sverigestamfagelforening-bundle', get_template_directory_uri() . '/dist/js/jquery.lazy.min.js', array('jquery'), '1.0', true );
+	wp_enqueue_script( 'stf-bundle', get_template_directory_uri() . '/dist/js/jquery.lazy.min.js', array('jquery'), '1.0', true );
 
 	// Font awesome JS
-	wp_enqueue_script( 'sverigestamfagelforening-fontawesome', get_template_directory_uri() . '/dist/js/fontawesome-all.min.js' );
+	wp_enqueue_script( 'stf-fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/js/all.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'sverigestamfagelforening_scripts' );
+add_action( 'wp_enqueue_scripts', 'stf_scripts' );
 
 /**
  * Implement the Custom Header feature.

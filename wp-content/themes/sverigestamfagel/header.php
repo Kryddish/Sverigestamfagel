@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -35,7 +35,7 @@
 
 <body style="background-image: url(<?php echo get_stylesheet_directory_uri() . '/dist/img/foggy_birds.png'; ?>);" tabindex="-1" <?php body_class(); ?>>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sverigestamfagelforening' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'stf' ); ?></a>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="top-header">
 				<div class="site-branding">
@@ -67,7 +67,7 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="mobile-navbar">
 					<?php the_custom_logo(); ?>
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Meny', 'sverigestamfagelforening' ); ?></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Meny', 'stf' ); ?></button>
 				</div>
 				<?php
 				wp_nav_menu( array(

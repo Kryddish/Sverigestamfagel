@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package sverigestamfagelforening
+ * @package stf
  */
 
 ?>
@@ -18,7 +18,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sverigestamfagelforening' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stf' ),
 				'after'  => '</div>',
 			) );
 		?>
