@@ -1,0 +1,51 @@
+.instagram-feed {
+    h3 {
+        text-align: center;
+    }
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+
+        a {
+            outline: none;
+            transition: 150ms transform ease-out;
+            padding: 4px;
+            display: block;
+            width: calc(100% / 6);
+
+            img {
+                border-radius: 10px;
+                min-height: 100%;
+            }
+            @media screen and (min-width: $mobile) {
+                &:hover {
+                    transform: scale(1.04);
+                }
+            }
+        }
+    }
+    @media screen and (min-width: $mobile) {
+        .instagram-feed {
+            a {
+                width: calc(100% / 6);
+
+                &:nth-child(n+13) {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        .instagram-feed {
+            a {
+                width: calc(100% / 3);
+
+                &:nth-child(n+7) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

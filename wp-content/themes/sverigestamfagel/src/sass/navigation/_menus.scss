@@ -1,0 +1,21 @@
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-next {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-previous {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

@@ -1,0 +1,46 @@
+{
+    "key": "group_5a942c3103555",
+    "title": "Arkiv - Sida - Inläggsflöde",
+    "fields": [
+        {
+            "key": "field_5a942c36d0010",
+            "label": "Inlägg per sida",
+            "name": "posts_per_page",
+            "type": "range",
+            "instructions": "Antal inlägg som visas per sida.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "min": 1,
+            "max": 20,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "1715"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1530127932
+}

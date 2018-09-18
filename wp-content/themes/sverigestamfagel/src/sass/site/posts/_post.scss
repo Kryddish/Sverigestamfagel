@@ -1,0 +1,45 @@
+.stf-post {
+    .date {
+        font-weight: bold;
+        font-family: $font__averia;
+    }
+    margin-top: 50px;
+    top: 0;
+
+    .link {
+        height: 100%;
+        display: block;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 300px;
+    }
+    .date {
+        position: relative;
+        margin: 0;
+        float: right;
+    }
+    .entry-footer {
+        margin: 5px 0 0 0;
+    }
+    .text {
+        text-align: left;
+        color: $color__text-main;
+        
+        .date {
+            font-weight: bold;
+            font-family: $font__averia;
+        }
+        h5 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    p {
+        font-size: 18px;
+        margin-bottom: 0;
+        margin-top: 0;
+        color: #787878;
+    }
+}
