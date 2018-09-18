@@ -1,4 +1,4 @@
-(function( $ ) {
+(function ($) {
     var
         header = $('.site-header'),
         scrollTop = $('html, body').scrollTop(),
@@ -6,13 +6,13 @@
         navHeight = navbar.height(),
         navTop = navbar.offset().top;
 
-    if(!isMobile()) {
-        $(window).scroll(function() {
+    if (!isMobile()) {
+        $(window).scroll(function () {
 
             scrollTop = $('html, body').scrollTop();
-            
+
             /* Stick navbar */
-            if(scrollTop > navTop) {
+            if (scrollTop > navTop) {
                 navbar.addClass('stick');
                 header.css({
                     'padding-bottom': navHeight
@@ -33,7 +33,7 @@
     // Lazy load images
     $('.lazy').Lazy();
 
-})( jQuery );
+})(jQuery);
 
 function isMobile() {
     if (/Mobi/.test(navigator.userAgent)) return true;
