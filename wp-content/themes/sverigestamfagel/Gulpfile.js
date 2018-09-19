@@ -9,7 +9,7 @@ const
 	// Prepare and optimize code etc
 	autoprefixer = require('autoprefixer'),
 	browserSync = require('browser-sync').create(),
-	image = require('gulp-image'),
+	imagemin = require('gulp-imagemin'),
 	jshint = require('gulp-jshint'),
 	stylish = require('jshint-stylish'),
 	postcss = require('gulp-postcss'),
@@ -79,7 +79,7 @@ gulp.task('sass', cb => {
 gulp.task('img', cb => {
 	pump([
 		gulp.src(img + '**/*.{jpg,JPG,jpeg,JPEG,png,PNG}'),
-		image(),
+		imagemin(),
 		gulp.dest(dist + 'img/')
 	], cb);
 });
