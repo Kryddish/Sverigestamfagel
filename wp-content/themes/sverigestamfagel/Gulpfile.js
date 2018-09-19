@@ -4,6 +4,7 @@ const
 	proxy = 'sverigestamfagel.local',
 
 	gulp = require('gulp'),
+	// $ = require('gulp-load-plugins')(),
 
 	// Prepare and optimize code etc
 	autoprefixer = require('autoprefixer'),
@@ -44,6 +45,13 @@ gulp.task('clean', cb => {
 	], cb);
 });
 
+gulp.task('icons', () => {
+	return gulp.src(src + 'config.json')
+		.pipe($.fontello())
+		.pipe($.print())
+		.pipe(gulp.dest('dist'))
+});
+
 // CSS via Sass and Autoprefixer
 gulp.task('sass', cb => {
 	pump([
@@ -71,9 +79,7 @@ gulp.task('sass', cb => {
 gulp.task('img', cb => {
 	pump([
 		gulp.src(img + '**/*.{jpg,JPG,jpeg,JPEG,png,PNG}'),
-		image().on('error', notify.onError(error => {
-			return "Message to the notifier: " + error.message;
-		})),
+		image(),
 		gulp.dest(dist + 'img/')
 	], cb);
 });
