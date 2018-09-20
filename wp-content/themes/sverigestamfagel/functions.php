@@ -201,7 +201,7 @@ $posts = get_posts( array(
 if ( empty( $posts ) ) {
 	return null;
 }
-	$output = exec( 'bash ./deploy.sh' );
+	$output = shell_exec( 'bash ./deploy.sh' );
 	if( $output ) echo $output;
 	else echo 'Deployment failed.';
 }
