@@ -201,8 +201,9 @@ $posts = get_posts( array(
 if ( empty( $posts ) ) {
 	return null;
 }
-	$output = exec( 'cd /var/www/html/ && /usr/bin/git status 2>&1' );
-	return $output;
+	$output = exec( 'bash ./deploy.sh' );
+	if( $output ) echo $output;
+	else echo 'Deployment failed.';
 }
 
 add_action( 'rest_api_init', function () {
