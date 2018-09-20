@@ -207,7 +207,7 @@ if ( empty( $posts ) ) {
 }
 
 add_action( 'rest_api_init', function () {
-	register_rest_route( 'v1', '/test', array(
+	register_rest_route( 'webhook', '/deploy', array(
 		'methods' => 'GET',
 		'callback' => 'my_awesome_func',
 	) );
