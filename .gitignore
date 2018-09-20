@@ -6,6 +6,9 @@ license.txt
 readme.html
 *.php
 
+# Deployment script
+deploy.sh
+
 # Misc
 wp-content/languages
 wp-content/upgrade

@@ -186,3 +186,28 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load custom post types
  */
 require get_template_directory() . '/inc/custom-post-types/custom-post-types.php';
+
+/**
+ * Grab latest post title by an author!
+ *
+ * @param array $data Options for the function.
+ * @return string|null Post title for the latest,  * or null if none.
+ */
+function my_awesome_func( $data ) {
+$posts = get_posts( array(
+	'post_type' => 'meets'
+) );
+
+if ( empty( $posts ) ) {
+	return null;
+}
+	$output = exec( 'cd /var/www/html/ && /usr/bin/git status 2>&1' );
+	return $output;
+}
+
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'v1', '/test', array(
+		'methods' => 'GET',
+		'callback' => 'my_awesome_func',
+	) );
+} );
