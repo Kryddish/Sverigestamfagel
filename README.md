@@ -1,5 +1,5 @@
 # Sverigestamfågel
-A wordpress theme built by SpiZeak and Memlisen. test
+A wordpress theme built by SpiZeak and Memlisen.
 
 ### Licenses and External Assets
 Sverigestamfågel is distributed under the terms of the GNU GPL v2
