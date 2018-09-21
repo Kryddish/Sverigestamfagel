@@ -1,0 +1,9 @@
+.site-content {
+	max-width: $page;
+	margin: auto;
+	margin-bottom: 50px;
+
+	@media screen and (min-width: $mobile) {
+		margin-top: 50px;
+	}
+}
