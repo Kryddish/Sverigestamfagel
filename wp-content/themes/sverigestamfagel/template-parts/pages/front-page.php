@@ -121,7 +121,7 @@
 			) ); ?>
 
 			<div class="posts-container">
-				<h4>Senaste fågelträffarna</h4>
+				<h4>Senaste träffarna</h4>
 
 				<?php
 				$index = 0;
