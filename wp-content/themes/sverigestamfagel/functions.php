@@ -64,14 +64,14 @@ function stf_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-	
+
 	// Add theme support for Custom Logo
 	add_theme_support( 'custom-logo', array(
 		'width' => 90,
 		'height' => 90,
 		'flex-width' => true,
 	));
-	
+
 }
 endif;
 add_action( 'after_setup_theme', 'stf_setup' );
@@ -130,7 +130,7 @@ add_action( 'widgets_init', 'stf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stf_scripts() {
-	
+
 	// Stylesheet
 	wp_enqueue_style( 'stf-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
@@ -208,7 +208,7 @@ if ( empty( $posts ) ) {
 
 add_action( 'rest_api_init', function () {
 	register_rest_route( 'webhook', '/deploy', array(
-		'methods' => 'GET',
+		'methods' => 'POST',
 		'callback' => 'my_awesome_func',
 	) );
 } );
