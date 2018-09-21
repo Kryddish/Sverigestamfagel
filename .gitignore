@@ -1,23 +1,23 @@
 # Wordpress installation
-wp-admin
-wp-includes
-.htaccess
-license.txt
-readme.html
-*.php
+/wp-admin
+/wp-includes
+/.htaccess
+/license.txt
+/readme.html
+/*.php
 
 # Deployment script
-deploy.sh
+/deploy.sh
 
 # Misc
-wp-content/languages
-wp-content/upgrade
-wp-content/uploads
-wp-content/themes/*
+/wp-content/languages
+/wp-content/upgrade
+/wp-content/uploads
+/wp-content/themes/*
 
 # Theme
-!wp-content/themes/sverigestamfagel
-wp-content/themes/sverigestamfagel/dist
-wp-content/themes/sverigestamfagel/style.css
-wp-content/themes/sverigestamfagel/src/sass/maps
-wp-content/themes/sverigestamfagel/node_modules
+/!wp-content/themes/sverigestamfagel
+/wp-content/themes/sverigestamfagel/dist
+/wp-content/themes/sverigestamfagel/style.css
+/wp-content/themes/sverigestamfagel/src/sass/maps
+/wp-content/themes/sverigestamfagel/node_modules
