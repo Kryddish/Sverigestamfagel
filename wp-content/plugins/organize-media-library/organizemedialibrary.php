@@ -2,7 +2,7 @@
 /*
 Plugin Name: Organize Media Library by Folders
 Plugin URI: https://wordpress.org/plugins/organize-media-library/
-Version: 6.10
+Version: 6.44
 Description: Organize Media Library by Folders. URL in the content, replace with the new URL.
 Author: Katsushi Kawamori
 Author URI: https://riverforest-wp.info/
@@ -25,33 +25,12 @@ Domain Path: /languages
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-	load_plugin_textdomain('organize-media-library');
-//	load_plugin_textdomain('organize-media-library', false, basename( dirname( __FILE__ ) ) . '/languages' );
+	add_action( 'plugins_loaded', 'organize_media_library_load_textdomain' );
+	function organize_media_library_load_textdomain() {
+		load_plugin_textdomain('organize-media-library');
+	}
 
-	define("ORGANIZEMEDIALIBRARY_PLUGIN_BASE_FILE", plugin_basename(__FILE__));
-	define("ORGANIZEMEDIALIBRARY_PLUGIN_BASE_DIR", dirname(__FILE__));
-	define("ORGANIZEMEDIALIBRARY_PLUGIN_URL", plugins_url($path='',$scheme=null).'/organize-media-library');
-
-	require_once( ORGANIZEMEDIALIBRARY_PLUGIN_BASE_DIR.'/req/OrganizeMediaLibraryRegist.php' );
-	$organizemedialibraryregist = new OrganizeMediaLibraryRegist();
-	add_action( 'admin_init', array($organizemedialibraryregist, 'register_settings') );
-	add_action( 'admin_init', array($organizemedialibraryregist, 'upload_folder_constant') );
-	add_action( 'admin_init', array($organizemedialibraryregist, 'media_folder_taxonomies'), 10 );
-	add_action( 'admin_head-upload.php', array($organizemedialibraryregist, 'media_folder_term'), 11 );
-	unset($organizemedialibraryregist);
-
-	require_once( ORGANIZEMEDIALIBRARY_PLUGIN_BASE_DIR.'/req/OrganizeMediaLibraryAdmin.php' );
-	$organizemedialibraryadmin = new OrganizeMediaLibraryAdmin();
-	add_filter( 'plugin_action_links', array($organizemedialibraryadmin, 'settings_link'), 10, 2 );
-	add_action( 'admin_menu', array($organizemedialibraryadmin, 'add_pages') );
-	add_action( 'admin_enqueue_scripts', array($organizemedialibraryadmin, 'load_custom_wp_admin_style') );
-	add_filter( 'manage_media_columns', array($organizemedialibraryadmin, 'muc_column') );
-	add_action( 'manage_media_custom_column', array($organizemedialibraryadmin, 'muc_value'), 12, 2 );
-	add_action( 'restrict_manage_posts', array( $organizemedialibraryadmin, 'add_folder_filter' ), 13 );
-	add_action( 'admin_footer', array( $organizemedialibraryadmin, 'custom_bulk_admin_footer') );
-	add_action( 'load-upload.php', array( $organizemedialibraryadmin, 'custom_bulk_action') );
-	add_action( 'admin_notices', array( $organizemedialibraryadmin, 'custom_bulk_admin_notices') );
-	add_action( 'wp_enqueue_media', array( $organizemedialibraryadmin, 'insert_media_custom_filter') );
-	unset($organizemedialibraryadmin);
+	if(!class_exists('OrganizeMediaLibraryRegist')) require_once( dirname(__FILE__).'/lib/OrganizeMediaLibraryRegist.php' );
+	if(!class_exists('OrganizeMediaLibraryAdmin')) require_once( dirname(__FILE__).'/lib/OrganizeMediaLibraryAdmin.php' );
 
 ?>
