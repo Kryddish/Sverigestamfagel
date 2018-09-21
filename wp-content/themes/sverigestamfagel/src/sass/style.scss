@@ -33,38 +33,38 @@ Tags: Underscores STF
 	## Galleries
 --------------------------------------------------------------*/
 
-@import "variables-site/variables-site";
+@import "common/variables-site/variables-site";
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 
-@import "normalize";
+@import "common/normalize";
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 
-@import "typography/typography";
+@import "common/typography/typography";
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 
-@import "elements/elements";
+@import "common/elements/elements";
 
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 
-@import "forms/forms";
+@import "common/forms/forms";
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 
-@import "navigation/navigation";
+@import "common/navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility

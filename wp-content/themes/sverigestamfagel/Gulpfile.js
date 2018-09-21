@@ -40,7 +40,7 @@ gulp.task('clean', cb => {
 			allowEmpty: true
 		}),
 		clean().on("error", notify.onError(error => {
-			return "Message to the notifier: " + error.message;
+			return "Whoops: " + error.message;
 		}))
 	], cb);
 });
@@ -60,7 +60,7 @@ gulp.task('sass', cb => {
 		sass({
 			outputStyle: 'expanded'
 		}).on('error', notify.onError(error => {
-			return "Message to the notifier: " + error.message;
+			return "Whoops: " + error.message;
 		})),
 		postcss([
 			autoprefixer({
@@ -69,8 +69,8 @@ gulp.task('sass', cb => {
 			}),
 			cssnano()
 		]),
-		sourcemaps.write(scss + 'maps'),
-		gulp.dest(root)
+		sourcemaps.write('/'),
+		gulp.dest(`${dist}css/`)
 	], cb);
 });
 

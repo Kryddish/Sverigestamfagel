@@ -132,7 +132,7 @@ add_action( 'widgets_init', 'stf_widgets_init' );
 function stf_scripts() {
 
 	// Stylesheet
-	wp_enqueue_style( 'stf-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+	wp_enqueue_style( 'stf-style', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime( get_stylesheet_directory() . '/dist/css/style.css' ) );
 
 	// Google fonts
 	wp_enqueue_style( 'sverigestamfagel-fonts', 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|Open+Sans:400,700' );
