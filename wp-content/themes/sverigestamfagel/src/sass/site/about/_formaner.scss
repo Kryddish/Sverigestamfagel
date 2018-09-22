@@ -84,7 +84,26 @@
     }
     
     .bird-register {
-        text-align: center;
+       text-align: left;
+
+       button {
+        margin-top: 1em;
+        transition:
+        box-shadow .2s ease, top .2s ease;
+        top: 0;
+        position: relative;
+        display: inline-block;
+        font-family: 'Averia Sans Libre';
+        font-size: 25px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        background-color: $color__interactive;
+
+        &:hover {
+            background: rgba(51, 161, 106, 0.9);
+        }
+       }
     }
     
     .page-content {
