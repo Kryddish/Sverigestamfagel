@@ -110,53 +110,60 @@ Tags: Underscores STF
 
 
 .medlemskapet {
-	.intro {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		align-items: flex-start;
-	}
-	.header {
-		width: 80%;
-		display: inline-block;
-		&::after {
-			content: "";
-			clear: both;
-			display: table;
-		}
+	.membership {
 		a {
 			color: green;
 		}
-
-		h5 {
-			float: right;
-			width: 70%;
-			padding-left: 30px;
+		.intro {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			align-items: flex-start;
 		}
-
-		img {
-			height: 450px;
-			width: 40%;
-		}
-		button {
-			margin-top: 1em;
-			transition:
-			box-shadow .2s ease, top .2s ease;
-			top: 0;
-			position: relative;
+		.header {
+			width: 80%;
 			display: inline-block;
-			font-family: 'Averia Sans Libre';
-			font-size: 24px;
-			color: white;
-			border: none;
-			border-radius: 10px;
-			background-color: $color__interactive;
-
-			&:hover {
-				background: rgba(51, 161, 106, 0.9);
+			&::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+	
+			h5 {
+				float: right;
+				width: 70%;
+				padding-left: 30px;
+			}
+	
+			img {
+				height: 450px;
+				width: 40%;
+			}
+			button {
+				margin-top: 1em;
+				transition:
+				box-shadow .2s ease, top .2s ease;
+				top: 0;
+				position: relative;
+				display: inline-block;
+				font-family: 'Averia Sans Libre';
+				font-size: 25px;
+				color: white;
+				border: none;
+				border-radius: 10px;
+				background-color: $color__interactive;
+	
+				&:hover {
+					background: rgba(51, 161, 106, 0.9);
+				}
+			}
+		}
+		.howmember {
+			img {
+				width: 25px;
+				margin-left: 5px;
 			}
 		}
 	}
-
 }
