@@ -140,29 +140,29 @@ Tags: Underscores STF
 				height: 450px;
 				width: 40%;
 			}
-			button {
-				margin-top: 1em;
-				transition:
-				box-shadow .2s ease, top .2s ease;
-				top: 0;
-				position: relative;
-				display: inline-block;
-				font-family: 'Averia Sans Libre';
-				font-size: 25px;
-				color: white;
-				border: none;
-				border-radius: 10px;
-				background-color: $color__interactive;
-	
-				&:hover {
-					background: rgba(51, 161, 106, 0.9);
-				}
-			}
 		}
 		.howmember {
 			img {
 				width: 25px;
 				margin-left: 5px;
+			}
+		}
+		button {
+			margin-top: 1em;
+			transition:
+			box-shadow .2s ease, top .2s ease;
+			top: 0;
+			position: relative;
+			display: inline-block;
+			font-family: 'Averia Sans Libre';
+			font-size: 25px;
+			color: white;
+			border: none;
+			border-radius: 10px;
+			background-color: $color__interactive;
+
+			&:hover {
+				background: rgba(51, 161, 106, 0.9);
 			}
 		}
 	}
