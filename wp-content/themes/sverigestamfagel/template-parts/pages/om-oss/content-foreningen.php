@@ -24,9 +24,9 @@
         </p> 
         <p>
             Passa på att bli medlem för att snabbt ta del av våra Medemsförmåner.
-            Mer info kan du hitta här
+            Mer info kan du hitta här.
         </p>
     </div>
 </section>
 
-<?php include( get_stylesheet_directory() . '/template-parts/instagram.php' ); ?>
+<?php include( get_stylesheet_directory() . '/template-parts/instagram.php' ); ?> 
