@@ -1,5 +1,5 @@
 <section>
-    <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/27368787_1623716201050523_4938098733160723649_o.jpg?oh=ef41e1a5efdc94ac025d2a59e25f3d62&oe=5B005A57" alt="">
+    <img src="http://dev.sverigestamfagel.se/wp-content/uploads/2015/11/cropped-STF-logo-1.gif" alt="">
     <div class="text">
         <h2>Vilka är vi? </h2>
         <p>
@@ -15,7 +15,7 @@
 </section>
 
 <section>
-    <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t31.0-8/20988424_10213087457917722_1228120172698785271_o.jpg?oh=35dca9c2b19272a2d44277d50974d5ab&oe=5B181AA3" alt="">
+    <img src="https://scontent.farn1-1.fna.fbcdn.net/v/t1.0-9/34808162_10215544386499401_5955583046282379264_o.jpg?_nc_cat=0&oh=fdedf19f4e3b77aef8a2e81f80158916&oe=5C61CE39" alt="">
     <div class="text">
         <h2>Vad gör vi? </h2>
         <p>
