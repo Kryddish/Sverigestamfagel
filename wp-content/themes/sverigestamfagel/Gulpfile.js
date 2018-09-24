@@ -4,7 +4,7 @@ const
 	proxy = 'sverigestamfagel.local',
 
 	gulp = require('gulp'),
-	// $ = require('gulp-load-plugins')(),
+	$ = require('gulp-load-plugins')(),
 
 	// Prepare and optimize code etc
 	autoprefixer = require('autoprefixer'),
@@ -46,7 +46,7 @@ gulp.task('clean', cb => {
 });
 
 gulp.task('icons', () => {
-	return gulp.src(src + 'config.json')
+	return gulp.src(src + 'icons/config.json')
 		.pipe($.fontello())
 		.pipe($.print())
 		.pipe(gulp.dest('dist'))
