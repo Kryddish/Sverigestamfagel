@@ -69,6 +69,22 @@
                             "maxlength": "",
                             "rows": 4,
                             "new_lines": ""
+                        },
+                        {
+                            "key": "field_5bbe16efdef6d",
+                            "label": "Länk",
+                            "name": "lank",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ]
                 },
@@ -124,6 +140,22 @@
                             "maxlength": "",
                             "rows": 4,
                             "new_lines": ""
+                        },
+                        {
+                            "key": "field_5bbe175f8ba9f",
+                            "label": "Länk",
+                            "name": "lank2",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ]
                 }
@@ -151,5 +183,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530128077
+    "modified": 1539184488
 }

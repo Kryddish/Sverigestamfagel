@@ -59,24 +59,34 @@
 				<button class="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
 				<button class="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 			</div>
+			
 			<div class="container">
 
 				<?php $top_info = get_field('top_info'); ?>
 
-				<div>
-					<h2>
-						<?php
-						if( $top_info['top']['headline'] ) {
-							echo $top_info['top']['headline'];
-						} ?>
-					</h2>
-					<p>
-						<?php
-						if( $top_info['top']['text'] ) {
-							echo $top_info['top']['text'];
-						} ?>
-					</p>
-				</div>
+				
+					<div>
+						<h2>
+							<?php
+							if( $top_info['top']['headline'] ) {
+								echo $top_info['top']['headline'];
+							} ?>
+						</h2>
+						<p>
+							<?php
+							if( $top_info['top']['text'] ) {
+								echo $top_info['top']['text'];
+							} ?>
+						</p>
+						<?php if( $top_info['top']['lank'] ) {
+								?>
+								<a target="_blank" href="<?php echo $top_info['top']['lank']; ?>">Läs mer..</a>
+								<?php
+							} ?>
+					</div>
+				
+				
+				
 				<div>
 					<h2>
 						<?php
@@ -90,8 +100,15 @@
 							echo $top_info['bottom']['text'];
 						} ?>
 					</p>
+					<?php
+							if( $top_info['bottom']['lank2'] ) {
+								?> <a target="_blank" href="<?php echo $top_info['bottom']['lank2']; ?>">Läs mer..</a> 
+								<?php
+							} ?>
 				</div>
 			</div>
+		
+				
 		</section>
 		<hr>
 		<div class="page-content">
