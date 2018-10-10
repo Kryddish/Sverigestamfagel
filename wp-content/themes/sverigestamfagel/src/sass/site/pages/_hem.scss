@@ -2,7 +2,7 @@
     .site-content {
         .entry-content {
             .top-info {
-                max-height: 500px;
+                max-height: 550px;
                 display: flex;
 
                 .container {
@@ -12,7 +12,7 @@
                     flex: 50%;
 
                     div {
-                        padding: 0 2em 0;
+                        padding: 0 2em 0.5em;
                         flex: 50%;
 
                         &:first-child {
@@ -26,6 +26,28 @@
                         h2 {
                             margin: 0;
                         }
+                    }
+                    button.lank_1 {
+                        border-radius: 5px;
+                        color: #000;
+                        text-decoration: none;
+                        background-color: transparent;
+                        
+                            &:hover {
+                                color: #000;;
+                                text-decoration: underline;
+                            }
+                    }
+                    button.lank_2 {
+                        border-radius: 5px;
+                        color: #000;
+                        text-decoration: none;
+                        background-color: transparent;
+                        
+                            &:hover {
+                                color: $color__interactive;
+                                text-decoration: underline;
+                            }
                     }
                 }
             }

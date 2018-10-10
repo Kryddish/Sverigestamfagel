@@ -80,7 +80,7 @@
 						</p>
 						<?php if( $top_info['top']['lank'] ) {
 								?>
-								<a target="_blank" href="<?php echo $top_info['top']['lank']; ?>">Läs mer..</a>
+								<button class="lank_1" target="_blank" href="<?php echo $top_info['top']['lank']; ?>">Läs mer</button>
 								<?php
 							} ?>
 					</div>
@@ -102,7 +102,7 @@
 					</p>
 					<?php
 							if( $top_info['bottom']['lank2'] ) {
-								?> <a target="_blank" href="<?php echo $top_info['bottom']['lank2']; ?>">Läs mer..</a> 
+								?> <button class="lank_2" target="_blank" href="<?php echo $top_info['bottom']['lank2']; ?>">Läs mer</button> 
 								<?php
 							} ?>
 				</div>
