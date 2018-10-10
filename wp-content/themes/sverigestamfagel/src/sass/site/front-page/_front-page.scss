@@ -28,6 +28,29 @@
                         }
                     }
                 }
+                button.lank_1 {
+                    border-radius: 5px;
+                    color: #000;
+                    text-decoration: none;
+                    background-color: transparent;
+                    
+                        &:hover {
+                            color: #000;;
+                            text-decoration: underline;
+                        }
+                }
+                button.lank_2 {
+                    border-radius: 5px;
+                    color: #000;
+                    text-decoration: none;
+                    background-color: transparent;
+                    
+                        &:hover {
+                            color: $color__interactive;
+                            text-decoration: underline;
+                        }
+                }
+            }
             }
             hr {
                 margin: 3em 0;
