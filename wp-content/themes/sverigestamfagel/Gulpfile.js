@@ -5,6 +5,7 @@ const
 
 	gulp = require('gulp'),
 	$ = require('gulp-load-plugins')(),
+	print = require('gulp-print').default,
 
 	// Prepare and optimize code etc
 	autoprefixer = require('autoprefixer'),
@@ -48,7 +49,7 @@ gulp.task('clean', cb => {
 gulp.task('icons', () => {
 	return gulp.src(src + 'icons/config.json')
 		.pipe($.fontello())
-		.pipe($.print())
+		.pipe(print())
 		.pipe(gulp.dest('dist'))
 });
 
@@ -124,7 +125,7 @@ gulp.task('watch', () => {
 
 
 // Build
-gulp.task('build', gulp.series('clean', gulp.parallel('js', 'sass', 'img')));
+gulp.task('build', gulp.series('clean', gulp.parallel('js', 'sass', 'img', 'icons')));
 
 
 // Default task (runs at initiation: gulp --verbose)

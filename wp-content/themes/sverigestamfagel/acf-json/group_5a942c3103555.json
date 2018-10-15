@@ -26,9 +26,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "1715"
+                "value": "template-archive.php"
             }
         ]
     ],
@@ -42,5 +42,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1530127932
+    "modified": 1537723684
 }

@@ -124,8 +124,14 @@
 				<h4>Senaste fågelträffarna</h4>
 
 				<?php
+				$args = [
+					'post_type' => 'meets',
+					'posts_per_page' => 10
+				];
+				$meets_query = new WP_Query( $args );
 				$index = 0;
-				foreach( $posts as $post ) : setup_postdata( $post );
+
+				foreach( $meets_query->posts as $post ) : setup_postdata( $post );
 
 					if( $index < $meets_count ) :
 						get_template_part( 'template-parts/content/content' );

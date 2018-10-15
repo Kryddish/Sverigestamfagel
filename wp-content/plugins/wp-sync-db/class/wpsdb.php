@@ -1259,6 +1259,7 @@ class WPSDB extends WPSDB_Base {
 	function get_post_max_size() {
 		$val = trim( ini_get( 'post_max_size' ) );
 		$last = strtolower( $val[ strlen( $val ) - 1 ] );
+		$val = (int) $val;
 		switch ( $last ) {
 		case 'g':
 			$val *= 1024;
@@ -2206,7 +2207,7 @@ class WPSDB extends WPSDB_Base {
 			$this->download_file();
 		}
 
-		$plugins_url = trailingslashit( plugins_url() ) . trailingslashit( $this->plugin_folder_name );
+		$plugins_url = trailingslashit( plugins_url( '', $this->plugin_file_path ) );
 
 		$version = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? time() : $this->plugin_version;
 
@@ -2410,6 +2411,7 @@ class WPSDB extends WPSDB_Base {
 		if( empty( $val ) ) return false;
 		$val = trim($val);
 		$last = strtolower($val[strlen($val)-1]);
+		$val = (int) $val;
 		switch($last) {
 			// The 'G' modifier is available since PHP 5.1.0
 			case 'g':

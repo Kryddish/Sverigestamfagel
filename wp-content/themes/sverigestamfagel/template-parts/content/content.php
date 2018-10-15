@@ -33,10 +33,10 @@ $location = get_field( 'location' ); ?>
 
 	<div class="text">
 		<?php
-		$archive_year  = get_the_time('Y'); 
-		$archive_month = get_the_time('m'); 
+		$archive_year  = get_the_time('Y');
+		$archive_month = get_the_time('m');
 		$archive_day   = get_the_time('d'); ?>
-		
+
 		<header>
 			<?php
 			if( !is_front_page() ) : ?>
@@ -53,14 +53,15 @@ $location = get_field( 'location' ); ?>
 				</a>
 			<?php
 			endif;
-			if( !is_front_page() ) : 
-				$post_type = get_post_type();
+			if( !is_front_page() ) :
+				$post_type = get_post_type($post);
+				echo '<pre>' . print_r( $post_type, true ) . '</pre>';
 
 				if( $post_type != 'post' ) : ?>
-					
+
 					<h6 class="category">
-						<a href="<?php echo site_url() . '/' . get_post_type_object( $post_type )->name ?>">
-							<?php echo get_post_type_object( $post_type )->labels->singular_name; ?>
+						<a href="<?= site_url() . '/' . get_post_type_object( $post_type )->name ?>">
+							<?= get_post_type_object( $post_type )->labels->singular_name; ?>
 						</a>
 					</h6>
 				<?php
@@ -80,21 +81,21 @@ $location = get_field( 'location' ); ?>
 				</a>
 			</h5>
 		</header>
-		
+
 		<?php the_excerpt();
 
 		if( is_front_page() ) : ?>
 			<footer>
 				<a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day ); ?>">
 					<h6 class="date">
-						
+
 							<?php
 							if(get_field( 'date' )) :
 								the_field( 'date' );
 							else :
 								echo get_the_date();
 							endif;?>
-						
+
 					</h6>
 				</a>
 			</footer>

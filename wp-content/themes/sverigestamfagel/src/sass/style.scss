@@ -13,6 +13,8 @@ Tags: Underscores STF
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Vendor assets
+# Variables and mixins
 # Normalize
 # Typography
 # Elements
@@ -33,6 +35,14 @@ Tags: Underscores STF
 	## Galleries
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Vendor assets
+--------------------------------------------------------------*/
+@import "../icons/css/fontello";
+
+/*--------------------------------------------------------------
+# Variables and mixins
+--------------------------------------------------------------*/
 @import "common/variables-site/variables-site";
 @import "mixins/mixins-master";
 
@@ -129,13 +139,13 @@ Tags: Underscores STF
 				clear: both;
 				display: table;
 			}
-	
+
 			h5 {
 				float: right;
 				width: 70%;
 				padding-left: 30px;
 			}
-	
+
 			img {
 				height: 450px;
 				width: 40%;
@@ -169,7 +179,7 @@ Tags: Underscores STF
 }
 
 
-// Contact form 
+// Contact form
 
 .wpcf7-form {
 	input, select, textarea {
@@ -190,7 +200,7 @@ Tags: Underscores STF
 	textarea {
 		padding: 2em;
 	}
-	
+
 	input[type=submit] {
 		background-color: $color__interactive;
 		color: white;
@@ -200,11 +210,11 @@ Tags: Underscores STF
 		cursor: pointer;
 		width: 15%;
 	}
-	
+
 	input[type=submit]:hover {
 		background: rgba(51, 161, 106, 0.9);
 	}
-	
+
 	.container {
 		border-radius: 5px;
 		background-color: #f2f2f2;
