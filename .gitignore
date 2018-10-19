@@ -4,13 +4,26 @@ wp-includes
 .htaccess
 license.txt
 readme.html
-*.php
+wp-activate.php
+wp-blog-header.php
+wp-comments-post
+wp-config-sample.php
+wp-config.php
+wp-comments-post.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
 
 # Deployment script
 deploy.sh
 
 # Misc
-wp-content/languages
 wp-content/upgrade
 wp-content/uploads
 
