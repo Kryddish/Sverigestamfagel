@@ -24,7 +24,7 @@ $location = get_field( 'location' ); ?>
 
 		if( $images ): ?>
 			<a class="image" href="<?php the_permalink(); ?>">
-				<img src="<?php echo $images[0]['url']; ?>" alt="Post image">
+				<img src="<?= $images[0]['url']; ?>" alt="Post image">
 			</a>
 		<?php
 		endif;
@@ -40,29 +40,23 @@ $location = get_field( 'location' ); ?>
 		<header>
 			<?php
 			if( !is_front_page() ) : ?>
-
-				<a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day ); ?>">
-					<h6 class="date">
-						<?php
-						if(get_field( 'date' )) :
-							the_field( 'date' );
-						else :
-							echo get_the_date();
-						endif;?>
-					</h6>
-				</a>
+				<h6 class="date">
+					<?php
+					if(get_field( 'date' )) :
+						the_field( 'date' );
+					else :
+						echo get_the_date();
+					endif;?>
+				</h6>
 			<?php
 			endif;
 			if( !is_front_page() ) :
 				$post_type = get_post_type($post);
-				echo '<pre>' . print_r( $post_type, true ) . '</pre>';
 
 				if( $post_type != 'post' ) : ?>
 
 					<h6 class="category">
-						<a href="<?= site_url() . '/' . get_post_type_object( $post_type )->name ?>">
-							<?= get_post_type_object( $post_type )->labels->singular_name; ?>
-						</a>
+						<a href="<?= site_url() . '/' . get_post_type_object( $post_type )->name ?>">Kategorier</a>
 					</h6>
 				<?php
 				else : ?>
@@ -86,18 +80,16 @@ $location = get_field( 'location' ); ?>
 
 		if( is_front_page() ) : ?>
 			<footer>
-				<a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day ); ?>">
-					<h6 class="date">
+				<h6 class="date">
 
-							<?php
-							if(get_field( 'date' )) :
-								the_field( 'date' );
-							else :
-								echo get_the_date();
-							endif;?>
+						<?php
+						if(get_field( 'date' )) :
+							the_field( 'date' );
+						else :
+							echo get_the_date();
+						endif;?>
 
-					</h6>
-				</a>
+				</h6>
 			</footer>
 		<?php
 		endif;

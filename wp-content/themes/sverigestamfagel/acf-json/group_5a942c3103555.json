@@ -1,6 +1,6 @@
 {
     "key": "group_5a942c3103555",
-    "title": "Arkiv - Sida - Inläggsflöde",
+    "title": "Sidmall: Arkiv",
     "fields": [
         {
             "key": "field_5a942c36d0010",
@@ -28,7 +28,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-archive.php"
+                "value": "templates\/archive.php"
             }
         ]
     ],
@@ -42,5 +42,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1537723684
+    "modified": 1540135087
 }

@@ -6,21 +6,32 @@
  *
  * @package stf
  */
-?>
+
+/**
+ * Fields
+ */
+$posts_per_page = get_field( 'meets_count' ) ? get_field( 'meets_count' ) : 3;
+
+/**
+ * Queries
+ */
+$post_types = get_post_types( array(
+	'public' => true
+) );
+unset($post_types['attachment'], $post_types['page']);
+
+$args = [
+	'post_type' => $post_types,
+	'posts_per_page' => $posts_per_page
+];
+$meets_query = new WP_Query( $args ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stf' ),
-			'after'  => '</div>',
-		) ); ?>
-
 		<section class="top-info">
 			<div class="stf-slider">
 				<ul>
-
 					<?php
 					if( have_rows('slider') ):
 						while ( have_rows('slider') ) : the_row(); ?>
@@ -54,39 +65,33 @@
 						<img src="<?php echo get_stylesheet_directory_uri() . '/dist/img/parrot.png'?>" alt="Parrot image">
 					<?php
 					endif; ?>
-
 				</ul>
 				<button class="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
 				<button class="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 			</div>
-			
+
 			<div class="container">
-
 				<?php $top_info = get_field('top_info'); ?>
-
-				
-					<div>
-						<h2>
-							<?php
-							if( $top_info['top']['headline'] ) {
-								echo $top_info['top']['headline'];
-							} ?>
-						</h2>
-						<p>
-							<?php
-							if( $top_info['top']['text'] ) {
-								echo $top_info['top']['text'];
-							} ?>
-						</p>
-						<?php if( $top_info['top']['lank'] ) {
-								?>
-								<button class="lank_1" target="_blank" href="<?php echo $top_info['top']['lank']; ?>">Läs mer</button>
-								<?php
-							} ?>
-					</div>
-				
-				
-				
+				<div>
+					<h2>
+						<?php
+						if( $top_info['top']['headline'] ) {
+							echo $top_info['top']['headline'];
+						} ?>
+					</h2>
+					<p>
+						<?php
+						if( $top_info['top']['text'] ) {
+							echo $top_info['top']['text'];
+						} ?>
+					</p>
+					<?php
+					if( $top_info['top']['lank'] ) {
+						?>
+						<button class="lank_1" target="_blank" href="<?= $top_info['top']['lank']; ?>">Läs mer</button>
+						<?php
+					} ?>
+				</div>
 				<div>
 					<h2>
 						<?php
@@ -101,61 +106,29 @@
 						} ?>
 					</p>
 					<?php
-							if( $top_info['bottom']['lank2'] ) {
-								?> <button class="lank_2" target="_blank" href="<?php echo $top_info['bottom']['lank2']; ?>">Läs mer</button> 
-								<?php
-							} ?>
+					if( $top_info['bottom']['lank2'] ): ?>
+						<button class="lank_2" target="_blank" href="<?= $top_info['bottom']['lank2']; ?>">Läs mer</button>
+						<?php
+					endif; ?>
 				</div>
 			</div>
-		
-				
 		</section>
 		<hr>
 		<div class="page-content">
-
 			<?php
-			$post_types =
-			get_post_types( array(
-				'public' => true
-			) );
-			unset($post_types['attachment'], $post_types['page']);
-
-			if( get_field( 'meets_count' ) ) {
-				$meets_count = get_field( 'meets_count' );
-			} else {
-				$meets_count = 3;
-			}
-
 			if( get_field( 'news_count' ) ) {
 				$news_count = get_field( 'news_count' );
 			} else {
 				$news_count = 3;
-			}
-
-			$posts = get_posts( array(
-				'post_type' 		=> 	'meets',
-				'posts_per_page'	=>  -1
-			) ); ?>
+			} ?>
 
 			<div class="posts-container">
 				<h4>Senaste fågelträffarna</h4>
 
 				<?php
-				$args = [
-					'post_type' => 'meets',
-					'posts_per_page' => 10
-				];
-				$meets_query = new WP_Query( $args );
-				$index = 0;
-
 				foreach( $meets_query->posts as $post ) : setup_postdata( $post );
 
-					if( $index < $meets_count ) :
-						get_template_part( 'template-parts/content/content' );
-						$index++;
-					else:
-						break;
-					endif;
+					get_template_part( 'template-parts/content/content' );
 
 				endforeach;
 				wp_reset_postdata(); ?>
@@ -165,8 +138,6 @@
 				<h4>Senaste nyheterna</h4>
 
 				<?php
-				dynamic_sidebar( 'sidebar-1' );
-
 				$posts = get_posts( array(
 					'post_type' 		=> 	'articles',
 					'posts_per_page'	=>  $news_count
@@ -176,9 +147,9 @@
 
 					if( $post->post_type !== 'meets' ) : ?>
 						<a href="<?php the_permalink(); ?>"><h6><?php the_title(); ?></h6></a>
-						<a href="<?php echo get_category_link( get_the_category()[0]->cat_ID ) ?>"><?php echo get_the_category()[0]->name; ?></a>
+						<a href="<?= get_category_link( get_the_category()[0]->cat_ID ) ?>"><?php echo get_the_category()[0]->name; ?></a>
 						<h6 class="article-date">
-							<?php echo get_the_date(); ?>
+							<?= get_the_date(); ?>
 						</h6>
 						<hr>
 						<?php
@@ -186,7 +157,6 @@
 
 				endforeach;
 				wp_reset_postdata(); ?>
-
 			</div>
 		</div>
 
