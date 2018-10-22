@@ -50,4 +50,4 @@ $args = array(
     'rest_base'             => 'articles',
     'menu_icon'				=> 'dashicons-welcome-write-blog'
 );
-register_post_type( 'artiklar', $args );
+register_post_type( 'articles', $args );

@@ -38,8 +38,15 @@ $location = get_field( 'location' ); ?>
 		$archive_day   = get_the_time('d'); ?>
 
 		<header>
-			<?php
-			if( !is_front_page() ) : ?>
+			<h5>
+				<a href="<?php the_permalink(); ?>">
+					<?php the_title(); ?>
+				</a>
+			</h5>
+		</header>
+
+		<?php the_excerpt(); ?>
+			<footer>
 				<h6 class="date">
 					<?php
 					if(get_field( 'date' )) :
@@ -48,52 +55,8 @@ $location = get_field( 'location' ); ?>
 						echo get_the_date();
 					endif;?>
 				</h6>
-			<?php
-			endif;
-			if( !is_front_page() ) :
-				$post_type = get_post_type($post);
-
-				if( $post_type != 'post' ) : ?>
-
-					<h6 class="category">
-						<a href="<?= site_url() . '/' . get_post_type_object( $post_type )->name ?>">Kategorier</a>
-					</h6>
-				<?php
-				else : ?>
-					<h6 class="category">
-						<?php _e('Inlägg', 'stf'); ?>
-					</h6>
-				<?php
-				endif; ?>
-
-			<?php
-			endif; ?>
-
-			<h5>
-				<a href="<?php the_permalink(); ?>">
-					<?php the_title(); ?>
-				</a>
-			</h5>
-		</header>
-
-		<?php the_excerpt();
-
-		if( is_front_page() ) : ?>
-			<footer>
-				<h6 class="date">
-
-						<?php
-						if(get_field( 'date' )) :
-							the_field( 'date' );
-						else :
-							echo get_the_date();
-						endif;?>
-
-				</h6>
 			</footer>
 		<?php
-		endif;
-
 		if( !empty( $location['adress'] ) ) : ?>
 			<h6 class="location"><?php echo $location['adress']; ?></h6>
 		<?php

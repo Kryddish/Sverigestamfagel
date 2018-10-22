@@ -134,7 +134,7 @@ $meets_query = new WP_Query( $args ); ?>
 				wp_reset_postdata(); ?>
 			</div>
 
-			<div class="article-container">
+			<div class="c-sidebar">
 				<h4>Senaste nyheterna</h4>
 
 				<?php
@@ -146,12 +146,15 @@ $meets_query = new WP_Query( $args ); ?>
 				foreach( $posts as $post ) : setup_postdata( $post );
 
 					if( $post->post_type !== 'meets' ) : ?>
-						<a href="<?php the_permalink(); ?>"><h6><?php the_title(); ?></h6></a>
-						<a href="<?= get_category_link( get_the_category()[0]->cat_ID ) ?>"><?php echo get_the_category()[0]->name; ?></a>
-						<h6 class="article-date">
-							<?= get_the_date(); ?>
-						</h6>
-						<hr>
+						<article <?php post_class(); ?>>
+							<header>
+								<span class="category"><?php echo get_the_category()[0]->name; ?></span>
+								<span class="date"><?= get_the_date(); ?></span>
+							</header>
+							<a href="<?php the_permalink(); ?>">
+								<h6><?php the_title(); ?></h6>
+							</a>
+						</article>
 						<?php
 					endif;
 
