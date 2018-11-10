@@ -12,25 +12,4 @@
     }
 }
 
-.article-container {
-    &::before {
-        position: absolute;
-        left: -30px;
-        content: "";
-        border-left: 2px dashed rgba(41, 42, 43, 0.5);
-        height: 100%;
-    }
-
-    hr {
-        margin: 0;
-        padding: 0;
-    }
-
-    .article-date {
-        text-align: right;
-        margin: 0;
-        padding: 0;
-    }
-}
-
 @import 'post';

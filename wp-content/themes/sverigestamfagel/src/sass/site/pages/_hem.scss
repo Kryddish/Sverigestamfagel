@@ -32,7 +32,7 @@
                         color: #000;
                         text-decoration: none;
                         background-color: transparent;
-                        
+
                             &:hover {
                                 color: #000;;
                                 text-decoration: underline;
@@ -43,7 +43,7 @@
                         color: #000;
                         text-decoration: none;
                         background-color: transparent;
-                        
+
                             &:hover {
                                 color: $color__interactive;
                                 text-decoration: underline;
@@ -55,7 +55,7 @@
                 overflow: auto;
             }
         }
-        
+
     }
     hr {
         margin: 3em 0 2em 0;
@@ -90,14 +90,5 @@
                 }
             }
         }
-    }
-}
-
-.article-container {
-    width: 40%;
-    float: right;
-
-    @media screen and (max-width: $mobile) {
-        display: none;
     }
 }
