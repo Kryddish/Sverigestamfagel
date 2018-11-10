@@ -187,21 +187,9 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/custom-post-types/custom-post-types.php';
 
-/**
- * Grab latest post title by an author!
- *
- * @param array $data Options for the function.
- * @return string|null Post title for the latest,  * or null if none.
- */
 function my_awesome_func( $data ) {
-$posts = get_posts( array(
-	'post_type' => 'meets'
-) );
-
-if ( empty( $posts ) ) {
-	return null;
-}
 	$output = shell_exec( 'bash ./deploy.sh' );
+
 	if( $output ) echo $output;
 	else echo 'Deployment failed.';
 }

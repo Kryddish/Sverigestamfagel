@@ -3,9 +3,13 @@
  * Template Name: Arkivsida
  */
 
-$post_type = get_field( 'post_type' ) ? get_field( 'post_type' ) : 'any';
 $posts_per_page = get_field( 'posts_per_page' ) ? get_field( 'posts_per_page' ) : 5;
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+$post_type = [
+	'meets',
+	'articles',
+	'post'
+];
 $post_types = [
 	'meets' => 'Fågelträffar',
 	'articles' => 'Artiklar',
@@ -38,6 +42,11 @@ if( isset( $_GET['category'] ) ) {
 
 $archive_query = new WP_Query( $args );
 
+/**
+ * Sort array with custom function
+ */
+$archive_query->posts = stf_sort_date( $archive_query->posts );
+
 $categories = get_categories();
 
 get_header(); ?>
@@ -52,7 +61,7 @@ get_header(); ?>
 				if( $archive_query->have_posts() ):
 					foreach( $archive_query->posts as $post ): setup_postdata( $post );
 
-							get_template_part( 'template-parts/content/content' );
+						get_template_part( 'template-parts/content/content' );
 
 					endforeach;
 					wp_reset_postdata();
@@ -100,6 +109,7 @@ get_header(); ?>
 					</div>
 					<?php
 				endif;
+
 				foreach( $post_types as $key => $value ):
 					if( isset( $_GET['type'] ) and $_GET['type'] === $key ): ?>
 						<div>
