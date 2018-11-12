@@ -27,7 +27,7 @@ if( isset( $_GET['type'] ) ) {
 $args = [
 	'post_type' => $post_type,
 	'posts_per_page' => $posts_per_page,
-	'paged' => $paged
+	'offset' => ($paged-1) * $posts_per_page
 ];
 
 // Add search query to query arguments if set
@@ -51,7 +51,8 @@ $archive_query = new WP_Query( $args );
 /**
  * Sort array with custom function
  */
-$archive_query->posts = stf_sort_date( $archive_query->posts );
+// if( $archive_query->have_posts() )
+// 	$archive_query->posts = stf_sort_date( $archive_query->posts );
 
 $categories = get_categories();
 
@@ -84,8 +85,8 @@ get_header(); ?>
 						'format' 			=> '/page/%#%',
 						'current' 			=> max(1, $paged),
 						'total' 			=> $archive_query->max_num_pages,
-						'prev_text'         => __('« Föregående sida', 'stf'),
-						'next_text'         => __('Nästa sida »', 'stf'),
+						'prev_text'         => __('', 'stf'),
+						'next_text'         => __('', 'stf'),
 						'mid_size'          => 2,
 						'end_size'          => 0,
 					)); ?>

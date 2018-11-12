@@ -116,18 +116,16 @@ function stf_categorized_blog() {
 	}
 }
 
-function stf_sort_date( $array ) {
-	foreach ( $array as $key => $value ) {
-		$date = get_field( 'date', $value->ID );
-
-		if ( $date ) {
-			$sort[$key] = strtotime( $date );
+function stf_sort_date($array) {
+	foreach ($array as $key => $part) {
+		$date = get_post_meta($part->ID, 'date', true);
+		if ( !empty( $date ) ) {
+			$sort[$key] = strtotime($date);
 		} else {
-			$sort[$key] = strtotime( $value->post_date );
+			$sort[$key] = strtotime($part->post_date);
 		}
 	}
-
-	array_multisort( $sort, SORT_DESC, $array );
+	array_multisort($sort, SORT_DESC, $array);
 	
 	return $array;
 }
