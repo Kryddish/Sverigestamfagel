@@ -16,30 +16,36 @@ $post_types = [
 	'post' => 'Inlägg'
 ];
 
-if( isset( $_GET['q'] ) ) {
-	$search = $_GET['q'];
-} else {
-	$search = '';
-}
-
+// Get post type field if set
 if( isset( $_GET['type'] ) ) {
 	$post_type = $_GET['type'];
 }
 
+/**
+ * Query arguments
+ */
 $args = [
 	'post_type' => $post_type,
 	'posts_per_page' => $posts_per_page,
 	'paged' => $paged
 ];
 
+// Add search query to query arguments if set
 if( isset( $_GET['q'] ) ) {
+	$search = $_GET['q'];
 	$args['s'] = $_GET['q'];
+} else {
+	$search = '';
 }
 
+// Add categories to query if set
 if( isset( $_GET['category'] ) ) {
 	$args['category_name'] = $_GET['category'];
 }
 
+/**
+ * Get posts
+ */
 $archive_query = new WP_Query( $args );
 
 /**
