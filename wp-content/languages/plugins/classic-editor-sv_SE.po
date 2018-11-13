@@ -1,0 +1,492 @@
+# Translation of Plugins - Classic Editor - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Classic Editor - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-11-02 14:41:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Classic Editor - Stable (latest release)\n"
+
+#: classic-editor.php:311
+msgid "Edit (Block editor)"
+msgstr "Redigera (blockredigeraren)"
+
+#: classic-editor.php:185
+msgid "Replace the Block editor with the Classic editor."
+msgstr "Ersätt blockredigeraren med den klassiska redigeraren."
+
+#: classic-editor.php:191
+msgid "Use the Block editor by default and include optional links back to the Classic editor."
+msgstr "Använd blockredigeraren som standard och inkludera valfria länkar tillbaka till den klassiska redigeraren."
+
+#: classic-edit-form-advanced.php:424
+msgid "The Text mode allows you to enter HTML along with your post text. Note that &lt;p&gt; and &lt;br&gt; tags are converted to line breaks when switching to the Text editor to make it less cluttered. When you type, a single line break can be used instead of typing &lt;br&gt;, and two line breaks instead of paragraph tags. The line breaks are converted back to tags automatically."
+msgstr "Text-läget låter dig ange HTML tillsammans med innehållstexten. Notera att taggarna &lt;p&gt; och &lt;br&gt; automatiskt konverteras till radbrytningar när man växlar läge i redigeraren för att göra det mindre rörigt. När du skriver kan en enkelt radbrytning användas istället för att ange &lt;br&gt; och två radbrytningar kan användas för styckeindelning. Radbrytningarna konverteras automatiskt tillbaka till taggar."
+
+#: classic-edit-form-advanced.php:423
+msgid "Visual mode gives you an editor that is similar to a word processor. Click the Toolbar Toggle button to get a second row of controls."
+msgstr "Det visuella läget ger dig en redigeraren som kan liknas vid en ordbehandlare. Klicka på knappen för utökad verktygsrad för att få ytterligare en rad med verktyg."
+
+#: classic-edit-form-advanced.php:220
+msgid "Media file updated."
+msgstr "Mediafil uppdaterad."
+
+#: classic-edit-form-advanced.php:489
+msgid "<strong>Publish</strong> &mdash; You can set the terms of publishing your post in the Publish box. For Status, Visibility, and Publish (immediately), click on the Edit link to reveal more options. Visibility includes options for password-protecting a post or making it stay at the top of your blog indefinitely (sticky). The Password protected option allows you to set an arbitrary password for each post. The Private option hides the post from everyone except editors and administrators. Publish (immediately) allows you to set a future or past date and time, so you can schedule a post to be published in the future or backdate a post."
+msgstr "<strong>Publicera</strong> &mdash; Du kan ställa in villkoren för att publicera inlägget i panelen Publicera. För status, synlighet, och publicera (direkt), klicka på länken Redigera för att visa fler alternativ. Synlighet omfattar alternativ för att lösenordsskydda ett inlägg eller för att klistra det överst i ditt flöde på obestämd tid. Alternativet för att lösenordsskydda kan användas för att ange ett valfritt lösenord för varje post. Det privata alternativet döljer inlägget från alla utom redaktörer och administratörer. Under alternativet publicera (direkt) kan du tidsinställa publiceringen framåt eller bakåt i tiden."
+
+#: classic-edit-form-advanced.php:217
+msgid "Page scheduled for: %s."
+msgstr "Sida schemalagd för: %s."
+
+#: classic-edit-form-advanced.php:218
+msgid "Page draft updated."
+msgstr "Utkast av sida uppdaterat."
+
+#: classic-edit-form-advanced.php:214
+msgid "Page published."
+msgstr "Sida publicerad."
+
+#: classic-edit-form-advanced.php:216
+msgid "Page submitted."
+msgstr "Sida sparad."
+
+#: classic-edit-form-advanced.php:202
+msgid "Post submitted."
+msgstr "Inlägg sparat."
+
+#: classic-edit-form-advanced.php:203
+msgid "Post scheduled for: %s."
+msgstr "Inlägg schemalagt för: %s."
+
+#: classic-edit-form-advanced.php:204
+msgid "Post draft updated."
+msgstr "Utkast av inlägg uppdaterat."
+
+#: classic-edit-form-advanced.php:200
+msgid "Post published."
+msgstr "Inlägg publicerat."
+
+#: classic-edit-form-advanced.php:184
+msgid "View page"
+msgstr "Visa sida"
+
+#: classic-edit-form-advanced.php:154 classic-edit-form-advanced.php:160
+msgid "Preview post"
+msgstr "Förhandsgranska inlägg"
+
+#: classic-edit-form-advanced.php:172 classic-edit-form-advanced.php:178
+msgid "Preview page"
+msgstr "Förhandsgranska sidan"
+
+#: classic-edit-form-advanced.php:477
+msgid "You can also embed media from many popular websites including Twitter, YouTube, Flickr and others by pasting the media URL on its own line into the content of your post/page. Please refer to the Codex to <a href=\"https://codex.wordpress.org/Embeds\">learn more about embeds</a>."
+msgstr "Du kan även bädda in media från flera populära webbplatser inklusive Twitter, YouTube, Flickr med fler genom att klistra in objektets URL på en egen rad av innehåller för ditt inlägg/sida. För att ta reda på mer om inbäddningar, <a href=\"https://codex.wordpress.org/Embeds\">se dokumentationen för WordPress</a>."
+
+#: classic-edit-form-advanced.php:453
+msgid "<a href=\"https://codex.wordpress.org/Pages_Add_New_Screen\">Documentation on Adding New Pages</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Pages_Add_New_Screen\">Dokumentation för att lägga till nya sidor</a>"
+
+#: classic-edit-form-advanced.php:438
+msgid "<a href=\"https://codex.wordpress.org/Posts_Add_New_Screen\">Documentation on Writing and Editing Posts</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Posts_Add_New_Screen\">Dokumentation för skapande och redigering av inlägg</a>"
+
+#: classic-edit-form-advanced.php:454
+msgid "<a href=\"https://codex.wordpress.org/Pages_Screen#Editing_Individual_Pages\">Documentation on Editing Pages</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Pages_Screen#Editing_Individual_Pages\">Dokumentation för redigering av sidor</a>"
+
+#: classic-edit-form-advanced.php:470
+msgid "<a href=\"https://codex.wordpress.org/Media_Add_New_Screen#Edit_Media\">Documentation on Edit Media</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Media_Add_New_Screen#Edit_Media\">Dokumentation för redigering av media</a>"
+
+#: classic-edit-form-advanced.php:493
+msgid "<strong>Format</strong> &mdash; Post Formats designate how your theme will display a specific post. For example, you could have a <em>standard</em> blog post with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Please refer to the Codex for <a href=\"https://codex.wordpress.org/Post_Formats#Supported_Formats\">descriptions of each post format</a>. Your theme could enable all or some of 10 possible formats."
+msgstr "<strong>Format</strong> - Inläggsformat bestämmer hur ditt tema kommer att visa specifika inlägg. Exempel, du kan ha ett <em>standard</em>-blogginlägg med en rubrik och stycken eller en kort <em>notis</em> som består av en rubrik och en kort text. Besök dokumentationen för <a href=\"https://codex.wordpress.org/Post_Formats#Supported_Formats\">beskrivningar av alla inläggstyper</a>. Ditt tema kan aktivera alla eller något av de 10 olika formaten."
+
+#. translators: Publish box date format, see https://secure.php.net/date
+#: classic-edit-form-advanced.php:190
+msgid "M j, Y @ H:i"
+msgstr "j M, Y @ H:i"
+
+#: classic-edit-form-advanced.php:426
+msgid "You can enable distraction-free writing mode using the icon to the right. This feature is not available for old browsers or devices with small screens, and requires that the full-height editor be enabled in Screen Options."
+msgstr "Du kan aktivera distraktionsfritt skrivläge via ikonen till höger. Den här funktionen är inte tillgänglig för äldre webbläsare eller enheter med små skärmar och kräver att fullhöjdsredigeraren är aktiverad under Panelinställningar."
+
+#: classic-edit-form-advanced.php:425
+msgid "You can insert media files by clicking the icons above the post editor and following the directions. You can align or edit images using the inline formatting toolbar available in Visual mode."
+msgstr "Du kan infoga mediafiler genom att klicka på ikonerna ovanför inläggsredigeraren och följa instruktionerna. Du kan justera eller redigera bilder genom att använda verktygen i redigeraren i det visuella läget."
+
+#: classic-edit-form-advanced.php:422
+msgid "<strong>Post editor</strong> &mdash; Enter the text for your post. There are two modes of editing: Visual and Text. Choose the mode by clicking on the appropriate tab."
+msgstr "<strong>Inläggsredigerare</strong> &mdash; Ange texten för ditt inlägg. Det finns två stycken redigeringslägen: visuellt och text. Välj läge genom att klicka på motsvarande flik."
+
+#: classic-edit-form-advanced.php:427
+msgid "Keyboard users: When you&#8217;re working in the visual editor, you can use <kbd>Alt + F10</kbd> to access the toolbar."
+msgstr "Tangentbordsanvändare: När du arbetar i den visuella redigeraren så kan du använda <kbd>Alt + F10</kbd> för att visa verktygsraden."
+
+#: classic-edit-form-advanced.php:552
+msgid "<strong>Connection lost.</strong> Saving has been disabled until you&#8217;re reconnected."
+msgstr "<strong>Anslutningen avbröts.</strong> Möjligheten att spara har inaktiverats tills att du är ansluten igen."
+
+#: classic-edit-form-advanced.php:553
+msgid "We&#8217;re backing up this post in your browser, just in case."
+msgstr "Vi tar en backup av detta inlägg i webbläsaren, för att vara på den säkra sidan."
+
+#: classic-edit-form-advanced.php:476
+msgid "You can upload and insert media (images, audio, documents, etc.) by clicking the Add Media button. You can select from the images and files already uploaded to the Media Library, or upload new media to add to your page or post. To create an image gallery, select the images to add and click the &#8220;Create a new gallery&#8221; button."
+msgstr "Du kan ladda upp och infoga media (bilder, ljud, dokument, osv.) genom att klicka på knappen Lägg till media. Du kan välja bland bilder och filer som redan har laddats upp i mediabiblioteket eller ladda upp ny media att lägga till på din sida eller i ditt inlägg. För att skapa ett bildgaller, välj bilder att lägga till och klicka på knappen &#8221;Skapa ett nytt galleri&#8221;."
+
+#: classic-edit-form-advanced.php:481
+msgid "Inserting Media"
+msgstr "Infogar media"
+
+#: classic-edit-form-advanced.php:487
+msgid "Several boxes on this screen contain settings for how your content will be published, including:"
+msgstr "Flera paneler på den här sidan innehåller inställningar för hur ditt innehåll kommer att publicera, inkluderat:"
+
+#: classic-edit-form-advanced.php:462
+msgid "This screen allows you to edit four fields for metadata in a file within the media library."
+msgstr "Den här sidan låter dig att redigera fem fält av metadata för en fil i mediebiblioteket."
+
+#: classic-edit-form-advanced.php:617
+msgid "Enter title here"
+msgstr "Ange titel här"
+
+#: classic-edit-form-advanced.php:691
+msgid "Word count: %s"
+msgstr "Antal ord: %s"
+
+#: classic-edit-form-advanced.php:259
+msgid "There is an autosave of this post that is more recent than the version below. <a href=\"%s\">View the autosave</a>"
+msgstr "Det finns en autosparad version av det här inlägget som är nyare än versionen nedan. <a href=\"%s\">Visa den autosparade versionen</a>."
+
+#: classic-edit-form-advanced.php:460
+msgid "Overview"
+msgstr "Översikt"
+
+#: classic-edit-form-advanced.php:437 classic-edit-form-advanced.php:452
+#: classic-edit-form-advanced.php:469
+msgid "For more information:"
+msgstr "För mer information:"
+
+#: classic-edit-form-advanced.php:447
+msgid "About Pages"
+msgstr "Om sidor"
+
+#: classic-edit-form-advanced.php:413
+msgid "The title field and the big Post Editing Area are fixed in place, but you can reposition all the other boxes using drag and drop. You can also minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
+msgstr "Tiltelfältet och det stora textfältet är fixerade fält, men du kan ändra plats för alla andra paneler genom att dra och släppa dessa. Du kan även minimera eller expandera panelerna genom att klicka på titelraden. Använd fliken Panelinställningar för visa fler paneler (Utdrag, Skicka trackbacks, Anpassade fält, Diskussion, Permalänk, Författare) eller välj hur många kolumner de ska visas i."
+
+#: classic-edit-form-advanced.php:443
+msgid "Creating a Page is very similar to creating a Post, and the screens can be customized in the same way using drag and drop, the Screen Options tab, and expanding/collapsing boxes as you choose. This screen also has the distraction-free writing space, available in both the Visual and Text modes via the Fullscreen buttons. The Page editor mostly works the same as the Post editor, but there are some Page-specific features in the Page Attributes box."
+msgstr "Att skapa en sida påminner mycket om att skapa ett inlägg och panelerna kan anpassas på samma sätt genom att använda dra och släpp, fliken Panelinställningar och minimera/maximera paneler efter egna önskemål. Denna sida har även det nya fullskärmsläget som är tillgängligt både i det visuella- och Text-läget via knappen för fullskärmsläget. Sidredigeraren fungerar i stort på samma sätt som inläggsredigeraren, men det finns vissa sidspecifika funktioner i panelen Sidattribut:"
+
+#: classic-edit-form-advanced.php:442
+msgid "Pages are similar to posts in that they have a title, body text, and associated metadata, but they are different in that they are not part of the chronological blog stream, kind of like permanent posts. Pages are not categorized or tagged, but can have a hierarchy. You can nest pages under other pages by making one the &#8220;Parent&#8221; of the other, creating a group of pages."
+msgstr "Sidor liknar inlägg i att de har en titel, brödtext och tillhörande metadata, men de är olika i att de inte är en del av den kronologiska bloggflödet, ungefär som statiska inlägg. Sidorna är inte kategoriserade eller har taggar, men kan anges i hierarki. Du kan kapsla sidor under andra sidor genom att göra en till \"Överordnad\" för de andra och på så sätt skapa en grupp av sidor."
+
+#: classic-edit-form-advanced.php:417
+msgid "Customizing This Display"
+msgstr "Anpassa denna vy"
+
+#: classic-edit-form-advanced.php:431
+msgid "Title and Post Editor"
+msgstr "Rubrik- och inläggsredigerare"
+
+#: classic-edit-form-advanced.php:465
+msgid "Remember to click Update Media to save metadata entered or changed."
+msgstr "Kom ihåg att klicka på Uppdatera Media för att spara metadata som angivits eller ändrats."
+
+#: classic-edit-form-advanced.php:464
+msgid "Note that you crop the image by clicking on it (the Crop icon is already selected) and dragging the cropping frame to select the desired part. Then click Save to retain the cropping."
+msgstr "Notera att du beskära bilden genom att klicka på den (beskärningsverktyget är redan markerat) och dra beskärningsramen för att välja önskad del. Klicka sedan på Spara för att spara vald beskärning."
+
+#: classic-edit-form-advanced.php:463
+msgid "For images only, you can click on Edit Image under the thumbnail to expand out an inline image editor with icons for cropping, rotating, or flipping the image as well as for undoing and redoing. The boxes on the right give you more options for scaling the image, for cropping it, and for cropping the thumbnail in a different way than you crop the original image. You can click on Help in those boxes to get more information."
+msgstr "Endast för bilder, du kan klicka på Redigera bild under bilden för att öppna en bildredigerare med verktyg för att beskära, rotera eller vända bilden liksom för att ångra och göra om. Rutorna till höger ger dig fler alternativ för att ändra skalan på bilden, för beskära den, och för att beskära miniatyrbilden på ett annat sätt än du beskära den ursprungliga bilden. Du kan klicka på Hjälp i panelerna för att få mer information."
+
+#: classic-edit-form-advanced.php:520
+msgid "<strong>Order</strong> &mdash; Pages are usually ordered alphabetically, but you can choose your own order by entering a number (1 for first, etc.) in this field."
+msgstr "<strong>Ordning</strong> &mdash; Sidor ordnas vanligtvis alfabetiskt, men du kan ange en siffra (1 för första, osv.) i detta fält för att ändra ordning i vilken sidorna ska visas."
+
+#: classic-edit-form-advanced.php:509
+msgid "<strong>Send Trackbacks</strong> &mdash; Trackbacks are a way to notify legacy blog systems that you&#8217;ve linked to them. Enter the URL(s) you want to send trackbacks. If you link to other WordPress sites they&#8217;ll be notified automatically using pingbacks, and this field is unnecessary."
+msgstr "<strong>Skicka trackbacks</strong> &mdash; Trackbacks är ett sätt att notifiera olika bloggsystem att du har länkat till dem. Ange URL(erna) du vill skicka trackbacks till. Om du länkar till andra WordPress-webbplatser så notifieras dessa automatiskt genom att använda pingbacks, då behöver inget anges i detta fält."
+
+#: classic-edit-form-advanced.php:436
+msgid "You can also create posts with the <a href=\"%s\">Press This bookmarklet</a>."
+msgstr "Du kan även skapa inlägg med genvägen <a href=\"%s\">Blogga det här</a>."
+
+#: classic-edit-form-advanced.php:519
+msgid "<strong>Template</strong> &mdash; Some themes have custom templates you can use for certain pages that might have additional features or custom layouts. If so, you&#8217;ll see them in this dropdown menu."
+msgstr "<strong>Mall</strong> &mdash; Vissa teman har anpassade mallar som kan användas för speciella sidor som kanske har extra funktioner eller anpassad layout. Om det finns mallar tillgängliga så kommer dessa att visas i denna rullgardinsmeny."
+
+#: classic-edit-form-advanced.php:518
+msgid "<strong>Parent</strong> &mdash; You can arrange your pages in hierarchies. For example, you could have an &#8220;About&#8221; page that has &#8220;Life Story&#8221; and &#8220;My Dog&#8221; pages under it. There are no limits to how many levels you can nest pages."
+msgstr "<strong>Överordnad</strong> &mdash; Du kan arrangera dina sidor i hierarkier. Till exempel kan du ha en sida &#8221;Om&#8221; som har sidorna &#8221;Min historia&#8221; och &#8221;Min katt&#8221; under sig. Det finns inga gränser för hur många nivåer du kan nästla sidor."
+
+#. translators: %s: Featured Image
+#: classic-edit-form-advanced.php:498
+msgid "<strong>%s</strong> &mdash; This allows you to associate an image with your post without inserting it. This is usually useful only if your theme makes use of the image as a post thumbnail on the home page, a custom header, etc."
+msgstr "<strong>%s</strong> &mdash; Den här funktionen tillåter dig att associera en bild med ditt inlägg utan att infoga den. Detta är endast användbart om ditt tema har stöd för funktionen att använda utvalda bilder som inläggsminiatyrer på startsidan, i ett anpassat sidhuvud, osv."
+
+#: classic-edit-form-advanced.php:421
+msgid "<strong>Title</strong> &mdash; Enter a title for your post. After you enter a title, you&#8217;ll see the permalink below, which you can edit."
+msgstr "<strong>Titel</strong> &mdash; Ange en titel för ditt inlägg. När du angivit en titel så kommer du att se permalänken nedan, vilken du sedan kan redigera."
+
+#: classic-edit-form-advanced.php:510
+msgid "<strong>Discussion</strong> &mdash; You can turn comments and pings on or off, and if there are comments on the post, you can see them here and moderate them."
+msgstr "<strong>Diskussion</strong> - Du kan stänga av kommentarer/pingar och om det finns kommentarer till inlägget så kan du se och moderera dem här."
+
+#: classic-edit-form-advanced.php:215
+msgid "Page saved."
+msgstr "Sidan sparad."
+
+#: classic-edit-form-advanced.php:642
+msgid "Get Shortlink"
+msgstr "Hämta kortlänk"
+
+#: classic-edit-form-advanced.php:514
+msgid "Discussion Settings"
+msgstr "Inställningar för diskussioner"
+
+#: classic-edit-form-advanced.php:166
+msgid "View post"
+msgstr "Visa inlägg"
+
+#: classic-edit-form-advanced.php:195 classic-edit-form-advanced.php:209
+msgid "Custom field updated."
+msgstr "Eget fält uppdaterat."
+
+#: classic-edit-form-advanced.php:196 classic-edit-form-advanced.php:210
+msgid "Custom field deleted."
+msgstr "Eget fält raderat."
+
+#: classic-edit-form-advanced.php:194 classic-edit-form-advanced.php:197
+msgid "Post updated."
+msgstr "Inlägg uppdaterat."
+
+#. translators: %s: date and time of the revision
+#: classic-edit-form-advanced.php:199
+msgid "Post restored to revision from %s."
+msgstr "Inlägg återställt till version från %s."
+
+#: classic-edit-form-advanced.php:201
+msgid "Post saved."
+msgstr "Inlägg sparat."
+
+#: classic-edit-form-advanced.php:208 classic-edit-form-advanced.php:211
+msgid "Page updated."
+msgstr "Sida uppdaterad."
+
+#. translators: %s: date and time of the revision
+#: classic-edit-form-advanced.php:213
+msgid "Page restored to revision from %s."
+msgstr "Sida återställd till version från %s."
+
+#: classic-edit-form-advanced.php:330
+msgid "Send Trackbacks"
+msgstr "Skicka trackbacks"
+
+#: classic-edit-form-advanced.php:333
+msgid "Custom Fields"
+msgstr "Anpassade fält"
+
+#: classic-edit-form-advanced.php:348
+msgid "Discussion"
+msgstr "Diskussion"
+
+#: classic-edit-form-advanced.php:366
+msgid "Slug"
+msgstr "Permalänk"
+
+#. translators: 1: Name of most recent post author, 2: Post edited date, 3:
+#. Post edited time
+#: classic-edit-form-advanced.php:699
+msgid "Last edited by %1$s on %2$s at %3$s"
+msgstr "Senast ändrat av %1$s den %2$s kl. %3$s"
+
+#. translators: 1: Post edited date, 2: Post edited time
+#: classic-edit-form-advanced.php:702
+msgid "Last edited on %1$s at %2$s"
+msgstr "Senast ändrat den %1$s kl. %2$s"
+
+#: classic-edit-form-advanced.php:439 classic-edit-form-advanced.php:455
+#: classic-edit-form-advanced.php:471
+msgid "<a href=\"https://wordpress.org/support/\">Support Forums</a>"
+msgstr "<a href=\"https://sv.wordpress.org/support/\">Supportforum</a>"
+
+#. Author of the plugin/theme
+msgid "WordPress Contributors"
+msgstr "Bidragsgivare till WordPress"
+
+#. Description of the plugin/theme
+msgid "Enables the WordPress classic editor and the old-style Edit Post screen layout (TinyMCE, meta boxes, etc.). Supports the older plugins that extend this screen."
+msgstr "Aktiverar den klassiska redigeraren i WordPress och den tidigare layouten av sidan för redigering av inlägg, med (TinyMCE, metafält m.m.). Stöder äldre WordPress-tillägg som utökar denna skärmbild."
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org"
+msgstr "https://wordpress.org"
+
+#: classic-editor.php:453
+msgid "Permalink saved"
+msgstr "Permalänk sparad"
+
+#: classic-editor.php:452
+msgid "Saving Draft&#8230;"
+msgstr "Sparar utkast&#8230;"
+
+#: classic-editor.php:450
+msgid "Published"
+msgstr "Publicerat"
+
+#: classic-editor.php:449
+msgid "Privately Published"
+msgstr "Publicerat privat"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute
+#: classic-editor.php:437
+msgid "%1$s %2$s, %3$s @ %4$s:%5$s"
+msgstr "%1$s %2$s, %3$s @ %4$s:%5$s"
+
+#: classic-edit-form-advanced.php:369
+msgid "Author"
+msgstr "Författare"
+
+#: classic-editor.php:432
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: classic-edit-form-advanced.php:361
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: classic-edit-form-advanced.php:327
+msgid "Excerpt"
+msgstr "Utdrag"
+
+#: classic-edit-form-advanced.php:699 classic-edit-form-advanced.php:702
+msgid "F j, Y"
+msgstr "j F, Y"
+
+#: classic-edit-form-advanced.php:294
+msgid "Metadata"
+msgstr "Metadata"
+
+#: classic-editor.php:439
+msgid "No more comments found."
+msgstr "Inga fler kommentarer hittade."
+
+#: classic-editor.php:431
+msgid "OK"
+msgstr "OK"
+
+#: classic-edit-form-advanced.php:524
+msgid "Page Attributes"
+msgstr "Sidoattribut"
+
+#: classic-editor.php:448
+msgid "Password Protected"
+msgstr "Lösenordsskyddat"
+
+#: classic-editor.php:445
+msgid "Private"
+msgstr "Privat"
+
+#: classic-editor.php:446
+msgid "Public"
+msgstr "Offentlig"
+
+#: classic-editor.php:447
+msgid "Public, Sticky"
+msgstr "Publik, Klistrad"
+
+#: classic-edit-form-advanced.php:297 classic-editor.php:440
+msgid "Publish"
+msgstr "Publicera"
+
+#: classic-edit-form-advanced.php:505
+msgid "Publish Settings"
+msgstr "Inställningar för publicering"
+
+#: classic-editor.php:433
+msgid "Publish on:"
+msgstr "Publicera den:"
+
+#: classic-editor.php:435
+msgid "Published on:"
+msgstr "Publicerat den:"
+
+#: classic-edit-form-advanced.php:283
+msgid "Revisions"
+msgstr "Version"
+
+#: classic-edit-form-advanced.php:290
+msgid "Save"
+msgstr "Spara"
+
+#: classic-editor.php:444
+msgid "Save Draft"
+msgstr "Spara utkast"
+
+#: classic-editor.php:443
+msgid "Save as Pending"
+msgstr "Spara som väntande"
+
+#: classic-editor.php:434
+msgid "Schedule for:"
+msgstr "Tidsinställ för:"
+
+#: classic-editor.php:329
+msgid "Settings"
+msgstr "Inställningar"
+
+#: classic-editor.php:438
+msgid "Show more comments"
+msgstr "Visa fler kommentarer"
+
+#: classic-editor.php:451
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr "Ändringarna du gjort kommer att förloras om du går i från sidan utan att spara."
+
+#: classic-editor.php:442
+msgid "Update"
+msgstr "Uppdatera"
+
+#: classic-edit-form-advanced.php:699 classic-edit-form-advanced.php:702
+msgid "g:i a"
+msgstr "H:i"
+
+#: classic-edit-form-advanced.php:301
+msgctxt "post format"
+msgid "Format"
+msgstr "Format"
+
+#: classic-editor.php:441
+msgid "Schedule"
+msgstr "Schemalägg"
+
+#. translators: %s: post title
+#: classic-editor.php:371
+msgid "Edit &#8220;%s&#8221; in the classic editor"
+msgstr "Redigera ”%s” i den klassiska redigeraren"
+
+#: classic-editor.php:317 classic-editor.php:374
+msgid "Edit (Classic)"
+msgstr "Redigera (klassisk)"
+
+#: classic-editor.php:274
+msgid "(Classic)"
+msgstr "(Klassisk)"
+
+#: classic-editor.php:172
+msgid "Classic editor settings"
+msgstr "Inställningar för Classic editor"
+
+#. Plugin Name of the plugin/theme
+msgid "Classic Editor"
+msgstr "Classic Editor"

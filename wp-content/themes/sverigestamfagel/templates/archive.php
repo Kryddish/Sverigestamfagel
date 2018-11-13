@@ -25,8 +25,8 @@ if( isset( $_GET['type'] ) ) {
  */
 $args = [
 	'post_type' => $post_type,
-	'posts_per_page' => $posts_per_page,
-	'offset' => ($paged-1) * $posts_per_page
+	'posts_per_page' => -1,
+	// 'offset' => ($paged-1) * $posts_per_page
 ];
 
 // Add search query to query arguments if set
@@ -64,18 +64,28 @@ get_header(); ?>
 
 				<?php
 				if( $archive_query->have_posts() ):
-					foreach( $archive_query->posts as $post ): setup_postdata( $post );
+
+					// Prepare array for pagination by slicing correct piece
+					$posts = array_slice( $archive_query->posts, ($paged-1) * $posts_per_page, $posts_per_page );
+
+					foreach( $posts as $key => $post ): setup_postdata( $post );
+						$key++;
 
 						get_template_part( 'template-parts/content/content' );
+
+						if( $key % $posts_per_page === 0 )
+							break;
 
 					endforeach;
 					wp_reset_postdata();
 				else: ?>
 					<h5>Inga inlägg hittades.</h5>
 					<?php
-				endif; ?>
+				endif;
 
-				<?php custom_pagination( $archive_query->max_num_pages ); ?>
+				// Calculate amount of pages and print pagination links
+				$pages = count( $archive_query->posts ) / $posts_per_page;
+				custom_pagination( $pages ); ?>
 			</div>
 
 			<div class="c-sidebar c-sidebar--search">
