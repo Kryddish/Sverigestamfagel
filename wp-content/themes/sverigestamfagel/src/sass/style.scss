@@ -119,12 +119,15 @@ Tags: Underscores STF
 @import "media/media";
 @import "components/sidebar";
 
+@import "objects/pagination";
+
 
 .medlemskapet {
 	.membership {
 		a {
 			color: green;
 		}
+
 		.intro {
 			display: flex;
 			flex-direction: row;
@@ -132,9 +135,11 @@ Tags: Underscores STF
 			justify-content: center;
 			align-items: flex-start;
 		}
+
 		.header {
 			width: 80%;
 			display: inline-block;
+
 			&::after {
 				content: "";
 				clear: both;
@@ -152,16 +157,18 @@ Tags: Underscores STF
 				width: 40%;
 			}
 		}
+
 		.howmember {
 			img {
 				width: 25px;
 				margin-left: 5px;
 			}
 		}
+
 		button {
 			margin-top: 1em;
 			transition:
-			box-shadow .2s ease, top .2s ease;
+				box-shadow .2s ease, top .2s ease;
 			top: 0;
 			position: relative;
 			display: inline-block;
@@ -183,7 +190,10 @@ Tags: Underscores STF
 // Contact form
 
 .wpcf7-form {
-	input, select, textarea {
+
+	input,
+	select,
+	textarea {
 		width: 60%;
 		padding: 12px;
 		border: 1px solid #ccc;

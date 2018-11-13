@@ -5,20 +5,19 @@
 
 $posts_per_page = get_field( 'posts_per_page' ) ? get_field( 'posts_per_page' ) : 5;
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-$post_type = [
-	'meets',
-	'articles',
-	'post'
-];
 $post_types = [
 	'meets' => 'Fågelträffar',
 	'articles' => 'Artiklar',
-	'post' => 'Inlägg'
+	'post' => 'Nyheter'
 ];
+
+$post_type = array_keys( $post_types );
 
 // Get post type field if set
 if( isset( $_GET['type'] ) ) {
-	$post_type = $_GET['type'];
+	if( $_GET['type'] !== 'any' ) {
+		$post_type = $_GET['type'];
+	}
 }
 
 /**
@@ -43,16 +42,12 @@ if( isset( $_GET['category'] ) ) {
 	$args['category_name'] = $_GET['category'];
 }
 
-/**
- * Get posts
- */
+// Get posts
 $archive_query = new WP_Query( $args );
 
-/**
- * Sort array with custom function
- */
-// if( $archive_query->have_posts() )
-// 	$archive_query->posts = stf_sort_date( $archive_query->posts );
+// Sort array with custom function
+if( $archive_query->have_posts() )
+	$archive_query->posts = stf_sort_date( $archive_query->posts );
 
 $categories = get_categories();
 
@@ -62,7 +57,10 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="posts-container">
-				<h2><?php the_title() ?></h2>
+				<?php
+				$title = get_the_title();
+				if( isset( $_GET['type'] ) && $_GET['type'] !== 'any' ) $title = $post_types[$_GET['type']]; ?>
+				<h2><?= $title ?></h2>
 
 				<?php
 				if( $archive_query->have_posts() ):
@@ -77,20 +75,7 @@ get_header(); ?>
 					<?php
 				endif; ?>
 
-				<div class="posts-navigation">
-					<?php
-					$big = 999999999;
-					echo paginate_links(array(
-						'base' 				=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-						'format' 			=> '/page/%#%',
-						'current' 			=> max(1, $paged),
-						'total' 			=> $archive_query->max_num_pages,
-						'prev_text'         => __('', 'stf'),
-						'next_text'         => __('', 'stf'),
-						'mid_size'          => 2,
-						'end_size'          => 0,
-					)); ?>
-				</div>
+				<?php custom_pagination( $archive_query->max_num_pages ); ?>
 			</div>
 
 			<div class="c-sidebar c-sidebar--search">
