@@ -14,7 +14,9 @@ $posts_per_page = get_field( 'meets_count' ) ? get_field( 'meets_count' ) : 3;
 
 $args = [
 	'post_type' => 'meets',
-	'posts_per_page' => $posts_per_page
+	'posts_per_page' => $posts_per_page,
+	'meta_key' => 'date',
+	'orderby' => 'meta_value_num'
 ];
 $meets_query = new WP_Query( $args ); ?>
 
