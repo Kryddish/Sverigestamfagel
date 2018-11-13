@@ -25,8 +25,7 @@ if( isset( $_GET['type'] ) ) {
  */
 $args = [
 	'post_type' => $post_type,
-	'posts_per_page' => -1,
-	// 'offset' => ($paged-1) * $posts_per_page
+	'posts_per_page' => -1
 ];
 
 // Add search query to query arguments if set
@@ -49,7 +48,11 @@ $archive_query = new WP_Query( $args );
 if( $archive_query->have_posts() )
 	$archive_query->posts = stf_sort_date( $archive_query->posts );
 
-$categories = get_categories();
+$categories = get_categories([
+	'orderby' => 'name',
+	'parent' => false,
+	'hide_empty' => true,
+]);
 
 get_header(); ?>
 
@@ -79,7 +82,7 @@ get_header(); ?>
 					endforeach;
 					wp_reset_postdata();
 				else: ?>
-					<h5>Inga inlägg hittades.</h5>
+					<h5><?= __( 'Inga inlägg hittades.', 'stf' ) ?></h5>
 					<?php
 				endif;
 
@@ -98,7 +101,7 @@ get_header(); ?>
 					<input name="search" type="submit" class="search-submit" value="Sök">
 				</form>
 
-				<h6>Typ av inlägg</h6>
+				<h6><?= __('Typ av inlägg', 'stf') ?></h6>
 				<?php
 				if( !isset( $_GET['type'] ) or $_GET['type'] === 'any' ): ?>
 					<div>
@@ -126,16 +129,16 @@ get_header(); ?>
 					endif;
 				endforeach; ?>
 
-				<h6>Kategorier</h6>
+				<h6><?= __('Kategorier', 'stf') ?></h6>
 				<?php
 				if( !isset( $_GET['category'] ) or $_GET['category'] === '' ): ?>
 					<div>
-						<a class="current" href="<?= add_query_arg( 'category', '' ) ?>">Alla</a>
+						<a class="current" href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 					</div>
 				<?php
 				else: ?>
 					<div>
-						<a href="<?= add_query_arg( 'category', '' ) ?>">Alla</a>
+						<a href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 					</div>
 					<?php
 				endif;
