@@ -35,14 +35,14 @@ function stf_posted_on() {
 	);
 
 	echo '<span class="byline"> ' . $byline . '</span> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-	
+
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo ' <span class="comments-link">';
 		/* translators: %s: post title */
 		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'stf' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
-	
+
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
@@ -126,7 +126,7 @@ function stf_sort_date($array) {
 		}
 	}
 	array_multisort($sort, SORT_DESC, $array);
-	
+
 	return $array;
 }
 
@@ -142,3 +142,41 @@ function stf_category_transient_flusher() {
 }
 add_action( 'edit_category', 'stf_category_transient_flusher' );
 add_action( 'save_post',     'stf_category_transient_flusher' );
+
+/**
+ * TODO
+ */
+function stf_register_posttype( $plural, $singular, $args ) {
+	$labels = array(
+		'name'                  => _x( 'Artiklar', 'stf' ),
+		'singular_name'         => _x( 'Artikel', 'stf' ),
+		'menu_name'             => __( 'Artiklar', 'stf' ),
+		'name_admin_bar'        => __( 'Artiklar', 'stf' ),
+		'archives'              => __( 'Item Archives', 'stf' ),
+		'attributes'            => __( 'Item Attributes', 'stf' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'stf' ),
+		'all_items'             => __( 'Alla Artiklar', 'stf' ),
+		'add_new_item'          => __( 'Ny Artikel', 'stf' ),
+		'add_new'               => __( 'Skapa Ny', 'stf' ),
+		'new_item'              => __( 'Ny Artikel', 'stf' ),
+		'edit_item'             => __( 'Redigera Artikel', 'stf' ),
+		'update_item'           => __( 'Uppdatera Artikel', 'stf' ),
+		'view_item'             => __( 'Visa Artikel', 'stf' ),
+		'view_items'            => __( 'Visa Artiklar', 'stf' ),
+		'search_items'          => __( 'Search Item', 'stf' ),
+		'not_found'             => __( 'Not found', 'stf' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'stf' ),
+		'featured_image'        => __( 'Featured Image', 'stf' ),
+		'set_featured_image'    => __( 'Set featured image', 'stf' ),
+		'remove_featured_image' => __( 'Remove featured image', 'stf' ),
+		'use_featured_image'    => __( 'Use as featured image', 'stf' ),
+		'insert_into_item'      => __( 'Insert into item', 'stf' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'stf' ),
+		'items_list'            => __( 'Items list', 'stf' ),
+		'items_list_navigation' => __( 'Items list navigation', 'stf' ),
+		'filter_items_list'     => __( 'Filter items list', 'stf' ),
+	);
+
+	$args['labels'] = $labels;
+	register_post_type( 'articles', $args );
+}

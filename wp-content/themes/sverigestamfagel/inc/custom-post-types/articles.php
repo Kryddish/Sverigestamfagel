@@ -1,7 +1,7 @@
 <?php
 $labels = array(
-    'name'                  => _x( 'Artiklar', 'Post Type General Name', 'stf' ),
-    'singular_name'         => _x( 'Artikel', 'Post Type Singular Name', 'stf' ),
+    'name'                  => _x( 'Artiklar', 'stf' ),
+    'singular_name'         => _x( 'Artikel', 'stf' ),
     'menu_name'             => __( 'Artiklar', 'stf' ),
     'name_admin_bar'        => __( 'Artiklar', 'stf' ),
     'archives'              => __( 'Item Archives', 'stf' ),
