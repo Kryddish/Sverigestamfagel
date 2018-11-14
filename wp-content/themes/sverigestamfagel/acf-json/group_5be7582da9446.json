@@ -1,0 +1,66 @@
+{
+    "key": "group_5be7582da9446",
+    "title": "Inställningssida - Föreningen",
+    "fields": [
+        {
+            "key": "field_5be7593ad5ac9",
+            "label": "Medlemskap",
+            "name": "regular",
+            "type": "number",
+            "instructions": "Priset för att bli medlem hos oss.\r\nDetta går att hämta med kodsnutten [avgift=\"medlem\"]",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 300,
+            "placeholder": "",
+            "prepend": "",
+            "append": "kr",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5be758d3d5ac8",
+            "label": "Familjemedlemskap",
+            "name": "family",
+            "type": "number",
+            "instructions": "Priset för att bli familjemedlem hos oss.\r\nDetta går att hämta med kodsnutten [avgift=\"familj\"]",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 70,
+            "placeholder": "",
+            "prepend": "",
+            "append": "kr",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-foreningen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1541977152
+}
