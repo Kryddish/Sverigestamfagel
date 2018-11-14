@@ -1,6 +1,6 @@
 {
     "key": "group_5be7582da9446",
-    "title": "Inställningssida - Föreningen",
+    "title": "Inställningssida - Avgifter",
     "fields": [
         {
             "key": "field_5bec9b0c6ab88",
@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "sub_fields": [
                 {
                     "key": "field_5be7593ad5ac9",
@@ -79,5 +79,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542233475
+    "modified": 1542235316
 }
