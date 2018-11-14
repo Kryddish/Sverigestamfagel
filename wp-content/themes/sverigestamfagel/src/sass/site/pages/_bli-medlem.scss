@@ -127,18 +127,18 @@
                                         width: 100%;
                                     }
                                 }
+
                                 textarea {
                                     resize: none;
                                 }
-                                p:last-of-type {
-                                    text-align: center;
-                                }
+
                                 input[type=submit] {
+                                    display: block;
+                                    margin: auto;
                                     width: auto;
                                     transition: box-shadow .2s ease, top .2s ease;
                                     top: 0;
                                     position: relative;
-                                    display: inline-block;
                                     font-size: 28px;
                                     padding: 10px 20px;
                                     font-family: 'Averia Sans Libre';
@@ -152,6 +152,10 @@
                                         top: 4px;
                                         box-shadow: 0 4px 0 0 darken($color__interactive, 5%);
                                     }
+                                }
+
+                                .postaddress {
+                                    margin-left: 10px;
                                 }
                             }
                         }
