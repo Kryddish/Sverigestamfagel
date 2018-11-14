@@ -187,6 +187,21 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/custom-post-types/custom-post-types.php';
 
+/**
+ * Load ACF option pages
+ */
+require get_template_directory() . '/inc/acf-options.php';
+
+/**
+ * Load Shortcodes
+ */
+require get_template_directory() . '/inc/shortcodes.php';
+
+/**
+ * Load Filters
+ */
+require get_template_directory() . '/inc/filters.php';
+
 function my_awesome_func( $data ) {
 	$output = shell_exec( 'bash ./deploy.sh' );
 
