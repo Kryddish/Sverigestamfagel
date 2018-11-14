@@ -1,26 +1,23 @@
 <?php
 /**
- * [pris medlemskap]
+ * [pris {medlemskap}]
  */
-// add_shortcode( 'pris', function( $atts ) {
+add_shortcode( 'pris', function( $atts ) {
 
-// 	if( $atts[0] === 'medlem' ) {
-// 		$result = get_field( 'membership_fees', 'option' );
-// 		// $result = 'medlem';
-// 	}
-// 	elseif( $atts[0] === 'familj' ) {
-// 		$result = get_field( 'membership_fees', 'option' );
-// 		// $result = 'familj';
-// 	}
+    switch ($atts[0]) {
+        case 'medlem':
+            $result = get_field( 'membership_fees', 'option' )['regular'];
+            break;
 
-// 	return $result;
-// } );
+        case 'familj':
+            $result = get_field( 'membership_fees', 'option' )['family'];
+            break;
 
-/**
- * [pris medlemskap]
- */
-// add_shortcode( 'pris', function( $atts ) {
-// 	$result = get_field( 'membership_fees', 'option' );
+        // In case no parameter is specified
+        default:
+            $result = get_field( 'membership_fees', 'option' )['regular'];
+            break;
+    }
 
-// 	return 'test';
-// } );
+	return $result;
+} );

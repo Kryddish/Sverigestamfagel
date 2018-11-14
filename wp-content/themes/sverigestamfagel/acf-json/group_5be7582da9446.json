@@ -3,11 +3,11 @@
     "title": "Inställningssida - Föreningen",
     "fields": [
         {
-            "key": "field_5be7593ad5ac9",
-            "label": "Medlemskap",
-            "name": "regular",
-            "type": "number",
-            "instructions": "Priset för att bli medlem hos oss.\r\nDetta går att hämta med kodsnutten [avgift=\"medlem\"]",
+            "key": "field_5bec9b0c6ab88",
+            "label": "Medlemsavgifter",
+            "name": "membership_fees",
+            "type": "group",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,34 +15,51 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": 300,
-            "placeholder": "",
-            "prepend": "",
-            "append": "kr",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5be758d3d5ac8",
-            "label": "Familjemedlemskap",
-            "name": "family",
-            "type": "number",
-            "instructions": "Priset för att bli familjemedlem hos oss.\r\nDetta går att hämta med kodsnutten [avgift=\"familj\"]",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 70,
-            "placeholder": "",
-            "prepend": "",
-            "append": "kr",
-            "min": "",
-            "max": "",
-            "step": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5be7593ad5ac9",
+                    "label": "Medlemskap",
+                    "name": "regular",
+                    "type": "number",
+                    "instructions": "Priset för att bli medlem hos oss.\r\nDetta går att hämta med kodsnutten [pris] eller [pris medlem]",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 300,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "kr",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5be758d3d5ac8",
+                    "label": "Familjemedlemskap",
+                    "name": "family",
+                    "type": "number",
+                    "instructions": "Priset för att bli familjemedlem hos oss.\r\nDetta går att hämta med kodsnutten [pris familj]",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 70,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "kr",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -62,5 +79,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541977152
+    "modified": 1542233475
 }
