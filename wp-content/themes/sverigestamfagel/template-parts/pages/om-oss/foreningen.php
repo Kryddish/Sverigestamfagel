@@ -1,32 +1,71 @@
 <section>
-    <img src="http://dev.sverigestamfagel.se/wp-content/uploads/2015/11/cropped-STF-logo-1.gif" alt="">
+<?php if( have_rows('block_1') ): 
+        while ( have_rows('block_1') ) : the_row(); ?> 
+   
+   <img src=" <?php
+    if( get_sub_field( 'bild_1' ) ) : 
+                        the_sub_field( 'bild_1' );
+                    else : echo 'https://www.sverigestamfagel.se/wp-content/uploads/2015/11/STF-logo.gif';
+                    endif; ?>" alt="">
+
     <div class="text">
-        <h2>Vilka är vi? </h2>
+        <h2><?php if( get_sub_field( 'headline' ) ) : 
+                        the_sub_field( 'headline' );
+                    else : echo 'Vilka är vi?';
+                    endif; ?></h2>
         <p>
-            Sveriges Tamfågelförening (STF) är en ideell förening för dig som har eller är intresserad av fåglar.
-            Vi är anslutna till Svensk Fågelhobby och är således rikstäckande.
+        <?php if( get_sub_field( 'text' ) ) : 
+                        the_sub_field( 'text' );
+                    else : echo 'Mer info kommer snart';
+                    endif; ?></h2>
         </p>
-        <p>
-            Oavsett var du bor eller vad du har för fåglar är man välkommen till vår gemenskap.
-            Ett medlemskap hos oss blir både givande för dig och din fågel
-        </p>
-        <a href="#">Visa STFs stadgar *img*</a>
+        <a href="<?php 
+            if( get_sub_field( 'link' ) ) : 
+                the_sub_field( 'link' );
+            endif;?>
+                "> <?php if(get_sub_field( 'link_text' ) ) : 
+                            the_sub_field( 'link_text' );
+                            else : echo 'Visa Stadgar';
+            endif;?>
+        </a>                              
+                            
     </div>
+    <?php 
+        endwhile;
+        endif; ?>
 </section>
 
 <section>
-    <img src="https://scontent.farn1-1.fna.fbcdn.net/v/t1.0-9/34808162_10215544386499401_5955583046282379264_o.jpg?_nc_cat=0&oh=fdedf19f4e3b77aef8a2e81f80158916&oe=5C61CE39" alt="">
+<?php if( have_rows('block_2') ): 
+        while ( have_rows('block_2') ) : the_row(); ?>
+    <img src=" <?php
+    if( get_sub_field( 'bild_2' ) ) : 
+                        the_sub_field( 'bild_2' );
+                    else : echo 'https://www.sverigestamfagel.se/wp-content/uploads/2015/11/STF-logo.gif';
+                    endif; ?>" alt="">    
+    
     <div class="text">
-        <h2>Vad gör vi? </h2>
+        <h2><?php if( get_sub_field( 'headline' ) ) : 
+                        the_sub_field( 'headline' );
+                    else : echo 'Vilka är vi?';
+                    endif; ?></h2>
         <p>
-            På sommarna träffas vi utomhus i vårt stora friflygningstält. Här ges fåglarna möjlighet att umgås med varandra, flyga runt och tränas socialt. Under vinterhalvåret anordnar vi friflygningar inomhus, filmvisningar, studiebesök och föredrag av olika slag. <br>
-            Som medlem i STF blir du automatiskt medlem i Riksförbundet Svensk Fågelhobby (SF). Medlemskapet ger dig även vår populära medlemstidning "Fågelhobby" kostnadsfritt tio gånger per år.
+        <?php if( get_sub_field( 'info_text' ) ) : 
+                        the_sub_field( 'info_text' );
+                    else : echo 'Mer info kommer snart';
+                    endif; ?></h2>
         </p>
-        <p>
-            Passa på att bli medlem för att snabbt ta del av våra Medemsförmåner.
-            Mer info kan du hitta här
-        </p>
-    </div>
+        <a href="<?php 
+            if( get_sub_field( 'link' ) ) : 
+                the_sub_field( 'link' );
+            endif;?>
+                "> <?php if(get_sub_field( 'link_text' ) ) : 
+                            the_sub_field( 'link_text' );
+                            else : echo '';
+            endif;?>
+        </a> 
+                               
+    <?php 
+        endwhile;
+        endif; ?>
 </section>
-
-<!-- Comment -->

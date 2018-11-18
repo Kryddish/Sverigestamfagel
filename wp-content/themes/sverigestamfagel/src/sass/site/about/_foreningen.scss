@@ -21,7 +21,14 @@
             background-color: rgba($color__interactive, .15);
             width: 50%;
             border-radius: 10px;
+
+            a {
+                &:after {
+                    content: url('https://i2.wp.com/cherritybar.com/wp-content/uploads/2018/02/adobe-pdf-icon.png?ssl=1');
+                }
+            }
         }
+        
     }
     @import "../extra/instagram";
 }
