@@ -24,7 +24,7 @@
                 {
                     "key": "field_5bf16d2b489f1",
                     "label": "Bild",
-                    "name": "bild",
+                    "name": "bild_1",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -162,8 +162,8 @@
             "sub_fields": [
                 {
                     "key": "field_5bf17889213de",
-                    "label": "bild_1",
-                    "name": "bild",
+                    "label": "bild",
+                    "name": "bild_2",
                     "type": "image",
                     "instructions": "",
                     "required": 1,
@@ -258,5 +258,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542554932
+    "modified": 1542555233
 }
