@@ -1,4 +1,11 @@
 .page-kontakt {
+    
+    .contact-form {
+        img {
+            display: overlay;
+        }
+    }
+    
     form {
         width: 40%;
         margin: 50px auto 0;

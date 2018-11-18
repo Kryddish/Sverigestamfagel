@@ -47,3 +47,14 @@
 ## Instagram
 --------------------------------------------------------------*/
 @import "inc/instagram";
+
+.contact-form {
+    position: relative;
+    img {
+        float: left;
+        position: absolute;
+        left: 1000px;
+        top: 0px;
+        z-index: 1000;
+    }
+}
