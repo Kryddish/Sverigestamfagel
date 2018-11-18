@@ -4,7 +4,10 @@ p {
 	margin-bottom: 1em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -14,7 +17,7 @@ blockquote {
 	background: $color__background-pre;
 	padding: 1em 2em .5em 5em;
 	font-style: italic;
-	
+
 	&:before {
 		position: absolute;
 		top: -.2em;
@@ -33,7 +36,7 @@ address {
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
-	@include font-size(0.9375);
+	font-size: 12px;
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -41,17 +44,22 @@ pre {
 	padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font-family: $font__code;
 	@include font-size(0.9375);
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted $color__border-abbr;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: $color__background-ins;
 	text-decoration: none;
 }

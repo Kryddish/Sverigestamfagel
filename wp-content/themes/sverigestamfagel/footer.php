@@ -34,7 +34,7 @@
 			<span>
 				<?php _e( '© 2018 Sveriges Tamfågelförening. All rights reserved', 'stf' ); ?>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="https://memlisen.se" rel="designer">Emmelie</a>', '<a href="https://maxtrewhitt.se" rel="coder">Max</a>' ); ?>
+				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="#">Emmelie</a>', '<a href="https://github.com/spizeak">Max</a>' ); ?>
 			</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

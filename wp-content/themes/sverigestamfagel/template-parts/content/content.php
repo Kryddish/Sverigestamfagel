@@ -32,10 +32,6 @@ $location = get_field( 'location' ); ?>
 	endif; ?>
 
 	<div class="text">
-		<?php
-		$archive_year  = get_the_time('Y');
-		$archive_month = get_the_time('m');
-		$archive_day   = get_the_time('d'); ?>
 
 		<header>
 			<h5>
@@ -49,7 +45,7 @@ $location = get_field( 'location' ); ?>
 			<footer>
 				<h6 class="date">
 					<?php
-					if(get_field( 'date' )) :
+					if( get_field( 'date' ) ) :
 						the_field( 'date' );
 					else :
 						echo get_the_date();
@@ -57,6 +53,7 @@ $location = get_field( 'location' ); ?>
 				</h6>
 			</footer>
 		<?php
+		
 		if( !empty( $location['adress'] ) ) : ?>
 			<h6 class="location"><?php echo $location['adress']; ?></h6>
 		<?php

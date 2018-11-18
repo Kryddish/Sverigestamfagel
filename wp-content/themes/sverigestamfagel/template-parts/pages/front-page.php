@@ -12,17 +12,11 @@
  */
 $posts_per_page = get_field( 'meets_count' ) ? get_field( 'meets_count' ) : 3;
 
-/**
- * Queries
- */
-$post_types = get_post_types( array(
-	'public' => true
-) );
-unset($post_types['attachment'], $post_types['page']);
-
 $args = [
-	'post_type' => $post_types,
-	'posts_per_page' => $posts_per_page
+	'post_type' => 'meets',
+	'posts_per_page' => $posts_per_page,
+	'meta_key' => 'date',
+	'orderby' => 'meta_value_num'
 ];
 $meets_query = new WP_Query( $args ); ?>
 
@@ -115,12 +109,7 @@ $meets_query = new WP_Query( $args ); ?>
 		</section>
 		<hr>
 		<div class="page-content">
-			<?php
-			if( get_field( 'news_count' ) ) {
-				$news_count = get_field( 'news_count' );
-			} else {
-				$news_count = 3;
-			} ?>
+			<?php $posts_per_page = get_field( 'news_count' ) ? get_field( 'news_count' ) : 8; ?>
 
 			<div class="posts-container">
 				<h4>Senaste fågelträffarna</h4>
@@ -140,24 +129,20 @@ $meets_query = new WP_Query( $args ); ?>
 				<?php
 				$posts = get_posts( array(
 					'post_type' 		=> 	'articles',
-					'posts_per_page'	=>  $news_count
+					'posts_per_page'	=>  $posts_per_page
 				) );
-				$index = 0;
-				foreach( $posts as $post ) : setup_postdata( $post );
 
-					if( $post->post_type !== 'meets' ) : ?>
-						<article <?php post_class(); ?>>
-							<header>
-								<span class="category"><?php echo get_the_category()[0]->name; ?></span>
-								<span class="date"><?= get_the_date(); ?></span>
-							</header>
-							<a href="<?php the_permalink(); ?>">
-								<h6><?php the_title(); ?></h6>
-							</a>
-						</article>
-						<?php
-					endif;
-
+				foreach( $posts as $post ) : setup_postdata( $post ); ?>
+					<article <?php post_class(); ?>>
+						<header>
+							<span class="category"><?php echo get_the_category()[0]->name; ?></span>
+							<span class="date"><?= get_the_date(); ?></span>
+						</header>
+						<a href="<?php the_permalink(); ?>">
+							<h6><?php the_title(); ?></h6>
+						</a>
+					</article>
+					<?php
 				endforeach;
 				wp_reset_postdata(); ?>
 			</div>

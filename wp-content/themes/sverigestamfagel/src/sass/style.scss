@@ -9,122 +9,38 @@ Text Domain: stf
 Tags: Underscores STF
 */
 
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Vendor assets
-# Variables and mixins
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Vendor assets
---------------------------------------------------------------*/
+/**
+ * Imports
+ */
 @import "../icons/css/fontello";
-
-/*--------------------------------------------------------------
-# Variables and mixins
---------------------------------------------------------------*/
 @import "common/variables-site/variables-site";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-
+@import "common/elements/classes";
 @import "common/normalize";
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-
 @import "common/typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-
 @import "common/elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-
 @import "common/forms/forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-
 @import "common/navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-
 @import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-
 @import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-
 @import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-
 @import "site/site";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-
 @import "site/widgets/widgets";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-
 @import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-
 @import "media/media";
 @import "components/sidebar";
+@import "objects/pagination";
 
+/**
+ * Extra
+ */
 
 .medlemskapet {
 	.membership {
 		a {
 			color: green;
 		}
+
 		.intro {
 			display: flex;
 			flex-direction: row;
@@ -132,9 +48,11 @@ Tags: Underscores STF
 			justify-content: center;
 			align-items: flex-start;
 		}
+
 		.header {
 			width: 80%;
 			display: inline-block;
+
 			&::after {
 				content: "";
 				clear: both;
@@ -152,16 +70,18 @@ Tags: Underscores STF
 				width: 40%;
 			}
 		}
+
 		.howmember {
 			img {
 				width: 25px;
 				margin-left: 5px;
 			}
 		}
+
 		button {
 			margin-top: 1em;
 			transition:
-			box-shadow .2s ease, top .2s ease;
+				box-shadow .2s ease, top .2s ease;
 			top: 0;
 			position: relative;
 			display: inline-block;
@@ -183,7 +103,10 @@ Tags: Underscores STF
 // Contact form
 
 .wpcf7-form {
-	input, select, textarea {
+
+	input,
+	select,
+	textarea {
 		width: 60%;
 		padding: 12px;
 		border: 1px solid #ccc;

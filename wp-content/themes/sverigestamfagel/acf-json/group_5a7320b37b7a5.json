@@ -1,6 +1,6 @@
 {
     "key": "group_5a7320b37b7a5",
-    "title": "Events - Inlägg",
+    "title": "Inläggstyp - Fågelträff",
     "fields": [
         {
             "key": "field_5a74574351daa",
@@ -100,14 +100,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "thc-events"
+                "value": "meets"
             }
         ]
     ],
@@ -119,5 +112,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530129204
+    "modified": 1541864500
 }

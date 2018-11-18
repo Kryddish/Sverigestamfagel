@@ -1,0 +1,13 @@
+.flex {
+    display: flex;
+
+    .one {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    .two {
+        flex-grow: 2;
+        flex-basis: 0;
+    }
+}

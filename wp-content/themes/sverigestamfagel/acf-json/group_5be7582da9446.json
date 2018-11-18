@@ -1,0 +1,83 @@
+{
+    "key": "group_5be7582da9446",
+    "title": "Inställningssida - Avgifter",
+    "fields": [
+        {
+            "key": "field_5bec9b0c6ab88",
+            "label": "Medlemsavgifter",
+            "name": "membership_fees",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_5be7593ad5ac9",
+                    "label": "Medlemskap",
+                    "name": "regular",
+                    "type": "number",
+                    "instructions": "Priset för att bli medlem hos oss.\r\nDetta går att hämta med kodsnutten [pris] eller [pris medlem]",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 300,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "kr",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5be758d3d5ac8",
+                    "label": "Familjemedlemskap",
+                    "name": "family",
+                    "type": "number",
+                    "instructions": "Priset för att bli familjemedlem hos oss.\r\nDetta går att hämta med kodsnutten [pris familj]",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 70,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "kr",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-foreningen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1542235316
+}
