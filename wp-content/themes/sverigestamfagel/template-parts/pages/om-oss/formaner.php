@@ -1,28 +1,48 @@
-<h2>Medlemsförmåner</h2>
-<p>
-    Som medlem i STF får du inte bara träffa folk med samma intresse och
-    dela erfarenheter, du får får också en del förmåner så som rabatter eller tidningen fågelhobby.
-    Nedan kan du läsa mer om dessa.
+<?php if( have_rows('header') ): 
+        while ( have_rows('header') ) : the_row(); ?> 
+
+<h2> <?php
+    if( get_sub_field( 'headline' ) ) : 
+        the_sub_field( 'headline' );
+    endif; ?> 
+</h2>
+<p> 
+    <?php 
+    if( get_sub_field( 'header_text' ) ) : 
+        the_sub_field( 'header_text' ); 
+    endif; ?>
 </p>
 
+<?php endwhile;
+        endif; ?>
+
+<?php if( have_rows('paper') ): 
+        while ( have_rows('paper') ) : the_row(); ?> 
 <div class="magazine">
-    <img src="http://fagelhobby.nu/wp-content/uploads/2014/02/FH-Promotion01_2015.jpg" alt="">
+    <img src="
+        <?php 
+            if( get_sub_field( 'paper_img' ) ) : 
+                the_sub_field( 'paper_img' ); 
+                else : echo 'http://fagelhobby.nu/wp-content/uploads/2014/02/FH-Promotion01_2015.jpg';
+            endif; ?>
+    " alt="">
     <div class="magazine-text">
-        <h2>Medlemstidning</h2>
+        <h2>
+            <?php 
+                if( get_sub_field( 'headline' ) ) : 
+                    the_sub_field( 'headline' ); 
+                endif; ?>
+        </h2>
         <p>
-            Som medlem i STF blir du automatisk medlem i Riksförbundet Svensk Fågelhobby och får medlemstidningen Fågelhobby.
-            Tidningen är i färg och med i A4 formatet.
-        </p>
-        <p>
-            I tidningen medverkar både erfarna fågelhållare och nybörjare med artiklar som varvas med material från redaktionen. Tidningen är för medlemmar
-            av medlemmar vilket gör att det alltid finns något intressant att läsa för alla olika inriktningar.
-        </p>
-        <p>
-            Som medlem kan man annonsera gratis under ”köp och sälj”. Det publiceras även information från olika klubbar om till exempel utställningar och uppfödningar.
-            Väljer du att bli medlem i till exempel juni, får du under året redan utgivna nummer av tidningen Fågelhobby skickade till dig i efterhand.
+        <?php
+            if( get_sub_field( 'text' ) ) : 
+                        the_sub_field( 'text' ); 
+                    endif; ?>
         </p>
     </div><!-- .magazine-text -->
 </div><!-- .magazine -->
+<?php endwhile;
+        endif; ?>
 
 <div class="rebates">
     <h2>Rabatter</h2>
@@ -47,22 +67,30 @@
 
 </div><!-- .rebates -->
 
+<?php if( have_rows('ringar') ): 
+        while ( have_rows('ringar') ) : the_row(); ?> 
 <div class="rings">
-    <img src="http://www.youschi.se/Artiklar/Chip&Ring/Morran.jpg" alt="">
+    <img src="
+    <?php if( get_sub_field( 'rings_img' ) ) : 
+              the_sub_field( 'rings_img' ); 
+          endif; ?> " alt="">
 
     <div class="rings-content">
-        <h2>Ringar</h2>
+        <h2>
+            <?php if( get_sub_field( 'rings_headline' ) ) : 
+                the_sub_field( 'rings_headline' ); 
+            endif; ?>    
+        </h2>
         <p>
-            Föder du upp fåglar och vill ringmärka dem? Som medlem kan du köpa öppna och slutna ringar via Riksförbundet Svensk Fågelhobby. Tänk på att de fåglar
-            som är upptagna på Cites lista 1 och EU:s bilaga A måste ringmärkas med slutna ringar för att kunna säljas.
-        </p>
-        <p>
-            För mer information om ringar, se Riksförbundet Svensk Fågelhobbys hemsida, www.fagelhobby.nu under Ringkonto.
-            För mer information om Cites, se Statens Jordbruksverks hemsida, www.sjv.se under Djur och Veterinär.
+        <?php if( get_sub_field( 'rings_info' ) ) : 
+                the_sub_field( 'rings_info' ); 
+            endif; ?> 
         </p>
     </div><!-- .rings-content -->
 
 </div><!-- .rings -->
+<?php endwhile;
+        endif; ?>
 
 <div class="bird-register">
     <h2>Frivillig fågelregister</h2>
