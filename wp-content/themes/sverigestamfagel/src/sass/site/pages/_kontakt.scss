@@ -38,4 +38,14 @@
         border: none;
         vertical-align: middle;
     }
+    img {
+        position: relative;
+        img {
+            float: left;
+            position: absolute;
+            left: 1000px;
+            top: 0px;
+            z-index: 1000;
+        }
+    }
 }
