@@ -1,0 +1,23 @@
+{
+    "key": "group_5bfae036910df",
+    "title": "Inställningssida - Sidfot",
+    "fields": false,
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-sidfot"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1543168069
+}

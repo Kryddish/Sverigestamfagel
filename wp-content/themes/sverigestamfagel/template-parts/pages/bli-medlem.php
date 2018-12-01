@@ -65,14 +65,16 @@
 				</div>
 				<div class="slide confirmation">
 					<h4>Tack, nu återstår bara det sista...</h4>
-					<p>
-						Enklaste sättet att betala medlemsavgiften är med Swish.
-					</p>
-					<img src="<?= get_template_directory_uri() . '/dist/img/getswish_qr.png' ?>" alt="">
-					<p>
-						Behöver du hjälp med betalningen?<br>
-						Hör av dig till oss via <a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>
-					</p>
+					<div class="content">
+						<p>
+							Enklaste sättet att betala medlemsavgiften är med Swish.
+						</p>
+						<img class="qr-code" src="<?= get_template_directory_uri() . '/dist/img/getswish_qr.png' ?>" alt="">
+						<p>
+							Behöver du hjälp med betalningen?<br>
+							Hör av dig till oss via <a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

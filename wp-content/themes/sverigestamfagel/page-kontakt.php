@@ -10,14 +10,13 @@ get_header(); ?>
 
 		<?php
 		while ( have_posts() ) : the_post();
-		
+
 			get_template_part( 'template-parts/pages/kontakt' );
-			
+
 		endwhile ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

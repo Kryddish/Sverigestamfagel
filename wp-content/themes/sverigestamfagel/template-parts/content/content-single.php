@@ -9,9 +9,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        
+
     <header class="entry-header">
-        <h3 class="title"><?php the_title(); ?></h3>            
+        <h3 class="title"><?php the_title(); ?></h3>
         <h5 class="category">
 
             <?php
@@ -21,7 +21,7 @@
                 if( reset($categories) === $category) {
                     echo $category->name;
                 } else {
-                    echo ', ' . $category->name;                    
+                    echo ', ' . $category->name;
                 }
             endforeach; ?>
 
@@ -37,7 +37,7 @@
             <?php
             else:
                 $images = get_field('images');
-    
+
                 if( $images ): ?>
                     <div class="image">
                         <img src="<?php echo $images[0]['url']; ?>" alt="Post image">
@@ -71,7 +71,7 @@
                                 if( get_field( 'date' ) ) :
                                     the_field( 'date' );
                                 endif; ?>
-                                
+
                             </p>
 
                         <?php
@@ -82,25 +82,25 @@
                             <p><?php echo $location['address'] ?></p>
                         <?php
                         endif;
-                        
+
                     endif; ?>
 
                 </div>
 
             <?php
             endif; ?>
-            
+
             <div class="info">
                 <?php
                 if( get_the_excerpt() ) : ?>
 
-                    
+
                         <?php the_content(); ?>
-                    
+
 
                 <?php
                 else : ?>
-                
+
                     <h5>
                         <?php _e('Inget innehåll hittades.', 'stf'); ?>
                     </h5>
@@ -138,11 +138,5 @@
 
     <?php
     endif; ?>
-
-    <div class="post-navigation">
-        <?php
-        next_post_link('<span class="nav-next">Senare fågelträff:<br> %link</span>');
-        previous_post_link('<span class="nav-previous">Tidigare fågelträff:<br> %link</span>'); ?>
-    </div>
 
 </article>
