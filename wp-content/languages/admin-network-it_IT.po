@@ -1,15 +1,15 @@
-# Translation of WordPress - 4.9.x - Development - Administration - Network Admin in Italian
-# This file is distributed under the same license as the WordPress - 4.9.x - Development - Administration - Network Admin package.
+# Translation of WordPress - 5.0.x - Development - Administration - Network Admin in Italian
+# This file is distributed under the same license as the WordPress - 5.0.x - Development - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-08-05 15:54:19+0000\n"
+"PO-Revision-Date: 2018-11-09 10:31:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: it\n"
-"Project-Id-Version: WordPress - 4.9.x - Development - Administration - Network Admin\n"
+"Project-Id-Version: WordPress - 5.0.x - Development - Administration - Network Admin\n"
 
 #. translators: %s: DO_NOT_UPGRADE_GLOBAL_TABLES
 #: wp-admin/includes/network.php:107
@@ -26,7 +26,7 @@ msgstr "L'utente non può essere aggiunto a questo sito."
 
 #: wp-admin/network/site-new.php:252
 msgid "The username and a link to set the password will be mailed to this email address."
-msgstr "La username ed il link per impostare la password saranno inviati a questo indirizzo email."
+msgstr "Il nome utente ed il link per impostare la password saranno inviati a questo indirizzo email."
 
 #. translators: %s: new network admin email
 #: wp-admin/network/settings.php:145
@@ -89,8 +89,8 @@ msgstr "Non disponi dei permessi per gestire i temi per questo sito."
 msgid "Sorry, you are not allowed to add sites to this network."
 msgstr "Non disponi dei permessi per aggiungere siti a questo network."
 
-#: wp-admin/network/site-info.php:14 wp-admin/network/site-settings.php:14
-#: wp-admin/network/site-users.php:14
+#: wp-admin/network/site-info.php:14 wp-admin/network/site-users.php:14
+#: wp-admin/network/site-settings.php:14
 msgid "Sorry, you are not allowed to edit this site."
 msgstr "Non disponi dei permessi per modificare questo sito."
 
@@ -102,10 +102,6 @@ msgstr "L'indirizzo email per l'autore del primo commento su un nuovo sito."
 msgid "First Comment Email"
 msgstr "Email per il primo commento"
 
-#. translators: This string should only be translated if wp-config-sample.php
-#. is localized. You can check the localized release package or
-#. https://i18n.svn.wordpress.org/<locale code>/branches/<wp
-#. version>/dist/wp-config-sample.php
 #: wp-admin/includes/network.php:436
 msgid "That&#8217;s all, stop editing! Happy blogging."
 msgstr "È tutto, termina le modifiche! Scrivi con gioia."
@@ -373,7 +369,7 @@ msgstr "Spam"
 msgid "Archived"
 msgstr "Archiviato"
 
-#: wp-admin/network/site-users.php:346 wp-admin/network/user-new.php:117
+#: wp-admin/network/user-new.php:117 wp-admin/network/site-users.php:346
 msgid "A password reset link will be sent to the user via email."
 msgstr "All'utente verrà inviato, tramite email, un link di reimpostazione della password"
 
@@ -467,8 +463,8 @@ msgstr "Stai per disattivare il sito %s."
 msgid "You are about to activate the site %s."
 msgstr "Stai per attivare il sito %s."
 
-#: wp-admin/network/site-info.php:28 wp-admin/network/site-settings.php:26
-#: wp-admin/network/site-themes.php:49 wp-admin/network/site-users.php:42
+#: wp-admin/network/site-info.php:28 wp-admin/network/site-users.php:42
+#: wp-admin/network/site-themes.php:49 wp-admin/network/site-settings.php:26
 msgid "The requested site does not exist."
 msgstr "Il sito richiesto non esiste."
 
@@ -517,13 +513,13 @@ msgstr "Questi temi potrebbero essere attivi su altri siti del network."
 msgid "Are you sure you wish to delete this theme?"
 msgstr "Si è sicuri di voler cancellare questo tema?"
 
-#: wp-admin/network/site-themes.php:183 wp-admin/network/themes.php:279
+#: wp-admin/network/themes.php:279 wp-admin/network/site-themes.php:183
 msgid "%s theme disabled."
 msgid_plural "%s themes disabled."
 msgstr[0] "%s tema disabilitato."
 msgstr[1] "%s temi disabilitati."
 
-#: wp-admin/network/site-themes.php:175 wp-admin/network/themes.php:271
+#: wp-admin/network/themes.php:271 wp-admin/network/site-themes.php:175
 msgid "%s theme enabled."
 msgid_plural "%s themes enabled."
 msgstr[0] "%s tema abilitato."
@@ -636,8 +632,8 @@ msgstr "WordPress &#233; stato aggiornato correttamente! Prima di lasciarti anda
 msgid "Only use this screen once you have updated to a new version of WordPress through Updates/Available Updates (via the Network Administration navigation menu or the Toolbar). Clicking the Upgrade Network button will step through each site in the network, five at a time, and make sure any database updates are applied."
 msgstr "Utilizza questa schermata una volta che si è aggiornato ad una nuova versione di WordPress tramite Aggiornamenti/Aggiornamenti disponibili (nel menu di navigazione Amministrazione network o tramite la Barra strumenti). Facendo clic sul pulsante Aggiorna il network si scorreranno i singoli siti del network, cinque alla volta, assicurandosi che siano applicati tutti gli aggiornamenti al database."
 
-#: wp-admin/network/menu.php:34 wp-admin/network/upgrade.php:15
-#: wp-admin/network/upgrade.php:40 wp-admin/network/upgrade.php:131
+#: wp-admin/network/upgrade.php:15 wp-admin/network/upgrade.php:40
+#: wp-admin/network/upgrade.php:131 wp-admin/network/menu.php:34
 msgid "Upgrade Network"
 msgstr "Aggiorna il network"
 
@@ -691,7 +687,7 @@ msgstr "Dopo la schemata di conferma Cancella sarà una azione permanente."
 msgid "Clicking on bold headings can re-sort this table."
 msgstr "Facendo clic sulle intestazioni in grassetto è possibile riordinare questa tabella."
 
-#: wp-admin/network/menu.php:53 wp-admin/network/themes.php:253
+#: wp-admin/network/themes.php:253 wp-admin/network/menu.php:53
 msgctxt "theme"
 msgid "Add New"
 msgstr "Aggiungi tema"
@@ -738,25 +734,25 @@ msgid "No, return me to the theme list"
 msgstr "No, fammi tornare sull'elenco dei temi"
 
 #. translators: %s: site name
-#: wp-admin/network/site-info.php:117 wp-admin/network/site-settings.php:70
-#: wp-admin/network/site-themes.php:153 wp-admin/network/site-users.php:196
+#: wp-admin/network/site-info.php:117 wp-admin/network/site-users.php:196
+#: wp-admin/network/site-themes.php:153 wp-admin/network/site-settings.php:70
 msgid "Edit Site: %s"
 msgstr "Modifica il sito: %s"
 
-#: wp-admin/network/site-themes.php:187 wp-admin/network/themes.php:291
+#: wp-admin/network/themes.php:291 wp-admin/network/site-themes.php:187
 msgid "No theme selected."
 msgstr "Nessun tema selezionato."
 
-#: wp-admin/network/site-themes.php:173 wp-admin/network/themes.php:269
+#: wp-admin/network/themes.php:269 wp-admin/network/site-themes.php:173
 msgid "Theme enabled."
 msgstr "Tema abilitato."
 
-#: wp-admin/network/site-info.php:23 wp-admin/network/site-settings.php:22
-#: wp-admin/network/site-themes.php:43 wp-admin/network/site-users.php:38
+#: wp-admin/network/site-info.php:23 wp-admin/network/site-users.php:38
+#: wp-admin/network/site-themes.php:43 wp-admin/network/site-settings.php:22
 msgid "Invalid site ID."
 msgstr "ID sito non valido."
 
-#: wp-admin/network/site-themes.php:181 wp-admin/network/themes.php:277
+#: wp-admin/network/themes.php:277 wp-admin/network/site-themes.php:181
 msgid "Theme disabled."
 msgstr "Tema disabilitato."
 
@@ -768,7 +764,7 @@ msgstr "Aggiungi utente creerà un nuovo account utente per la rete e invierà a
 msgid "Network enabled themes are not shown on this screen."
 msgstr "I temi attivati nel network non sono visualizzati in questa schermata."
 
-#: wp-admin/network/menu.php:67 wp-admin/network/settings.php:19
+#: wp-admin/network/settings.php:19 wp-admin/network/menu.php:67
 msgid "Network Settings"
 msgstr "Impostazioni network"
 
@@ -820,7 +816,7 @@ msgstr "Non disponi del permesso per cancellare il sito %s."
 msgid "Cannot add user."
 msgstr "Impossibile aggiungere utenti."
 
-#: wp-admin/network/site-users.php:310 wp-admin/network/user-new.php:129
+#: wp-admin/network/user-new.php:129 wp-admin/network/site-users.php:310
 msgid "Add User"
 msgstr "Aggiungi utente"
 
