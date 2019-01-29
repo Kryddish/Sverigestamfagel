@@ -19,8 +19,7 @@ get_header(); ?>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'Det verkar som att ingenting hittades på denna plats. Kanske prova göra en sökning eller använda länkarna i menyn?', 'stf' ); ?></p>
-					<img src="app/public/sverigestamfagel/src/img/birb.jpg" alt="">
-
+					<Img src='<?= get_stylesheet_directory() . "/dist/img/birb.jpg" ?>' />
 					<?php 
 						get_search_form();
 					?>
