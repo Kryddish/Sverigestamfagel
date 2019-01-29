@@ -14,44 +14,15 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Ojsan! Den där sidan kunde inte hittas.', 'stf' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Ojdå, Har du flugit vilse?', 'stf' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'Det verkar som att ingenting hittades på denna plats. Kanske prova en av länkarna nedan eller med en sökning?', 'stf' ); ?></p>
+					<p><?php esc_html_e( 'Det verkar som att ingenting hittades på denna plats. Kanske prova göra en sökning eller använda länkarna i menyn?', 'stf' ); ?></p>
+					<img src="app/public/sverigestamfagel/src/img/birb.jpg" alt="">
 
 					<?php 
 						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( stf_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Mest använda kategorierna', 'stf' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Prova att leta i månadsarkiven. %1$s', 'stf' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
 
 				</div><!-- .page-content -->
