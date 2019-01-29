@@ -6,7 +6,7 @@
         navHeight = navbar.height(),
         navTop = navbar.offset().top;
 
-    if (!isMobile()) {
+    // if (!isMobile()) {
         $(window).scroll(function () {
 
             scrollTop = $('html, body').scrollTop();
@@ -24,11 +24,11 @@
                 });
             }
         });
-    } else {
+    // } else {
         header.css({
             'padding-bottom': navHeight
         });
-    }
+    // }
 
     // Lazy load images
     $('.lazy').Lazy();

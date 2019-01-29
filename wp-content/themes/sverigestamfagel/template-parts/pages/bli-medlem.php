@@ -65,11 +65,12 @@
 				</div>
 				<div class="slide confirmation">
 					<div class="content">
-						<p>
+						<!-- <p>
 							Enklaste sättet att betala medlemsavgiften är med Swish.<br>
 							Telefonnummer: <b>123 148 36 84</b>
 						</p>
-						<img class="qr-code" src="<?= get_template_directory_uri() . '/dist/img/getswish_qr.png' ?>" alt="">
+						<img class="qr-code" src="<?= get_template_directory_uri() . '/dist/img/getswish_qr.png' ?>" alt=""> -->
+						<?= do_shortcode('[simpay id="2568"]'); ?>
 						<p>
 							Behöver du hjälp med betalningen?<br>
 							Hör av dig till oss via <a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>

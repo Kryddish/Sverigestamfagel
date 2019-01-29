@@ -137,8 +137,4 @@
 		}
 	});
 
-	if ($('.mobile-navbar').css('display') !== 'none') {
-		$('body.page').css('margin-top', ($('.mobile-navbar').outerHeight() - 4) + 'px');
-	}
-
 })( jQuery );
