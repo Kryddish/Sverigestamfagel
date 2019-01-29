@@ -1,7 +1,7 @@
 const
 
 	// Development URL (FILL THIS)
-	proxy = 'sverigestamfagel.local',
+	proxy = 'Sverigestamfagel.local',
 
 	gulp = require('gulp'),
 	$ = require('gulp-load-plugins')(),
