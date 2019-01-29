@@ -39,14 +39,14 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="top-header">
 				<div class="site-branding">
-					
+
 					<?php the_custom_logo(); ?>
 
 					<div class="text">
 						<h2 class="site-title">
 							<?php bloginfo( 'name' ); ?>
 						</h2>
-						
+
 						<?php
 						$description = get_bloginfo( 'description', 'display' );
 
@@ -67,7 +67,11 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="mobile-navbar">
 					<?php the_custom_logo(); ?>
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Meny', 'stf' ); ?></button>
+					<button class="hamburger hamburger--spin menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
 				</div>
 				<?php
 				wp_nav_menu( array(

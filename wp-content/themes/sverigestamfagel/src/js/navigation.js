@@ -23,8 +23,8 @@
 				dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-');
 
 			e.preventDefault();
-			_this.toggleClass( 'toggled' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled' );
+			_this.toggleClass( 'is-active' );
+			_this.next( '.children, .sub-menu' ).toggleClass( 'is-active' );
 
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 
