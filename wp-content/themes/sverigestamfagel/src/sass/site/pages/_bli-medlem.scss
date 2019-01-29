@@ -34,6 +34,8 @@
                 width: 100%;
 
                 .holder {
+					display: flex;
+					align-items: center;
                     transition: left .4s ease-out;
                     position: relative;
                     left: 0;
@@ -47,7 +49,8 @@
                     }
 
                     .info {
-                        position: relative;
+						position: relative;
+						margin: 30px 0;
 
                         &:before {
                             content: "";
@@ -117,55 +120,83 @@
                     }
 
                     .form {
+						p {
+							margin-top: 0;
+							margin-bottom: 5px;
+							font-size: 14px;
+							line-height: 10px;
+
+							&.acceptance {
+								line-height: 24px;
+								display: flex;
+								align-items: center;
+
+								.text {
+									margin-left: 5px;
+								}
+							}
+						}
+
                         .wpcf7 {
                             width: 70%;
-                            margin: 0 auto;
+							margin: 0 auto;
 
-                            .wpcf7-form {
-                                input {
-                                    &[type=text],
-                                    &[type=email] {
-                                        width: 100%;
-                                    }
-                                }
+							input {
+								&[type=text],
+								&[type=email] {
+									width: 100%;
+								}
 
-                                textarea {
-                                    resize: none;
-                                }
+								&[type=checkbox] {
+									width: 20px;
+									height: 20px;
+									margin: 0;
+									margin-right: 5px;
+								}
+							}
 
-                                input[type=submit] {
-                                    display: block;
-                                    margin: auto;
-                                    width: auto;
-                                    transition: box-shadow .2s ease, top .2s ease;
-                                    top: 0;
-                                    position: relative;
-                                    font-size: 28px;
-                                    padding: 10px 20px;
-                                    font-family: 'Averia Sans Libre';
-                                    background-color: $color__interactive;
-                                    color: white;
-                                    border: none;
-                                    border-radius: 10px;
-                                    box-shadow: 0 8px 0 0 darken($color__interactive, 5%);
+							textarea {
+								resize: none;
+							}
 
-                                    &:active {
-                                        top: 4px;
-                                        box-shadow: 0 4px 0 0 darken($color__interactive, 5%);
-                                    }
-                                }
+							input[type=submit] {
+								display: block;
+								margin: auto;
+								width: auto;
+								transition: box-shadow .2s ease, top .2s ease;
+								top: 0;
+								position: relative;
+								font-size: 28px;
+								padding: 10px 20px;
+								font-family: 'Averia Sans Libre';
+								background-color: $color__interactive;
+								color: white;
+								border: none;
+								border-radius: 10px;
+								box-shadow: 0 8px 0 0 darken($color__interactive, 5%);
 
-                                .postaddress {
-                                    margin-left: 10px;
-                                }
-                            }
+								&:active {
+									top: 4px;
+									box-shadow: 0 4px 0 0 darken($color__interactive, 5%);
+								}
+							}
+
+							.postaddress {
+								margin-left: 15px;
+							}
                         }
                     }
 
                     .confirmation {
                         .content {
                             width: 65%;
-                            margin: auto;
+							margin: auto;
+
+							.qr-code {
+								display: block;
+								width: 70%;
+								margin: 0 auto 25px;
+							}
                         }
                     }
                 }

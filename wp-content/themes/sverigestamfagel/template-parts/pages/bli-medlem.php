@@ -64,10 +64,10 @@
 					<?php echo do_shortcode('[contact-form-7 title="Bli medlem"]'); ?>
 				</div>
 				<div class="slide confirmation">
-					<h4>Tack, nu återstår bara det sista...</h4>
 					<div class="content">
 						<p>
-							Enklaste sättet att betala medlemsavgiften är med Swish.
+							Enklaste sättet att betala medlemsavgiften är med Swish.<br>
+							Telefonnummer: <b>123 148 36 84</b>
 						</p>
 						<img class="qr-code" src="<?= get_template_directory_uri() . '/dist/img/getswish_qr.png' ?>" alt="">
 						<p>
