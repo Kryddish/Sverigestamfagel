@@ -26,7 +26,7 @@
         });
     } else {
         header.css({
-            'padding-bottom': navHeight
+            'padding-bottom': navHeight - 4
         });
     }
 
