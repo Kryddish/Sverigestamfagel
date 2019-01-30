@@ -67,8 +67,8 @@ function stf_setup() {
 
 	// Add theme support for Custom Logo
 	add_theme_support( 'custom-logo', array(
-		'width' => 90,
-		'height' => 90,
+		'width' => 130,
+		'height' => 130,
 		'flex-width' => true,
 	));
 
@@ -216,8 +216,8 @@ add_action( 'rest_api_init', function () {
 	) );
 } );
 
-function custom_pagination($pages = '', $range = 2) {  
-     $showitems = ($range * 2)+1;  
+function custom_pagination($pages = '', $range = 2) {
+     $showitems = ($range * 2)+1;
 
      global $paged;
      if(empty($paged)) $paged = 1;
@@ -230,7 +230,7 @@ function custom_pagination($pages = '', $range = 2) {
          {
              $pages = 1;
          }
-     }   
+     }
 
      if(1 != $pages)
      {
@@ -246,7 +246,7 @@ function custom_pagination($pages = '', $range = 2) {
              }
          }
 
-         if ($paged < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";  
+         if ($paged < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>&raquo;</a>";
          echo "</div>\n";
      }

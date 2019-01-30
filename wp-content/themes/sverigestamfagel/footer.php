@@ -32,7 +32,7 @@
 		</div>
 		<div class="site-info">
 			<span>
-				<?php _e( '© 2018 Sveriges Tamfågelförening. All rights reserved', 'stf' ); ?>
+				<?php _e( '© 2019 Sveriges Tamfågelförening. All rights reserved', 'stf' ); ?>
 				<span class="sep"> | </span>
 				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="#">Emmelie</a>', '<a href="https://github.com/spizeak">Max</a>' ); ?>
 			</span>
