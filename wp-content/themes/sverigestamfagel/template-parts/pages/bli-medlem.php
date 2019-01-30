@@ -71,14 +71,16 @@
 
 						<h6>Betala med kort</h6>
 						<p>Välj typ av medlemskap:</p>
-						<select>
-							<option value="<?= get_field('membership_fees', 'option')['regular'] ?>">Medlemskap</option>
-							<option value="<?= get_field('membership_fees', 'option')['half_year'] ?>">Halvårsmedlemskap</option>
+						<select class="chosen-membership">
+							<option value="regular">Medlemskap</option>
+							<option value="half_year">Halvårsmedlemskap</option>
 						</select>
-
-						<?= do_shortcode('[simpay id="2568"]') ?>
-						<?= do_shortcode('[simpay id="2570"]') ?>
-
+						<div class="pay regular">
+							<?= do_shortcode('[simpay id="2568"]') ?>
+						</div>
+						<div class="pay half_year">
+							<?= do_shortcode('[simpay id="2570"]') ?>
+						</div>
 						<p>
 							Behöver du hjälp med betalningen?<br>
 							Hör av dig till oss via <a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>

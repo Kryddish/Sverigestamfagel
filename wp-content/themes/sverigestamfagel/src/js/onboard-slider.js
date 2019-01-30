@@ -55,7 +55,12 @@
             $(this).removeClass('active');
             navigate($(this).index());
         }
-    });
+	});
+
+	refreshPayment();
+	$('.chosen-membership').change(function() {
+		refreshPayment();
+	});
 
     function prevSlide() {
 
@@ -136,7 +141,7 @@
                 $('.container h4:nth-of-type(1)').fadeIn();
             }, 400);
         } else {
-            
+
             // Middle slide
             if(index != slides.length-1) {
                 $('.buttons .begin').fadeOut();
@@ -159,5 +164,12 @@
                 }, 400);
             }
         }
-    }
+	}
+
+	function refreshPayment() {
+		chosenMembership = $('.chosen-membership').val();
+		console.log(chosenMembership);
+		$('.pay').css('display', 'none');
+		$('.pay.'+chosenMembership).css('display', 'block');
+	}
 })(jQuery);
