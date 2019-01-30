@@ -9,12 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
-	
+
 	class Stripe_Checkout_Shortcodes {
-		
+
 		// class instance variable
 		private static $instance = null;
-		
+
 		/*
 		 * class constructor
 		 */
@@ -22,10 +22,10 @@ if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
 			// Add the shortcode functionality
 			add_shortcode( 'stripe', array( $this, 'stripe_shortcode' ) );
 		}
-		
+
 		/**
 		* Function to process the [stripe] shortcode
-		* 
+		*
 		* @since 1.0.0
 		*/
 	   function stripe_shortcode( $attr, $content = null ) {
@@ -33,7 +33,7 @@ if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
 		   global $sc_options;
 
 		   STATIC $sc_id = 0;
-		   
+
 		   $sc_id++;
 
 		   $attr = shortcode_atts( array(
@@ -59,7 +59,7 @@ if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
 						   'live_secret_key'           => '',
 						   'live_publishable_key'      => '',
 					   ), $attr, 'stripe' );
-		   
+
 		   // Assign variables since we are not using extract
 		   $name                      = $attr['name'];
 		   $description               = $attr['description'];
@@ -85,7 +85,7 @@ if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
 			if ( $form_id === null || empty( $form_id ) ) {
 				$form_id = 'sc_checkout_form_' . $sc_id;
 			}
-		   
+
 		   $test_mode = ( isset( $_GET['test_mode'] ) ? 'true' : $test_mode );
 		   $filter_mode = false;
 
@@ -117,7 +117,7 @@ if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
 			   // Get current logged in user email
 			   if ( is_user_logged_in() ) {
 				   $prefill_email = get_userdata( get_current_user_id() )->user_email;
-			   } else { 
+			   } else {
 				   $prefill_email = 'false';
 			   }
 		   }
@@ -126,7 +126,7 @@ if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
 
 		   // Add filter for adding html before payment button.
 		   $html .= apply_filters( 'sc_before_payment_button', '' );
-		   
+
 		   $html .= '<script
 					   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 					   data-key="' . esc_js( $data_key ) . '" ' .
@@ -164,9 +164,9 @@ if ( ! class_exists( 'Stripe_Checkout_Shortcodes' ) ) {
 		   $stripe_minimum_amount = 50;
 
 		   if ( ( empty( $amount ) || $amount < $stripe_minimum_amount ) || ! isset( $amount ) ) {
-			   
+
 			   if ( current_user_can( 'manage_options' ) ) {
-				   
+
 				   $html  = '<h6>';
 				   $html .= sprintf( __( 'WP Simple Pay for Stripe requires an amount of %1$s (%2$s %3$s) or larger.', 'stripe' ),
 									$stripe_minimum_amount, Stripe_Checkout_Misc::to_formatted_amount( $stripe_minimum_amount, $currency ), $currency );
