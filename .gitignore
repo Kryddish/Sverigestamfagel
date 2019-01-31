@@ -27,7 +27,8 @@ deploy.sh
 wp-content/upgrade
 wp-content/uploads
 
-# Theme
+# Themes
+wp-content/themes/sverigestamfagel/twentynineteen
 wp-content/themes/sverigestamfagel/dist
 wp-content/themes/sverigestamfagel/node_modules
 wp-content/themes/sverigestamfagel/src/sass/maps/style.css.map
