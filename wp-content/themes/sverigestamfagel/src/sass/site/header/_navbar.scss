@@ -10,6 +10,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		overflow-y: auto;
 	}
 
 	@import 'mobile-navbar'; // .mobile-navbar
@@ -31,7 +32,6 @@
 		padding: 0;
 		position: relative;
 		display: flex;
-		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
 
@@ -43,6 +43,10 @@
 			justify-content: center;
 		}
 
+		@media screen and (min-width: $mobile) {
+			flex-wrap: wrap;
+		}
+
 		.menu-item {
 			position: relative;
 
@@ -50,15 +54,22 @@
 			&.current_page_parent {
 				background-color: #41CA86;
 			}
+
 			&.current-menu-parent {
+				>a {
+					background-color: #41CA86;
+				}
+
 				@media screen and (min-width: $mobile) {
 					background-color: #41CA86;
 				}
 			}
+
 			&.cta {
 				@media screen and (min-width: $mobile) {
 					margin-left: 1.5em;
 				}
+
 				a {
 					border-radius: 5px;
 					padding: 0.5em 1.5em;
@@ -77,6 +88,7 @@
 					}
 				}
 			}
+
 			a {
 				font-size: 16px;
 				letter-spacing: 2px;
@@ -95,24 +107,33 @@
 					text-align: center;
 					padding: .8em 0;
 				}
+
 				&:after {
-					content:  ' +';
+					content: ' +';
 				}
+
 				&:hover {
 					@media screen and (min-width: $mobile) {
 						background-color: #41CA86;
 					}
 				}
+
 				&:only-child {
 					&:after {
 						content: '';
 					}
 				}
 			}
+
 			.menu-toggle {
 				display: none;
 			}
+
 			&.menu-item-has-children {
+				@media screen and (max-width: $mobile) {
+					cursor: pointer;
+				}
+
 				.sub-menu {
 					transform-origin: top;
 					transition:
@@ -130,19 +151,32 @@
 						transform: scaleY(0);
 						opacity: 0;
 					}
+
 					@media screen and (max-width: $mobile) {
 						display: none;
 					}
 				}
+
 				&.toggle {
-					.sub-menu {
-						display: block;
-						transform: scaleY(1);
-						opacity: 1;
+					@media screen and (max-width: $mobile) {
+						ul {
+							display: block;
+						}
+
+						> a:after {
+							content: " -";
+						}
 					}
 				}
 			}
+
 			&:hover {
+				&.menu-item-has-children {
+					>a:after {
+						content: " -";
+					}
+				}
+
 				.sub-menu {
 					@media screen and (min-width: $mobile) {
 						transform: scaleY(1);
@@ -152,6 +186,7 @@
 			}
 		}
 	}
+
 	&.stick {
 		z-index: 100;
 		position: fixed;

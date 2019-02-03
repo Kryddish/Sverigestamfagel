@@ -11,6 +11,10 @@ html {
 body {
 	// background: $color__background-body; /* Fallback for when there is no custom background color defined.
 	background-size: 412px;
+
+	&.lock-scroll {
+		overflow-y: hidden;
+	}
 }
 
 blockquote, q {

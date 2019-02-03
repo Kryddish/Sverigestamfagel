@@ -51,6 +51,7 @@
 
 		menuToggle.on( 'click.stf', function() {
 			$( siteNavigation.closest( '.main-navigation' ), this ).toggleClass( 'toggled' );
+			$('body.page').toggleClass('lock-scroll');
 
 			$( this )
 				.add( siteNavigation )
@@ -130,11 +131,7 @@
 	var dropdown = $( '.menu-item-has-children' );
 
 	dropdown.click(function() {
-		if( !dropdown.hasClass('toggle') ) {
-			$(this).find('ul').toggleClass('toggle');
-		} else {
-			$(this).find('ul').toggleClass('toggle');
-		}
+		$(this).toggleClass('toggle');
 	});
 
 })( jQuery );
