@@ -59,12 +59,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="posts-container">
-				<?php
-				$title = get_the_title();
-				if( isset( $_GET['type'] ) && $_GET['type'] !== 'any' ) $title = $post_types[$_GET['type']]; ?>
-				<h2><?= $title ?></h2>
+			<?php
+			$title = get_the_title();
 
+			if( isset( $_GET['type'] ) && $_GET['type'] !== 'any' )
+				$title = $post_types[$_GET['type']]; ?>
+
+			<h2><?= $title ?></h2>
+			<div class="posts-container">
 				<?php
 				if( $archive_query->have_posts() ):
 

@@ -1,48 +1,50 @@
-<?php if( have_rows('header') ): 
-        while ( have_rows('header') ) : the_row(); ?> 
+<?php
+if( have_rows('header') ):
+    while ( have_rows('header') ) : the_row(); ?>
 
-<h2> <?php
-    if( get_sub_field( 'headline' ) ) : 
-        the_sub_field( 'headline' );
-    endif; ?> 
-</h2>
-<p> 
-    <?php 
-    if( get_sub_field( 'header_text' ) ) : 
-        the_sub_field( 'header_text' ); 
-    endif; ?>
-</p>
+		<h2> <?php
+			if( get_sub_field( 'headline' ) ) :
+				the_sub_field( 'headline' );
+			endif; ?>
+		</h2>
+		<p>
+			<?php
+			if( get_sub_field( 'header_text' ) ) :
+				the_sub_field( 'header_text' );
+			endif; ?>
+		</p>
 
-<?php endwhile;
-        endif; ?>
-
-<?php if( have_rows('paper') ): 
-        while ( have_rows('paper') ) : the_row(); ?> 
-<div class="magazine">
-    <img src="
-        <?php 
-            if( get_sub_field( 'paper_img' ) ) : 
-                the_sub_field( 'paper_img' ); 
-                else : echo 'http://fagelhobby.nu/wp-content/uploads/2014/02/FH-Promotion01_2015.jpg';
-            endif; ?>
-    " alt="">
-    <div class="magazine-text">
-        <h2>
-            <?php 
-                if( get_sub_field( 'headline' ) ) : 
-                    the_sub_field( 'headline' ); 
-                endif; ?>
-        </h2>
-        <p>
-        <?php
-            if( get_sub_field( 'text' ) ) : 
-                        the_sub_field( 'text' ); 
-                    endif; ?>
-        </p>
-    </div><!-- .magazine-text -->
-</div><!-- .magazine -->
-<?php endwhile;
-        endif; ?>
+		<?php
+	endwhile;
+endif;
+if( have_rows('paper') ):
+    while ( have_rows('paper') ) : the_row(); ?>
+		<div class="magazine">
+			<img src="
+				<?php
+				if( get_sub_field( 'paper_img' ) ) :
+					echo get_sub_field( 'paper_img' )['sizes']['medium'];
+				else:
+					echo 'http://fagelhobby.nu/wp-content/uploads/2014/02/FH-Promotion01_2015.jpg';
+				endif; ?>" alt="">
+			<div class="magazine-text">
+				<h2>
+					<?php
+					if( get_sub_field( 'headline' ) ) :
+						the_sub_field( 'headline' );
+					endif; ?>
+				</h2>
+				<p>
+					<?php
+					if( get_sub_field( 'text' ) ) :
+						the_sub_field( 'text' );
+					endif; ?>
+				</p>
+			</div><!-- .magazine-text -->
+		</div><!-- .magazine -->
+		<?php
+	endwhile;
+endif; ?>
 
 <div class="rebates">
     <h2>Rabatter</h2>
@@ -64,33 +66,33 @@
             Medlemmar i STF har 10%  rabatt på Zoosajtens Webbshop.
         </p>
     </div><!-- .rebates-2 -->
-
 </div><!-- .rebates -->
 
-<?php if( have_rows('ringar') ): 
-        while ( have_rows('ringar') ) : the_row(); ?> 
-<div class="rings">
-    <img src="
-    <?php if( get_sub_field( 'rings_img' ) ) : 
-              the_sub_field( 'rings_img' ); 
-          endif; ?> " alt="">
+<?php
+if( have_rows('ringar') ):
+    while ( have_rows('ringar') ) : the_row(); ?>
+		<div class="rings">
+			<img src="<?php
+				if(get_sub_field('rings_img')):
+					echo get_sub_field( 'rings_img' )['sizes']['medium'];
+				endif; ?>" alt="">
 
-    <div class="rings-content">
-        <h2>
-            <?php if( get_sub_field( 'rings_headline' ) ) : 
-                the_sub_field( 'rings_headline' ); 
-            endif; ?>    
-        </h2>
-        <p>
-        <?php if( get_sub_field( 'rings_info' ) ) : 
-                the_sub_field( 'rings_info' ); 
-            endif; ?> 
-        </p>
-    </div><!-- .rings-content -->
-
-</div><!-- .rings -->
-<?php endwhile;
-        endif; ?>
+			<div class="rings-content">
+				<h2>
+					<?php if( get_sub_field( 'rings_headline' ) ) :
+						the_sub_field( 'rings_headline' );
+					endif; ?>
+				</h2>
+				<p>
+				<?php if( get_sub_field( 'rings_info' ) ) :
+						the_sub_field( 'rings_info' );
+					endif; ?>
+				</p>
+			</div><!-- .rings-content -->
+		</div><!-- .rings -->
+		<?php
+	endwhile;
+endif; ?>
 
 <div class="bird-register">
     <h2>Frivillig fågelregister</h2>
