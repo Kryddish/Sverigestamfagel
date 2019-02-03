@@ -1,0 +1,189 @@
+# Translation of Plugins - Disable Comments - Development (trunk) in Norwegian (Bokmål)
+# This file is distributed under the same license as the Plugins - Disable Comments - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-12-14 11:08:02+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: nb_NO\n"
+"Project-Id-Version: Plugins - Disable Comments - Development (trunk)\n"
+
+#: includes/settings-page.php:49
+msgctxt "settings page title"
+msgid "Disable Comments"
+msgstr "Deaktiver kommentarer"
+
+#: disable-comments.php:396
+msgctxt "settings menu title"
+msgid "Disable Comments"
+msgstr "Deaktiver kommentarer"
+
+#: includes/tools-page.php:102
+msgid "Total Comments:"
+msgstr "Antall kommentarer:"
+
+#: includes/tools-page.php:97
+msgid "%s: Deleting comments will remove existing comment entries in the database and cannot be reverted without a database backup."
+msgstr "%s: Å slette kommentarer vil fjerne eksisterende kommentarer i databasen og kan ikke omgjøres uten sikkerhetskopi av databasen."
+
+#: includes/tools-page.php:88
+msgid "For certain post types"
+msgstr "For bestemte innholdstyper"
+
+#: includes/tools-page.php:86
+msgid "%s: This function and will affect your entire site. Use it only if you want to delete comments <em>everywhere</em>."
+msgstr "%s: Denne funksjonen vil ha virkning på hele nettstedet. Bruk den bare om du vil slette kommentarer <em>overalt</em>."
+
+#: includes/tools-page.php:85
+msgid "Delete all comments in WordPress."
+msgstr "Slett alle kommentarer i WordPress."
+
+#: includes/tools-page.php:68
+msgid "Comment Deletion Complete"
+msgstr "Sletting av kommentarer fullført"
+
+#: includes/tools-page.php:62
+msgid "All comments have been deleted for %ss."
+msgstr "Alle kommentarer er slettet for %s."
+
+#: includes/tools-page.php:40 includes/tools-page.php:43
+msgid "Internal error occured. Please try again later."
+msgstr "Intern feil oppsto. Vennligst prøv igjen senere."
+
+#: includes/tools-page.php:38
+msgid "All comments have been deleted."
+msgstr "Alle kommentarer er slettet."
+
+#: includes/tools-page.php:13 includes/tools-page.php:75
+msgid "No comments available for deletion."
+msgstr "Ingen kommentarer tilgjengelig for sletting."
+
+#: includes/settings-page.php:68 includes/tools-page.php:95
+msgid "Custom post types:"
+msgstr "Tilpassede innholdstyper:"
+
+#: disable-comments.php:408 includes/tools-page.php:7
+#: includes/tools-page.php:103
+msgid "Delete Comments"
+msgstr "Slett kommentarer"
+
+#: disable-comments.php:388
+msgid "Tools"
+msgstr "Verktøy"
+
+#: disable-comments.php:387
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: includes/settings-page.php:89
+msgid "Save Changes"
+msgstr "Lagre endringer"
+
+#: disable-comments.php:244 disable-comments.php:324 disable-comments.php:330
+msgid "Comments are closed."
+msgstr "Kommentarer er stengt."
+
+#: includes/settings-page.php:59 includes/settings-page.php:80
+#: includes/settings-page.php:82 includes/settings-page.php:110
+#: includes/tools-page.php:86 includes/tools-page.php:97
+msgid "Warning"
+msgstr "Advarsel"
+
+#: includes/settings-page.php:75
+msgid "Other options"
+msgstr "Andre innstillinger"
+
+#: includes/settings-page.php:58 includes/tools-page.php:85
+msgid "Everywhere"
+msgstr "Overalt"
+
+#. Plugin Name of the plugin/theme
+msgid "Disable Comments"
+msgstr "Deaktiver kommentarer"
+
+#: includes/settings-page.php:79
+msgid "Use persistent mode"
+msgstr "Bruk vedvarende modus"
+
+#: disable-comments.php:59
+msgid "Disable Comments requires WordPress version %s or greater."
+msgstr "Deaktiver kommentarer krever WordPress-versjon %s eller høyere."
+
+#: disable-comments.php:291
+msgid "Note: The <em>Disable Comments</em> plugin is currently active, and comments are completely disabled on: %s. Many of the settings below will not be applicable for those post types."
+msgstr "Merk: Utvidelsen <em>Deaktiver kommentarer</em> er aktiv, og kommentarer er fullstending deaktivert på: %s. Mange av innstillingene nedenfor vil ikke fungere for disse innholdstypene."
+
+#: disable-comments.php:316
+msgid "The <em>Disable Comments</em> plugin is active, but isn't configured to do anything yet. Visit the <a href=\"%s\">configuration page</a> to choose which post types to disable comments on."
+msgstr "Utvidelsen <em>Deaktiver kommentarer</em> er akitvert, men er ikke konfigurert til å gjøre noe enda. Gå til <a href=\"%s\">innstillingene</a> for å velge hvilke innholdstyper å deaktivere kommentarer for."
+
+#. Description of the plugin/theme
+msgid "Allows administrators to globally disable comments on their site. Comments can be disabled according to post type."
+msgstr "Tillat nettstedsadministratorer å deaktivere kommentarer på deres nettsted. Kommentarer kan bli deaktivert pr. innholdstype."
+
+#: includes/settings-page.php:61
+msgid "On certain post types"
+msgstr "På bestemte innholdstyper"
+
+#. Author URI of the plugin/theme
+msgid "http://www.rayofsolaris.net/"
+msgstr "https://www.rayofsolaris.net/"
+
+#. Author of the plugin/theme
+msgid "Samir Shah"
+msgstr "Samir Shah"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/disable-comments/"
+msgstr "https://nb.wordpress.org/plugins/disable-comments/"
+
+#: includes/settings-page.php:110
+msgid "%s: Selecting this option will make persistent changes to your database. Are you sure you want to enable it?"
+msgstr "%s: Å velge dette alternativet vil gjøre permanente endringer i din database. Er du sikker på at du vil aktivere det?"
+
+#: includes/settings-page.php:82
+msgid "%s: Entering persistent mode on large multi-site networks requires a large number of database queries and can take a while. Use with caution!"
+msgstr "%s: Å velge permanent modus på et stort nettverk vil kreve et stort antall databasespørringer og kan ta en stund. Bruk med forsiktighet!"
+
+#: includes/settings-page.php:80
+msgid "%s: <strong>This will make persistent changes to your database &mdash; comments will remain closed even if you later disable the plugin!</strong> You should not use it if you only want to disable comments temporarily. Please <a href=\"%s\" target=\"_blank\">read the FAQ</a> before selecting this option."
+msgstr "%s: <strong>Dette vil gjøre permanente endringer i din database &mdash; kommentarer vil forbli stengt også om du senere deaktiverer denne utvidelsen!</strong> Du bør ikke bruke det hvis du bare ønsker å deaktivere kommentarer midlertidig. Vennligst <a href=\"%s\" target=\"_blank\">les FAQ-en</a> før du velger dette alternativet."
+
+#: includes/settings-page.php:70
+msgid "Disabling comments will also disable trackbacks and pingbacks. All comment-related fields will also be hidden from the edit/quick-edit screens of the affected posts. These settings cannot be overridden for individual posts."
+msgstr "^deaktivere kommentarer vil også deaktivere tilbakesporinger og tilbakeping. Alle felter relatert til kommentarer vil også bli skjult fra skjermene for redigering/hurtigredigering for de berørte innholdstypene. Disse innstilllngene kan ikke overstyres for hvert enkelt innlegg."
+
+#: includes/settings-page.php:67 includes/tools-page.php:94
+msgid "Only the built-in post types appear above. If you want to disable comments on other custom post types on the entire network, you can supply a comma-separated list of post types below (use the slug that identifies the post type)."
+msgstr "Bare de innebygde innholdstypene vises ovenfor. Hvis du ønsker å deaktivere kommentarer for andre innholdstyper på hele nettverket kan du oppgi en kommaseparert liste av innholdstyper (bruk kodenavnet som identifiserer innholdstypen)."
+
+#: includes/settings-page.php:59
+msgid "%s: This option is global and will affect your entire site. Use it only if you want to disable comments <em>everywhere</em>. A complete description of what this option does is <a href=\"%s\" target=\"_blank\">available here</a>."
+msgstr "%s: Dette alternativet er globalt og vil berøre hele ditt nettsted. Bruk det bare om du vil deaktivere kommentarer <em>overalt</em>. En fullstendig beskrivelse av hva hva dette alternativet gjør er <a href=\"%s\" target=\"_blank\">tilgjengelig her</a>."
+
+#: includes/settings-page.php:58
+msgid "Disable all comment-related controls and settings in WordPress."
+msgstr "Deaktiver alle kommentar-relaterte kontroller og innstillinger i WordPress."
+
+#: includes/settings-page.php:54
+msgid "It seems that a caching/performance plugin is active on this site. Please manually invalidate that plugin's cache after making any changes to the settings below."
+msgstr "Det ser ut til at en hurtigbufringsutvidelse (caching) er aktiv på dette nettstedet. Vennligst tøm denne utvidelsens hurtigbuffer (cache) etter å ha gjort endringer i innstillingene nedenfor."
+
+#: includes/settings-page.php:52
+msgid "<em>Disable Comments</em> is Network Activated. The settings below will affect <strong>all sites</strong> in this network."
+msgstr "<em>Deaktiver kommentarer</em> er nettverksaktivert. Innstillingene nedenfor vil påvirke <strong>alle nettsteder</strong> i dette nettverket."
+
+#: includes/settings-page.php:44
+msgid "Options updated. Changes to the Admin Menu and Admin Bar will not appear until you leave or reload this page."
+msgstr "Alternativer oppdatert. Endringer i administrasjonsmenyen og verktøylinjen vil ikke bli synlige før du forlater denen siden eller laster den på nytt."
+
+#: includes/settings-page.php:43
+msgid "If a caching/performance plugin is active, please invalidate its cache to ensure that changes are reflected immediately."
+msgstr "Hvis en utvidelse for hurtigbufring (caching) er aktiv, vennligst tøm dens hurtigbuffer (cache) for å sørge for at endringer straks får virkning."
+
+#: disable-comments.php:291
+msgid ", "
+msgstr ", "

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-12-05 17:31:11+0000\n"
+"PO-Revision-Date: 2019-01-20 17:45:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,6 +25,19 @@ msgstr "1"
 msgctxt "default GMT offset or timezone string"
 msgid "0"
 msgstr "Europe/Helsinki"
+
+#. translators: %s: https://wordpress.org/plugins/classic-editor
+#: wp-admin/edit-form-blocks.php:412
+msgid "The block editor requires JavaScript. Please enable JavaScript in your browser settings, or try the <a href=\"%s\">Classic Editor plugin</a>."
+msgstr "Lohkomuokkain vaatii JavaScriptiä. Ole hyvä ja ota se käyttöön selaimesi asetuksista, tai kokeile <a href=\"%s\">Classic Editor -lisäosaa</a>."
+
+#: wp-admin/post.php:44
+msgid "A post type mismatch has been detected."
+msgstr "Sisältötyyppi ei täsmää."
+
+#: wp-admin/includes/class-wp-screen.php:282 wp-admin/post.php:20
+msgid "A post ID mismatch has been detected."
+msgstr "Artikkelin tunniste (ID) ei täsmää."
 
 #. translators: %s: An edit post link to use the classic editor.
 #: wp-admin/includes/template.php:1049
@@ -84,136 +97,136 @@ msgid "The Gutenberg plugin has been deactivated, as the features are now includ
 msgstr "Gutenberg-lisäosa on poistettu käytöstä, sillä sen ominaisuudet ovat nyt oletuksena sisällytetty WordPress-versioon %1$s. Mikäli haluat jatkaa muokkaimen tulevien ominaisuuksien testaamista, voit %2$saktivoida Gutenberg-lisäosan uudelleen%3$s."
 
 #. Translators: Use this to specify the CSS font family for the default font
-#: wp-admin/edit-form-blocks.php:182
+#: wp-admin/edit-form-blocks.php:178
 msgctxt "CSS Font Family for Editor Font"
 msgid "Noto Serif"
 msgstr "Noto Serif"
 
-#: wp-admin/about.php:425
+#: wp-admin/about.php:475
 msgid "The Classic Editor plugin restores the previous WordPress editor and the Edit Post screen. It lets you keep using plugins that extend it, add old-style meta boxes, or otherwise depend on the previous editor. To install, visit your plugins page and click the &#8220;Install Now&#8221; button next to &#8220;Classic Editor&#8221;. After the plugin finishes installing, click &#8220;Activate&#8221;. That’s it!"
 msgstr "WordPressin vanha muokkain on mahdollista ottaa käyttöön lisäosan avulla. Sen avulla voit jatkaa muokkaimen ominaisuuksia laajentavien vanhojen lisäosien käyttöä tai käyttää perinteisiä metalaatikoita. Asentaaksesi perinteisen muokkaimen, etsi \"Classic Editor\" lisäosasivulta ja asenna se. Asennuksen jälkeen sinun ei tarvitse kuin napsauttaa \"Ota käyttöön.\" Siinä kaikki!"
 
-#: wp-admin/about.php:426
+#: wp-admin/about.php:476
 msgid "Note to users of assistive technology: if you experience usability issues with the block editor, we recommend you continue to use the Classic Editor."
 msgstr "Huomautus avustavien teknologioiden käyttäjille: mikäli kohtaat käytettävyysongelmia Gutenbergin kanssa, suosittelemme, että jatkat vanhan muokkaimen käyttöä."
 
-#: wp-admin/about.php:400
+#: wp-admin/about.php:450
 msgid "Learn how to get started"
 msgstr "Näin pääset alkuun"
 
-#: wp-admin/about.php:424
+#: wp-admin/about.php:474
 msgid "Prefer to stick with the familiar Classic Editor? No problem! Support for the Classic Editor plugin will remain in WordPress through 2021."
 msgstr "Haluatko mieluummin pitäytyä perinteisessä muokkaimessa? Ei hätää, Classic Editor -lisäosaa tullaan tukemaan WordPressissä aina vuoteen 2021 asti."
 
-#: wp-admin/about.php:409
+#: wp-admin/about.php:459
 msgid "Keep it Classic"
 msgstr "Pitäydy perinteissä"
 
-#: wp-admin/about.php:394
+#: wp-admin/about.php:444
 msgid "The new block paradigm opens up a path of exploration and imagination when it comes to solving user needs. With the unified block insertion flow, it&#8217;s easier for your clients and customers to find and use blocks for all types of content. Developers can focus on executing their vision and providing rich editing experiences, rather than fussing with difficult APIs."
 msgstr "Uusi lohko-ajattelutapa avaa uusia mahdollisuuksia käyttäjien tarpeiden ratkaisemiseen. Asiakkaidesi on helppo löytää lohkoja erilaisille sisällöille, sillä ne kaikki otetaan käyttöön samalla tavalla. Kehittäjät voivat puolestaan tarjota asiakkailleen monipuolisia muokkausmahdollisuuksia joutumatta taistelemaan hankalien rajapintojen kanssa."
 
-#: wp-admin/about.php:386
+#: wp-admin/about.php:436
 msgid "Take advantage of a wide collection of APIs and interface components to easily create blocks with intuitive controls for your clients. Utilizing these components not only speeds up development work but also provide a more consistent, usable, and accessible interface to all users."
 msgstr "Luo helposti uusia lohkoja asiakkaillesi käyttämällä hyödyksesi laajaa valikoimaa rajapintoja ja käyttöliittymäkomponentteja. Näiden komponenttien avulla nopeutat kehitystyötä ja saat aikaiseksi yhteneviä, helppokäyttöisiä ja saavutettavia käyttöliittymiä."
 
-#: wp-admin/about.php:385
+#: wp-admin/about.php:435
 msgid "Compose"
 msgstr "Luo"
 
-#: wp-admin/about.php:378
+#: wp-admin/about.php:428
 msgid "Blocks provide a comfortable way for users to change content directly, while also ensuring the content structure cannot be easily disturbed by accidental code edits. This allows the developer to control the output, building polished and semantic markup that is preserved through edits and not easily broken."
 msgstr "Lohkot tarjoavat luontevan tavan käyttäjille muokata sisältöä suoraan. Ne mahdollistavat myös, etteivät lähdekoodimuutokset vahingossa riko sisällön muotoa. Lohkoja käyttämällä kehittäjä voi hallita esitettyä sisältöä, rakentaen hiottua ja semanttista merkitätapaa joka säilyy muutosten yli."
 
-#: wp-admin/about.php:377
+#: wp-admin/about.php:427
 msgid "Protect"
 msgstr "Suojaa"
 
-#: wp-admin/about.php:358
+#: wp-admin/about.php:408
 msgid "Give Twenty Nineteen a try"
 msgstr "Kokeile Twenty Nineteen -teemaa"
 
-#: wp-admin/about.php:351
+#: wp-admin/about.php:401
 msgid "Twenty Nineteen is designed to work for a wide variety of use cases. Whether you’re running a photo blog, launching a new business, or supporting a non-profit, Twenty Nineteen is flexible enough to fit your needs."
 msgstr "Twenty Nineteen on suunniteltu toimimaan monissa eri käyttötapauksissa. Olit sitten tekemässä valokuvablogia, perustamassa uutta yritystä tai auttamassa voittoa tavoittelematonta yhdistystä, Twenty Nineteen joustaa tarpeidesi mukaan."
 
-#: wp-admin/about.php:350
+#: wp-admin/about.php:400
 msgid "Versatile design for all sites"
 msgstr "Kaikille sivuille muovautuva design"
 
-#: wp-admin/about.php:346
+#: wp-admin/about.php:396
 msgid "Featuring ample whitespace, and modern sans-serif headlines paired with classic serif body text, Twenty Nineteen is built to be beautiful on the go. It uses system fonts to increase loading speed. No more long waits on slow networks!"
 msgstr "Ilmava asettelu, nykyaikaiset groteskit otsikot, sekä klassinen päätteellinen kirjasin leipätekstille tekevät Twenty Nineteenistä kauniin katsella. Se käyttää peruskirjasimia latausaikojen nopeuttamiseksi, joten nyt ei enää tarvitse kärsiä pitkistä odotusajoista hitaissa verkoissa!"
 
-#: wp-admin/about.php:345
+#: wp-admin/about.php:395
 msgid "Simple, type-driven layout"
 msgstr "Yksinkertainen, tekstikeskeinen asettelu"
 
-#: wp-admin/about.php:338
+#: wp-admin/about.php:388
 msgid "Twenty Nineteen features custom styles for the blocks available by default in 5.0. It makes extensive use of editor styles throughout the theme. That way, what you create in your content editor is what you see on the front of your site."
 msgstr "Twenty Nineteen sisältää mukautetut tyylit 5.0:n tarjoamille oletuslohkoille, eli teeman tyylit ovat laajasti käytössä myös muokkaimessa. Näin se, mitä luot muokkaimessa, vastaa täsmälleen sitä mitä näet sivustollasi. "
 
-#: wp-admin/about.php:337
+#: wp-admin/about.php:387
 msgid "Designed for the block editor"
 msgstr "Suunniteltu lohkomuokkaimelle"
 
-#: wp-admin/about.php:327
+#: wp-admin/about.php:377
 msgid "Introducing Twenty Nineteen, a new default theme that shows off the power of the new editor."
 msgstr "Esittelyssä Twenty Nineteen, uusi oletusteema, joka näyttää uuden muokkaimen voiman."
 
-#: wp-admin/about.php:308
+#: wp-admin/about.php:358
 msgid "A Stunning New Default Theme"
 msgstr "Häikäisevä uusi oletusteema"
 
-#: wp-admin/about.php:321
+#: wp-admin/about.php:371
 msgid "The front-end of Twenty Nineteen on the left, and how it looks in the editor on the right."
 msgstr "Twenty Nineteenin tarjoama selainnäkymä vasemmalla ja oikealla, miltä se näyttää muokkaimessa."
 
-#: wp-admin/about.php:298
+#: wp-admin/about.php:348
 msgid "Build your first post"
 msgstr "Luo ensimmäinen artikkelisi"
 
-#: wp-admin/about.php:286
+#: wp-admin/about.php:336
 msgid "This new editing experience provides a more consistent treatment of design as well as content. If you&#8217;re building client sites, you can create reusable blocks. This lets your clients add new content anytime, while still maintaining a consistent look and feel."
 msgstr "Tämä uusi muokkauskokemus tarjoaa yhtenäisemmän hallinnan muotoilulle ja sisällölle. Jos rakennat sivustoja asiakkaillesi, voit luoda uudelleenkäytettäviä lohkoja. Tämä antaa asiakkaillesi mahdollisuuden lisätä uutta sisältöä milloin vain, säilyttäen yhtenäisen ulkoasun ja käyttökokemuksen."
 
-#: wp-admin/about.php:285
+#: wp-admin/about.php:335
 msgid "Freedom to Build, Freedom to Write"
 msgstr "Vapaus rakentaa, vapaus kirjoittaa"
 
-#: wp-admin/about.php:132
+#: wp-admin/about.php:182
 msgid "We have tons of blocks available by default, and more get added by the community every day. Here are a few of the blocks to help you get started:"
 msgstr "Tarjoamme valtavasti oletuslohkoja ja yhteisö luo niitä jatkuvasti lisää. Tässä on lohkoista muutama, jotta pääset alkuun:"
 
-#: wp-admin/about.php:130 wp-admin/about.php:290
+#: wp-admin/about.php:180 wp-admin/about.php:340
 msgid "Your browser doesn&#8217;t support HTML5 video. Here is a %1$slink to the video%2$s instead."
 msgstr "Selaimesi ei tue HTML5-videota. Tässä %1$slinkki videoon%2$s."
 
-#: wp-admin/about.php:126
+#: wp-admin/about.php:176
 msgid "The new block-based editor won&#8217;t change the way any of your content looks to your visitors. What it will do is let you insert any type of multimedia in a snap and rearrange to your heart&#8217;s content. Each piece of content will be in its own block; a distinct wrapper for easy maneuvering. If you&#8217;re more of an HTML and CSS sort of person, then the blocks won&#8217;t stand in your way. WordPress is here to simplify the process, not the outcome."
 msgstr "Uusi lohkoihin perustuva muokkain ei muuta sitä, miten mikään sisällöstäsi esitetään sivustosi kävijöille. Se antaa sinulle mahdollisuuden lisätä helposti minkä tahansa muotoista multimediaa ja järjestää sitä uudelleen mielesi mukaan. Jokainen osa sisältöä tulee olemaan omassa lohkossaan, joka on helposti siirrettävä yhtenäinen paketti. Jos HTML ja CSS sujuvat kuin luonnostaan, lohkot eivät sinua pidättele. WordPress yksinkertaistaa puolestasi prosessia, ei lopputulosta."
 
-#: wp-admin/about.php:118
+#: wp-admin/about.php:168
 msgid "Trust that your editor looks like your website."
 msgstr "Muokkaimesi näyttää samalta kuin verkkosivusi."
 
-#: wp-admin/about.php:109
+#: wp-admin/about.php:159
 msgid "Work across all screen sizes and devices."
 msgstr "Voit työskennellä kaiken kokoisilla laitteilla ja ruuduilla."
 
-#: wp-admin/about.php:91
+#: wp-admin/about.php:141
 msgid "Do more with fewer plugins."
 msgstr "Tee enemmän pienemmällä määrällä lisäosia."
 
-#: wp-admin/about.php:80
+#: wp-admin/about.php:130
 msgid "You&#8217;ve successfully upgraded to WordPress 5.0! We’ve made some big changes to the editor. Our new block-based editor is the first step toward an exciting new future with a streamlined editing experience across your site. You’ll have more flexibility with how content is displayed, whether you are building your first site, revamping your blog, or write code for a living."
 msgstr "Olet onnistuneesti päivittänyt sivustosi WordPress 5.0! Olemme tehneet muutamia suuria muutoksia muokkaimeen. Uusi lohkohin perustuva muokkain on ensiaskel kohti virtaviivaisempaa muokkauskokemusta koko sivustollasi. Saat enemmän vapautta valita miten sisältö esitetään, rakennat sitten ensimmäistä sivustoasi, hiot blogiasi tai koodaat työksesi."
 
-#: wp-admin/about.php:100
+#: wp-admin/about.php:150
 msgid "Create modern, multimedia-heavy layouts."
 msgstr "Luo moderneja, sisältörikkaita asetteluja."
 
-#: wp-admin/about.php:125
+#: wp-admin/about.php:175
 msgid "Building with Blocks"
 msgstr "Lohkoilla rakentaminen"
 
@@ -230,7 +243,7 @@ msgstr "Kiitos paljon, että päivitit uusimpaan versioon! WordPress %s esittele
 msgid "Learn how to keep using the old editor."
 msgstr "Lue, miten jatkat vanhan muokkaimen käyttämistä."
 
-#: wp-admin/about.php:65
+#: wp-admin/about.php:115
 msgid "Say Hello to the New Editor"
 msgstr "Käy tutustumassa uuteen muokkaimeen"
 
@@ -258,10 +271,6 @@ msgstr "Tervehdys! Päivätyökseni teen pyörälähetin hommia ja iltaisin toim
 #: wp-admin/includes/upgrade.php:232
 msgid "This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:"
 msgstr "Tämä on esimerkkisivu. Se eroaa artikkelista, sillä se pysyy omalla paikallaan ja näkyy sivustosi navigaatiossa (useimmissa teemoissa). Monet tekevät ensimmäisenä Tietoja-sivun, joka esittelee heidät sivuston vierailijoille. Siihen voi kirjoittaa esimerkiksi jotain tämänkaltaista sisältöä:"
-
-#: wp-admin/includes/post.php:2205
-msgid "This action is still supported in the classic editor, but is deprecated in the block editor."
-msgstr "Tämä toiminto (action) on tuettu klassisessa muokkaimessa, mutta on vanhentunut lohkomuokkaimessa."
 
 #: wp-admin/includes/class-wp-posts-list-table.php:1309
 msgid "Export as JSON"
@@ -304,7 +313,7 @@ msgstr[1] "Lohkot %s päivittettiin."
 msgid "<strong>ERROR</strong>: \"Table Prefix\" must not be empty."
 msgstr "<strong>VIRHE</strong>: Taulun etuliite ei saa olla tyhjä."
 
-#: wp-admin/edit-form-blocks.php:161
+#: wp-admin/edit-form-blocks.php:157
 msgid "Default template"
 msgstr "Oletussivupohja"
 
@@ -325,12 +334,16 @@ msgctxt "page title"
 msgid "About"
 msgstr "Tietoja"
 
+#: wp-admin/edit-form-blocks.php:413
+msgid "https://wordpress.org/plugins/classic-editor/"
+msgstr "https://wordpress.org/plugins/classic-editor"
+
 #: wp-admin/includes/upgrade.php:303
 #: wp-admin/includes/class-wp-internal-pointers.php:167 wp-admin/privacy.php:63
 msgid "Privacy Policy"
 msgstr "Tietosuojaseloste"
 
-#: wp-admin/about.php:429
+#: wp-admin/about.php:479
 msgid "Install the Classic Editor"
 msgstr "Asenna perinteinen muokkain"
 
@@ -808,7 +821,7 @@ msgid "Report generated for"
 msgstr "Raportti generoitu osoitteelle"
 
 #. translators: %s: array index
-#: wp-admin/includes/ajax-actions.php:4117
+#: wp-admin/includes/ajax-actions.php:4121
 msgid "Exporter array at index %s does not include a friendly name."
 msgstr "Vientityökalulta indeksissä %s puuttuu käyttäjäystävällinen nimi."
 
@@ -820,76 +833,76 @@ msgstr "Valitettavasti sinulla ei ole oikeutta poistaa tietoja tältä sivustolt
 msgid "Sorry, you are not allowed to export personal data on this site."
 msgstr "Valitettavasti sinulla ei ole oikeutta viedä tietoja tältä sivustolta."
 
-#: wp-admin/includes/ajax-actions.php:4278
+#: wp-admin/includes/ajax-actions.php:4282
 msgid "Eraser index is out of range."
 msgstr "Indeksi on lukualueen ulkopuolella."
 
-#: wp-admin/includes/ajax-actions.php:4237
+#: wp-admin/includes/ajax-actions.php:4241
 msgid "Missing eraser index."
 msgstr "Henkilötiedon poistajan indeksi puuttuu."
 
 #. translators: %s: exporter friendly name
-#: wp-admin/includes/ajax-actions.php:4162
+#: wp-admin/includes/ajax-actions.php:4166
 msgid "Expected done (boolean) in response array from exporter: %s."
 msgstr "Odotetaan valmis-tilaa (boolean) vastaukseksi vientityökalulta: %s."
 
 #. translators: %s: exporter friendly name
-#: wp-admin/includes/ajax-actions.php:4156
+#: wp-admin/includes/ajax-actions.php:4160
 msgid "Expected data array in response array from exporter: %s."
 msgstr "Odotetaan taulukkoa vastaukseksi vientityökalulta: %s."
 
 #. translators: %s: exporter friendly name
-#: wp-admin/includes/ajax-actions.php:4150
+#: wp-admin/includes/ajax-actions.php:4154
 msgid "Expected data in response array from exporter: %s."
 msgstr "Odotetaan tietoa vastaukseksi vientityökalulta: %s."
 
 #. translators: %s: exporter friendly name
-#: wp-admin/includes/ajax-actions.php:4144
+#: wp-admin/includes/ajax-actions.php:4148
 msgid "Expected response as an array from exporter: %s."
 msgstr "Odotetaan taulukkoa vastaukseksi vientityökalulta: %s."
 
 #. translators: %s: exporter friendly name
-#: wp-admin/includes/ajax-actions.php:4129
+#: wp-admin/includes/ajax-actions.php:4133
 msgid "Exporter callback is not a valid callback: %s."
 msgstr "Takaisinkutsu ei ole hyväksytty vientityökalulta: %s."
 
 #. translators: %s: exporter friendly name
-#: wp-admin/includes/ajax-actions.php:4123
+#: wp-admin/includes/ajax-actions.php:4127
 msgid "Exporter does not include a callback: %s."
 msgstr "Takaisinkutsu ei ole osa vientityökalua: %s."
 
 #. translators: %s: array index
-#: wp-admin/includes/ajax-actions.php:4111
+#: wp-admin/includes/ajax-actions.php:4115
 msgid "Expected an array describing the exporter at index %s."
 msgstr "Odotetaan vientityökalua kuvaavaa taulukkoa indeksissä %s."
 
-#: wp-admin/includes/ajax-actions.php:4097
+#: wp-admin/includes/ajax-actions.php:4101
 msgid "Exporter index out of range."
 msgstr "Vientityökalun indeksi on lukualueen ulkopuolella."
 
-#: wp-admin/includes/ajax-actions.php:4093
+#: wp-admin/includes/ajax-actions.php:4097
 msgid "Exporter index cannot be negative."
 msgstr "Vientityökalun indeksi ei voi olla negatiivinen."
 
-#: wp-admin/includes/ajax-actions.php:4087
+#: wp-admin/includes/ajax-actions.php:4091
 msgid "An exporter has improperly used the registration filter."
 msgstr "Jokin vientityökalu on virheellisesti käyttäynyt rekisteröimissuodatinta."
 
-#: wp-admin/includes/ajax-actions.php:4059
-#: wp-admin/includes/ajax-actions.php:4243
+#: wp-admin/includes/ajax-actions.php:4063
+#: wp-admin/includes/ajax-actions.php:4247
 msgid "Missing page index."
 msgstr "Sivun indeksi puuttuu."
 
-#: wp-admin/includes/ajax-actions.php:4054
+#: wp-admin/includes/ajax-actions.php:4058
 msgid "Missing exporter index."
 msgstr "Vientityökalun indeksi puuttuu."
 
-#: wp-admin/includes/ajax-actions.php:4045
+#: wp-admin/includes/ajax-actions.php:4049
 msgid "Invalid request type."
 msgstr "Pyynnön tyyppi ei ole kelvollinen."
 
-#: wp-admin/includes/ajax-actions.php:4027
-#: wp-admin/includes/ajax-actions.php:4207
+#: wp-admin/includes/ajax-actions.php:4031
+#: wp-admin/includes/ajax-actions.php:4211
 msgid "Missing request ID."
 msgstr "Pyynnön ID puuttuu."
 
@@ -1059,7 +1072,7 @@ msgstr "Virheellinen pyyntö ID vientitiedoston luomisessa."
 msgid "Unable to generate export file. ZipArchive not available."
 msgstr "Vientitiedoston luominen ei onnistu. ZipArchive ei ole saatavilla."
 
-#: wp-admin/includes/ajax-actions.php:4050
+#: wp-admin/includes/ajax-actions.php:4054
 msgid "A valid email address must be given."
 msgstr "Sähköpostiosoite ei ole kelvollinen. "
 
@@ -1097,47 +1110,47 @@ msgstr "Yritä uudelleen"
 msgid "Force Erase Personal Data"
 msgstr "Pakota tietojen poisto"
 
-#: wp-admin/includes/ajax-actions.php:4233
+#: wp-admin/includes/ajax-actions.php:4237
 msgid "Invalid email address in request."
 msgstr "Pyynnössä on väärä sähköpostiosoite."
 
-#: wp-admin/includes/ajax-actions.php:4101
-#: wp-admin/includes/ajax-actions.php:4282
+#: wp-admin/includes/ajax-actions.php:4105
+#: wp-admin/includes/ajax-actions.php:4286
 msgid "Page index cannot be less than one."
 msgstr "Sivun indeksi ei voi olla vähemmän kuin yksi."
 
-#: wp-admin/includes/ajax-actions.php:4274
+#: wp-admin/includes/ajax-actions.php:4278
 msgid "Eraser index cannot be less than one."
 msgstr "Indeksi ei voi olla vähemmän kuin yksi."
 
 #. translators: %d: array index
-#: wp-admin/includes/ajax-actions.php:4291
+#: wp-admin/includes/ajax-actions.php:4295
 msgid "Expected an array describing the eraser at index %d."
 msgstr "Odotin array-muotoista poistotyökalun kuvausta indeksissä %d."
 
 #. translators: %d: array index
-#: wp-admin/includes/ajax-actions.php:4296
+#: wp-admin/includes/ajax-actions.php:4300
 msgid "Eraser array at index %d does not include a callback."
 msgstr "Poistotyökalun kuvaus-arraystä indeksissä %d puuttuu takaisinkutsu (callback)."
 
 #. translators: %d: array index
-#: wp-admin/includes/ajax-actions.php:4301
+#: wp-admin/includes/ajax-actions.php:4305
 msgid "Eraser callback at index %d is not a valid callback."
 msgstr "Takaisinkutsu indeksissä %d ei ole oikeamuotoinen."
 
 #. translators: %d: array index
-#: wp-admin/includes/ajax-actions.php:4306
+#: wp-admin/includes/ajax-actions.php:4310
 msgid "Eraser array at index %d does not include a friendly name."
 msgstr "Poistotyökalulta indeksissä %d puuttuu käyttäjäystävällinen nimi."
 
 #. translators: 1: eraser friendly name, 2: array index
-#: wp-admin/includes/ajax-actions.php:4322
+#: wp-admin/includes/ajax-actions.php:4326
 msgid "Did not receive array from %1$s eraser (index %2$d)."
 msgstr "En saanut arrayta poistotyökalulta %1$s (indeksi %2$d)."
 
-#: wp-admin/includes/ajax-actions.php:4032
-#: wp-admin/includes/ajax-actions.php:4213
-#: wp-admin/includes/ajax-actions.php:4227
+#: wp-admin/includes/ajax-actions.php:4036
+#: wp-admin/includes/ajax-actions.php:4217
+#: wp-admin/includes/ajax-actions.php:4231
 msgid "Invalid request ID."
 msgstr "Virheellinen pyynnön ID."
 
@@ -1196,31 +1209,31 @@ msgid "Downloading Data..."
 msgstr "Ladataan tietoa..."
 
 #. translators: 1: eraser friendly name, 2: array index
-#: wp-admin/includes/ajax-actions.php:4377
+#: wp-admin/includes/ajax-actions.php:4381
 msgid "Expected done flag in response array from %1$s eraser (index %2$d)."
 msgstr "Expected done flag in response array from %1$s eraser (index %2$d)."
 
 #. translators: 1: eraser friendly name, 2: array index
-#: wp-admin/includes/ajax-actions.php:4366
+#: wp-admin/includes/ajax-actions.php:4370
 msgid "Expected messages key to reference an array in response array from %1$s eraser (index %2$d)."
 msgstr "Expected messages key to reference an array in response array from %1$s eraser (index %2$d)."
 
 #. translators: 1: eraser friendly name, 2: array index
-#: wp-admin/includes/ajax-actions.php:4355
+#: wp-admin/includes/ajax-actions.php:4359
 msgid "Expected messages key in response array from %1$s eraser (index %2$d)."
 msgstr "Expected messages key in response array from %1$s eraser (index %2$d)."
 
 #. translators: 1: eraser friendly name, 2: array index
-#: wp-admin/includes/ajax-actions.php:4344
+#: wp-admin/includes/ajax-actions.php:4348
 msgid "Expected items_retained key in response array from %1$s eraser (index %2$d)."
 msgstr "Expected items_retained key in response array from %1$s eraser (index %2$d)."
 
 #. translators: 1: eraser friendly name, 2: array index
-#: wp-admin/includes/ajax-actions.php:4333
+#: wp-admin/includes/ajax-actions.php:4337
 msgid "Expected items_removed key in response array from %1$s eraser (index %2$d)."
 msgstr "Expected items_removed key in response array from %1$s eraser (index %2$d)."
 
-#: wp-admin/includes/plugin-install.php:595
+#: wp-admin/includes/plugin-install.php:596
 msgid "Requires PHP Version:"
 msgstr "Vaatii PHP-version:"
 
@@ -1304,7 +1317,7 @@ msgstr "https://codex.wordpress.org/Giving_WordPress_Its_Own_Directory"
 msgid "Enter the address here if you <a href=\"%s\">want your site home page to be different from your WordPress installation directory</a>."
 msgstr "Syötä tähän osoite, jos haluat <a href=\"%s\">sivustosi kotisivun olevan muualla kuin WordPressin asennushakemistossa</a>."
 
-#: wp-admin/about.php:367
+#: wp-admin/about.php:417
 msgid "Developer Happiness"
 msgstr "Kehittäjätyytyväisyys"
 
@@ -1509,12 +1522,12 @@ msgid "Theme Installation"
 msgstr "Teeman asennus"
 
 #. translators: %s: user's display name
-#: wp-admin/includes/post.php:1607
+#: wp-admin/includes/post.php:1634
 msgid "%s is already editing this post."
 msgstr "%s muokkaa jo tätä artikkelia."
 
 #. translators: %s: user's display name
-#: wp-admin/includes/post.php:1604
+#: wp-admin/includes/post.php:1631
 msgid "%s is already editing this post. Do you want to take over?"
 msgstr "%s muokkaa jo tätä artikkelia. Haluatko ottaa ohjat?"
 
@@ -1522,11 +1535,11 @@ msgstr "%s muokkaa jo tätä artikkelia. Haluatko ottaa ohjat?"
 msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Sites_Screen\">Documentation on Site Management</a>"
 msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Sites_Screen\">Sivustojen ylläpidon dokumentaatio</a>"
 
-#: wp-admin/includes/plugin-install.php:602
+#: wp-admin/includes/plugin-install.php:603
 msgid "Active Installations:"
 msgstr "Aktiiviset asennukset:"
 
-#: wp-admin/includes/plugin-install.php:522 wp-admin/update.php:123
+#: wp-admin/includes/plugin-install.php:523 wp-admin/update.php:123
 msgid "Plugin Installation"
 msgstr "Lisäosan asennus"
 
@@ -1780,13 +1793,13 @@ msgid "Sorry, you are not allowed to attach files to this post."
 msgstr "Valitettavasti sinulla ei ole oikeuksia liittää tiedostoja tähän artikkeliin."
 
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:608
-#: wp-admin/includes/plugin-install.php:606
+#: wp-admin/includes/plugin-install.php:607
 msgctxt "Active plugin installations"
 msgid "Less Than 10"
 msgstr "Alle 10"
 
 #: wp-admin/includes/plugin-install.php:239
-#: wp-admin/includes/plugin-install.php:612 wp-admin/freedoms.php:84
+#: wp-admin/includes/plugin-install.php:613 wp-admin/freedoms.php:84
 #: wp-admin/plugins.php:418 wp-admin/plugin-install.php:82
 msgid "https://wordpress.org/plugins/"
 msgstr "https://fi.wordpress.org/plugins/"
@@ -1955,7 +1968,7 @@ msgstr "Uusi versio saatavilla. <button class=\"button-link\" type=\"button\">P�
 msgid "Sorry, you are not allowed to update this site."
 msgstr "Sinulla ei ole oikeutta päivittää tätä sivustoa."
 
-#: wp-admin/includes/ajax-actions.php:3497 wp-admin/update.php:172
+#: wp-admin/includes/ajax-actions.php:3501 wp-admin/update.php:172
 #: wp-admin/update.php:192
 msgid "Sorry, you are not allowed to update themes for this site."
 msgstr "Sinulla ei ole oikeutta päivittää tämän sivuston teemoja."
@@ -2160,22 +2173,22 @@ msgstr "Upotuksen alatunnisteen pohja"
 msgid "(Private post)"
 msgstr "(Yksityinen artikkeli)"
 
-#: wp-admin/includes/ajax-actions.php:3657 wp-admin/update.php:96
+#: wp-admin/includes/ajax-actions.php:3661 wp-admin/update.php:96
 #: wp-admin/update.php:144 wp-admin/plugin-install.php:18
 msgid "Sorry, you are not allowed to install plugins on this site."
 msgstr "Sinulla ei ole oikeutta asentaa lisäosia tälle sivustolle."
 
-#: wp-admin/includes/ajax-actions.php:3762 wp-admin/update.php:24
+#: wp-admin/includes/ajax-actions.php:3766 wp-admin/update.php:24
 #: wp-admin/update.php:50 wp-admin/update.php:71
 msgid "Sorry, you are not allowed to update plugins for this site."
 msgstr "Sinulla ei ole oikeutta päivittää lisäosia tällä sivustolla."
 
-#: wp-admin/includes/ajax-actions.php:3865 wp-admin/plugins.php:249
+#: wp-admin/includes/ajax-actions.php:3869 wp-admin/plugins.php:249
 msgid "Sorry, you are not allowed to delete plugins for this site."
 msgstr "Sinulla ei ole oikeutta poistaa lisäosia tältä sivustolta."
 
-#: wp-admin/includes/ajax-actions.php:3933
-#: wp-admin/includes/ajax-actions.php:3976 wp-admin/plugins.php:13
+#: wp-admin/includes/ajax-actions.php:3937
+#: wp-admin/includes/ajax-actions.php:3980 wp-admin/plugins.php:13
 msgid "Sorry, you are not allowed to manage plugins for this site."
 msgstr "Sinulla ei ole oikeutta hallinnoida lisäosia tällä sivustolla."
 
@@ -2189,13 +2202,13 @@ msgctxt "plugin"
 msgid "Active"
 msgstr "Aktiivinen"
 
-#: wp-admin/includes/ajax-actions.php:3903
+#: wp-admin/includes/ajax-actions.php:3907
 msgid "Plugin could not be deleted."
 msgstr "Lisäosan poistaminen ei onnistunut."
 
-#: wp-admin/includes/ajax-actions.php:3647
-#: wp-admin/includes/ajax-actions.php:3748
-#: wp-admin/includes/ajax-actions.php:3853
+#: wp-admin/includes/ajax-actions.php:3651
+#: wp-admin/includes/ajax-actions.php:3752
+#: wp-admin/includes/ajax-actions.php:3857
 msgid "No plugin specified."
 msgstr "Ei valittua lisäosaa."
 
@@ -2203,26 +2216,26 @@ msgstr "Ei valittua lisäosaa."
 msgid "Sorry, you are not allowed to manage privacy on this site."
 msgstr "Sori, et voi hallinnoida tietosuoja-asioita tällä sivustolla."
 
-#: wp-admin/includes/ajax-actions.php:3387 wp-admin/update.php:218
+#: wp-admin/includes/ajax-actions.php:3391 wp-admin/update.php:218
 #: wp-admin/update.php:247 wp-admin/theme-install.php:16
 msgid "Sorry, you are not allowed to install themes on this site."
 msgstr "Sinulla ei ole oikeutta asentaa teemoja tälle sivustolle."
 
-#: wp-admin/includes/ajax-actions.php:3588
+#: wp-admin/includes/ajax-actions.php:3592
 msgid "Sorry, you are not allowed to delete themes on this site."
 msgstr "Sinulla ei ole oikeutta poistaa teemoja tältä sivustolta."
 
-#: wp-admin/includes/ajax-actions.php:3557
+#: wp-admin/includes/ajax-actions.php:3561
 msgid "Update failed."
 msgstr "Päivitys epäonnistui."
 
-#: wp-admin/includes/ajax-actions.php:3624
+#: wp-admin/includes/ajax-actions.php:3628
 msgid "Theme could not be deleted."
 msgstr "Teeman poistaminen ei onnistunut."
 
-#: wp-admin/includes/ajax-actions.php:3375
-#: wp-admin/includes/ajax-actions.php:3484
-#: wp-admin/includes/ajax-actions.php:3577
+#: wp-admin/includes/ajax-actions.php:3379
+#: wp-admin/includes/ajax-actions.php:3488
+#: wp-admin/includes/ajax-actions.php:3581
 msgid "No theme specified."
 msgstr "Ei valittua teemaa."
 
@@ -2448,7 +2461,7 @@ msgstr "Vakiota %s ei voida määritellä WordPressin asennusvaiheessa."
 msgid "WordPress has been installed. Thank you, and enjoy!"
 msgstr "WordPress on asennettu. Pidä hauskaa!"
 
-#: wp-admin/includes/plugin-install.php:626
+#: wp-admin/includes/plugin-install.php:627
 msgid "Reviews"
 msgstr "Arvostelut"
 
@@ -2456,11 +2469,11 @@ msgstr "Arvostelut"
 msgid "You are using a development version of WordPress. These feature plugins are also under development. <a href=\"%s\">Learn more</a>."
 msgstr "Käytät WordPressin kehitysversiota. Seuraavia uusia ominaisuuksia kehitetään lisäosina. <a href=\"%s\">Lue lisää</a>."
 
-#: wp-admin/includes/plugin-install.php:627
+#: wp-admin/includes/plugin-install.php:628
 msgid "Read all reviews on WordPress.org or write your own!"
 msgstr "Lue kaikki arviot WordPress.orgista tai kirjoita omasi!"
 
-#: wp-admin/includes/post.php:1430
+#: wp-admin/includes/post.php:1457
 msgid "Click the image to edit or update"
 msgstr "Muokkaa tai päivitä kuvaa klikkaamalla sitä."
 
@@ -2474,7 +2487,7 @@ msgstr "Teeman zip-tiedosto"
 
 #. translators: 1: number of stars (used to determine singular/plural), 2:
 #. number of reviews
-#: wp-admin/includes/plugin-install.php:633
+#: wp-admin/includes/plugin-install.php:634
 msgid "Reviews with %1$d star: %2$s. Opens in a new window."
 msgid_plural "Reviews with %1$d stars: %2$s. Opens in a new window."
 msgstr[0] "%1$d:n tähden arviot: %2$s. Aukeaa uuteen ikkunaan."
@@ -2721,7 +2734,7 @@ msgid "(Currently set to: %s)"
 msgstr "(Tämänhetkinen asetus: %s)"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:558
+#: wp-admin/about.php:608
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>Versio %s</strong> paikkasi yhden tietoturva-aukon."
 
@@ -2743,15 +2756,15 @@ msgstr "https://fi.gravatar.com/"
 msgid "Profile Picture"
 msgstr "Profiilikuva"
 
-#: wp-admin/about.php:552
+#: wp-admin/about.php:602
 msgid "Security Releases"
 msgstr "Tietoturvapäivitykset"
 
-#: wp-admin/about.php:549
+#: wp-admin/about.php:599
 msgid "Maintenance Releases"
 msgstr "Ylläpitopäivitykset"
 
-#: wp-admin/about.php:555
+#: wp-admin/about.php:64 wp-admin/about.php:605
 msgid "Maintenance and Security Releases"
 msgstr "Ylläpito- ja tietoturvapäivitykset"
 
@@ -3013,11 +3026,11 @@ msgstr "Lataa versio %s"
 msgid "Toggle panel: %s"
 msgstr "Avaa/sulje paneeli: %s"
 
-#: wp-admin/includes/post.php:1356
+#: wp-admin/includes/post.php:1383
 msgid "Edit permalink"
 msgstr "Muokkaa kestolinkkiä"
 
-#: wp-admin/includes/post.php:1645
+#: wp-admin/includes/post.php:1672
 msgid "Saving revision&hellip;"
 msgstr "Tallennetaan versiota&hellip;"
 
@@ -3079,21 +3092,21 @@ msgstr "Olet poistamassa käyttäjää kaikista verkoista ja sivustoista."
 msgid "You have chosen to delete the following users from all networks and sites."
 msgstr "Olet poistamassa seuraavia käyttäjiä kaikista verkoista ja sivustoista."
 
-#: wp-admin/includes/class-wp-screen.php:928
+#: wp-admin/includes/class-wp-screen.php:930
 msgid "Additional settings"
 msgstr "Lisäasetukset"
 
-#: wp-admin/includes/class-wp-screen.php:1193
+#: wp-admin/includes/class-wp-screen.php:1195
 msgid "Pagination"
 msgstr "Sivutus"
 
-#: wp-admin/includes/class-wp-screen.php:1133
+#: wp-admin/includes/class-wp-screen.php:1135
 msgid "%s column"
 msgid_plural "%s columns"
 msgstr[0] "%s sarake"
 msgstr[1] "%s saraketta"
 
-#: wp-admin/includes/class-wp-screen.php:1242
+#: wp-admin/includes/class-wp-screen.php:1244
 msgid "View Mode"
 msgstr "Katselutila"
 
@@ -3110,15 +3123,15 @@ msgctxt "no user roles"
 msgid "None"
 msgstr "Ei mitään"
 
-#: wp-admin/includes/class-wp-screen.php:709
+#: wp-admin/includes/class-wp-screen.php:711
 msgid "Items list navigation"
 msgstr "Kohdelistavalikko"
 
-#: wp-admin/includes/class-wp-screen.php:710
+#: wp-admin/includes/class-wp-screen.php:712
 msgid "Items list"
 msgstr "Kohdelista"
 
-#: wp-admin/includes/class-wp-screen.php:1037
+#: wp-admin/includes/class-wp-screen.php:1039
 msgid "Boxes"
 msgstr "Laatikot"
 
@@ -3196,7 +3209,7 @@ msgid_plural "Trash <span class=\"count\">(%s)</span>"
 msgstr[0] "Roskakorissa <span class=\"count\">(%s)</span>"
 msgstr[1] "Roskakorissa <span class=\"count\">(%s)</span>"
 
-#: wp-admin/includes/class-wp-screen.php:708
+#: wp-admin/includes/class-wp-screen.php:710
 msgid "Filter items list"
 msgstr "Kohdelistan suodatus"
 
@@ -3383,7 +3396,7 @@ msgid_plural "%s comments"
 msgstr[0] "%s kommentti"
 msgstr[1] "%s kommenttia"
 
-#: wp-admin/includes/ajax-actions.php:3235
+#: wp-admin/includes/ajax-actions.php:3239
 msgid "Image could not be processed."
 msgstr "Kuvaa ei voitu käsitellä."
 
@@ -3765,7 +3778,7 @@ msgid "Plugins updated successfully."
 msgstr "Lisäosat päivitetty onnistuneesti."
 
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:606
-#: wp-admin/includes/plugin-install.php:604
+#: wp-admin/includes/plugin-install.php:605
 msgctxt "Active plugin installations"
 msgid "1+ Million"
 msgstr "Yli miljoona"
@@ -3891,7 +3904,7 @@ msgstr "Muokkaat parhaillaan sivua, joka näyttää viimeisimmät artikkelisi."
 msgid "New translations are available."
 msgstr "Uusia käännöksiä on saatavilla."
 
-#: wp-admin/includes/class-wp-screen.php:1153
+#: wp-admin/includes/class-wp-screen.php:1155
 msgid "Number of items per page:"
 msgstr "Kohteiden määrä per sivu:"
 
@@ -3996,12 +4009,12 @@ msgstr "d.m.Y \\k\\l\\o H:i"
 msgid "Y/m/d g:i:s a"
 msgstr "d.m.Y H:i:s"
 
-#: wp-admin/includes/ajax-actions.php:3427
-#: wp-admin/includes/ajax-actions.php:3546
-#: wp-admin/includes/ajax-actions.php:3606
-#: wp-admin/includes/ajax-actions.php:3701
-#: wp-admin/includes/ajax-actions.php:3822
-#: wp-admin/includes/ajax-actions.php:3887
+#: wp-admin/includes/ajax-actions.php:3431
+#: wp-admin/includes/ajax-actions.php:3550
+#: wp-admin/includes/ajax-actions.php:3610
+#: wp-admin/includes/ajax-actions.php:3705
+#: wp-admin/includes/ajax-actions.php:3826
+#: wp-admin/includes/ajax-actions.php:3891
 msgid "Unable to connect to the filesystem. Please confirm your credentials."
 msgstr "Tiedostojärjestelmään yhdistäminen epäonnistui. Tarkista kirjautumistiedot."
 
@@ -4086,7 +4099,7 @@ msgstr "Tuntematon henkilö"
 msgid "Usernames can have only alphanumeric characters, spaces, underscores, hyphens, periods, and the @ symbol."
 msgstr "Käyttäjätunnuksissa hyväksyttäviä merkkejä ovat kaikki alfanumeeriset merkit, välilyönti, alaviiva, väliviiva, piste ja @-merkki."
 
-#: wp-admin/includes/class-wp-screen.php:930
+#: wp-admin/includes/class-wp-screen.php:932
 msgid "Enable full-height editor and distraction-free functionality."
 msgstr "Ota käyttöön täyskorkea muokkain ja häiriötön kirjoitustila."
 
@@ -4120,20 +4133,20 @@ msgstr "Suodata kategorian mukaan"
 msgid "Filter by comment type"
 msgstr "Suodata kommenttityypin mukaan"
 
-#: wp-admin/includes/ajax-actions.php:3207
+#: wp-admin/includes/ajax-actions.php:3211
 msgid "You are now logged out everywhere else."
 msgstr "Olet nyt kirjautunut ulos kaikkialta muualta."
 
 #. translators: %s: User's display name.
-#: wp-admin/includes/ajax-actions.php:3211
+#: wp-admin/includes/ajax-actions.php:3215
 msgid "%s has been logged out."
 msgstr "%s on kirjattu ulos."
 
-#: wp-admin/includes/ajax-actions.php:3199
+#: wp-admin/includes/ajax-actions.php:3203
 msgid "Could not log out user sessions. Please try again."
 msgstr "Kirjautuminen ulos käyttäjän istunnoista ei onnistunut. Kokeile uudelleen."
 
-#: wp-admin/includes/ajax-actions.php:3093
+#: wp-admin/includes/ajax-actions.php:3097
 msgid "This preview is unavailable in the editor."
 msgstr "Tämä esikatselu ei ole saatavilla."
 
@@ -4145,7 +4158,7 @@ msgstr "Voit syöttää medioita painamalla muokkaimen yläpuolella olevia paini
 msgid "<strong>Post editor</strong> &mdash; Enter the text for your post. There are two modes of editing: Visual and Text. Choose the mode by clicking on the appropriate tab."
 msgstr "<strong>Artikkelin muokkain</strong>  &mdash; Syötä artikkelin teksti. Muokkauksessa on kaksi tilaa: Graafinen ja teksti. Valitse tila painamalla haluamaasi välilehteä. Graafinen tila antaa WYSIWYG-editorin."
 
-#: wp-admin/includes/class-wp-screen.php:1056
+#: wp-admin/includes/class-wp-screen.php:1058
 msgctxt "Welcome panel"
 msgid "Welcome"
 msgstr "Tervetuloa"
@@ -4237,7 +4250,7 @@ msgstr "<strong>Yhteensopimaton</strong> sinun WordPress-versiosi kanssa"
 msgid "<strong>Compatible</strong> with your version of WordPress"
 msgstr "<strong>Yhteensopiva</strong> sinun WordPress-versiosi kanssa"
 
-#: wp-admin/includes/plugin-install.php:640
+#: wp-admin/includes/plugin-install.php:641
 msgid "%d star"
 msgid_plural "%d stars"
 msgstr[0] "%d tähti"
@@ -4309,7 +4322,7 @@ msgctxt "themes"
 msgid "Recently Updated"
 msgstr "Viimeksi päivittyneet"
 
-#: wp-admin/includes/ajax-actions.php:3064
+#: wp-admin/includes/ajax-actions.php:3068
 msgid "%s failed to embed."
 msgstr "Kohteen %s upotus epäonnistui."
 
@@ -4322,12 +4335,12 @@ msgctxt "Number/count of items"
 msgid "Count"
 msgstr "Lukumäärä"
 
-#: wp-admin/includes/plugin-install.php:499
+#: wp-admin/includes/plugin-install.php:500
 msgctxt "Plugin installer section title"
 msgid "Reviews"
 msgstr "Arvostelut"
 
-#: wp-admin/includes/plugin-install.php:650
+#: wp-admin/includes/plugin-install.php:651
 msgid "Contributors"
 msgstr "Avustajat"
 
@@ -4344,8 +4357,8 @@ msgstr "WordPress-tiimi on valmis auttamaan sinua. Lähetä tämä sähköposti 
 msgid "Update %s now"
 msgstr "Päivitä %s nyt"
 
-#: wp-admin/includes/plugin-install.php:616
-#: wp-admin/includes/plugin-install.php:670
+#: wp-admin/includes/plugin-install.php:617
+#: wp-admin/includes/plugin-install.php:671
 msgid "Donate to this plugin &#187;"
 msgstr "Tue tämän lisäosan tekijöitä &#187;"
 
@@ -4703,7 +4716,7 @@ msgstr "Lisää uusi"
 msgid "Add New Theme"
 msgstr "Lisää uusi teema"
 
-#: wp-admin/post.php:72
+#: wp-admin/post.php:78
 msgid "Unable to submit this form, please refresh and try again."
 msgstr "Lomakkeen lähettäminen ei onnistunut, päivitä sivu ja kokeile uudelleen."
 
@@ -5244,15 +5257,15 @@ msgstr "Siirry versioiden välillä <strong>raahaamalla liukusäädintä vasemma
 msgid "Loading&hellip;"
 msgstr "Ladataan&hellip;"
 
-#: wp-admin/post.php:214
+#: wp-admin/post.php:221
 msgid "The item you are trying to move to the Trash no longer exists."
 msgstr "Kohdetta, jota yrität siirtää roskakoriin ei ole enää olemassa."
 
-#: wp-admin/post.php:237
+#: wp-admin/post.php:244
 msgid "The item you are trying to restore from the Trash no longer exists."
 msgstr "Kohdetta, jota yrität palauttaa roskakorista ei ole enää olemassa."
 
-#: wp-admin/post.php:255
+#: wp-admin/post.php:262
 msgid "This item has already been deleted."
 msgstr "Tämä kohde on jo poistettu."
 
@@ -5338,7 +5351,7 @@ msgstr "Ääniformaatti:"
 msgid "Audio Codec:"
 msgstr "Äänikoodekki:"
 
-#: wp-admin/includes/post.php:1646
+#: wp-admin/includes/post.php:1673
 msgid "Your latest changes were saved as a revision."
 msgstr "Tuoreimmat muutokset on tallennettu uutena versiona."
 
@@ -5493,7 +5506,7 @@ msgstr "Luonnos luotu %1$s klo %2$s"
 msgid "%s has taken over and is currently editing."
 msgstr "%s on ottanut ohjat ja muokkaa tätä sisältöä parhaillaan."
 
-#: wp-admin/post.php:224
+#: wp-admin/post.php:231
 msgid "You cannot move this item to the Trash. %s is currently editing."
 msgstr "Et voi siirtää tätä kohdetta roskakoriin. %s muokkaa sitä parhaillaan."
 
@@ -5617,7 +5630,7 @@ msgctxt "column name"
 msgid "Uploaded to"
 msgstr "Liitetty"
 
-#: wp-admin/includes/ajax-actions.php:2102 wp-admin/custom-background.php:451
+#: wp-admin/includes/ajax-actions.php:2106 wp-admin/custom-background.php:451
 #: wp-admin/custom-header.php:842
 msgid "The uploaded file is not a valid image. Please try again."
 msgstr "Siirretty tiedosto ei ole kelvollinen kuva. Kokeile uudelleen."
@@ -5842,11 +5855,11 @@ msgstr "Sivustosi tilakiintiö (%s) on täynnä."
 msgid "Type of search"
 msgstr "Haun tyyppi"
 
-#: wp-admin/includes/class-wp-screen.php:985
+#: wp-admin/includes/class-wp-screen.php:987
 msgid "Screen Options Tab"
 msgstr "Näyttöasetukset-välilehti"
 
-#: wp-admin/includes/class-wp-screen.php:800
+#: wp-admin/includes/class-wp-screen.php:802
 msgid "Contextual Help Tab"
 msgstr "Ohje-välilehti"
 
@@ -6067,7 +6080,7 @@ msgstr "Lisäosa"
 
 #: wp-admin/includes/class-wp-themes-list-table.php:230
 #: wp-admin/includes/class-wp-theme-install-list-table.php:419
-#: wp-admin/includes/plugin-install.php:573
+#: wp-admin/includes/plugin-install.php:574
 msgid "Version:"
 msgstr "Versio:"
 
@@ -6402,32 +6415,32 @@ msgstr "Voit korjata tietokantaongelmia tällä sivulla. Lisää ensin seuraavat
 msgid "No comments awaiting moderation."
 msgstr "Ei arvioitavia kommentteja."
 
-#: wp-admin/includes/plugin-install.php:498
+#: wp-admin/includes/plugin-install.php:499
 msgctxt "Plugin installer section title"
 msgid "Changelog"
 msgstr "Muutosloki"
 
-#: wp-admin/includes/plugin-install.php:500
+#: wp-admin/includes/plugin-install.php:501
 msgctxt "Plugin installer section title"
 msgid "Other Notes"
 msgstr "Muita tietoja"
 
-#: wp-admin/includes/plugin-install.php:496
+#: wp-admin/includes/plugin-install.php:497
 msgctxt "Plugin installer section title"
 msgid "FAQ"
 msgstr "UKK"
 
-#: wp-admin/includes/plugin-install.php:495
+#: wp-admin/includes/plugin-install.php:496
 msgctxt "Plugin installer section title"
 msgid "Installation"
 msgstr "Asennus"
 
-#: wp-admin/includes/plugin-install.php:494
+#: wp-admin/includes/plugin-install.php:495
 msgctxt "Plugin installer section title"
 msgid "Description"
 msgstr "Kuvaus"
 
-#: wp-admin/includes/plugin-install.php:497
+#: wp-admin/includes/plugin-install.php:498
 msgctxt "Plugin installer section title"
 msgid "Screenshots"
 msgstr "Ruutukaappauksia"
@@ -6436,7 +6449,7 @@ msgstr "Ruutukaappauksia"
 msgid "You should update your web.config now."
 msgstr "Päivitä web.config-tiedosto nyt."
 
-#: wp-admin/includes/plugin-install.php:614
+#: wp-admin/includes/plugin-install.php:615
 msgid "Plugin Homepage &#187;"
 msgstr "Lisäosan kotisivu &#187;"
 
@@ -6521,27 +6534,28 @@ msgstr "Näytä työkalupalkki kun tarkastelet sivustoa"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:567
+#: wp-admin/about.php:617
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Versio %1$s</strong> paikkasi tietoturva-aukon ja korjasi %2$s bugin."
 msgstr[1] "<strong>Versio %1$s</strong> paikkasi tietoturva-aukon ja korjasi %2$s bugia."
 
 #. translators: %s: Codex URL
-#: wp-admin/about.php:575
+#: wp-admin/about.php:80 wp-admin/about.php:98 wp-admin/about.php:108
+#: wp-admin/about.php:625
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "<a href=\"%s\">Lisätietoja tästä päivityksestä</a>."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:571
+#: wp-admin/about.php:621
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Versio %1$s</strong> paikkasi joitakin tietoturva-aukkoja ja korjasi %2$s bugin."
 msgstr[1] "<strong>Versio %1$s</strong> paikkasi joitakin tietoturva-aukkoja ja korjasi %2$s bugia."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:563
+#: wp-admin/about.php:69 wp-admin/about.php:87 wp-admin/about.php:613
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Versio %1$s</strong> korjasi %2$s bugin."
@@ -6551,15 +6565,15 @@ msgstr[1] "<strong>Versio %1$s</strong> korjasi %2$s bugia."
 msgid "Welcome to your WordPress Dashboard! This is the screen you will see when you log in to your site, and gives you access to all the site management features of WordPress. You can get help for any screen by clicking the Help tab above the screen title."
 msgstr "Tervetuloa WordPressin ohjausnäkymään! Näet tämän aina kun kirjaudut sisään, ja pääset tätä kautta kaikkiin sivuston hallintaominaisuuksiin. Saat tarvittaessa apua oikean yläkulman Ohje-välilehdeltä."
 
-#: wp-admin/about.php:554
+#: wp-admin/about.php:604
 msgid "Maintenance and Security Release"
 msgstr "Huolto- ja tietoturvapäivitys"
 
-#: wp-admin/about.php:551
+#: wp-admin/about.php:601
 msgid "Security Release"
 msgstr "Tietoturvapäivitys"
 
-#: wp-admin/about.php:548
+#: wp-admin/about.php:598
 msgid "Maintenance Release"
 msgstr "Huoltopäivitys"
 
@@ -6568,7 +6582,7 @@ msgid "What&#8217;s New"
 msgstr "Uudet ominaisuudet"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:560
+#: wp-admin/about.php:104 wp-admin/about.php:610
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>Versio %s</strong> paikkasi tietoturva-aukon."
 
@@ -6576,7 +6590,7 @@ msgstr "<strong>Versio %s</strong> paikkasi tietoturva-aukon."
 msgid "This screen allows you to choose your permalink structure. You can choose from common settings or create custom URL structures."
 msgstr "Tällä ruudulla pystyt valitsemaan kestolinkin rakenteen. Voit valita joko vakioasetukset tai luoda oman URL-rakenteen."
 
-#: wp-admin/about.php:441
+#: wp-admin/about.php:491
 msgid "Return to Updates"
 msgstr "Palaa päivitykset -kohtaan"
 
@@ -6852,11 +6866,11 @@ msgstr "Koska tämä on multisite-asennus, voit lisätä jo olemassaolevia tilej
 msgid "Welcome to WordPress %s"
 msgstr "Tervetuloa käyttämään WordPress-versiota %s"
 
-#: wp-admin/about.php:444
+#: wp-admin/about.php:494
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Mene ohjausnäkymän etusivulle"
 
-#: wp-admin/about.php:441
+#: wp-admin/about.php:491
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Palaa sivulle Ohjausnäkymä &rarr; Päivitykset"
 
@@ -7007,7 +7021,7 @@ msgstr "Navigointi"
 
 #: wp-admin/options-reading.php:22 wp-admin/edit-tags.php:233
 #: wp-admin/link-manager.php:51 wp-admin/options-writing.php:20
-#: wp-admin/includes/ms.php:977 wp-admin/includes/class-wp-screen.php:785
+#: wp-admin/includes/ms.php:977 wp-admin/includes/class-wp-screen.php:787
 #: wp-admin/my-sites.php:40 wp-admin/options-general.php:39
 #: wp-admin/comment.php:43 wp-admin/theme-editor.php:25
 #: wp-admin/plugin-editor.php:118 wp-admin/nav-menus.php:529
@@ -7044,8 +7058,8 @@ msgstr[1] "Päivityksiä saatavilla <span class=\"count\">(%s)</span>"
 #: wp-admin/credits.php:25
 #: wp-admin/includes/class-wp-plugins-list-table.php:767
 #: wp-admin/includes/update.php:193 wp-admin/includes/update.php:218
-#: wp-admin/includes/ajax-actions.php:3772
-#: wp-admin/includes/ajax-actions.php:3815 wp-admin/freedoms.php:27
+#: wp-admin/includes/ajax-actions.php:3776
+#: wp-admin/includes/ajax-actions.php:3819 wp-admin/freedoms.php:27
 #: wp-admin/about.php:54
 msgid "Version %s"
 msgstr "Versio %s"
@@ -7470,7 +7484,7 @@ msgid "Uploaded Images"
 msgstr "Palvelimelle siirretyt kuvat"
 
 #: wp-admin/includes/theme.php:265 wp-admin/includes/theme.php:295
-#: wp-admin/includes/class-wp-screen.php:1127 wp-admin/index.php:61
+#: wp-admin/includes/class-wp-screen.php:1129 wp-admin/index.php:61
 msgid "Layout"
 msgstr "Asettelu"
 
@@ -7491,7 +7505,7 @@ msgstr "%1$s / %2$s"
 msgid "%s Page Template"
 msgstr "%s sivupohja"
 
-#: wp-admin/includes/ajax-actions.php:3874 wp-admin/plugins.php:467
+#: wp-admin/includes/ajax-actions.php:3878 wp-admin/plugins.php:467
 msgid "You cannot delete a plugin while it is active on the main site."
 msgstr "Et voi poistaa lisäosaa, kun se on aktiivinen pääsivustolla."
 
@@ -7615,8 +7629,8 @@ msgid "Plugin updated successfully."
 msgstr "Lisäosa päivitetty onnistuneesti."
 
 #: wp-admin/includes/class-plugin-upgrader.php:54
-#: wp-admin/includes/ajax-actions.php:3806
-#: wp-admin/includes/ajax-actions.php:3833
+#: wp-admin/includes/ajax-actions.php:3810
+#: wp-admin/includes/ajax-actions.php:3837
 msgid "Plugin update failed."
 msgstr "Lisäosan päivitys epäonnistui."
 
@@ -8316,7 +8330,7 @@ msgstr "Oma sivusto"
 msgid "New WordPress Site"
 msgstr "Uusi WordPress-sivusto"
 
-#: wp-admin/includes/post.php:729
+#: wp-admin/includes/post.php:749
 msgid "Sorry, you are not allowed to create posts or drafts on this site."
 msgstr "Et saa luoda artikkeleita tai luonnoksia tällä sivustolla."
 
@@ -8332,7 +8346,7 @@ msgstr "Mukautettu sivusto hyllytetty -viesti."
 msgid "Custom site inactive message."
 msgstr "Mukautettu sivusto pois käytöstä -viesti."
 
-#: wp-admin/includes/post.php:727
+#: wp-admin/includes/post.php:747
 msgid "Sorry, you are not allowed to create pages on this site."
 msgstr "Et voi luoda sivuja tällä sivustolla."
 
@@ -8416,24 +8430,24 @@ msgstr "Valitsemasi salasana."
 msgid "No thanks, do not remind me again"
 msgstr "Ei kiitos, älä muistuta minua uudestaan"
 
-#: wp-admin/post.php:266 wp-admin/post.php:269 wp-admin/upload.php:164
+#: wp-admin/post.php:273 wp-admin/post.php:276 wp-admin/upload.php:164
 #: wp-admin/edit.php:144 wp-admin/edit.php:147
 msgid "Error in deleting."
 msgstr "Virhe poistamisessa."
 
-#: wp-admin/post.php:243 wp-admin/upload.php:149 wp-admin/edit.php:125
+#: wp-admin/post.php:250 wp-admin/upload.php:149 wp-admin/edit.php:125
 msgid "Sorry, you are not allowed to restore this item from the Trash."
 msgstr "Et voi palauttaa tätä kohdetta roskakorista, koska oikeutesi eivät riitä."
 
-#: wp-admin/post.php:246 wp-admin/upload.php:152 wp-admin/edit.php:128
+#: wp-admin/post.php:253 wp-admin/upload.php:152 wp-admin/edit.php:128
 msgid "Error in restoring from Trash."
 msgstr "Roskakorista palauttaminen ei onnistunut."
 
-#: wp-admin/post.php:228 wp-admin/upload.php:140 wp-admin/edit.php:114
+#: wp-admin/post.php:235 wp-admin/upload.php:140 wp-admin/edit.php:114
 msgid "Error in moving to Trash."
 msgstr "Roskakoriin siirto ei onnistunut."
 
-#: wp-admin/post.php:220 wp-admin/upload.php:137 wp-admin/edit.php:106
+#: wp-admin/post.php:227 wp-admin/upload.php:137 wp-admin/edit.php:106
 msgid "Sorry, you are not allowed to move this item to the Trash."
 msgstr "Sinulla ei ole oikeutta siirtää tätä kohdetta roskakoriin."
 
@@ -8640,7 +8654,7 @@ msgstr "Muokkaa valikon kohtaa"
 msgid "Please enter a valid menu name."
 msgstr "Anna valikolle kelvollinen nimi."
 
-#: wp-admin/about.php:444
+#: wp-admin/about.php:494
 msgid "Go to Dashboard"
 msgstr "Palaa Ohjausnäkymä-sivulle"
 
@@ -8765,7 +8779,7 @@ msgstr "Kommentti on roskakorissa."
 msgid "View post"
 msgstr "Näytä artikkeli"
 
-#: wp-admin/includes/class-wp-screen.php:899
+#: wp-admin/includes/class-wp-screen.php:901
 msgid "Screen Options"
 msgstr "Näyttöasetukset"
 
@@ -9308,7 +9322,7 @@ msgstr "Ohhoh, tiedostoa ei ole olemassa! Tarkista tiedoston nimi ja yritä uude
 msgid "Files of this type are not editable."
 msgstr "Tämän tyyppisiä tiedostoja ei voi muokata."
 
-#: wp-admin/includes/ajax-actions.php:4014 wp-admin/theme-editor.php:180
+#: wp-admin/includes/ajax-actions.php:4018 wp-admin/theme-editor.php:180
 #: wp-admin/plugin-editor.php:177
 msgid "File edited successfully."
 msgstr "Tiedoston muokkaus onnistui."
@@ -9650,7 +9664,7 @@ msgstr "Sijainti"
 msgid "Save Widget"
 msgstr "Tallenna vimpain"
 
-#: wp-admin/includes/misc.php:1084 wp-admin/includes/post.php:1805
+#: wp-admin/includes/misc.php:1084 wp-admin/includes/post.php:1833
 #: wp-admin/widgets.php:342
 msgid "Error while saving."
 msgstr "Virhe tallennettaessa muutoksia"
@@ -9747,7 +9761,7 @@ msgstr "Poista käytöstä kaikilla sivustoilla"
 msgid "Visit"
 msgstr "Näytä"
 
-#: wp-admin/about.php:278
+#: wp-admin/about.php:328
 msgid "More"
 msgstr "Lisää"
 
@@ -9772,7 +9786,7 @@ msgstr "Ei käyttäjiä."
 msgid "No plugins found."
 msgstr "Lisäosia ei löytynyt."
 
-#: wp-admin/edit-tags.php:143 wp-admin/edit-tags.php:163 wp-admin/post.php:107
+#: wp-admin/edit-tags.php:143 wp-admin/edit-tags.php:163 wp-admin/post.php:113
 #: wp-admin/term.php:26
 msgid "You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?"
 msgstr "Yritit muokata artikkelia, jota ei löydy. Onko se mahdollisesti poistettu?"
@@ -9793,7 +9807,7 @@ msgstr "Kutsu on lähetetty uudelle käyttäjälle. Käyttäjän pitää napsaut
 msgid "Skip Confirmation Email"
 msgstr "Ohita vahvistusviesti"
 
-#: wp-admin/post.php:120
+#: wp-admin/post.php:126
 msgid "You can&#8217;t edit this item because it is in the Trash. Please restore it and try again."
 msgstr "Et voi muokata kohdetta, koska se on roskakorissa. Palauta se ensin ja kokeile uudestaan."
 
@@ -9963,9 +9977,10 @@ msgstr "Valitse avatar, joka näytetään, mikäli kommentoijalla ei ole omaa av
 msgid "<strong>ERROR</strong>: Please enter a password."
 msgstr "<strong>VIRHE</strong>: Syötä salasanasi."
 
-#: wp-admin/edit-tags.php:156 wp-admin/includes/post.php:1811
-#: wp-admin/async-upload.php:47 wp-admin/post.php:117 wp-admin/term.php:38
-#: wp-admin/media-upload.php:46
+#: wp-admin/edit-tags.php:156 wp-admin/includes/post.php:1839
+#: wp-admin/includes/class-wp-screen.php:282 wp-admin/async-upload.php:47
+#: wp-admin/post.php:20 wp-admin/post.php:44 wp-admin/post.php:123
+#: wp-admin/term.php:38 wp-admin/media-upload.php:46
 msgid "Sorry, you are not allowed to edit this item."
 msgstr "Sinulla ei ole oikeuksia muokata tätä kohdetta."
 
@@ -10118,12 +10133,12 @@ msgstr "Lähetä paluuviitteet"
 
 #. translators: 1: Name of most recent post author, 2: Post edited date, 3:
 #. Post edited time
-#: wp-admin/includes/ajax-actions.php:2338 wp-admin/edit-form-advanced.php:520
+#: wp-admin/includes/ajax-actions.php:2342 wp-admin/edit-form-advanced.php:520
 msgid "Last edited by %1$s on %2$s at %3$s"
 msgstr "Viimeksi muokannut %1$s. %2$s %3$s."
 
 #. translators: 1: Post edited date, 2: Post edited time
-#: wp-admin/includes/ajax-actions.php:2340 wp-admin/edit-form-advanced.php:523
+#: wp-admin/includes/ajax-actions.php:2344 wp-admin/edit-form-advanced.php:523
 msgid "Last edited on %1$s at %2$s"
 msgstr "Viimeksi muokattu  %1$s kello %2$s."
 
@@ -10182,7 +10197,7 @@ msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] "Kaikki <span class=\"count\">(%s)</span>"
 msgstr[1] "Kaikki <span class=\"count\">(%s)</span>"
 
-#: wp-admin/includes/class-wp-screen.php:1249
+#: wp-admin/includes/class-wp-screen.php:1251
 #: wp-admin/includes/class-wp-list-table.php:152
 msgid "Excerpt View"
 msgstr "Otenäkymä"
@@ -11062,57 +11077,57 @@ msgstr "Etsi lisäosia"
 msgid "Plugin zip file"
 msgstr "Lisäosan tiedostot"
 
-#: wp-admin/includes/plugin-install.php:622
+#: wp-admin/includes/plugin-install.php:623
 msgid "(based on %s rating)"
 msgid_plural "(based on %s ratings)"
 msgstr[0] "(perustuu %s arvioon)"
 msgstr[1] "(perustuu %s arvioon)"
 
-#: wp-admin/includes/plugin-install.php:710
+#: wp-admin/includes/plugin-install.php:711
 msgid "Install Update Now"
 msgstr "Asenna päivitys nyt"
 
 #. translators: %s: Plugin version
-#: wp-admin/includes/plugin-install.php:715
+#: wp-admin/includes/plugin-install.php:716
 msgid "Newer Version (%s) Installed"
 msgstr "Uudempi versio (%s) asennettu"
 
-#: wp-admin/includes/plugin-install.php:718
+#: wp-admin/includes/plugin-install.php:719
 msgid "Latest Version Installed"
 msgstr "Viimeisin versio asennettu"
 
 #: wp-admin/includes/class-wp-plugin-install-list-table.php:601
-#: wp-admin/includes/plugin-install.php:577
+#: wp-admin/includes/plugin-install.php:578
 msgid "Last Updated:"
 msgstr "Viimeksi päivitetty:"
 
-#: wp-admin/includes/plugin-install.php:585
+#: wp-admin/includes/plugin-install.php:586
 msgid "Requires WordPress Version:"
 msgstr "Vaatii WordPressin version:"
 
 #. translators: %s: version number
-#: wp-admin/includes/plugin-install.php:588
-#: wp-admin/includes/plugin-install.php:598
+#: wp-admin/includes/plugin-install.php:589
+#: wp-admin/includes/plugin-install.php:599
 msgid "%s or higher"
 msgstr "%s tai uudempi"
 
-#: wp-admin/includes/plugin-install.php:592
+#: wp-admin/includes/plugin-install.php:593
 msgid "Compatible up to:"
 msgstr "Yhteensopiva versioon:"
 
-#: wp-admin/includes/plugin-install.php:612
+#: wp-admin/includes/plugin-install.php:613
 msgid "WordPress.org Plugin Page &#187;"
 msgstr "WordPress.org lisäosasivu &#187;"
 
-#: wp-admin/includes/plugin-install.php:620
+#: wp-admin/includes/plugin-install.php:621
 msgid "Average Rating"
 msgstr "Arvostelu"
 
-#: wp-admin/includes/plugin-install.php:679
+#: wp-admin/includes/plugin-install.php:680
 msgid "<strong>Warning:</strong> This plugin has <strong>not been tested</strong> with your current version of WordPress."
 msgstr "<strong>Varoitus:</strong> Tätä lisäosaa <strong>ei ole testattu</strong> käyttämäsi WordPressin version kanssa."
 
-#: wp-admin/includes/plugin-install.php:681
+#: wp-admin/includes/plugin-install.php:682
 msgid "<strong>Warning:</strong> This plugin has <strong>not been marked as compatible</strong> with your version of WordPress."
 msgstr "<strong>Varoitus:</strong> Tätä lisäosaa ei ole merkitty <strong>yhteensopivaksi</strong> käyttämäsi WordPressin version kanssa."
 
@@ -11278,11 +11293,11 @@ msgstr "Tuo tiedosto"
 msgid "Install Themes"
 msgstr "Asenna teemoja"
 
-#: wp-admin/includes/class-wp-screen.php:925
+#: wp-admin/includes/class-wp-screen.php:927
 msgid "Enable accessibility mode"
 msgstr "Ota saavutettavuusmoodi käyttöön"
 
-#: wp-admin/includes/class-wp-screen.php:925
+#: wp-admin/includes/class-wp-screen.php:927
 msgid "Disable accessibility mode"
 msgstr "Poista saavutettavuusmoodi käytöstä"
 
@@ -11424,7 +11439,7 @@ msgstr "Lataa ja asenna .zip-muodossa olevat lisäosat tästä."
 msgid "Could not fully remove the plugins %s."
 msgstr "Seuraavia lisäosia ei voitu poistaa kokonaan: %s"
 
-#: wp-admin/includes/post.php:608
+#: wp-admin/includes/post.php:628
 msgid "Auto Draft"
 msgstr "Automaattinen luonnos"
 
@@ -11725,7 +11740,7 @@ msgstr "Virheellinen data."
 msgid "Sorry, you are not allowed to edit pages as this user."
 msgstr "Et voi muokata sivuja tämän käyttäjän nimissä."
 
-#: wp-admin/edit-tags.php:100 wp-admin/post.php:261 wp-admin/themes.php:43
+#: wp-admin/edit-tags.php:100 wp-admin/post.php:268 wp-admin/themes.php:43
 #: wp-admin/upload.php:161 wp-admin/edit.php:140
 msgid "Sorry, you are not allowed to delete this item."
 msgstr "Et voi poistaa tätä kohdetta."

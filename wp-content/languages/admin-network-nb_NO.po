@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x - Development - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-11-10 13:35:27+0000\n"
+"PO-Revision-Date: 2019-01-24 22:25:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +18,7 @@ msgstr "Konstanten %s kan ikke defineres når man oppretter et nettverk."
 
 #: wp-admin/network/sites.php:173
 msgid "You are about to delete the following sites:"
-msgstr "Du er i ferd med å slette følgende nettsider: "
+msgstr "Du er i ferd med å slette følgende nettsteder: "
 
 #: wp-admin/network/site-new.php:252
 msgid "The username and a link to set the password will be mailed to this email address."
@@ -26,7 +26,7 @@ msgstr "Brukernavn og en lenke for å sette nytt passord, vil bli sendt til denn
 
 #: wp-admin/network/site-users.php:237
 msgid "User could not be added to this site."
-msgstr "Brukeren kunne ikke bli lagt til på denne nettsiden."
+msgstr "Brukeren kunne ikke bli lagt til på denne nettstedet."
 
 #. translators: %s: new network admin email
 #: wp-admin/network/settings.php:145
@@ -360,14 +360,14 @@ msgid "Network Enable %s"
 msgstr "Aktiver %s i nettverket"
 
 #. translators: %s: theme name
-#: wp-admin/includes/class-wp-ms-themes-list-table.php:545
-msgid "Visit %s homepage"
-msgstr "Besøk nettsiden til %s"
-
-#. translators: %s: theme name
 #: wp-admin/includes/class-wp-ms-themes-list-table.php:434
 msgid "Network Disable %s"
 msgstr "Deaktiver %s i nettverket"
+
+#. translators: %s: theme name
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:545
+msgid "Visit %s homepage"
+msgstr "Besøk hjemmesiden til %s "
 
 #: wp-admin/network/user-new.php:117 wp-admin/network/site-users.php:346
 msgid "A password reset link will be sent to the user via email."
@@ -1213,7 +1213,7 @@ msgstr "Både nettsteder og brukerkontoer kan registreres."
 
 #: wp-admin/network/settings.php:173
 msgid "Logged in users may register new sites"
-msgstr "Innloggede brukere kan registrere nye nettsider."
+msgstr "Innloggede brukere kan registrere nye nettsteder."
 
 #: wp-admin/network/settings.php:122
 msgid "Operational Settings"

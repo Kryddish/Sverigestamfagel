@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x - Development - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-09-18 05:15:17+0000\n"
+"PO-Revision-Date: 2019-01-18 19:48:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -71,7 +71,7 @@ msgstr "Usuń %s"
 
 #: wp-admin/network/themes.php:90
 msgid "Sorry, you are not allowed to delete themes for this site."
-msgstr "Przykro nam, ale nie masz uprawnień, pozwalających na kasowanie motywów z tej witryny."
+msgstr "Przykro nam, ale nie masz uprawnień, pozwalających na usuwanie motywów z tej witryny."
 
 #: wp-admin/network/themes.php:14
 msgid "Sorry, you are not allowed to manage network themes."
