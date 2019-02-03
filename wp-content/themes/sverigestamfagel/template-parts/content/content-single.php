@@ -131,6 +131,9 @@
                 <li>
                     <a target="_blank" href="<?php echo $image['url']; ?>">
                         <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<div class="caption">
+							<span><?= $image['caption'] ?></span>
+						</div>
                     </a>
                 </li>
             <?php endforeach; ?>
