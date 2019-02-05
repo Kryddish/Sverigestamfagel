@@ -76,10 +76,10 @@
 							<option value="half_year">Halvårsmedlemskap</option>
 						</select>
 						<div class="pay regular">
-							<?= do_shortcode('[simpay id="2568"]') ?>
+							<?= do_shortcode('[simpay id="3296"]') ?>
 						</div>
 						<div class="pay half_year">
-							<?= do_shortcode('[simpay id="2570"]') ?>
+							<?= do_shortcode('[simpay id="3297"]') ?>
 						</div>
 						<p>
 							Behöver du hjälp med betalningen?<br>
