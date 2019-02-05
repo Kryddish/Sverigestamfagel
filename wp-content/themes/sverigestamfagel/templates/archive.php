@@ -5,11 +5,21 @@
 
 $posts_per_page = get_field( 'posts_per_page' ) ? get_field( 'posts_per_page' ) : 5;
 $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-$post_types = [
-	'meets' => 'Fågelträffar',
-	'articles' => 'Artiklar',
-	'post' => 'Nyheter'
-];
+
+$post_types = get_field('post_types');
+
+if ($post_types) {
+	foreach ($post_types as $key => $post_type) {
+		$post_types[$post_type] = get_post_type_object($post_type)->labels->name;
+		unset($post_types[$key]);
+	}
+} else {
+	$post_types = [
+		'meets' => 'Fågelträffar',
+		'articles' => 'Artiklar',
+		'post' => 'Nyheter'
+	];
+}
 
 $post_type = array_keys( $post_types );
 
@@ -53,6 +63,25 @@ $categories = get_categories([
 	'parent' => false,
 	'hide_empty' => true,
 ]);
+
+$new_categories = [];
+
+// Check for empty categories
+foreach ($post_types as $post_type => $name) {
+	foreach ($categories as $category) {
+		$the_post = get_posts([
+			'post_type' => $post_type,
+			'category' => $category->term_id,
+			'posts_per_page' => 1
+		]);
+
+		if ($the_post) {
+			$new_categories[] = $category;
+		}
+	}
+}
+
+$categories = $new_categories;
 
 get_header(); ?>
 
@@ -103,60 +132,64 @@ get_header(); ?>
 					<input name="search" type="submit" class="search-submit" value="Sök">
 				</form>
 
-				<h6><?= __('Typ av inlägg', 'stf') ?></h6>
 				<?php
-				if( !isset( $_GET['type'] ) or $_GET['type'] === 'any' ): ?>
-					<div>
-						<a class="current" href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
-					</div>
+				if (count($post_types) > 1): ?>
+					<h6><?= __('Typ av inlägg', 'stf') ?></h6>
 					<?php
-				else: ?>
-					<div>
-						<a href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
-					</div>
-					<?php
-				endif;
-
-				foreach( $post_types as $key => $value ):
-					if( isset( $_GET['type'] ) and $_GET['type'] === $key ): ?>
+					if( !isset( $_GET['type'] ) or $_GET['type'] === 'any' ): ?>
 						<div>
-							<a class="current" href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+							<a class="current" href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
 						</div>
 						<?php
 					else: ?>
 						<div>
-							<a href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+							<a href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
 						</div>
 						<?php
 					endif;
-				endforeach; ?>
 
-				<h6><?= __('Kategorier', 'stf') ?></h6>
-				<?php
-				if( !isset( $_GET['category'] ) or $_GET['category'] === '' ): ?>
-					<div>
-						<a class="current" href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
-					</div>
-				<?php
-				else: ?>
-					<div>
-						<a href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
-					</div>
-					<?php
+					foreach( $post_types as $key => $value ):
+						if( isset( $_GET['type'] ) and $_GET['type'] === $key ): ?>
+							<div>
+								<a class="current" href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+							</div>
+							<?php
+						else: ?>
+							<div>
+								<a href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+							</div>
+							<?php
+						endif;
+					endforeach;
 				endif;
-				foreach ( $categories as $category ):
-					if( isset( $_GET['category'] ) and $_GET['category'] === $category->slug ): ?>
+				if (count($categories) > 0): ?>
+					<h6><?= __('Kategorier', 'stf') ?></h6>
+					<?php
+					if( !isset( $_GET['category'] ) or $_GET['category'] === '' ): ?>
 						<div>
-							<a class="current" href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+							<a class="current" href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 						</div>
 					<?php
 					else: ?>
 						<div>
-							<a href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+							<a href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 						</div>
 						<?php
 					endif;
-				endforeach; ?>
+					foreach ( $categories as $category ):
+						if( isset( $_GET['category'] ) and $_GET['category'] === $category->slug ): ?>
+							<div>
+								<a class="current" href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+							</div>
+						<?php
+						else: ?>
+							<div>
+								<a href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+							</div>
+							<?php
+						endif;
+					endforeach;
+				endif; ?>
 			</div>
 
 		</main><!-- #main -->

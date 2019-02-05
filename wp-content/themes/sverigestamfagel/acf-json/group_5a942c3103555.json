@@ -1,7 +1,43 @@
 {
     "key": "group_5a942c3103555",
-    "title": "Sidmall: Arkiv",
-    "fields": false,
+    "title": "Sidmall - Arkiv",
+    "fields": [
+        {
+            "key": "field_5a942c36d0010",
+            "label": "Inlägg per sida",
+            "name": "posts_per_page",
+            "type": "range",
+            "instructions": "Antal inlägg som visas per sida.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "min": 1,
+            "max": 20,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5c5a032d69692",
+            "label": "Filtreringstyp",
+            "name": "post_types",
+            "type": "post_type_selector",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "select_type": 2
+        }
+    ],
     "location": [
         [
             {
@@ -21,5 +57,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542135869
+    "modified": 1549403377
 }
