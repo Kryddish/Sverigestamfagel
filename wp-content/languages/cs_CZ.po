@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-01-26 15:37:57+0000\n"
+"PO-Revision-Date: 2019-02-04 16:49:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2939,7 +2939,7 @@ msgstr "Pokud nedojde k aktivaci uživatelského jména během několika dní, t
 #. translators: %s: email address
 #: wp-signup.php:613 wp-signup.php:759
 msgid "Check your inbox at %s and click the link given."
-msgstr "Zkontrolujte prosím obsah zvolené emailové schránky %s, kde by se měl nacházet aktivační email s dalšími instrukcemi."
+msgstr "Zkontrolujte si obsah doručené pošty na adrese %s, v doručené zprávě klikněte na uvedený odkaz."
 
 #: wp-signup.php:611
 msgid "But, before you can start using your new username, <strong>you must activate it</strong>."

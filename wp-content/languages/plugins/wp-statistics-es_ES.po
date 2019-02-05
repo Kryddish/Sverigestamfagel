@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP Statistics - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-08-23 07:50:27+0000\n"
+"PO-Revision-Date: 2019-02-04 19:25:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,25 +11,291 @@ msgstr ""
 "Language: es\n"
 "Project-Id-Version: Plugins - WP Statistics - Stable (latest release)\n"
 
-#: includes/templates/welcomes/last-version.php:46
-msgid "This option anonymizes the user IP address for GDPR compliance."
-msgstr "Esto anonimiza la IP del usuario para cumplir con la RGPD."
+#: includes/settings/tabs/wps-general.php:330
+msgid "Don't forget to clear your enabled plugin cache."
+msgstr "No olvides vaciar la caché de tu plugin activo."
 
-#: includes/templates/welcomes/last-version.php:45
-msgid "Anonymize IP addresses"
-msgstr "Anonimizar dirección IP"
+#: includes/functions/functions.php:1580
+msgid "Safari"
+msgstr "Safari"
 
-#: includes/templates/welcomes/last-version.php:33
-msgid "<span style=\"color:red;\">Important:</span> with this update, Opt-out feature is removed."
-msgstr "<span style=\"color:red;\">Importante:</span> en esta actualización desaparece la opción de rechazar."
+#: includes/functions/functions.php:1579
+msgid "Opera"
+msgstr "Opera"
 
-#: includes/templates/welcomes/last-version.php:32
-msgid "We implement GDPR into the WP-Statistics. for more information read <a href=\"%s\" target=\"_blank\">the blog post</a>."
-msgstr "Implementamos la RGPD en WP-Statistics. Lee <a href=\"%s\" target=\"_blank\">la entrada del blog</a> para más información."
+#: includes/functions/functions.php:1578
+msgid "Microsoft Edge"
+msgstr "Microsoft Edge"
 
-#: includes/templates/welcomes/last-version.php:31
-msgid "GDPR compliance, Updated!"
-msgstr "¡Actualizada la compatibilidad con la RGPD!"
+#: includes/functions/functions.php:1577
+msgid "Microsoft Internet Explorer"
+msgstr "Microsoft Internet Explorer"
+
+#: includes/functions/functions.php:1576
+msgid "Mozilla Firefox"
+msgstr "Mozilla Firefox"
+
+#: includes/functions/functions.php:1575
+msgid "Google Chrome"
+msgstr "Google Chrome"
+
+#: includes/templates/welcome.php:90
+msgid "Now include customization and show based on post type settings"
+msgstr "Ahora incluye personalización y presentación basada en los ajustes del tipo de contenido"
+
+#: includes/templates/welcome.php:89
+msgid "Mini Chart"
+msgstr "Mini gráfico"
+
+#: includes/templates/welcome.php:73
+msgid "The new & beautiful chart includes a caching mechanism and time range settings"
+msgstr "El nuevo y hermoso gráfico incluye un mecanismo de almacenamiento en caché y ajustes de rango de tiempo"
+
+#: includes/templates/welcome.php:72
+msgid "Widgets"
+msgstr "Widgets"
+
+#: includes/templates/welcome.php:56
+msgid "Added “Top Countries” stats for sending with the report."
+msgstr "Añadidas estadísticas de los \"Países principales\" a la hora de enviar el informe."
+
+#: includes/templates/welcome.php:55
+msgid "Ability to send preview & test email."
+msgstr "Posibilidad de enviar la vista previa y prueba del correo electrónico."
+
+#: includes/templates/welcome.php:54
+msgid "New: Ability to customize reports based on data widgets."
+msgstr "Nuevo: Posibilidad de personalizar informes basados en widgets de datos."
+
+#: includes/templates/welcome.php:53
+msgid "Now, Fully customized and new options!"
+msgstr "¡Ahora totalmente personalizado y con nuevas opciones!"
+
+#: includes/templates/welcome.php:52
+msgid "Advanced Reporting"
+msgstr "Informes avanzados"
+
+#: includes/templates/welcome.php:36
+msgid "And much more!"
+msgstr "¡Y mucho más!"
+
+#: includes/templates/welcome.php:35
+msgid "<span style=\"font-weight: bold;\">New:</span> Better Performance"
+msgstr "<span style=\"font-weight: bold;\">Nuevo:</span> Mejor rendimiento"
+
+#: includes/templates/welcome.php:34
+msgid "<span style=\"font-weight: bold;\">New:</span> Live Chart"
+msgstr "<span style=\"font-weight: bold;\">Nuevo:</span> Gráfica en directo"
+
+#: includes/templates/welcome.php:33
+msgid "<span style=\"font-weight: bold;\">New:</span> Visitor on Map"
+msgstr "<span style=\"font-weight: bold;\">Nuevo:</span> Visitantes en el mapa"
+
+#: includes/templates/welcome.php:32
+msgid "<span style=\"font-weight: bold;\">New:</span> Redesign & Optimized for with on the big screen"
+msgstr "<span style=\"font-weight: bold;\">Nuevo:</span> Rediseñado y optimizado para el ancho en pantalla grande"
+
+#: includes/templates/welcome.php:31
+msgid "View Live Report data with new dashboard"
+msgstr "Ve los datos del informe en directo con el nuevo escritorio"
+
+#: includes/templates/welcome.php:23
+msgid "Great update for all WP-Statistics Add-Ons"
+msgstr "Gran actualización de todas las extensiones de WP-Statistics"
+
+#: includes/log/widgets/about.php:15
+msgid "More Info"
+msgstr "Más información"
+
+#: includes/log/widgets/about.php:11
+msgid "Rate & Review"
+msgstr "Puntúa y valora "
+
+#: includes/log/widgets/about.php:21
+msgid "Power by VeronaLabs"
+msgstr "Creado por VeronaLabs"
+
+#: includes/log/log.php:24
+msgid "WP Statistics - Version %s"
+msgstr "WP Statistics - Versión %s"
+
+#: includes/classes/class-wp-statistics-admin.php:292
+msgid "Here is an error associated with Connecting WordPress Rest API, Please Flushing rewrite rules or activate wp rest api for performance WP-Statistics Plugin Cache / Go %1$sSettings->Permalinks%2$s"
+msgstr "Hay un error asociado al conecdtar con la Rest API de WordPress, por favor, limpia las reglas de rewrite o activa la wp rest api para un mejor rendimiento de la caché del plugin WP-Statistics / Ve a %1$sAjustes->Enlaces permanentes%2$s"
+
+#: includes/classes/class-wp-statistics-dashboard.php:190
+#: includes/classes/class-wp-statistics-admin-pages.php:53
+msgid "Top Search Words (30 Days)"
+msgstr "Principales palabras de búsqueda (30 días)"
+
+#: includes/settings/tabs/wps-general.php:329
+msgid "To register WP-Statistics REST API endpoint  ( %s ) , go to the <a href=\"%s\">Permalink page</a> and update the permalink with press Save Changes."
+msgstr "Para registrar una variable de la REST API de WP-Statistics (%s), ve a <a href=\"%s\">la página de enlaces permanentes</a> y actualiza los enlaces permanentes pulsando en \"Guardar cambios\"."
+
+#: includes/settings/tabs/wps-general.php:266
+msgid "Hits in single page:"
+msgstr "Visitas en página única:"
+
+#: includes/settings/tabs/wps-general.php:260
+msgid "Show hits meta box chart in the edit of all post types page."
+msgstr "Muestra su gráfico de caja meta en la página de edición de todos los tipos de contenido."
+
+#: includes/settings/tabs/wps-general.php:251
+msgid "Hit metabox chart:"
+msgstr "Visita la gráfica de la caja meta:"
+
+#: includes/settings/tabs/wps-general.php:235
+msgid "Hits column"
+msgstr "Columna de visitas"
+
+#: includes/templates/welcome.php:140
+msgid "Mohammad Ghasemi"
+msgstr "Mohammad Ghasemi"
+
+#: includes/templates/welcome.php:136
+msgid "Mehrshad Darzi"
+msgstr "Mehrshad Darzi"
+
+#: includes/templates/welcome.php:119
+msgid "WP-Statistics is one of the VeronaLabs.com projects."
+msgstr "WP-Statistics es uno de los proyectos de VeronaLabs.com."
+
+#: includes/settings/tabs/wps-privacy.php:34
+msgid "If you want to delete visitor data, please <a href=\"%s\">click here</a>."
+msgstr "Si quieres borrar los datos de los visitantes, por favor <a href=\"%s\">haz clic aquí</a>."
+
+#: includes/settings/tabs/wps-general.php:328
+msgid "If you use WordPress Cache Plugins, enable this option."
+msgstr "Si usas plugins de caché para WordPress activa esta opción."
+
+#: includes/settings/tabs/wps-general.php:319
+msgid "Use Cache Plugin:"
+msgstr "Usar plugin de caché:"
+
+#: includes/settings/tabs/wps-general.php:314
+msgid "Cache Plugin"
+msgstr "Plugin de caché"
+
+#: includes/settings/tabs/wps-externals.php:93
+msgid "See Visitor's City Name"
+msgstr "Ver nombre de la ciudad del visitante"
+
+#: includes/settings/tabs/wps-externals.php:79
+msgid "GeoIP City:"
+msgstr "Geolocalizar ciudad:"
+
+#: includes/settings/tabs/wps-externals.php:66
+#: includes/settings/tabs/wps-externals.php:89
+msgid "Update Database"
+msgstr "Actualizar base de datos"
+
+#: includes/settings/tabs/wps-exclusions.php:307
+#: includes/settings/tabs/wps-exclusions.php:326
+msgid "(%1$sISO 3166 Country Codes%2$s)"
+msgstr "(%1$s Códigos de país ISO 3166%2$s)"
+
+#: includes/log/widgets/pages.php:23 includes/log/top-pages.php:169
+msgid "Link"
+msgstr "Enlace"
+
+#: includes/log/widgets/pages.php:22 includes/log/top-pages.php:168
+msgid "Title"
+msgstr "Título"
+
+#: includes/log/widgets/jqv.map.php:75 includes/log/widgets/words.php:83
+#: includes/log/widgets/words.php:87 includes/log/widgets/recent.php:47
+#: includes/log/widgets/recent.php:51 includes/log/widgets/top.visitors.php:59
+#: includes/log/widgets/top.visitors.php:62 includes/log/last-search.php:189
+#: includes/log/last-search.php:193 includes/log/last-visitor.php:172
+#: includes/log/last-visitor.php:176 includes/functions/functions.php:1595
+msgid "Unknown"
+msgstr "Desconocida"
+
+#: includes/log/widgets/words.php:35 includes/log/widgets/recent.php:17
+#: includes/log/widgets/top.visitors.php:32 includes/log/last-search.php:137
+#: includes/log/last-visitor.php:141
+msgid "City"
+msgstr "Ciudad"
+
+#: includes/log/widgets/words.php:29 includes/log/last-search.php:131
+msgid "Word"
+msgstr "Palabra"
+
+#: includes/functions/functions.php:665
+msgid "Qwant"
+msgstr "Qwant"
+
+#: includes/log/widgets/pages.php:21 includes/log/top-pages.php:167
+#: includes/classes/class-wp-statistics-tinymce.php:62
+msgid "ID"
+msgstr "ID"
+
+#: includes/classes/class-wp-statistics-tinymce.php:60
+msgid "Format"
+msgstr "Formato"
+
+#: includes/classes/class-wp-statistics-tinymce.php:58
+msgid "Provider"
+msgstr "Proveedor"
+
+#: includes/classes/class-wp-statistics-tinymce.php:57
+msgid "Is the time frame (time periods) for the statistic"
+msgstr "Es el rango de tiempo (periodos de tiempo) de la estadística"
+
+#: includes/classes/class-wp-statistics-tinymce.php:55
+msgid "Year"
+msgstr "Año"
+
+#: includes/classes/class-wp-statistics-tinymce.php:54
+msgid "Month"
+msgstr "Mes"
+
+#: includes/classes/class-wp-statistics-tinymce.php:53
+msgid "Week"
+msgstr "Semana"
+
+#: includes/classes/class-wp-statistics-tinymce.php:50
+msgid "Select item ..."
+msgstr "Seleccionar elemento…"
+
+#: includes/classes/class-wp-statistics-tinymce.php:49
+msgid "Time"
+msgstr "Hora"
+
+#: includes/classes/class-wp-statistics-tinymce.php:48
+msgid "The statistics you want, see the next table for available options."
+msgstr "La estadística que quieras, ve la tabla siguiente para las opciones disponibles."
+
+#: includes/classes/class-wp-statistics-tinymce.php:32
+msgid "Stat"
+msgstr "Estadística"
+
+#: includes/classes/class-wp-statistics-tinymce.php:31
+msgid "WP Statistics Shortcodes"
+msgstr "Shortcodes de WP Statistics"
+
+#: includes/log/widgets/words.php:39 includes/log/widgets/recent.php:21
+#: includes/log/last-search.php:141 includes/log/last-visitor.php:145
+#: includes/classes/class-wp-statistics-tinymce.php:47
+#: includes/classes/class-wp-statistics-shortcode.php:175
+msgid "Referrer"
+msgstr "Referente"
+
+#: includes/classes/class-wp-statistics-admin.php:272
+msgid "You Are Using %s Plugin in WordPress"
+msgstr "Estás usando el plugin %s en WordPress"
+
+#: includes/classes/class-wp-statistics-admin.php:274
+msgid "WP_CACHE is Enable in Your WordPress"
+msgstr "WP_CACHE está activo en tu WordPress"
+
+#: includes/settings/tabs/wps-exclusions.php:386
+msgid "Exclude any call to the WordPress Admin pages."
+msgstr "Excluir cualquier llamada a las páginas de administración de WordPress."
+
+#: includes/classes/class-wp-statistics-admin.php:278
+msgid "Please enable %1$sCache Setting%2$s in WP Statistics."
+msgstr "Por favor, activa %1$sel ajuste de caché%2$s en WP Statistics."
 
 #: includes/settings/tabs/wps-privacy.php:48
 msgid "This option anonymizes the user IP address for GDPR compliance. For example, 888.888.888.888 > 888.888.888.000."
@@ -39,23 +305,19 @@ msgstr "Esto anonimiza la IP del usuario para cumplir con la RGPD. Por ejemplo, 
 msgid "Anonymize IP Addresses:"
 msgstr "Anonimizar direcciones IP:"
 
-#: includes/settings/tabs/wps-notifications.php:317
+#: includes/settings/tabs/wps-notifications.php:298
 msgid "Show all notices and suggestion from WP-Statistics in the admin."
 msgstr "Mostrar todos los avisos y sugerencias de WP-Statistics en el escritorio."
 
-#: includes/settings/tabs/wps-notifications.php:310
+#: includes/settings/tabs/wps-notifications.php:291
 msgid "All Notices:"
 msgstr "Todos los avisos:"
 
-#: includes/settings/tabs/wps-notifications.php:305
+#: includes/settings/tabs/wps-notifications.php:286
 msgid "Admin Notices"
 msgstr "Avisos del escritorio"
 
-#: includes/vendor/mimmi20/wurflcache/src/Adapter/File.php:200
-msgid "You have to provide a path to read/store the Browscap cache file"
-msgstr "Debes proporcionar una ruta para leer / almacenar el archivo de caché Browscap"
-
-#: includes/templates/welcomes/last-version.php:15
+#: includes/templates/welcome.php:7
 msgid "Submit your rating:"
 msgstr "Envía su puntuación:"
 
@@ -71,21 +333,17 @@ msgstr "La configuración \"Almacenar cadena de agente de usuario completa\" se 
 msgid "This feature will not store IP addresses in the database but instead used a unique hash."
 msgstr "Esta característica no almacenará las direcciones IP en la base de datos, sino que usa un hash único."
 
-#: includes/settings/tabs/wps-notifications.php:265
+#: includes/settings/tabs/wps-notifications.php:246
 msgid "Message body:"
 msgstr "Cuerpo del mensaje:"
 
-#: includes/settings/tabs/wps-notifications.php:163
+#: includes/settings/tabs/wps-notifications.php:144
 msgid "Statistical reporting:"
 msgstr "Informes estadísticos:"
 
-#: includes/settings/tabs/wps-notifications.php:105
+#: includes/settings/tabs/wps-notifications.php:86
 msgid "GeoIP:"
 msgstr "GeoIP:"
-
-#: includes/settings/tabs/wps-notifications.php:87
-msgid "Browscap:"
-msgstr "Browscap:"
 
 #: includes/settings/tabs/wps-maintenance.php:123
 msgid "The number of hits required to delete the visitor."
@@ -100,19 +358,19 @@ msgstr "Los valores no válidos desactivarán el mantenimiento diario."
 msgid "The number of days to keep statistics for."
 msgstr "Cantidad de días de los que mantener estadísticas."
 
-#: includes/settings/tabs/wps-general.php:179
+#: includes/settings/tabs/wps-general.php:181
 msgid "Pages:"
 msgstr "Páginas:"
 
-#: includes/settings/tabs/wps-general.php:144
+#: includes/settings/tabs/wps-general.php:146
 msgid "Visitors:"
 msgstr "Visitantes:"
 
-#: includes/settings/tabs/wps-general.php:125
+#: includes/settings/tabs/wps-general.php:127
 msgid "Visits:"
 msgstr "Visitas:"
 
-#: includes/settings/tabs/wps-general.php:72
+#: includes/settings/tabs/wps-general.php:74
 msgid "Online User:"
 msgstr "Usuario en línea:"
 
@@ -124,28 +382,28 @@ msgstr "Usa \"000\" (tres ceros) para usar \"Desconocido\" como el código de pa
 msgid "The international standard two letter country code (ie. US = United States, CA = Canada, etc.) for private (non-routable) IP addresses (ie. 10.0.0.1, 192.158.1.1, 127.0.0.1, etc.)."
 msgstr "El código de país de dos letras estándar internacional (es decir, US = Estados Unidos, CA = Canadá, etc.) para direcciones IP privadas (no enrutables) (es decir, 10.0.0.1, 192.158.1.1, 127.0.0.1, etc.)."
 
-#: includes/settings/tabs/wps-exclusions.php:319
-msgid "A list of country codes (one per line, two letters each) to include in statistics collection, if this list is not empty, only visitors from the included countries will be recorded."
+#: includes/settings/tabs/wps-exclusions.php:320
+msgid "A list of country codes (one per line, two letters each) to include in statistics collection, if this list is not empty, only visitors from the included countries will be recorded"
 msgstr "Una lista de códigos de país (uno por línea, dos letras cada uno) para incluir en la recopilación de estadísticas; si esta lista no está vacía, solo se registrarán los visitantes de los países incluidos."
 
-#: includes/settings/tabs/wps-exclusions.php:303
-#: includes/settings/tabs/wps-exclusions.php:322
+#: includes/settings/tabs/wps-exclusions.php:304
+#: includes/settings/tabs/wps-exclusions.php:323
 msgid "Use \"000\" (three zeros) to exclude unknown countries."
 msgstr "Usa \"000\" (tres ceros) para excluir países desconocidos."
 
-#: includes/settings/tabs/wps-exclusions.php:300
+#: includes/settings/tabs/wps-exclusions.php:301
 msgid "A list of country codes (one per line, two letters each) to exclude from statistics collection."
 msgstr "Una lista de códigos de país (uno por línea, dos letras cada uno) para excluir de la recopilación de estadísticas."
 
-#: includes/settings/tabs/wps-exclusions.php:237
+#: includes/settings/tabs/wps-exclusions.php:238
 msgid "Use Honey Pot:"
 msgstr "Usar Honey Pot:"
 
-#: includes/settings/tabs/wps-exclusions.php:94
+#: includes/settings/tabs/wps-exclusions.php:95
 msgid "This will generate a lot of data but is useful if you want to see the total number of hits your site gets, not just actual user visits."
 msgstr "Esto generará una gran cantidad de datos, pero es útil si quieres ver el número total de impactos que recibe tu sitio y no solo las visitas reales de los usuarios."
 
-#: includes/settings/tabs/wps-exclusions.php:91
+#: includes/settings/tabs/wps-exclusions.php:92
 msgid "This will record all the excluded hits in a separate table with the reasons why it was excluded but no other information."
 msgstr "Registra todos los impactos excluidos en una tabla separada con los motivos por los que se excluyó, pero ninguna otra información."
 
@@ -257,15 +515,11 @@ msgstr "¡No se encontraron datos de direcciones IP para eliminar!"
 msgid "%s IP data deleted successfully."
 msgstr "%s datos IP borrados con éxito."
 
-#: includes/classes/class-wp-statistics-admin.php:670
+#: includes/classes/class-wp-statistics-admin.php:772
 msgid "Installation/upgrade complete!"
 msgstr "¡Instalación/actualización completa!"
 
-#: includes/templates/welcomes/last-version.php:58
-msgid "Add-Ons!"
-msgstr "¡Complementos!"
-
-#: includes/templates/welcomes/last-version.php:7
+#: includes/templates/welcome.php:6
 msgid "Thank you for updating to the latest version! We encourage you to submit a %srating and review%s over at WordPress.org. Your feedback is greatly appreciated!"
 msgstr "¡Gracias por actualizar a la última versión! Te invitamos a que envíes tu %svaloración y reseña%s en WordPress.org. ¡Tu opinión es muy apreciada!"
 
@@ -281,19 +535,19 @@ msgstr "Solo está habilitado para la depuración. (Si los hash de IP están hab
 msgid "Privacy and Data Protection"
 msgstr "Privacidad y protección de datos"
 
-#: includes/classes/class-wp-statistics-updates.php:49
+#: includes/classes/class-wp-statistics-updates.php:63
 msgid "Error the gzopen() function do not exist!"
 msgstr "¡Error, la función gzopen() no existe!"
 
-#: includes/templates/welcomes/last-version.php:123
+#: includes/templates/welcome.php:173
 msgid "Go to Statistics &rarr; Overview"
 msgstr "Ir a Estadísticas &rarr; vista general"
 
-#: includes/templates/welcomes/last-version.php:22
+#: includes/templates/welcome.php:14
 msgid "What&#8217;s New"
 msgstr "Qué hay de nuevo"
 
-#: includes/settings/tabs/wps-general.php:288
+#: includes/settings/tabs/wps-general.php:306
 msgid "Choose the position to show Hits."
 msgstr "Elige la posición para mostrar los impactos."
 
@@ -305,104 +559,96 @@ msgstr "La recolección de GeoIP no está activada. Ve a la <a href=\"%s\">pági
 msgid "WP-Statistics Welcome"
 msgstr "Bienvenido a WP-Statistics"
 
-#: includes/classes/class-wp-statistics-updates.php:245
-msgid "Browscap database updated failed! %s"
-msgstr "¡La base de datos Browscap actualizada falló! %s"
-
-#: includes/classes/class-wp-statistics-frontend.php:105
+#: includes/classes/class-wp-statistics-frontend.php:215
 msgid "Hits: %s"
 msgstr "Impactos: %s"
 
-#: includes/templates/welcomes/last-version.php:108
+#: includes/templates/welcome.php:158
 msgid "External Libraries"
 msgstr "Bibliotecas externas"
 
-#: includes/templates/welcomes/last-version.php:107
+#: includes/templates/welcome.php:157
 msgid "WP-Statistics is being developed on GitHub, if you’re interested in contributing to the plugin, please look at the <a href=\"%s\" target=\"_blank\">GitHub page</a>."
 msgstr "WP-Statistics está siendo desarrollado en GitHub, si estás interesado en contribuir al plugin, por favor mira en la <a href=\"%s\" target=\"_blank\">página de GitHub</a>."
 
-#: includes/templates/welcomes/last-version.php:103
+#: includes/templates/welcome.php:153
 msgid "Language Contributor"
 msgstr "Colaborador de idiomas"
 
-#: includes/templates/welcomes/last-version.php:102
+#: includes/templates/welcome.php:152
 msgid "Pedro Mendonça"
 msgstr "Pedro Mendonça"
 
-#: includes/templates/welcomes/last-version.php:93
-#: includes/templates/welcomes/last-version.php:98
+#: includes/templates/welcome.php:137 includes/templates/welcome.php:141
+#: includes/templates/welcome.php:145 includes/templates/welcome.php:149
 msgid "Core Contributor"
 msgstr "Colaborador principal"
 
-#: includes/templates/welcomes/last-version.php:97
+#: includes/templates/welcome.php:148
 msgid "Farhad Sakhaei"
 msgstr "Farhad Sakhaei"
 
-#: includes/templates/welcomes/last-version.php:92
+#: includes/templates/welcome.php:144
 msgid "Greg Ross"
 msgstr "Greg Ross"
 
-#: includes/templates/welcomes/last-version.php:88
+#: includes/templates/welcome.php:133
 msgid "Other Contributors"
 msgstr "Otro colaborador"
 
-#: includes/templates/welcomes/last-version.php:85
+#: includes/templates/welcome.php:130
 msgid "Original Author"
 msgstr "Autor original"
 
-#: includes/templates/welcomes/last-version.php:84
+#: includes/templates/welcome.php:129
 msgid "Mostafa Soufi"
 msgstr "Mostafa Soufi"
 
-#: includes/templates/welcomes/last-version.php:80
+#: includes/templates/welcome.php:126
 msgid "Project Leaders"
 msgstr "Líderes del projecto"
 
-#: includes/templates/welcomes/last-version.php:79
+#: includes/templates/welcome.php:125
 msgid "WP-Statistics is created by some people and is one of the <a href=\"%s\" target=\"_blank\">VeronaLabs.com</a> projects."
 msgstr "WP-Statistics es creado por algunas personas y es uno de los proyectos de <a href=\"%s\" target=\"_blank\"> VeronaLabs.com </a>."
 
-#: includes/templates/welcomes/last-version.php:73
-msgid "To help us, you can make <a href=\"%s\" target=\"_blank\">donate</a> or <a href=\"%s\" target=\"_blank\">purchase</a> Add-Ons. 😊"
-msgstr "Para ayudarnos, puede hacer una <a href=\"%s\" target=\"_blank\"> donación </a> o <a href=\"%s\" target=\"_blank\"> comprar </a> complementos. 😊"
-
-#: includes/templates/welcomes/last-version.php:24
+#: includes/templates/welcome.php:16
 msgid "Changelog"
 msgstr "Registro de cambios"
 
-#: includes/templates/welcomes/last-version.php:23
+#: includes/templates/welcome.php:15
 msgid "Credits"
 msgstr "Créditos"
 
-#: includes/templates/welcomes/last-version.php:18
+#: includes/log/widgets/about.php:16
+msgid "What’s New"
+msgstr "Novedades"
+
+#: includes/templates/welcome.php:11
 msgid "Version %s"
 msgstr "Versión %s"
 
-#: includes/templates/welcomes/last-version.php:3
+#: includes/templates/welcome.php:3
 msgid "Welcome to WP-Statistics&nbsp;%s"
 msgstr "Bienvenido a WP-Statistics&nbsp;%s"
 
-#: includes/settings/tabs/wps-general.php:282
+#: includes/settings/tabs/wps-general.php:300
 msgid "After Content"
 msgstr "Después del contenido"
 
-#: includes/settings/tabs/wps-general.php:277
+#: includes/settings/tabs/wps-general.php:295
 msgid "Before Content"
 msgstr "Antes del contenido"
 
-#: includes/settings/tabs/wps-general.php:268
+#: includes/settings/tabs/wps-general.php:286
 msgid "Display position:"
 msgstr "Posición de visualización:"
 
-#: includes/settings/tabs/wps-general.php:257
+#: includes/settings/tabs/wps-general.php:275
 msgid "Enable or disable show hits in content"
 msgstr "Habilitar o deshabilitar mostrar hits en el contenido"
 
-#: includes/settings/tabs/wps-general.php:248
-msgid "Show hits in posts/pages in the site:"
-msgstr "Mostrar visitas en publicaciones/páginas en el sitio:"
-
-#: includes/settings/tabs/wps-general.php:174
+#: includes/settings/tabs/wps-general.php:176
 msgid "Pages and Posts"
 msgstr "Páginas y entradas"
 
@@ -410,11 +656,12 @@ msgstr "Páginas y entradas"
 msgid "Select Page"
 msgstr "Seleccionar página"
 
-#. Author URI of the plugin/theme
+#. Author URI of the plugin
 msgid "http://veronalabs.com/"
 msgstr "http://veronalabs.com/"
 
 #: includes/log/widgets/searched.phrases.php:13
+#: includes/log/searched-phrases.php:164
 msgid "Phrase"
 msgstr "Frase"
 
@@ -422,47 +669,28 @@ msgstr "Frase"
 msgid "Searched Phrase: %s"
 msgstr "Frase buscada: %s"
 
-#: includes/log/searched-phrases.php:74 includes/log/searched-phrases.php:122
-msgid "Top Searched Phrases"
-msgstr "Frases más buscadas"
-
 #: includes/log/exclusions.php:112
 msgid "CronJob"
 msgstr "CronJob"
 
+#: includes/log/searched-phrases.php:74 includes/log/searched-phrases.php:122
 #: includes/classes/class-wp-statistics-network-admin.php:90
-msgid "Searched Phrases"
-msgstr "Frases buscadas"
-
-#: includes/classes/class-wp-statistics-ajax.php:396
-msgid "<a href=\"%s\">Click here</a> to see page stats."
-msgstr "<a href=\"%s\"> Haz clic aquí </a> para ver las estadísticas de la página."
-
-#: includes/classes/class-wp-statistics-admin.php:417
-#: includes/classes/class-wp-statistics-admin.php:418
+#: includes/classes/class-wp-statistics-admin.php:525
+#: includes/classes/class-wp-statistics-admin.php:526
 msgid "Top Search Words"
 msgstr "Palabras más buscadas"
 
-#. Author of the plugin/theme
-msgid "Verona Labs"
-msgstr "Verona Labs"
+#. Author of the plugin
+msgid "VeronaLabs"
+msgstr "VeronaLabs"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:48
-#: includes/classes/class-wp-statistics-dashboard.php:190
-msgid "Top Searched Phrases (30 Days)"
-msgstr "Frases más buscadas (30 días)"
-
-#. Description of the plugin/theme
+#. Description of the plugin
 msgid "Complete WordPress Analytics and Statistics for your site!"
 msgstr "¡Analítica y estadísticas completas de WordPress para tu sitio!"
 
 #: includes/templates/postbox.php:4
 msgid "Subscribe to Newsletter"
 msgstr "Suscribirse al boletín digital."
-
-#: includes/classes/class-wp-statistics-ajax.php:390
-msgid "This feature temporarily disabled."
-msgstr "Esta función está desactivada temporalmente."
 
 #: includes/templates/postbox.php:16
 msgid "Subscribe"
@@ -472,67 +700,67 @@ msgstr "Suscribir"
 msgid "Subscribe to our mailing list for get any news of the WP-Statistics"
 msgstr "Suscribir a nuestra lista de correo para recibir noticias sobre WP-Statistics."
 
-#: includes/settings/tabs/wps-externals.php:55
-msgid "IP location services provided by data created by %s."
+#: includes/settings/tabs/wps-externals.php:46
+msgid "IP location services are provided by data created by %s."
 msgstr "Servicios de localización de IP obtenidos de %s."
 
 #: includes/settings/tabs/wps-about.php:17
 msgid "This product includes GeoLite2 data created by %s."
 msgstr "Este producto incluye GeoLite2 creado por %s."
 
-#: includes/log/all-browsers.php:161 includes/log/all-browsers.php:288
+#: includes/log/all-browsers.php:174 includes/log/all-browsers.php:301
 msgid "Platforms"
 msgstr "Plataformas"
 
-#: includes/classes/class-wp-statistics-updates.php:96
+#: includes/classes/class-wp-statistics-updates.php:108
 msgid "Error setting permissions of the GeoIP database directory, make sure your web server has permissions to write to directories in : %s"
 msgstr "Error al configurar los permisos en el directorio para base de datos de GeoIP, asegúrese que sus sitio web tiene permisos de escritura en los directorios en: %s"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:170
+#: includes/classes/class-wp-statistics-admin-pages.php:190
 msgid "Add-On deactivated."
 msgstr "Complemento desactivado."
 
-#: includes/classes/class-wp-statistics-admin-pages.php:162
+#: includes/classes/class-wp-statistics-admin-pages.php:182
 msgid "Add-On activated."
 msgstr "Complemento activado."
 
-#: includes/classes/class-wp-statistics-admin.php:550
-#: includes/classes/class-wp-statistics-admin.php:551
+#: includes/classes/class-wp-statistics-admin.php:658
+#: includes/classes/class-wp-statistics-admin.php:659
 msgid "Add-Ons"
 msgstr "Complementos"
 
-#: includes/classes/class-wp-statistics-admin.php:487
-#: includes/classes/class-wp-statistics-admin.php:488
+#: includes/classes/class-wp-statistics-admin.php:595
+#: includes/classes/class-wp-statistics-admin.php:596
 msgid "Authors"
 msgstr "Autores"
 
-#: includes/classes/class-wp-statistics-admin.php:477
-#: includes/classes/class-wp-statistics-admin.php:478
+#: includes/classes/class-wp-statistics-admin.php:585
+#: includes/classes/class-wp-statistics-admin.php:586
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: includes/classes/class-wp-statistics-admin.php:467
-#: includes/classes/class-wp-statistics-admin.php:468
+#: includes/classes/class-wp-statistics-admin.php:575
+#: includes/classes/class-wp-statistics-admin.php:576
 msgid "Categories"
 msgstr "Categorías"
 
-#: includes/classes/class-wp-statistics-admin.php:195
+#: includes/classes/class-wp-statistics-admin.php:201
 msgid "Database updates are required, please go to %soptimization page%s and update the following: %s"
 msgstr "Las actualizaciones de la base de datos son obligatorias, por favor vaya a %soptimization page%s y actualice lo siguiente: %s"
 
-#: includes/classes/class-wp-statistics.php:1417
+#: includes/classes/class-wp-statistics.php:1490
 msgid "Please contact your hosting provider to upgrade to a supported version or disable WP Statistics to remove this message."
 msgstr "Por favor, contacta con tu proveedor de hosting para actualizar a una versión soportada o desactiva WP-Statistics para eliminar este mensaje."
 
-#: includes/classes/class-wp-statistics.php:1409
+#: includes/classes/class-wp-statistics.php:1482
 msgid "WP Statistics has detected PHP version %s which is unsupported, WP Statistics requires PHP Version %s or higher!"
 msgstr "WP Statistics ha detectado la versión %s de PHP, la cual no es compatible ¡WP Statistics requiere la versión %s o superior de PHP!"
 
-#: includes/classes/class-wp-statistics.php:1400
+#: includes/classes/class-wp-statistics.php:1473
 msgid "&#151; You are running an unsupported version of PHP."
 msgstr "&#151; Tienes una versión no compatible de PHP."
 
-#: includes/classes/class-wp-statistics.php:1397
+#: includes/classes/class-wp-statistics.php:1470
 msgid "WP Statistics Disabled"
 msgstr "WP Statistics deshabilitado"
 
@@ -550,18 +778,6 @@ msgstr "Visitas los últimos 30 días"
 #: includes/classes/class-wp-statistics-widget.php:296
 msgid "Last 7 Days Visits"
 msgstr "Visitas los últimos 7 días"
-
-#: includes/templates/plugins.php:95
-msgid "Submit Add-on"
-msgstr "Enviar Add-on"
-
-#: includes/templates/plugins.php:91
-msgid "We welcome practical extensions for the WP-Statistics plugin. In case you're a WordPress programmer and developer and plan to sell extension in this page, please contact us through the following link."
-msgstr "Tenemos extensiones útiles para el plugin WP-Statistics. En caso de que seas un programador y desarrollador de WordPress  y quieras vender una extensión en esta página, contacta con nosotros a través del siguiente enlace."
-
-#: includes/templates/plugins.php:80
-msgid "Join to Market!"
-msgstr "Ir a la tienda"
 
 #: includes/templates/plugins.php:67
 msgid "Buy Add-On"
@@ -588,7 +804,6 @@ msgid "Version:"
 msgstr "Versión:"
 
 #: includes/templates/plugins.php:7
-#: includes/templates/welcomes/last-version.php:59
 msgid "These extensions add functionality to your WP-Statistics."
 msgstr "Estas extensiones añaden funcionalidades a tu WP-Statistics."
 
@@ -610,20 +825,20 @@ msgstr "Restablecer opciones:"
 
 #: includes/classes/class-wp-statistics-widget.php:40
 #: includes/classes/class-wp-statistics-widget.php:268
-#: includes/classes/class-wp-statistics.php:1497
-#: includes/settings/tabs/wps-notifications.php:290
+#: includes/classes/class-wp-statistics.php:1570
+#: includes/settings/tabs/wps-notifications.php:271
 msgid "Today's Visits"
 msgstr "Visitas hoy"
 
 #: includes/classes/class-wp-statistics-widget.php:47
 #: includes/classes/class-wp-statistics-widget.php:275
-#: includes/classes/class-wp-statistics.php:1489
-#: includes/settings/tabs/wps-notifications.php:288
+#: includes/classes/class-wp-statistics.php:1562
+#: includes/settings/tabs/wps-notifications.php:269
 msgid "Today's Visitors"
 msgstr "Visitantes hoy"
 
-#: includes/classes/class-wp-statistics.php:1477
-#: includes/settings/tabs/wps-notifications.php:286
+#: includes/classes/class-wp-statistics.php:1550
+#: includes/settings/tabs/wps-notifications.php:267
 msgid "Online User"
 msgstr "Usuarios online"
 
@@ -631,32 +846,32 @@ msgstr "Usuarios online"
 msgid "First Tuesday of next month"
 msgstr "Primer martes del próximo mes"
 
-#: includes/classes/class-wp-statistics-schedule.php:191
+#: includes/classes/class-wp-statistics-schedule.php:177
 #: includes/settings/tabs/wps-externals.php:114
 msgid "First Tuesday of this month"
 msgstr "Primer martes de este mes"
 
-#: includes/settings/tabs/wps-exclusions.php:417
+#: includes/settings/tabs/wps-exclusions.php:435
 msgid "Exclude any call to the WordPress AJAX system."
 msgstr "Excluir cualquier llamada del sistema AJAX de WordPress"
 
-#: includes/settings/tabs/wps-exclusions.php:408
+#: includes/settings/tabs/wps-exclusions.php:426
 msgid "Excluded AJAX calls:"
 msgstr "Llamadas AJAX excluidas:"
 
-#: includes/settings/tabs/wps-exclusions.php:232
+#: includes/settings/tabs/wps-exclusions.php:233
 msgid "Add fc00::/7"
 msgstr "Añadir fc00::/7"
 
-#: includes/settings/tabs/wps-exclusions.php:221
+#: includes/settings/tabs/wps-exclusions.php:222
 msgid "For IPv6 addresses use the fc00::/7 format."
 msgstr "Para las direcciones IPv6 usar el formato fc00::/7."
 
-#: includes/settings/tabs/wps-exclusions.php:216
+#: includes/settings/tabs/wps-exclusions.php:217
 msgid "For IPv4 addresses, both 192.168.0.0/24 and 192.168.0.0/255.255.255.0 formats are accepted. To specify an IP address only, use a subnet value of 32 or 255.255.255.255."
 msgstr "Para las direcciones IPv4, se aceptan los formatos 192.168.0.0/24 y 192.168.0.0/255.255.255.0. Para especificar una dirección IP solamente, utilice un valor de subred de 32 o 255.255.255.255."
 
-#: includes/settings/tabs/wps-exclusions.php:211
+#: includes/settings/tabs/wps-exclusions.php:212
 msgid "A list of IP addresses and subnet masks (one per line) to exclude from statistics collection."
 msgstr "Una lista de direcciones IP y máscaras de subred (una por línea) para excluir de la recopilación de estadísticas."
 
@@ -748,12 +963,12 @@ msgstr "Últimos 30 días:"
 msgid "Last 7 Days:"
 msgstr "Últimos 7 días:"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:30
-#: includes/log/top-visitors.php:53
+#: includes/log/top-visitors.php:46
+#: includes/classes/class-wp-statistics-admin-pages.php:35
 msgid "Top Visitors"
 msgstr "Top de visitantes"
 
-#: includes/log/top-referring.php:131
+#: includes/log/top-referring.php:129
 msgid "Referring site: %s"
 msgstr "Sitios de referencia: %s"
 
@@ -781,17 +996,17 @@ msgstr "Elegir etiqueta"
 msgid "Tag Statistics"
 msgstr "Estadísticas de etiquetas"
 
-#: includes/log/search-statistics.php:120 includes/log/widgets/search.php:76
+#: includes/log/search-statistics.php:121 includes/log/widgets/search.php:77
 msgid "Search engine referrals in the last %s days"
 msgstr "Referencias de motores de búsquedas en los últimos %s días"
 
-#: includes/log/online.php:128
+#: includes/log/online.php:109
 msgid "Online for %s (HH:MM:SS)"
 msgstr "En linea durante %s (HH:MM:SS)"
 
-#: includes/log/last-search.php:222 includes/log/last-visitor.php:226
-#: includes/log/online.php:154 includes/log/searched-phrases.php:183
-#: includes/log/top-pages.php:212 includes/log/top-referring.php:268
+#: includes/log/online.php:135 includes/log/last-search.php:244
+#: includes/log/top-referring.php:249 includes/log/searched-phrases.php:185
+#: includes/log/top-pages.php:217 includes/log/last-visitor.php:219
 msgid "Page %1$s of %2$s"
 msgstr "Página %1$s de %2$s"
 
@@ -823,44 +1038,45 @@ msgstr "Seleccione categoría"
 msgid "Category Statistics"
 msgstr "Estadísticas de categoría"
 
-#: includes/log/authors.php:244 includes/log/categories.php:227
-#: includes/log/tags.php:239
+#: includes/log/categories.php:227 includes/log/tags.php:239
+#: includes/log/authors.php:238
 msgid "Post Title"
 msgstr "Título de la entrada"
 
-#: includes/log/authors.php:230
+#: includes/log/authors.php:224
 msgid "Author Posts Sorted by Hits"
 msgstr "Autores de las entradas ordenados por impactos"
 
-#: includes/log/authors.php:208 includes/log/categories.php:191
-#: includes/log/tags.php:203
+#: includes/log/categories.php:191 includes/log/tags.php:203
+#: includes/log/authors.php:202
 msgid "All Time Visits Total:"
 msgstr "Visitas totales de todo el tiempo:"
 
-#: includes/log/authors.php:202 includes/log/categories.php:185
-#: includes/log/tags.php:197
+#: includes/log/categories.php:185 includes/log/tags.php:197
+#: includes/log/authors.php:196
 msgid "Chart Visits Total:"
 msgstr "Gráfico de total de visitas:"
 
-#: includes/log/authors.php:196
+#: includes/log/authors.php:190
 msgid "Number of posts by author:"
 msgstr "Número de entradas por autor:"
 
-#: includes/log/authors.php:192 includes/log/categories.php:175
-#: includes/log/tags.php:187 includes/log/widgets/searched.phrases.php:14
+#: includes/log/categories.php:175 includes/log/tags.php:187
+#: includes/log/widgets/searched.phrases.php:14
+#: includes/log/searched-phrases.php:165 includes/log/authors.php:186
 msgid "Count"
 msgstr "Cuenta"
 
-#: includes/log/authors.php:177
+#: includes/log/authors.php:171
 msgid "Author Statistics Summary"
 msgstr "Sumario de estadísticas de autor"
 
-#: includes/log/authors.php:115
+#: includes/log/authors.php:109
 msgid "Author Statistics Chart"
 msgstr "Tabla de estadísticas de autor"
 
-#: includes/log/authors.php:63 includes/log/categories.php:46
-#: includes/log/page-statistics.php:60 includes/log/tags.php:59
+#: includes/log/page-statistics.php:60 includes/log/categories.php:46
+#: includes/log/tags.php:59 includes/log/authors.php:57
 msgid "Select"
 msgstr "Elegir"
 
@@ -872,20 +1088,20 @@ msgstr "Elegir autor"
 msgid "Author Statistics"
 msgstr "Estadísticas de autor"
 
-#: includes/log/all-browsers.php:90 includes/log/all-browsers.php:145
-#: includes/log/all-browsers.php:272 includes/log/authors.php:118
-#: includes/log/authors.php:180 includes/log/authors.php:233
-#: includes/log/categories.php:101 includes/log/categories.php:163
-#: includes/log/categories.php:216 includes/log/exclusions.php:183
-#: includes/log/exclusions.php:251 includes/log/hit-statistics.php:64
-#: includes/log/hit-statistics.php:138 includes/log/last-search.php:69
-#: includes/log/last-visitor.php:106 includes/log/online.php:21
-#: includes/log/page-statistics.php:73 includes/log/search-statistics.php:65
-#: includes/log/searched-phrases.php:126 includes/log/tags.php:113
-#: includes/log/tags.php:175 includes/log/tags.php:228
-#: includes/log/top-countries.php:42 includes/log/top-pages.php:64
-#: includes/log/top-pages.php:129 includes/log/top-referring.php:139
-#: includes/log/top-visitors.php:56 includes/templates/plugins.php:83
+#: includes/log/hit-statistics.php:64 includes/log/hit-statistics.php:138
+#: includes/log/online.php:21 includes/log/page-statistics.php:73
+#: includes/log/search-statistics.php:65 includes/log/exclusions.php:183
+#: includes/log/exclusions.php:251 includes/log/categories.php:101
+#: includes/log/categories.php:163 includes/log/categories.php:216
+#: includes/log/tags.php:113 includes/log/tags.php:175
+#: includes/log/tags.php:228 includes/log/last-search.php:69
+#: includes/log/top-referring.php:137 includes/log/searched-phrases.php:126
+#: includes/log/top-pages.php:64 includes/log/top-pages.php:129
+#: includes/log/top-visitors.php:49 includes/log/last-visitor.php:91
+#: includes/log/all-browsers.php:104 includes/log/all-browsers.php:158
+#: includes/log/all-browsers.php:285 includes/log/authors.php:112
+#: includes/log/authors.php:174 includes/log/authors.php:227
+#: includes/log/top-countries.php:42
 msgid "Toggle panel: %s"
 msgstr "Cambiar panel: %s"
 
@@ -894,50 +1110,50 @@ msgctxt "Country"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: includes/classes/class-wp-statistics.php:1098
-#: includes/classes/class-wp-statistics.php:1132
+#: includes/classes/class-wp-statistics.php:1175
+#: includes/classes/class-wp-statistics.php:1209
 msgctxt "Search Engine"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: includes/classes/class-wp-statistics.php:868
-#: includes/classes/class-wp-statistics.php:880
+#: includes/classes/class-wp-statistics.php:955
 msgctxt "Version"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: includes/classes/class-wp-statistics.php:867
-#: includes/classes/class-wp-statistics.php:877
+#: includes/classes/class-wp-statistics.php:954
 msgctxt "Platform"
 msgid "Unknown"
 msgstr "Desconocida"
 
-#: includes/classes/class-wp-statistics.php:866
-#: includes/classes/class-wp-statistics.php:874
+#: includes/classes/class-wp-statistics.php:953
 msgctxt "Browser"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: includes/classes/class-wp-statistics-dashboard.php:268
-#: includes/classes/class-wp-statistics-editor.php:123 includes/log/log.php:72
+#: includes/log/log.php:72
+#: includes/classes/class-wp-statistics-dashboard.php:271
+#: includes/classes/class-wp-statistics-editor.php:131
 msgid "More Details"
 msgstr "Mas detalles"
 
-#: includes/classes/class-wp-statistics-dashboard.php:264
-#: includes/classes/class-wp-statistics-dashboard.php:274
-#: includes/classes/class-wp-statistics-editor.php:119
-#: includes/classes/class-wp-statistics-editor.php:129 includes/log/log.php:68
-#: includes/log/log.php:77
+#: includes/log/log.php:68 includes/log/log.php:77
+#: includes/classes/class-wp-statistics-dashboard.php:267
+#: includes/classes/class-wp-statistics-dashboard.php:277
+#: includes/classes/class-wp-statistics-editor.php:129
+#: includes/classes/class-wp-statistics-editor.php:132
 msgid "Reload"
 msgstr "Recarga"
 
-#: includes/classes/class-wp-statistics-dashboard.php:257
-#: includes/classes/class-wp-statistics-editor.php:112 includes/log/log.php:2
+#: includes/log/log.php:2
+#: includes/classes/class-wp-statistics-dashboard.php:260
+#: includes/classes/class-wp-statistics-editor.php:125
 msgid "Reloading..."
 msgstr "Recargando..."
 
-#: includes/classes/class-wp-statistics-dashboard.php:358
-#: includes/classes/class-wp-statistics-editor.php:90 includes/log/log.php:36
+#: includes/log/log.php:36
+#: includes/classes/class-wp-statistics-dashboard.php:361
+#: includes/classes/class-wp-statistics-editor.php:106
 msgid "Loading..."
 msgstr "Cargando..."
 
@@ -945,57 +1161,49 @@ msgstr "Cargando..."
 msgid "ERROR: Widget not found!"
 msgstr "ERROR: Widget no encontrado!"
 
-#: includes/classes/class-wp-statistics-ajax.php:338
+#: includes/classes/class-wp-statistics-ajax.php:346
 msgid "No matching widget found!"
 msgstr "Ningún widget parecido encontrado!"
 
-#. Plugin URI of the plugin/theme
+#. Plugin URI of the plugin
 msgid "https://wp-statistics.com/"
 msgstr "https://wp-statistics.com/"
 
-#: includes/classes/class-wp-statistics-updates.php:262
-msgid "Browscap.ini update on"
-msgstr "Actualización Browscap.ini en"
-
-#: includes/classes/class-wp-statistics-updates.php:243
-msgid "Browscap database updated successfully!"
-msgstr "¡base de datos browscap actualizada!"
-
-#: includes/classes/class-wp-statistics-updates.php:191
+#: includes/classes/class-wp-statistics-updates.php:208
 msgid "GeoIP update on"
 msgstr "Actualización GeoIP activada"
 
-#: includes/classes/class-wp-statistics-updates.php:159
+#: includes/classes/class-wp-statistics-updates.php:172
 msgid "GeoIP Database updated successfully!"
 msgstr "GeoIP de base de datos actualizada!"
 
-#: includes/classes/class-wp-statistics-updates.php:141
+#: includes/classes/class-wp-statistics-updates.php:154
 msgid "Error could not open destination GeoIP database for writing %s"
 msgstr "Error no pudo abrir la base de datos de GeoIP destino para escribir %s"
 
-#: includes/classes/class-wp-statistics-updates.php:130
+#: includes/classes/class-wp-statistics-updates.php:141
 msgid "Error could not open downloaded GeoIP database for reading: %s"
 msgstr "Error no pudo abrir descargado GeoIP de base de datos para la lectura: %s"
 
-#: includes/classes/class-wp-statistics-updates.php:114
+#: includes/classes/class-wp-statistics-updates.php:125
 msgid "Error downloading GeoIP database from: %s - %s"
 msgstr "Error al descargar GeoIP base de datos: %s - %s"
 
-#: includes/classes/class-wp-statistics-updates.php:81
+#: includes/classes/class-wp-statistics-updates.php:96
 msgid "Error creating GeoIP database directory, make sure your web server has permissions to create directories in: %s"
 msgstr "Error al crear el directorio de la base de datos GeoIP, asegúrate de que tu servidor web tenga permisos para crear directorios en: %s"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:442
+#: includes/classes/class-wp-statistics-admin-pages.php:532
 msgid "The following plugin table(s) do not exist in the database, please re-run the %s install routine %s:"
 msgstr "La(s) siguiente(s) tabla(s) del plugin no existe(n) en la base de datos, por favor vuelve a ejecutar la %s rutina de instalación%s:"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:214
-#: includes/classes/class-wp-statistics-admin-pages.php:261
-#: includes/classes/class-wp-statistics-admin-pages.php:385
+#: includes/classes/class-wp-statistics-admin-pages.php:234
+#: includes/classes/class-wp-statistics-admin-pages.php:281
+#: includes/classes/class-wp-statistics-admin-pages.php:475
 msgid "You do not have sufficient permissions to access this page."
 msgstr "No tienes permisos suficientes para acceder a esta página."
 
-#: includes/classes/class-wp-statistics.php:1523
+#: includes/classes/class-wp-statistics.php:1596
 msgid "View Stats"
 msgstr "Ver estadísticas"
 
@@ -1007,119 +1215,119 @@ msgstr "Opciones"
 msgid "Site"
 msgstr "Sitio"
 
-#: includes/classes/class-wp-statistics-admin.php:534
-#: includes/classes/class-wp-statistics-admin.php:535
+#: includes/optimization/wps-optimization.php:233
 #: includes/classes/class-wp-statistics-network-admin.php:98
-#: includes/optimization/wps-optimization.php:242
+#: includes/classes/class-wp-statistics-admin.php:642
+#: includes/classes/class-wp-statistics-admin.php:643
 msgid "Optimization"
 msgstr "Optimización"
 
-#: includes/classes/class-wp-statistics-admin.php:507
-#: includes/classes/class-wp-statistics-admin.php:508
 #: includes/classes/class-wp-statistics-network-admin.php:96
+#: includes/classes/class-wp-statistics-admin.php:615
+#: includes/classes/class-wp-statistics-admin.php:616
 msgid "Top Visitors Today"
 msgstr "Lista de visitantes de hoy"
 
-#: includes/classes/class-wp-statistics-admin.php:407
-#: includes/classes/class-wp-statistics-admin.php:408
 #: includes/classes/class-wp-statistics-network-admin.php:89
+#: includes/classes/class-wp-statistics-admin.php:515
+#: includes/classes/class-wp-statistics-admin.php:516
 msgid "Search Words"
 msgstr "Palabras de búsqueda"
 
-#: includes/classes/class-wp-statistics-admin.php:397
-#: includes/classes/class-wp-statistics-admin.php:398
 #: includes/classes/class-wp-statistics-network-admin.php:88
+#: includes/classes/class-wp-statistics-admin.php:505
+#: includes/classes/class-wp-statistics-admin.php:506
 msgid "Referrers"
 msgstr "Referencias"
 
-#: includes/classes/class-wp-statistics-admin.php:387
-#: includes/classes/class-wp-statistics-admin.php:388
 #: includes/classes/class-wp-statistics-network-admin.php:87
+#: includes/classes/class-wp-statistics-admin.php:495
+#: includes/classes/class-wp-statistics-admin.php:496
 msgid "Online"
 msgstr "Online"
 
-#: includes/classes/class-wp-statistics-admin.php:368
-#: includes/classes/class-wp-statistics-admin.php:369
 #: includes/classes/class-wp-statistics-network-admin.php:35
 #: includes/classes/class-wp-statistics-network-admin.php:36
 #: includes/classes/class-wp-statistics-network-admin.php:85
+#: includes/classes/class-wp-statistics-admin.php:476
+#: includes/classes/class-wp-statistics-admin.php:477
 msgid "Overview"
 msgstr "Resumen"
 
-#: includes/classes/class-wp-statistics-admin.php:331
+#: includes/classes/class-wp-statistics-admin.php:439
 msgid "WP Statistics - Hits"
 msgstr "Estadísticas de WP - Impactos"
 
-#: includes/classes/class-wp-statistics-admin.php:257
+#: includes/classes/class-wp-statistics-admin.php:365
 msgid "Rate this plugin"
 msgstr "Valora este plugin"
 
-#: includes/classes/class-wp-statistics-admin.php:254
+#: includes/classes/class-wp-statistics-admin.php:362
 msgid "Click here to rate and review this plugin on WordPress.org"
 msgstr "Haga clic aquí para calificar y revisar este plugin en WordPress.org"
 
-#: includes/classes/class-wp-statistics-admin.php:251
+#: includes/classes/class-wp-statistics-admin.php:359
 msgid "Visit WordPress.org page"
 msgstr "Visita la página de WordPress.org"
 
-#: includes/classes/class-wp-statistics-admin.php:248
+#: includes/classes/class-wp-statistics-admin.php:356
 msgid "Click here to visit the plugin on WordPress.org"
 msgstr "Haga clic aquí para visitar el plugin en WordPress.org"
 
-#: includes/classes/class-wp-statistics-admin.php:226
-#: includes/classes/class-wp-statistics-admin.php:542
-#: includes/classes/class-wp-statistics-admin.php:543
 #: includes/classes/class-wp-statistics-network-admin.php:99
+#: includes/classes/class-wp-statistics-admin.php:334
+#: includes/classes/class-wp-statistics-admin.php:650
+#: includes/classes/class-wp-statistics-admin.php:651
 #: includes/settings/wps-settings.php:23
 msgid "Settings"
 msgstr "Configuración"
 
-#: includes/classes/class-wp-statistics-admin.php:667
+#: includes/classes/class-wp-statistics-admin.php:769
 msgid "WP Statistics %s installed on"
 msgstr "WP Statistics %s esta instalado"
 
-#: includes/classes/class-wp-statistics-admin.php:184
+#: includes/classes/class-wp-statistics-admin.php:190
 msgid "visit database index"
 msgstr "Índice de base de datos de visitas"
 
-#: includes/classes/class-wp-statistics-admin.php:183
+#: includes/classes/class-wp-statistics-admin.php:189
 msgid "countries database index"
 msgstr "Índice de paises"
 
-#: includes/classes/class-wp-statistics-admin.php:174
+#: includes/classes/class-wp-statistics-admin.php:180
 msgid "search table"
 msgstr "tabla de búsqueda"
 
-#: includes/classes/class-wp-statistics-admin.php:162
-#: includes/classes/class-wp-statistics-admin.php:201
+#: includes/classes/class-wp-statistics-admin.php:168
+#: includes/classes/class-wp-statistics-admin.php:207
 msgid ","
 msgstr ","
 
-#: includes/classes/class-wp-statistics-admin.php:156
+#: includes/classes/class-wp-statistics-admin.php:162
 msgid "The following features are disabled, please go to %ssettings page%s and enable them: %s"
 msgstr "Las siguientes funciones están desactivadas, ve a la %spágina de configuración%s y actívalas: %s"
 
-#: includes/classes/class-wp-statistics-admin.php:151
+#: includes/classes/class-wp-statistics-admin.php:157
 msgid "geoip collection"
 msgstr "colección geoip"
 
-#: includes/classes/class-wp-statistics-admin.php:148
+#: includes/classes/class-wp-statistics-admin.php:154
 msgid "visitor tracking"
 msgstr "seguimiento de visitante"
 
-#: includes/classes/class-wp-statistics-admin.php:145
+#: includes/classes/class-wp-statistics-admin.php:151
 msgid "hit tracking"
 msgstr "seguimiento de impactos"
 
-#: includes/classes/class-wp-statistics-admin.php:142
+#: includes/classes/class-wp-statistics-admin.php:148
 msgid "online user tracking"
 msgstr "seguimiento de visitantes online"
 
-#: includes/classes/class-wp-statistics-admin.php:109
+#: includes/classes/class-wp-statistics-admin.php:115
 msgid "WP Statistics has been removed, please disable and delete it."
 msgstr "WP Statistics ha sido eliminado, por favor deshabilita y borralo"
 
-#. Plugin Name of the plugin/theme
+#. Plugin Name of the plugin
 msgid "WP Statistics"
 msgstr "Estadísticas de WP"
 
@@ -1134,21 +1342,6 @@ msgstr "Elementos"
 #: includes/classes/class-wp-statistics-widget.php:248
 msgid "Name"
 msgstr "Nombre"
-
-#: includes/classes/class-wp-statistics-widget.php:167
-#: includes/classes/class-wp-statistics-widget.php:420
-msgid "Average Users"
-msgstr "Media por usuarios"
-
-#: includes/classes/class-wp-statistics-widget.php:160
-#: includes/classes/class-wp-statistics-widget.php:413
-msgid "Average Comments"
-msgstr "Media por comentarios"
-
-#: includes/classes/class-wp-statistics-widget.php:153
-#: includes/classes/class-wp-statistics-widget.php:406
-msgid "Average Posts"
-msgstr "Medía por artículos"
 
 #: includes/classes/class-wp-statistics-widget.php:146
 #: includes/classes/class-wp-statistics-widget.php:399
@@ -1184,119 +1377,139 @@ msgstr "Visitas totales "
 msgid "Show site stats in sidebar."
 msgstr "Mostrar las estadísticas del sitio en la barra lateral."
 
-#: includes/classes/class-wp-statistics-admin.php:357
-#: includes/classes/class-wp-statistics-admin.php:358
+#: includes/classes/class-wp-statistics-widget.php:11
 #: includes/classes/class-wp-statistics-network-admin.php:24
 #: includes/classes/class-wp-statistics-network-admin.php:25
-#: includes/classes/class-wp-statistics-widget.php:11
+#: includes/classes/class-wp-statistics-admin.php:465
+#: includes/classes/class-wp-statistics-admin.php:466
 msgid "Statistics"
 msgstr "Estadísticas"
 
-#: includes/classes/class-wp-statistics-shortcode.php:209
+#: includes/classes/class-wp-statistics-tinymce.php:63
+#: includes/classes/class-wp-statistics-shortcode.php:214
 msgid "The post/page ID to get page statistics on."
 msgstr "El ID de la entrada/página en la que poner las estadísticas."
 
-#: includes/classes/class-wp-statistics-shortcode.php:206
+#: includes/classes/class-wp-statistics-shortcode.php:211
 msgid "Post/Page ID"
 msgstr "Id de la entrada/página"
 
-#: includes/classes/class-wp-statistics-shortcode.php:202
+#: includes/classes/class-wp-statistics-shortcode.php:207
 msgid "International"
 msgstr "Internacional"
 
-#: includes/classes/class-wp-statistics-shortcode.php:201
+#: includes/classes/class-wp-statistics-shortcode.php:206
 msgid "English"
 msgstr "Inglés"
 
-#: includes/classes/class-wp-statistics-shortcode.php:194
+#: includes/classes/class-wp-statistics-tinymce.php:61
+#: includes/classes/class-wp-statistics-shortcode.php:199
 msgid "The format to display numbers in: i18n, english, none."
 msgstr "El formato para mostrar números en: i18n, inglés, ninguno."
 
-#: includes/classes/class-wp-statistics-shortcode.php:191
+#: includes/classes/class-wp-statistics-shortcode.php:196
 msgid "Number Format"
 msgstr "Formato del número"
 
-#: includes/classes/class-wp-statistics-shortcode.php:187
+#: includes/classes/class-wp-statistics-tinymce.php:59
+#: includes/classes/class-wp-statistics-shortcode.php:192
 msgid "The search provider to get statistics on."
 msgstr "El proveedor de búsquedas para coger las estadísticas."
 
-#: includes/classes/class-wp-statistics-shortcode.php:184
+#: includes/classes/class-wp-statistics-shortcode.php:189
 msgid "Search Provider"
 msgstr "Proveedor de búsquedas"
 
-#: includes/classes/class-wp-statistics-shortcode.php:177
+#: includes/classes/class-wp-statistics-shortcode.php:182
 msgid "The time frame to get the statistic for, strtotime() (http://php.net/manual/en/datetime.formats.php) will be used to calculate it. Use \"total\" to get all recorded dates."
 msgstr "El marco de tiempo  del que obtener estadísticas, se utilizará strtotime() (http://php.net/manual/en/datetime.formats.php) para calcularlo. Usa \"total\" para obtener todas las fechas registradas."
 
-#: includes/classes/class-wp-statistics-shortcode.php:174
-#: includes/functions/functions.php:1274 includes/functions/functions.php:1276
+#: includes/functions/functions.php:1334 includes/functions/functions.php:1336
+#: includes/classes/class-wp-statistics-shortcode.php:179
 msgid "Time Frame"
 msgstr "Período de tiempo"
 
-#: includes/classes/class-wp-statistics-shortcode.php:170
 #: includes/classes/class-wp-statistics-widget.php:174
 #: includes/classes/class-wp-statistics-widget.php:427
+#: includes/classes/class-wp-statistics-tinymce.php:46
+#: includes/classes/class-wp-statistics-shortcode.php:174
 msgid "Last Post Date"
 msgstr "Fecha de última entrada"
 
-#: includes/classes/class-wp-statistics-shortcode.php:169
+#: includes/classes/class-wp-statistics-widget.php:167
+#: includes/classes/class-wp-statistics-widget.php:420
+#: includes/classes/class-wp-statistics-tinymce.php:45
+#: includes/classes/class-wp-statistics-shortcode.php:173
 msgid "User Average"
 msgstr "Promedio de usuarios"
 
-#: includes/classes/class-wp-statistics-shortcode.php:168
+#: includes/classes/class-wp-statistics-widget.php:160
+#: includes/classes/class-wp-statistics-widget.php:413
+#: includes/classes/class-wp-statistics-tinymce.php:44
+#: includes/classes/class-wp-statistics-shortcode.php:172
 msgid "Comment Average"
 msgstr "Promedio de comentarios"
 
-#: includes/classes/class-wp-statistics-shortcode.php:167
+#: includes/classes/class-wp-statistics-widget.php:153
+#: includes/classes/class-wp-statistics-widget.php:406
+#: includes/classes/class-wp-statistics-tinymce.php:43
+#: includes/classes/class-wp-statistics-shortcode.php:171
 msgid "Post Average"
 msgstr "Promedio de posts"
 
-#: includes/classes/class-wp-statistics-shortcode.php:166
+#: includes/classes/class-wp-statistics-tinymce.php:42
+#: includes/classes/class-wp-statistics-shortcode.php:170
 msgid "User Count"
 msgstr "Número de usuarios"
 
-#: includes/classes/class-wp-statistics-shortcode.php:165
+#: includes/classes/class-wp-statistics-tinymce.php:41
+#: includes/classes/class-wp-statistics-shortcode.php:169
 msgid "Spam Count"
 msgstr "Número de spams"
 
-#: includes/classes/class-wp-statistics-shortcode.php:164
+#: includes/classes/class-wp-statistics-tinymce.php:40
+#: includes/classes/class-wp-statistics-shortcode.php:168
 msgid "Comment Count"
 msgstr "Número de comentarios"
 
-#: includes/classes/class-wp-statistics-shortcode.php:163
+#: includes/classes/class-wp-statistics-tinymce.php:39
+#: includes/classes/class-wp-statistics-shortcode.php:167
 msgid "Page Count"
 msgstr "Número de páginas"
 
-#: includes/classes/class-wp-statistics-shortcode.php:162
+#: includes/classes/class-wp-statistics-tinymce.php:38
+#: includes/classes/class-wp-statistics-shortcode.php:166
 msgid "Post Count"
 msgstr "Nº de post"
 
 #: includes/classes/class-wp-statistics-network-admin.php:91
-#: includes/classes/class-wp-statistics-shortcode.php:161
+#: includes/classes/class-wp-statistics-tinymce.php:37
+#: includes/classes/class-wp-statistics-shortcode.php:165
 msgid "Searches"
 msgstr "Búsquedas"
 
-#: includes/classes/class-wp-statistics-shortcode.php:160
+#: includes/classes/class-wp-statistics-tinymce.php:36
+#: includes/classes/class-wp-statistics-shortcode.php:164
 msgid "Page Visits"
 msgstr "Visitas a la página"
 
-#: includes/classes/class-wp-statistics-shortcode.php:154
+#: includes/classes/class-wp-statistics-shortcode.php:158
 msgid "Select the statistic you wish to display."
 msgstr "Seleccione la estadística que desea mostrar."
 
-#: includes/classes/class-wp-statistics-shortcode.php:151
+#: includes/classes/class-wp-statistics-shortcode.php:155
 msgid "Statistic"
 msgstr "Estadística"
 
-#: includes/classes/class-wp-statistics-schedule.php:157
+#: includes/classes/class-wp-statistics-schedule.php:143
 msgid "Once Every 4 Weeks"
 msgstr "Una vez cada 4 semanas"
 
-#: includes/classes/class-wp-statistics-schedule.php:150
+#: includes/classes/class-wp-statistics-schedule.php:136
 msgid "Once Every 2 Weeks"
 msgstr "Una vez cada 2 semanas"
 
-#: includes/classes/class-wp-statistics-schedule.php:143
+#: includes/classes/class-wp-statistics-schedule.php:129
 msgid "Once Weekly"
 msgstr "Una vez semanal"
 
@@ -1387,118 +1600,114 @@ msgstr "Panel de Control"
 msgid "About"
 msgstr "Acerca de"
 
-#: includes/classes/class-wp-statistics-shortcode.php:200
+#: includes/classes/class-wp-statistics-shortcode.php:205
 msgid "None"
 msgstr "Ninguno"
 
 #: includes/classes/class-wp-statistics-widget.php:89
 #: includes/classes/class-wp-statistics-widget.php:317
-#: includes/settings/tabs/wps-notifications.php:298
+#: includes/settings/tabs/wps-notifications.php:279
 msgid "Total Visits"
 msgstr "Total de visitas"
 
 #: includes/classes/class-wp-statistics-widget.php:96
 #: includes/classes/class-wp-statistics-widget.php:324
-#: includes/settings/tabs/wps-notifications.php:296
+#: includes/settings/tabs/wps-notifications.php:277
 msgid "Total Visitors"
 msgstr "Total visitantes"
 
 #: includes/classes/class-wp-statistics-widget.php:54
 #: includes/classes/class-wp-statistics-widget.php:282
-#: includes/classes/class-wp-statistics.php:1515
-#: includes/settings/tabs/wps-notifications.php:294
+#: includes/classes/class-wp-statistics.php:1588
+#: includes/settings/tabs/wps-notifications.php:275
 msgid "Yesterday's Visits"
 msgstr "Visitas de ayer"
 
 #: includes/classes/class-wp-statistics-widget.php:61
 #: includes/classes/class-wp-statistics-widget.php:289
-#: includes/classes/class-wp-statistics.php:1505
-#: includes/settings/tabs/wps-notifications.php:292
+#: includes/classes/class-wp-statistics.php:1578
+#: includes/settings/tabs/wps-notifications.php:273
 msgid "Yesterday's Visitors"
 msgstr "Visitantes de ayer"
 
-#: includes/settings/tabs/wps-notifications.php:281
+#: includes/settings/tabs/wps-notifications.php:262
 msgid "Any shortcode supported by your installation of WordPress, include all shortcodes for WP Statistics (see the documentation for a list of codes available) are supported in the body of the message. Here are some examples:"
 msgstr "Cualquier shortcode compatible con tu instalación de WordPress, incluidos todos los shortcodes de WP Statistics (mira la documentación para una lista de códigos disponibles) se puede utilizar en el cuerpo del mensaje. Aquí hay unos ejemplos:"
 
-#: includes/settings/tabs/wps-notifications.php:278
+#: includes/settings/tabs/wps-notifications.php:259
 msgid "Enter the contents of the report."
 msgstr "Introduce el contenido del informe."
 
-#: includes/settings/tabs/wps-notifications.php:256
+#: includes/settings/tabs/wps-notifications.php:237
 msgid "WordPress SMS"
 msgstr "SMS WordPress"
 
-#: includes/settings/tabs/wps-notifications.php:254
+#: includes/settings/tabs/wps-notifications.php:235
 msgid "Note: To send SMS text messages please install the %s plugin."
 msgstr "Nota: Para enviar mensajes de texto SMS mensajes por favor instalación el plugin %s."
 
-#: includes/settings/tabs/wps-notifications.php:247
+#: includes/settings/tabs/wps-notifications.php:228
 msgid "Select delivery method for statistical report."
 msgstr "Seleccione el método de envío para los informes de estadísticas"
 
-#: includes/settings/tabs/wps-notifications.php:243
+#: includes/settings/tabs/wps-notifications.php:224
 msgid "SMS"
 msgstr "SMS"
 
-#: includes/settings/tabs/wps-notifications.php:235
+#: includes/settings/tabs/wps-notifications.php:216
 msgid "Email"
 msgstr "Correo electrónico"
 
-#: includes/settings/tabs/wps-notifications.php:226
+#: includes/settings/tabs/wps-notifications.php:207
 msgid "Send reports via:"
 msgstr "Enviar informes mediante:"
 
-#: includes/settings/tabs/wps-notifications.php:217
+#: includes/settings/tabs/wps-notifications.php:198
 msgid "Select how often to receive statistical report."
 msgstr "Selecciona con qué frecuencia quieres recibir el informe de estadísticas."
 
-#: includes/settings/tabs/wps-notifications.php:183
+#: includes/settings/tabs/wps-notifications.php:164
 msgid "Schedule:"
 msgstr "Programación:"
 
-#: includes/classes/class-wp-statistics-schedule.php:285
-#: includes/settings/tabs/wps-notifications.php:158
+#: includes/classes/class-wp-statistics-schedule.php:258
+#: includes/settings/tabs/wps-notifications.php:139
 msgid "Statistical reporting"
 msgstr "Informes estadísticos"
 
-#: includes/settings/tabs/wps-notifications.php:150
+#: includes/settings/tabs/wps-notifications.php:131
 msgid "Send a report whenever the plugin is upgraded."
 msgstr "Envía un informe cada vez que se actualice el plugin."
 
-#: includes/settings/tabs/wps-notifications.php:141
+#: includes/settings/tabs/wps-notifications.php:122
 msgid "Upgrade:"
 msgstr "Mejorar:"
 
-#: includes/settings/tabs/wps-notifications.php:132
+#: includes/settings/tabs/wps-notifications.php:113
 msgid "Send a report whenever the pruning of database is run."
 msgstr "Envía un informe cada vez que se ejecute la limpieza de la base de datos."
 
-#: includes/settings/tabs/wps-notifications.php:123
+#: includes/settings/tabs/wps-notifications.php:104
 msgid "Pruning:"
 msgstr "Limpieza de datos:"
 
-#: includes/settings/tabs/wps-notifications.php:114
+#: includes/settings/tabs/wps-notifications.php:95
 msgid "Send a report whenever the GeoIP database is updated."
 msgstr "Envía un informe cada vez que se actualice la base de datos de GeoIP."
 
-#: includes/settings/tabs/wps-notifications.php:96
-msgid "Send a report whenever the browscap.ini is updated."
-msgstr "Envía un informe cada vez que se actualice browscap.ini."
-
-#: includes/settings/tabs/wps-notifications.php:82
+#: includes/settings/tabs/wps-notifications.php:81
 msgid "Update Reports"
 msgstr "Informes de Actualización"
 
-#: includes/settings/tabs/wps-notifications.php:74
+#: includes/settings/tabs/wps-notifications.php:73
 msgid "A comma separated list of e-mail addresses to send reports to."
 msgstr "Una lista de direcciones de emails separada por comas para enviarles informes"
 
-#: includes/settings/tabs/wps-notifications.php:64
+#: includes/settings/tabs/wps-notifications.php:63
 msgid "E-mail addresses:"
 msgstr "Direcciones de correo electrónico:"
 
-#: includes/settings/tabs/wps-notifications.php:59
+#: includes/settings/tabs/wps-notifications.php:58
 msgid "Common Report Options"
 msgstr "Opciones de informes comunes"
 
@@ -1536,103 +1745,104 @@ msgstr "Purgar datos antiguos diariamente"
 msgid "This will permanently delete data from the database each day, are you sure you want to enable this option?"
 msgstr "Esto se eliminarán permanentemente los datos de la base de datos cada día, ¿estás seguro de que desea activar esta opción?"
 
-#: includes/settings/tabs/wps-general.php:412
+#: includes/settings/tabs/wps-general.php:452
 msgid "Add a total line to charts with multiple values, like the search engine referrals"
 msgstr "Añada una línea total a listas con varios valores, como las referencias del motor de búsqueda"
 
-#: includes/settings/tabs/wps-general.php:403
+#: includes/settings/tabs/wps-general.php:443
 msgid "Include totals:"
 msgstr "Incluir totales:"
 
-#: includes/settings/tabs/wps-general.php:398
+#: includes/settings/tabs/wps-general.php:438
 msgid "Charts"
 msgstr "Cartas"
 
-#: includes/settings/tabs/wps-general.php:390
+#: includes/settings/tabs/wps-general.php:430
 msgid "Disable %s from data collection and reporting."
 msgstr "Deshabilitar %s de recopilación de datos y presentación de informes."
 
-#: includes/settings/tabs/wps-general.php:384
+#: includes/settings/tabs/wps-overview-display.php:43
+#: includes/settings/tabs/wps-overview-display.php:69
+#: includes/settings/tabs/wps-overview-display.php:95
+#: includes/settings/tabs/wps-general.php:242
+#: includes/settings/tabs/wps-general.php:424
 msgid "Disable"
 msgstr "Desactivar"
 
-#: includes/settings/tabs/wps-general.php:362
+#: includes/settings/tabs/wps-general.php:402
 msgid "Disabling all search engines is not allowed, doing so will result in all search engines being active."
 msgstr "Deshabilitar todos los buscadores no está permitido, haciendo así que generará en todos los buscadores siendo activos."
 
-#: includes/settings/tabs/wps-general.php:353
+#: includes/settings/tabs/wps-general.php:393
 msgid "If a search engine is identified as the referrer but it does not include the search query this option will substitute the page title in quotes preceded by \"~:\" as the search query to help identify what the user may have been searching for."
 msgstr "Si un motor de búsqueda se identifica como el referente pero no incluye la consulta de búsqueda, esta opción sustituirá el título de la página entre comillas precedido por \"~:\" como la consulta de búsqueda para ayudar a identificar lo que el usuario puede haber estado buscando."
 
-#: includes/settings/tabs/wps-general.php:344
+#: includes/settings/tabs/wps-general.php:384
 msgid "Add page title to empty search words:"
 msgstr "Añadir el título de la página a las palabras de búsqueda vacías:"
 
-#: includes/classes/class-wp-statistics-admin.php:427
-#: includes/classes/class-wp-statistics-admin.php:428
-#: includes/settings/tabs/wps-general.php:339
+#: includes/classes/class-wp-statistics-admin.php:535
+#: includes/classes/class-wp-statistics-admin.php:536
+#: includes/settings/tabs/wps-general.php:379
 msgid "Search Engines"
 msgstr "Motores de búsqueda"
 
-#: includes/settings/tabs/wps-general.php:331
+#: includes/settings/tabs/wps-general.php:371
 msgid "By default WP Statistics displays an alert if any of the core features are disabled on every admin page, this option will disable these notices."
 msgstr "Por defecto WP Statistics muestra una alerta si cualquiera de las funciones del núcleo están deshabilitado en cada página de admin, esta opción desactivará estos avisos."
 
-#: includes/settings/tabs/wps-general.php:322
+#: includes/settings/tabs/wps-general.php:362
 msgid "Hide admin notices about non active features:"
 msgstr "Ocultar los avisos de características no activas:"
 
-#: includes/settings/tabs/wps-general.php:316
+#: includes/settings/tabs/wps-general.php:356
 msgid "Show stats in admin menu bar"
 msgstr "Muestra las estadísticas en la barra de menú de administración"
 
 #: includes/optimization/tabs/wps-optimization-resources.php:248
 #: includes/optimization/tabs/wps-optimization-resources.php:267
-#: includes/settings/tabs/wps-general.php:310
+#: includes/settings/tabs/wps-general.php:326
+#: includes/settings/tabs/wps-general.php:350
 msgid "Yes"
 msgstr "Si"
 
 #: includes/optimization/tabs/wps-optimization-resources.php:250
 #: includes/optimization/tabs/wps-optimization-resources.php:269
-#: includes/settings/tabs/wps-general.php:306
+#: includes/settings/tabs/wps-general.php:346
 msgid "No"
 msgstr "No"
 
-#: includes/settings/tabs/wps-general.php:301
+#: includes/settings/tabs/wps-general.php:341
 msgid "Show stats in menu bar:"
 msgstr "Mostrar estadísticas en la barra de menús:"
 
-#: includes/settings/tabs/wps-general.php:296
+#: includes/settings/tabs/wps-general.php:336
 msgid "Miscellaneous"
 msgstr "Misceláneo"
 
-#: includes/settings/tabs/wps-general.php:233
-msgid "Disable hits column in post/pages list:"
-msgstr "Desactivar la columna de impactos en la lista de entradas/páginas:"
-
-#: includes/settings/tabs/wps-general.php:222
+#: includes/settings/tabs/wps-general.php:224
 msgid "This will remove anything after the ? in a URL."
 msgstr "Esto eliminará cualquier cosa después de ? en una URL."
 
-#: includes/settings/tabs/wps-general.php:212
+#: includes/settings/tabs/wps-general.php:214
 msgid "Strip parameters from URI:"
 msgstr "Eliminar los parámetros de la URI:"
 
-#: includes/settings/tabs/wps-general.php:194
+#: includes/settings/tabs/wps-general.php:196
 msgid "Track all pages:"
 msgstr "Rastrear todas las páginas:"
 
-#: includes/classes/class-wp-statistics-admin.php:437
-#: includes/classes/class-wp-statistics-admin.php:438
 #: includes/classes/class-wp-statistics-network-admin.php:92
+#: includes/classes/class-wp-statistics-admin.php:545
+#: includes/classes/class-wp-statistics-admin.php:546
 msgid "Pages"
 msgstr "Páginas"
 
-#: includes/settings/tabs/wps-general.php:167
+#: includes/settings/tabs/wps-general.php:169
 msgid "For each visit to account for several hits. Currently %s."
 msgstr "Para que cada visita tenga en cuenta varios impactos. Actualmente %s."
 
-#: includes/settings/tabs/wps-general.php:159
+#: includes/settings/tabs/wps-general.php:161
 msgid "Coefficient per visitor:"
 msgstr "Coeficiente por visitante:"
 
@@ -1640,95 +1850,67 @@ msgstr "Coeficiente por visitante:"
 msgid "Store entire user agent string:"
 msgstr "Almacenar la cadena de agente usuario completa:"
 
-#: includes/settings/tabs/wps-general.php:112
+#: includes/settings/tabs/wps-general.php:114
 msgid "Ignores the exclusion settings and records all users that are online (including self referrals and robots). Should only be used for troubleshooting."
 msgstr "Ignora la configuración de exclusión y registra a todos los usuarios que están en línea (incluidas autorreferencias y robots). Solo debe usarse para solucionar problemas."
 
-#: includes/settings/tabs/wps-general.php:103
+#: includes/settings/tabs/wps-general.php:105
 msgid "Record all user:"
 msgstr "Graba todo el usuario:"
 
-#: includes/settings/tabs/wps-general.php:95
+#: includes/settings/tabs/wps-general.php:97
 msgid "Time for the check accurate online user in the site. Now: %s Seconds"
 msgstr "Tiempo para verificar el usuario preciso en línea en el sitio. Ahora: %s segundos"
 
-#: includes/settings/tabs/wps-general.php:93
+#: includes/settings/tabs/wps-general.php:95
 msgid "Seconds"
 msgstr "Segundos"
 
-#: includes/settings/tabs/wps-general.php:87
+#: includes/settings/tabs/wps-general.php:89
 msgid "Check for online users every:"
 msgstr "Buscar usuarios en línea cada:"
 
-#: includes/settings/tabs/wps-general.php:81
-#: includes/settings/tabs/wps-general.php:134
-#: includes/settings/tabs/wps-general.php:153
-#: includes/settings/tabs/wps-general.php:188
-#: includes/settings/tabs/wps-general.php:203
-#: includes/settings/tabs/wps-general.php:242
-#: includes/settings/tabs/wps-notifications.php:172
+#: includes/settings/tabs/wps-general.php:83
+#: includes/settings/tabs/wps-general.php:136
+#: includes/settings/tabs/wps-general.php:155
+#: includes/settings/tabs/wps-general.php:190
+#: includes/settings/tabs/wps-general.php:205
+#: includes/settings/tabs/wps-general.php:244
+#: includes/settings/tabs/wps-notifications.php:153
 msgid "Enable or disable this feature"
 msgstr "Habilitar o deshabilitar esta característica"
 
-#: includes/settings/tabs/wps-externals.php:405
+#: includes/settings/tabs/wps-externals.php:326
 msgid "Download of the Piwik Referrer Spam Blacklist database will be scheduled for once a week."
 msgstr "La descarga de la base de datos de la lista negra de spam de Piwik Referrer se programará para una vez a la semana."
 
-#: includes/settings/tabs/wps-externals.php:369
+#: includes/settings/tabs/wps-externals.php:290
 msgid "Schedule weekly update of Piwik Referrer Spam Blacklist DB:"
 msgstr "Programa la actualización semanal de la base de datos de la lista negra de spam de Piwik Referrer:"
 
-#: includes/settings/tabs/wps-externals.php:355
+#: includes/settings/tabs/wps-externals.php:276
 msgid "Download Piwik Referrer Spam Blacklist Database"
 msgstr "Descargar la base de datos de la lista negra de spam de Piwik Referrer"
 
-#: includes/settings/tabs/wps-externals.php:348
+#: includes/settings/tabs/wps-externals.php:269
 msgid "Update Piwik Referrer Spam Blacklist Info:"
 msgstr "Actualiza la información de la lista negra de spam de Piwik Referrer:"
 
-#: includes/settings/tabs/wps-externals.php:339
+#: includes/settings/tabs/wps-externals.php:260
 msgid "The Piwik Referrer Spam Blacklist database will be downloaded and used to detect referrer spam."
 msgstr "La base de datos de la lista negra de spam de Piwik Referir será descargada y utilizada para detectar spam de referidos."
 
-#: includes/settings/tabs/wps-externals.php:330
+#: includes/settings/tabs/wps-externals.php:251
 msgid "Piwik Referrer Spam Blacklist usage:"
 msgstr "Uso de la la lista negra de spam de referidos de Piwik:"
 
-#: includes/settings/tabs/wps-externals.php:322
+#: includes/settings/tabs/wps-externals.php:243
 msgid "Referrer spam blacklist is provided by Piwik, available from %s."
 msgstr "Piwik provee la blacklist de spamers. Está disponible en %s."
 
-#: includes/settings/tabs/wps-externals.php:315
+#: includes/settings/tabs/wps-externals.php:236
 msgid "Piwik Referrer Spam Blacklist settings"
 msgstr "Opciones de la lista negra de spam de referidos de Piwik"
-
-#: includes/settings/tabs/wps-externals.php:306
-msgid "Download of the Browscap database will be scheduled for once a week."
-msgstr "La descarga de la base de datos de Browscap se programará para hacerse una vez a la semana."
-
-#: includes/settings/tabs/wps-externals.php:274
-msgid "Schedule weekly update of browscap DB:"
-msgstr "Programar la actualización semanal de la DB de browscap:"
-
-#: includes/settings/tabs/wps-externals.php:263
-msgid "Download Browscap Database"
-msgstr "Descargar base de datos de Browscap"
-
-#: includes/settings/tabs/wps-externals.php:256
-msgid "Update Browscap Info:"
-msgstr "Actualizar información de Browscap:"
-
-#: includes/settings/tabs/wps-externals.php:247
-msgid "The Browscap database will be downloaded and used to detect robots."
-msgstr "La base de datos de Browscap será descargada y utilizada para detectar robots."
-
-#: includes/settings/tabs/wps-externals.php:238
-msgid "Browscap usage:"
-msgstr "Uso de Browscap:"
-
-#: includes/settings/tabs/wps-externals.php:233
-msgid "Browscap settings"
-msgstr "Ajustes de browscap"
 
 #: includes/settings/tabs/wps-externals.php:220
 msgid "PHP safe mode detected! GeoIP collection is not supported with PHP's safe mode enabled!"
@@ -1767,8 +1949,7 @@ msgid "Download of the GeoIP database will be scheduled for 2 days after the fir
 msgstr "La descarga de la base de datos GeoIP programará durante 2 días después del primer martes del mes."
 
 #: includes/settings/tabs/wps-externals.php:112
-#: includes/settings/tabs/wps-externals.php:284
-#: includes/settings/tabs/wps-externals.php:383
+#: includes/settings/tabs/wps-externals.php:304
 msgid "Next update will be"
 msgstr "Próxima actualización será"
 
@@ -1776,233 +1957,223 @@ msgstr "Próxima actualización será"
 msgid "Schedule monthly update of GeoIP DB:"
 msgstr "Programar actualización mensual DB de GeoIP:"
 
-#: includes/settings/tabs/wps-externals.php:93
-#: includes/settings/tabs/wps-externals.php:265
-#: includes/settings/tabs/wps-externals.php:360
+#: includes/settings/tabs/wps-externals.php:281
 msgid "Save changes on this page to download the update."
 msgstr "Guardar cambios en esta página para descargar la actualización."
 
-#: includes/settings/tabs/wps-externals.php:91
-msgid "Download GeoIP Database"
-msgstr "Descargar GeoIP Database"
-
-#: includes/settings/tabs/wps-externals.php:84
-msgid "Update GeoIP Info:"
-msgstr "Actualizar información GeoIP:"
-
-#: includes/settings/tabs/wps-externals.php:75
-msgid "For get more information and location (country) from visitor, enable this feature."
+#: includes/settings/tabs/wps-externals.php:70
+msgid "For getting more information and location (country) from visitor, enable this feature."
 msgstr "Para obtener más información y ubicación (país) de visitante, activar esta función."
 
 #: includes/templates/plugins.php:41
 msgid "Active"
 msgstr "Activo"
 
-#: includes/settings/tabs/wps-externals.php:66
+#: includes/settings/tabs/wps-externals.php:57
 msgid "GeoIP collection:"
 msgstr "Colección GeoIP:"
 
-#: includes/settings/tabs/wps-externals.php:49
+#: includes/settings/tabs/wps-externals.php:40
 msgid "GeoIP settings"
 msgstr "Configuración de GeoIP"
 
-#: includes/settings/tabs/wps-exclusions.php:438
+#: includes/settings/tabs/wps-exclusions.php:456
 msgid "Note: this option will NOT handle URL parameters (anything after the ?), only to the script name. Entries less than two characters will be ignored."
 msgstr "Nota: esta opción NO maneja los parámetros de URL (cualquier cosa después de ?), solo el nombre del script. Las entradas de menos de dos caracteres serán ignoradas."
 
-#: includes/settings/tabs/wps-exclusions.php:432
+#: includes/settings/tabs/wps-exclusions.php:450
 msgid "A list of local urls (ie. /wordpress/about, one per line) to exclude from statistics collection."
 msgstr "Una lista de URLs locales (es decir, /wordpress/about, una por línea) que excluir de la recopilación de estadísticas."
 
-#: includes/settings/tabs/wps-exclusions.php:424
+#: includes/settings/tabs/wps-exclusions.php:442
 msgid "Excluded URLs list:"
 msgstr "Lista de URLs omitidas:"
 
-#: includes/settings/tabs/wps-exclusions.php:401
+#: includes/settings/tabs/wps-exclusions.php:419
 msgid "Exclude any URL that returns a \"404 - Not Found\" message."
 msgstr "Excluir cualquier URL que devuelva un mensaje del tipo \" 404 - Not found\"."
 
-#: includes/settings/tabs/wps-exclusions.php:392
+#: includes/settings/tabs/wps-exclusions.php:410
 msgid "Excluded 404 pages:"
 msgstr "Páginas 404 excluidas:"
 
-#: includes/settings/tabs/wps-exclusions.php:385
+#: includes/settings/tabs/wps-exclusions.php:403
 msgid "Exclude the RSS feeds for registering as a hit."
 msgstr "Excluir los RSS en el registro de impactos."
 
-#: includes/settings/tabs/wps-exclusions.php:376
+#: includes/settings/tabs/wps-exclusions.php:394
 msgid "Excluded RSS feeds:"
 msgstr "Feeds RSS excluidos:"
 
-#: includes/settings/tabs/wps-exclusions.php:369
+#: includes/settings/tabs/wps-exclusions.php:377
+msgid "Excluded Admin page:"
+msgstr "Páginas de admin excluidas"
+
+#: includes/settings/tabs/wps-exclusions.php:370
 msgid "Exclude the login page for registering as a hit."
 msgstr "Excluye a la página de inicio de sesión para registrarse como impacto."
 
-#: includes/settings/tabs/wps-exclusions.php:360
+#: includes/settings/tabs/wps-exclusions.php:361
 msgid "Excluded login page:"
 msgstr "Página de inicio de sesión excluida:"
 
-#: includes/settings/tabs/wps-exclusions.php:356
+#: includes/settings/tabs/wps-exclusions.php:357
 msgid "Site URL Exclusions"
 msgstr "Sitio URL exclusiones"
 
-#: includes/settings/tabs/wps-exclusions.php:348
+#: includes/settings/tabs/wps-exclusions.php:349
 msgid "Note: this option will NOT perform a reverse DNS lookup on each page load but instead cache the IP address for the provided hostnames for one hour. If you are excluding dynamically assigned hosts you may find some degree of overlap when the host changes it's IP address and when the cache is updated resulting in some hits recorded."
 msgstr "Nota: esta opción NO realizará una búsqueda DNS inversa en cada carga de página, sino que guardará en caché la dirección IP de los nombres de host proporcionados durante una hora. Si estás excluyendo hosts asignados dinámicamente, puedes encontrar cierto grado de superposición cuando el host cambia su dirección IP y cuando se actualiza la caché, lo que da como resultado que se registren algunos impactos."
 
-#: includes/settings/tabs/wps-exclusions.php:342
+#: includes/settings/tabs/wps-exclusions.php:343
 msgid "A list of fully qualified host names (ie. server.example.com, one per line) to exclude from statistics collection."
 msgstr "Lista de nombres de host totalmente calificados (es decir, server.example.com, uno por línea) que excluir de la recopilación de estadísticas."
 
-#: includes/settings/tabs/wps-exclusions.php:334
+#: includes/settings/tabs/wps-exclusions.php:335
 msgid "Excluded hosts list:"
 msgstr "Lista de hosts excluidos:"
 
-#: includes/settings/tabs/wps-exclusions.php:330
+#: includes/settings/tabs/wps-exclusions.php:331
 msgid "Host Exclusions"
 msgstr "Host excluidos"
 
-#: includes/settings/tabs/wps-exclusions.php:311
+#: includes/settings/tabs/wps-exclusions.php:312
 msgid "Included countries list:"
 msgstr "Lista de países incluidos:"
 
-#: includes/settings/tabs/wps-exclusions.php:292
+#: includes/settings/tabs/wps-exclusions.php:293
 msgid "Excluded countries list:"
 msgstr "Lista de países excluidos:"
 
-#: includes/settings/tabs/wps-exclusions.php:288
+#: includes/settings/tabs/wps-exclusions.php:289
 msgid "GeoIP Exclusions"
 msgstr "Exclusiones GeoIP"
 
-#: includes/settings/tabs/wps-exclusions.php:280
+#: includes/settings/tabs/wps-exclusions.php:281
 msgid "Treat any visitor with corrupt browser info (missing IP address or empty user agent string) as a robot."
 msgstr "Tratar a cualquier visitante con información de navegador corrupta (sin Ip o cadena de usuario vacía) como un robot."
 
-#: includes/settings/tabs/wps-exclusions.php:272
+#: includes/settings/tabs/wps-exclusions.php:273
 msgid "Treat corrupt browser info as a bot:"
 msgstr "Tratar información corrupta del navegador como un bot:"
 
-#: includes/settings/tabs/wps-exclusions.php:266
+#: includes/settings/tabs/wps-exclusions.php:267
 msgid "Create a new Honey Pot page"
 msgstr "Crear una nueva página honeypot"
 
-#: includes/settings/tabs/wps-exclusions.php:261
+#: includes/settings/tabs/wps-exclusions.php:262
 msgid "The post ID to use for the Honey Pot page."
 msgstr "ID de la publicación utilizada para la página señuelo."
 
-#: includes/settings/tabs/wps-exclusions.php:254
+#: includes/settings/tabs/wps-exclusions.php:255
 msgid "Honey Pot post ID"
 msgstr "ID de la publicación honeypot"
 
-#: includes/settings/tabs/wps-exclusions.php:246
+#: includes/settings/tabs/wps-exclusions.php:247
 msgid "Use a Honey Pot page to identify robots."
 msgstr "Usar una página honeypot para identificar robots."
 
-#: includes/settings/tabs/wps-exclusions.php:230
+#: includes/settings/tabs/wps-exclusions.php:231
 msgid "Add 192.168.0.0"
 msgstr "Añadir 192.168.0.0"
 
-#: includes/settings/tabs/wps-exclusions.php:228
+#: includes/settings/tabs/wps-exclusions.php:229
 msgid "Add 172.16.0.0"
 msgstr "Añadir 172.16.0.0"
 
-#: includes/settings/tabs/wps-exclusions.php:226
+#: includes/settings/tabs/wps-exclusions.php:227
 msgid "Add 10.0.0.0"
 msgstr "Añadir 10.0.0.0"
 
-#: includes/settings/tabs/wps-exclusions.php:203
+#: includes/settings/tabs/wps-exclusions.php:204
 msgid "Excluded IP address list:"
 msgstr "Lista de direcciones IP excluidas:"
 
-#: includes/settings/tabs/wps-exclusions.php:195
+#: includes/settings/tabs/wps-exclusions.php:196
 msgid "Treat visitors with more than this number of visits per day as robots. 0 = disabled."
 msgstr "Tratar a los visitantes con más de esta cantidad de visitas por día como robots. 0 = desactivado."
 
-#: includes/settings/tabs/wps-exclusions.php:189
+#: includes/settings/tabs/wps-exclusions.php:190
 msgid "Robot visit threshold:"
 msgstr "Umbral de visita del robot:"
 
-#: includes/settings/tabs/wps-exclusions.php:179
+#: includes/settings/tabs/wps-exclusions.php:180
 msgid "Force the robot list to be reset to the default after an update to WP Statistics takes place. Note if this option is enabled any custom robots you have added to the list will be lost."
 msgstr "Fuerza que la lista de robots se restablezca a la predeterminada después de una actualizacin de WP Statistics. Ten en cuenta que si activas esta opción oerderás cualquier robot que hayas añadido tú."
 
-#: includes/settings/tabs/wps-exclusions.php:168
+#: includes/settings/tabs/wps-exclusions.php:169
 msgid "Force robot list update after upgrades:"
 msgstr "Forzar la actualización de la lista de robots después de las actualizaciones:"
 
-#: includes/settings/tabs/wps-exclusions.php:162
+#: includes/settings/tabs/wps-exclusions.php:163
 msgid "Reset to Default"
 msgstr "Restablecer por defecto"
 
-#: includes/settings/tabs/wps-exclusions.php:155
+#: includes/settings/tabs/wps-exclusions.php:156
 msgid "A list of words (one per line) to match against to detect robots. Entries must be at least 4 characters long or they will be ignored."
 msgstr "Una lista de palabras (una por línea) que comparar para buscar robots. Las entradas que tengan menos de 4 caracteres serán ignoradas."
 
-#: includes/settings/tabs/wps-exclusions.php:139
+#: includes/settings/tabs/wps-exclusions.php:140
 msgid "Robot list:"
 msgstr "Lista de robots:"
 
-#: includes/settings/tabs/wps-exclusions.php:135
+#: includes/settings/tabs/wps-exclusions.php:136
 msgid "IP/Robot Exclusions"
 msgstr "Exclusiones de IP/Robot"
 
-#: includes/settings/tabs/wps-exclusions.php:127
+#: includes/settings/tabs/wps-exclusions.php:128
 msgid "Exclude %s role from data collection."
 msgstr "Excluir %s papel de recopilación de datos."
 
-#: includes/settings/tabs/wps-exclusions.php:121
-#: includes/settings/tabs/wps-exclusions.php:364
-#: includes/settings/tabs/wps-exclusions.php:380
-#: includes/settings/tabs/wps-exclusions.php:396
-#: includes/settings/tabs/wps-exclusions.php:412
+#: includes/settings/tabs/wps-exclusions.php:122
+#: includes/settings/tabs/wps-exclusions.php:365
+#: includes/settings/tabs/wps-exclusions.php:381
+#: includes/settings/tabs/wps-exclusions.php:398
+#: includes/settings/tabs/wps-exclusions.php:414
+#: includes/settings/tabs/wps-exclusions.php:430
 msgid "Exclude"
 msgstr "Excluir"
 
-#: includes/settings/tabs/wps-exclusions.php:102
+#: includes/settings/tabs/wps-exclusions.php:103
 msgid "Exclude User Roles"
 msgstr "Excluir Roles de usuario"
 
-#: includes/settings/tabs/wps-exclusions.php:86
-#: includes/settings/tabs/wps-exclusions.php:173
-#: includes/settings/tabs/wps-exclusions.php:241
-#: includes/settings/tabs/wps-exclusions.php:278
-#: includes/settings/tabs/wps-externals.php:73
+#: includes/settings/tabs/wps-externals.php:63
+#: includes/settings/tabs/wps-externals.php:86
 #: includes/settings/tabs/wps-externals.php:109
 #: includes/settings/tabs/wps-externals.php:162
-#: includes/settings/tabs/wps-externals.php:245
-#: includes/settings/tabs/wps-externals.php:281
-#: includes/settings/tabs/wps-externals.php:337
-#: includes/settings/tabs/wps-externals.php:380
-#: includes/settings/tabs/wps-general.php:79
-#: includes/settings/tabs/wps-general.php:110
-#: includes/settings/tabs/wps-general.php:132
-#: includes/settings/tabs/wps-general.php:151
-#: includes/settings/tabs/wps-general.php:186
-#: includes/settings/tabs/wps-general.php:201
-#: includes/settings/tabs/wps-general.php:220
-#: includes/settings/tabs/wps-general.php:240
-#: includes/settings/tabs/wps-general.php:255
-#: includes/settings/tabs/wps-general.php:329
-#: includes/settings/tabs/wps-general.php:351
-#: includes/settings/tabs/wps-general.php:410
+#: includes/settings/tabs/wps-externals.php:258
+#: includes/settings/tabs/wps-externals.php:301
+#: includes/settings/tabs/wps-exclusions.php:87
+#: includes/settings/tabs/wps-exclusions.php:174
+#: includes/settings/tabs/wps-exclusions.php:242
+#: includes/settings/tabs/wps-exclusions.php:279
+#: includes/settings/tabs/wps-general.php:81
+#: includes/settings/tabs/wps-general.php:112
+#: includes/settings/tabs/wps-general.php:134
+#: includes/settings/tabs/wps-general.php:153
+#: includes/settings/tabs/wps-general.php:188
+#: includes/settings/tabs/wps-general.php:203
+#: includes/settings/tabs/wps-general.php:222
+#: includes/settings/tabs/wps-general.php:258
+#: includes/settings/tabs/wps-general.php:273
+#: includes/settings/tabs/wps-general.php:369
+#: includes/settings/tabs/wps-general.php:391
+#: includes/settings/tabs/wps-general.php:450
 #: includes/settings/tabs/wps-maintenance.php:50
 #: includes/settings/tabs/wps-maintenance.php:99
-#: includes/settings/tabs/wps-notifications.php:94
-#: includes/settings/tabs/wps-notifications.php:112
-#: includes/settings/tabs/wps-notifications.php:130
-#: includes/settings/tabs/wps-notifications.php:148
-#: includes/settings/tabs/wps-notifications.php:170
-#: includes/settings/tabs/wps-notifications.php:315
-#: includes/settings/tabs/wps-overview-display.php:43
-#: includes/settings/tabs/wps-overview-display.php:69
-#: includes/settings/tabs/wps-overview-display.php:95
 #: includes/settings/tabs/wps-privacy.php:46
 #: includes/settings/tabs/wps-privacy.php:61
 #: includes/settings/tabs/wps-privacy.php:85
+#: includes/settings/tabs/wps-notifications.php:93
+#: includes/settings/tabs/wps-notifications.php:111
+#: includes/settings/tabs/wps-notifications.php:129
+#: includes/settings/tabs/wps-notifications.php:151
+#: includes/settings/tabs/wps-notifications.php:296
 msgid "Enable"
 msgstr "Enable"
 
-#: includes/settings/tabs/wps-exclusions.php:81
+#: includes/settings/tabs/wps-exclusions.php:82
 msgid "Record exclusions:"
 msgstr "Registrar exclusiones:"
 
@@ -2014,15 +2185,15 @@ msgstr "Este es el Honey Pot que usa WP Statistics, no eliminar."
 msgid "WP Statistics Honey Pot Page"
 msgstr "Estadísticas WP de la página Honey Pot"
 
-#: includes/settings/tabs/wps-access-level.php:129
-#: includes/settings/tabs/wps-exclusions.php:448
-#: includes/settings/tabs/wps-externals.php:415
-#: includes/settings/tabs/wps-general.php:422
-#: includes/settings/tabs/wps-maintenance.php:139
-#: includes/settings/tabs/wps-notifications.php:323
+#: includes/settings/tabs/wps-externals.php:336
 #: includes/settings/tabs/wps-overview-display.php:106
-#: includes/settings/tabs/wps-privacy.php:93
+#: includes/settings/tabs/wps-exclusions.php:466
+#: includes/settings/tabs/wps-general.php:462
+#: includes/settings/tabs/wps-maintenance.php:139
 #: includes/settings/tabs/wps-removal.php:131
+#: includes/settings/tabs/wps-privacy.php:93
+#: includes/settings/tabs/wps-access-level.php:129
+#: includes/settings/tabs/wps-notifications.php:304
 msgid "Update"
 msgstr "Actualización"
 
@@ -2120,11 +2291,11 @@ msgid "Visit Us Online"
 msgstr "Visítenos"
 
 #: includes/settings/tabs/wps-about.php:35
-msgid "Fell like showing us how much you enjoy WP Statistics? Drop by our %sdonation%s page and show us some love!"
+msgid "Feel like showing us how much you enjoy WP Statistics? Drop by our %sdonation%s page and show us some love!"
 msgstr "¿Quieres mostrarnos cuánto disfrutas de WP Statistics? ¡Visita nuestra página de %sdonación%s y muéstranos algo de amor!"
 
-#: includes/classes/class-wp-statistics-admin.php:558
-#: includes/classes/class-wp-statistics-admin.php:559
+#: includes/classes/class-wp-statistics-admin.php:666
+#: includes/classes/class-wp-statistics-admin.php:667
 #: includes/settings/tabs/wps-about.php:30
 msgid "Donate"
 msgstr "Donar"
@@ -2133,35 +2304,35 @@ msgstr "Donar"
 msgid "WP Statistics V%s"
 msgstr "WP Statistics V %s"
 
-#: includes/optimization/wps-optimization.php:257
+#: includes/optimization/wps-optimization.php:248
 msgid "Historical"
 msgstr "Histórico"
 
-#: includes/optimization/wps-optimization.php:256
+#: includes/optimization/wps-optimization.php:247
 msgid "Updates"
 msgstr "Actualizaciones"
 
-#: includes/optimization/wps-optimization.php:255
+#: includes/optimization/wps-optimization.php:246
 msgid "Database"
 msgstr "Base de datos"
 
-#: includes/optimization/wps-optimization.php:254
+#: includes/optimization/wps-optimization.php:245
 msgid "Purging"
 msgstr "Purga"
 
-#: includes/optimization/wps-optimization.php:249
+#: includes/optimization/wps-optimization.php:240
 msgid "Resources/Information"
 msgstr "Recursos e información"
 
-#: includes/optimization/wps-optimization.php:237
+#: includes/optimization/wps-optimization.php:228
 msgid "Search table conversion complete, %d rows added."
 msgstr "Conversión completada en la tabla de búsquedas, %d filas borradas"
 
-#: includes/optimization/wps-optimization.php:52
+#: includes/optimization/wps-optimization.php:49
 msgid "Install routine complete."
 msgstr "Instale la rutina completa."
 
-#: includes/optimization/wps-optimization.php:42
+#: includes/optimization/wps-optimization.php:41
 msgid "IP Addresses replaced with hash values."
 msgstr "Direcciones IP reemplazado con valores hash."
 
@@ -2190,73 +2361,49 @@ msgstr "Opciones de GeoIP"
 msgid "This will replace all IP addresses in the database with hash values and cannot be undo, are you sure?"
 msgstr "Esto reemplazará todas las direcciones IP en la base de datos con los valores hash y no se puede deshacer, ¿estás seguro?"
 
-#: includes/optimization/tabs/wps-optimization-resources.php:517
+#: includes/optimization/tabs/wps-optimization-resources.php:461
 msgid "The detected client platform."
 msgstr "La plataforma del cliente detectada."
 
-#: includes/optimization/tabs/wps-optimization-resources.php:505
+#: includes/optimization/tabs/wps-optimization-resources.php:449
 msgid "The detected client browser version."
 msgstr "Versión del navegador del cliente detectada."
 
-#: includes/optimization/tabs/wps-optimization-resources.php:493
+#: includes/optimization/tabs/wps-optimization-resources.php:437
 msgid "The detected client browser."
 msgstr "Navegador del cliente detectado"
 
-#: includes/optimization/tabs/wps-optimization-resources.php:485
+#: includes/log/widgets/words.php:30 includes/log/widgets/recent.php:12
+#: includes/log/last-search.php:132 includes/log/last-visitor.php:136
+#: includes/optimization/tabs/wps-optimization-resources.php:429
 msgid "Browser"
 msgstr "Navegador"
 
-#: includes/optimization/tabs/wps-optimization-resources.php:479
+#: includes/optimization/tabs/wps-optimization-resources.php:423
 msgid "The client user agent string."
 msgstr "La cadena de agente de usuario cliente."
 
-#: includes/optimization/tabs/wps-optimization-resources.php:473
+#: includes/optimization/tabs/wps-optimization-resources.php:417
 msgid "User Agent"
 msgstr "Agente de usuario"
 
-#: includes/optimization/tabs/wps-optimization-resources.php:467
+#: includes/optimization/tabs/wps-optimization-resources.php:411
 msgid "The client IP address."
 msgstr "La dirección IP del cliente."
 
-#: includes/optimization/tabs/wps-optimization-resources.php:461
+#: includes/optimization/tabs/wps-optimization-resources.php:405
 msgid "Client IP"
 msgstr "Cliente IP"
 
-#: includes/optimization/tabs/wps-optimization-resources.php:456
+#: includes/optimization/tabs/wps-optimization-resources.php:400
 msgid "Client Info"
 msgstr "Información del cliente"
-
-#: includes/optimization/tabs/wps-optimization-resources.php:448
-msgid "The file size and date of the Browscap cache file."
-msgstr "El tamaño del archivo y la fecha del archivo de la caché de browscap."
-
-#: includes/optimization/tabs/wps-optimization-resources.php:438
-msgid "Browscap cache file does not exist."
-msgstr "El archivo de caché de Browscap no existe."
-
-#: includes/optimization/tabs/wps-optimization-resources.php:429
-msgid "Browscap Cache File"
-msgstr "Archivo de caché de browscap"
-
-#: includes/optimization/tabs/wps-optimization-resources.php:420
-msgid "The file size and date of the browscap.ini file."
-msgstr "El tamaño del archivo y la fecha del archivo browscap.ini."
-
-#: includes/optimization/tabs/wps-optimization-resources.php:410
-msgid "browscap.ini file does not exist."
-msgstr "archivo browscap.ini no existe."
-
-#: includes/optimization/tabs/wps-optimization-resources.php:401
-msgid "browscap.ini File"
-msgstr "Archivo browscap.ini"
 
 #: includes/optimization/tabs/wps-optimization-resources.php:392
 msgid "The file size and date of the GeoIP database."
 msgstr "El tamaño del archivo y la fecha de la base de datos GeoIP."
 
 #: includes/optimization/tabs/wps-optimization-resources.php:388
-#: includes/optimization/tabs/wps-optimization-resources.php:413
-#: includes/optimization/tabs/wps-optimization-resources.php:441
 msgid ", created on "
 msgstr ", creado en "
 
@@ -2272,10 +2419,10 @@ msgstr "Base de datos de GeoIP"
 msgid "File Info"
 msgstr "Información de archivo"
 
+#: includes/templates/plugins.php:47
 #: includes/optimization/tabs/wps-optimization-resources.php:322
 #: includes/optimization/tabs/wps-optimization-resources.php:341
 #: includes/optimization/tabs/wps-optimization-resources.php:360
-#: includes/templates/plugins.php:47
 msgid "Not installed"
 msgstr "No está instalada"
 
@@ -2291,11 +2438,11 @@ msgstr "La versión de la extensión cURL de PHP que utilizas. cURL es necesario
 
 #: includes/optimization/tabs/wps-optimization-resources.php:303
 msgid "cURL not installed"
-msgstr "Enrollamiento no instalado"
+msgstr "cURL no instalado"
 
 #: includes/optimization/tabs/wps-optimization-resources.php:295
 msgid "cURL Version"
-msgstr "Versión del enrollamiento"
+msgstr "Versión de cURL"
 
 #: includes/optimization/tabs/wps-optimization-resources.php:289
 msgid "The jQuery version you are running."
@@ -2455,15 +2602,16 @@ msgstr "Número de visitas históricas al sitio (el valor actual es %s)."
 msgid "Number of historical number of visitors to the site (current value is %s)."
 msgstr "Número histórico de visitantes al sitio (el valor actual es %s)."
 
-#: includes/classes/class-wp-statistics-admin.php:447
-#: includes/classes/class-wp-statistics-admin.php:448
-#: includes/classes/class-wp-statistics-network-admin.php:93
-#: includes/classes/class-wp-statistics-shortcode.php:159
 #: includes/log/hit-statistics.php:82 includes/log/hit-statistics.php:151
 #: includes/log/widgets/hits.php:30 includes/log/widgets/quickstats.php:25
 #: includes/log/widgets/summary.php:25
 #: includes/optimization/tabs/wps-optimization-historical.php:29
-#: includes/settings/tabs/wps-general.php:139
+#: includes/classes/class-wp-statistics-network-admin.php:93
+#: includes/classes/class-wp-statistics-tinymce.php:35
+#: includes/classes/class-wp-statistics-admin.php:555
+#: includes/classes/class-wp-statistics-admin.php:556
+#: includes/classes/class-wp-statistics-shortcode.php:163
+#: includes/settings/tabs/wps-general.php:141
 msgid "Visitors"
 msgstr "Visitantes"
 
@@ -2504,9 +2652,9 @@ msgstr "Seleccione la tabla para el archivo de salida."
 #: includes/optimization/tabs/wps-optimization-purging.php:223
 #: includes/optimization/tabs/wps-optimization-purging.php:308
 #: includes/optimization/tabs/wps-optimization-purging.php:338
-#: includes/settings/tabs/wps-general.php:273
-#: includes/settings/tabs/wps-notifications.php:188
-#: includes/settings/tabs/wps-notifications.php:231
+#: includes/settings/tabs/wps-general.php:291
+#: includes/settings/tabs/wps-notifications.php:169
+#: includes/settings/tabs/wps-notifications.php:212
 msgid "Please select"
 msgstr "Por favor, seleccione"
 
@@ -2514,8 +2662,8 @@ msgstr "Por favor, seleccione"
 msgid "Export from:"
 msgstr "Exportar desde:"
 
+#: includes/optimization/wps-optimization.php:244
 #: includes/optimization/tabs/wps-optimization-export.php:8
-#: includes/optimization/wps-optimization.php:253
 msgid "Export"
 msgstr "Exportación"
 
@@ -2552,15 +2700,15 @@ msgstr "Esta operación podría tomar mucho tiempo en instalaciones con muchas f
 
 #: includes/optimization/tabs/wps-optimization-database.php:51
 #: includes/optimization/tabs/wps-optimization-database.php:108
-#: includes/optimization/tabs/wps-optimization-historical.php:68
 #: includes/optimization/tabs/wps-optimization-updates.php:26
 #: includes/optimization/tabs/wps-optimization-updates.php:47
+#: includes/optimization/tabs/wps-optimization-historical.php:68
 msgid "Update Now!"
 msgstr "¡Actualiza ahora!"
 
-#: includes/classes/class-wp-statistics-admin.php:457
-#: includes/classes/class-wp-statistics-admin.php:458
 #: includes/classes/class-wp-statistics-network-admin.php:94
+#: includes/classes/class-wp-statistics-admin.php:565
+#: includes/classes/class-wp-statistics-admin.php:566
 msgid "Countries"
 msgstr "Países"
 
@@ -2584,26 +2732,28 @@ msgstr "Volver a ejecutar el instalador"
 msgid "Database Setup"
 msgstr "Configuración de base de datos"
 
-#: includes/log/widgets/top.visitors.php:28
-#: includes/optimization/tabs/wps-optimization-resources.php:499
+#: includes/log/widgets/top.visitors.php:38
+#: includes/optimization/tabs/wps-optimization-resources.php:443
 msgid "Version"
 msgstr "Versión"
 
-#: includes/log/widgets/top.visitors.php:26
+#: includes/log/widgets/top.visitors.php:36
 msgid "Agent"
 msgstr "Agente"
 
-#: includes/log/widgets/top.visitors.php:24
+#: includes/log/widgets/words.php:38 includes/log/widgets/recent.php:20
+#: includes/log/widgets/top.visitors.php:34 includes/log/last-search.php:140
+#: includes/log/last-visitor.php:144
 msgid "IP"
 msgstr "IP"
 
-#: includes/classes/class-wp-statistics-admin.php:299
-#: includes/classes/class-wp-statistics-admin.php:377
-#: includes/classes/class-wp-statistics-admin.php:378
-#: includes/classes/class-wp-statistics-network-admin.php:86
-#: includes/log/authors.php:245 includes/log/categories.php:228
-#: includes/log/tags.php:240 includes/log/widgets/top.visitors.php:21
+#: includes/log/categories.php:228 includes/log/tags.php:240
+#: includes/log/widgets/top.visitors.php:28 includes/log/authors.php:239
 #: includes/optimization/tabs/wps-optimization-purging.php:274
+#: includes/classes/class-wp-statistics-network-admin.php:86
+#: includes/classes/class-wp-statistics-admin.php:407
+#: includes/classes/class-wp-statistics-admin.php:485
+#: includes/classes/class-wp-statistics-admin.php:486
 #: includes/settings/tabs/wps-maintenance.php:122
 msgid "Hits"
 msgstr "Impactos"
@@ -2641,10 +2791,12 @@ msgid "Last 7 Days (Week):"
 msgstr "Últimos 7 días (Semana):"
 
 #: includes/log/widgets/quickstats.php:194 includes/log/widgets/summary.php:194
+#: includes/classes/class-wp-statistics-tinymce.php:52
 msgid "Yesterday"
 msgstr "Ayer"
 
 #: includes/log/widgets/quickstats.php:193 includes/log/widgets/summary.php:193
+#: includes/classes/class-wp-statistics-tinymce.php:51
 msgid "Today"
 msgstr "Hoy"
 
@@ -2656,27 +2808,17 @@ msgstr "Dirección"
 msgid "Page Trending Stats"
 msgstr "Estadísticas significativas de la página"
 
-#: includes/log/widgets/browsers.php:33
+#: includes/log/widgets/browsers.php:39 includes/log/all-browsers.php:67
 msgid "Other"
 msgstr "Otros"
 
-#: includes/log/widgets/about.php:25
-msgid "More Information"
-msgstr "Más información"
-
-#: includes/log/widgets/about.php:14
-msgid "Rate and Review"
-msgstr "Tasa y revisión"
-
-#: includes/log/widgets/about.php:12
+#: includes/log/widgets/about.php:10
 msgid "Website"
 msgstr "Sitio web"
 
-#: includes/log/log.php:24
-msgid "About WP Statistics Version %s"
-msgstr "Acerca de las WP Statistics Versión %s"
-
-#: includes/log/top-visitors.php:32
+#: includes/log/widgets/words.php:37 includes/log/widgets/recent.php:19
+#: includes/log/last-search.php:139 includes/log/top-visitors.php:32
+#: includes/log/last-visitor.php:143
 msgid "Date"
 msgstr "Fecha"
 
@@ -2684,26 +2826,27 @@ msgstr "Fecha"
 msgid "Top 100 Visitors Today"
 msgstr "Top 100 visitantes de hoy"
 
-#: includes/log/top-referring.php:246 includes/log/widgets/referring.php:32
+#: includes/log/widgets/referring.php:32 includes/log/top-referring.php:227
 msgid "References"
 msgstr "Referencias"
 
-#: includes/log/searched-phrases.php:4 includes/log/top-referring.php:4
+#: includes/log/top-referring.php:4 includes/log/searched-phrases.php:4
 msgid "To be added soon"
 msgstr "Agregarse pronto"
 
-#: includes/classes/class-wp-statistics-shortcode.php:158
-#: includes/log/authors.php:135 includes/log/categories.php:118
 #: includes/log/hit-statistics.php:92 includes/log/hit-statistics.php:150
-#: includes/log/tags.php:130 includes/log/top-pages.php:180
-#: includes/log/widgets/hits.php:40 includes/log/widgets/pages.php:36
+#: includes/log/categories.php:118 includes/log/tags.php:130
+#: includes/log/widgets/pages.php:24 includes/log/widgets/hits.php:40
 #: includes/log/widgets/quickstats.php:30 includes/log/widgets/summary.php:30
+#: includes/log/top-pages.php:170 includes/log/authors.php:129
 #: includes/optimization/tabs/wps-optimization-historical.php:48
-#: includes/settings/tabs/wps-general.php:120
+#: includes/classes/class-wp-statistics-tinymce.php:34
+#: includes/classes/class-wp-statistics-shortcode.php:162
+#: includes/settings/tabs/wps-general.php:122
 msgid "Visits"
 msgstr "Visitas"
 
-#: includes/log/top-pages.php:174 includes/log/widgets/pages.php:31
+#: includes/log/widgets/pages.php:37 includes/log/top-pages.php:180
 msgid "No page title found"
 msgstr "No encontró el título de página"
 
@@ -2723,22 +2866,24 @@ msgstr "Principales tendencias de 5 páginas"
 msgid "Top Pages"
 msgstr "Páginas principales"
 
-#: includes/log/top-countries.php:55 includes/log/widgets/countries.php:11
+#: includes/log/widgets/countries.php:11 includes/log/top-countries.php:55
 msgid "Visitor Count"
 msgstr "Contador de visitantes"
 
-#: includes/log/top-countries.php:54 includes/log/widgets/countries.php:10
-#: includes/log/widgets/top.visitors.php:23
+#: includes/log/widgets/countries.php:10 includes/log/widgets/words.php:32
+#: includes/log/widgets/recent.php:14 includes/log/widgets/top.visitors.php:30
+#: includes/log/last-search.php:134 includes/log/last-visitor.php:138
+#: includes/log/top-countries.php:54
 msgid "Country"
 msgstr "País"
 
-#: includes/log/top-countries.php:53 includes/log/widgets/countries.php:9
-#: includes/log/widgets/top.visitors.php:22
+#: includes/log/widgets/countries.php:9
+#: includes/log/widgets/top.visitors.php:29 includes/log/top-countries.php:53
 msgid "Flag"
 msgstr "Bandera"
 
-#: includes/log/top-countries.php:52 includes/log/widgets/countries.php:8
-#: includes/log/widgets/top.visitors.php:20
+#: includes/log/widgets/countries.php:8
+#: includes/log/widgets/top.visitors.php:27 includes/log/top-countries.php:52
 msgid "Rank"
 msgstr "Puesto"
 
@@ -2758,15 +2903,16 @@ msgstr "Página de tendencia"
 msgid "Page Trend for Post ID %s"
 msgstr "Tendencia de página para ID de publicación %s"
 
-#: includes/log/online.php:143
+#: includes/log/online.php:124
 msgid "Currently there are no users online in the site."
 msgstr "Ahora no hay usuarios online en este sitio."
 
-#: includes/classes/class-wp-statistics-shortcode.php:157
+#: includes/log/online.php:10 includes/log/online.php:18
 #: includes/classes/class-wp-statistics-widget.php:33
 #: includes/classes/class-wp-statistics-widget.php:261
-#: includes/log/online.php:10 includes/log/online.php:18
-#: includes/settings/tabs/wps-general.php:67
+#: includes/classes/class-wp-statistics-tinymce.php:33
+#: includes/classes/class-wp-statistics-shortcode.php:161
+#: includes/settings/tabs/wps-general.php:69
 msgid "Online Users"
 msgstr "Usuarios online"
 
@@ -2778,36 +2924,34 @@ msgstr "¡Donar ahora!"
 msgid "Have you thought about donating to WP Statistics?"
 msgstr "¿Has pensado en hacer una donación a WP Statistics?"
 
-#: includes/log/last-visitor.php:102
+#: includes/log/last-visitor.php:88
 msgid "Filtered by"
 msgstr "Filtrado por"
 
-#: includes/log/last-visitor.php:100
+#: includes/log/last-visitor.php:86
 msgid "Recent Visitor Statistics"
 msgstr "Estadísticas recientes de visitante"
 
-#: includes/log/last-search.php:142 includes/log/last-visitor.php:168
-#: includes/log/online.php:76 includes/log/top-referring.php:199
-#: includes/log/widgets/recent.php:23 includes/log/widgets/words.php:55
+#: includes/log/online.php:76 includes/log/top-referring.php:196
 #: includes/settings/tabs/wps-overview-display.php:76
 msgid "Map"
 msgstr "Mapa"
 
-#: includes/log/last-search.php:135 includes/log/last-visitor.php:160
-#: includes/log/online.php:68 includes/log/widgets/jqv.map.php:67
-#: includes/log/widgets/recent.php:15 includes/log/widgets/words.php:34
+#: includes/log/online.php:68 includes/log/widgets/jqv.map.php:66
+#: includes/log/widgets/words.php:110 includes/log/widgets/recent.php:74
+#: includes/log/last-search.php:218 includes/log/last-visitor.php:199
 msgid "#hash#"
-msgstr "#hash #"
+msgstr "#hash#"
 
 #: includes/log/last-search.php:66
 msgid "Latest Search Word Statistics"
 msgstr "Últimas estadísticas de la palabra de búsqueda"
 
-#: includes/classes/class-wp-statistics-widget.php:363
-#: includes/log/last-search.php:47 includes/log/last-visitor.php:44
-#: includes/log/searched-phrases.php:91 includes/log/searched-phrases.php:108
-#: includes/log/top-referring.php:103 includes/log/top-referring.php:118
+#: includes/log/last-search.php:47 includes/log/top-referring.php:103
+#: includes/log/top-referring.php:116 includes/log/searched-phrases.php:91
+#: includes/log/searched-phrases.php:108 includes/log/last-visitor.php:44
 #: includes/optimization/tabs/wps-optimization-purging.php:230
+#: includes/classes/class-wp-statistics-widget.php:363
 msgid "All"
 msgstr "Todo"
 
@@ -2815,23 +2959,24 @@ msgstr "Todo"
 msgid "Hits Statistics Chart"
 msgstr "Tabla de estadísticas de impactos"
 
-#: includes/log/exclusions.php:273 includes/log/hit-statistics.php:163
+#: includes/log/hit-statistics.php:163 includes/log/exclusions.php:273
 msgid "All Time Total:"
 msgstr "Total de todos los tiempos:"
 
-#: includes/log/exclusions.php:267 includes/log/hit-statistics.php:155
+#: includes/log/hit-statistics.php:155 includes/log/exclusions.php:267
 msgid "Chart Total:"
 msgstr "Total del gráfico."
 
-#: includes/classes/class-wp-statistics-admin.php:517
-#: includes/classes/class-wp-statistics-admin.php:518
+#: includes/log/exclusions.php:263
 #: includes/classes/class-wp-statistics-network-admin.php:97
-#: includes/log/exclusions.php:263 includes/settings/tabs/wps-exclusions.php:77
+#: includes/classes/class-wp-statistics-admin.php:625
+#: includes/classes/class-wp-statistics-admin.php:626
+#: includes/settings/tabs/wps-exclusions.php:78
 #: includes/settings/wps-settings.php:53
 msgid "Exclusions"
 msgstr "Exclusiones"
 
-#: includes/log/exclusions.php:248 includes/log/hit-statistics.php:135
+#: includes/log/hit-statistics.php:135 includes/log/exclusions.php:248
 msgid "Hits Statistics Summary"
 msgstr "Resumen de impactos"
 
@@ -2875,8 +3020,9 @@ msgstr "Nombre del host"
 msgid "GeoIP"
 msgstr "GeoIP"
 
-#: includes/log/exclusions.php:102 includes/log/search-statistics.php:103
-#: includes/log/widgets/search.php:56
+#: includes/log/search-statistics.php:104 includes/log/exclusions.php:102
+#: includes/log/widgets/search.php:57
+#: includes/classes/class-wp-statistics-tinymce.php:56
 msgid "Total"
 msgstr "Total"
 
@@ -2908,25 +3054,25 @@ msgstr "Robot"
 msgid "Attention: Exclusion are not currently set to be recorded, the results below may not reflect current statistics!"
 msgstr "Atención: La exclusión no son actualmente establecido en grabarse, abajo los resultados pueden no reflejar estadísticas actuales!"
 
-#: includes/log/all-browsers.php:269
+#: includes/log/all-browsers.php:282
 msgid "%s Version"
 msgstr "versión de %s"
 
-#: includes/log/all-browsers.php:142 includes/log/widgets/top.visitors.php:27
-#: includes/optimization/tabs/wps-optimization-resources.php:511
+#: includes/log/widgets/top.visitors.php:37 includes/log/all-browsers.php:155
+#: includes/optimization/tabs/wps-optimization-resources.php:455
 msgid "Platform"
 msgstr "Plataforma"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:112
-#: includes/classes/class-wp-statistics-admin.php:497
-#: includes/classes/class-wp-statistics-admin.php:498
+#: includes/log/widgets/browsers.php:52 includes/log/all-browsers.php:101
+#: includes/log/all-browsers.php:119
 #: includes/classes/class-wp-statistics-network-admin.php:95
-#: includes/log/all-browsers.php:87 includes/log/all-browsers.php:106
-#: includes/log/widgets/browsers.php:46
+#: includes/classes/class-wp-statistics-admin-pages.php:117
+#: includes/classes/class-wp-statistics-admin.php:605
+#: includes/classes/class-wp-statistics-admin.php:606
 msgid "Browsers"
 msgstr "Navegadores"
 
-#: includes/log/all-browsers.php:79
+#: includes/log/all-browsers.php:93
 msgid "Browser Statistics"
 msgstr "Estadísticas de navegador"
 
@@ -2946,7 +3092,7 @@ msgstr "No hay registros encontrados para purgar de %s!"
 msgid "%s data older than %s days purged successfully."
 msgstr "datos de %s mayores de %s días purgadas con éxito."
 
-#: includes/functions/purge-hits.php:60 includes/functions/purge.php:205
+#: includes/functions/purge.php:205 includes/functions/purge-hits.php:60
 msgid "Database pruned on"
 msgstr "Purgado de la base de datos activado"
 
@@ -2958,106 +3104,101 @@ msgstr "No se encontraron visitantes para purgar."
 msgid "%s records purged successfully."
 msgstr "%s registros purgados con éxito."
 
-#: includes/classes/class-wp-statistics-updates.php:361
+#: includes/classes/class-wp-statistics-updates.php:301
 msgid "Updated %s GeoIP records in the visitors database."
 msgstr "Actualizados %s registros GeoIP en la base de datos de visitantes."
 
-#: includes/classes/class-wp-statistics-updates.php:327
+#: includes/classes/class-wp-statistics-updates.php:270
 msgid "Unable to load the GeoIP database, make sure you have downloaded it in the settings page."
 msgstr "No se puede cargar la base de datos GeoIP, asegúrese de que lo hayas descargado en la página de configuración."
 
-#: includes/functions/functions.php:1344
+#: includes/functions/functions.php:1471
 msgid "Error, %s not emptied!"
 msgstr "Error, %s no vaciado."
 
-#: includes/functions/functions.php:1338
+#: includes/functions/functions.php:1465
 msgid "%s table data deleted successfully."
 msgstr "datos de la tabla de %s eliminados satisfactoriamente."
 
-#: includes/functions/functions.php:1290 includes/log/top-visitors.php:40
+#: includes/log/top-visitors.php:35 includes/functions/functions.php:1350
 msgid "Go"
 msgstr "Ir"
 
-#: includes/functions/functions.php:1284
+#: includes/functions/functions.php:1344
 msgid "to"
 msgstr "a"
 
-#: includes/functions/functions.php:1282 includes/functions/functions.php:1288
-#: includes/log/top-visitors.php:38
-msgid "MM/DD/YYYY"
-msgstr "MM/DD/AAAA"
-
-#: includes/functions/functions.php:1182
+#: includes/functions/functions.php:1242
 msgid "1 Year"
 msgstr "1 año"
 
-#: includes/functions/functions.php:1181
+#: includes/functions/functions.php:1241
 msgid "9 Months"
 msgstr "9 meses"
 
-#: includes/functions/functions.php:1180
+#: includes/functions/functions.php:1240
 msgid "6 Months"
 msgstr "6 meses"
 
-#: includes/functions/functions.php:1179
+#: includes/functions/functions.php:1239
 msgid "3 Months"
 msgstr "3 meses"
 
-#: includes/functions/functions.php:1178
+#: includes/functions/functions.php:1238
 msgid "2 Months"
 msgstr "2 meses"
 
-#: includes/functions/functions.php:1177
+#: includes/functions/functions.php:1237
 msgid "30 Days"
 msgstr "30 días"
 
-#: includes/functions/functions.php:1176
+#: includes/functions/functions.php:1236
 msgid "20 Days"
 msgstr "20 días"
 
-#: includes/functions/functions.php:1175
+#: includes/functions/functions.php:1235
 msgid "10 Days"
 msgstr "10 días"
 
-#: includes/functions/functions.php:641
+#: includes/functions/functions.php:656
 msgid "Yandex"
 msgstr "Yandex"
 
-#: includes/functions/functions.php:632
+#: includes/functions/functions.php:647
 msgid "Yahoo!"
 msgstr "Yahoo!"
 
-#: includes/functions/functions.php:623
+#: includes/functions/functions.php:638
 msgid "Google"
 msgstr "Google"
 
-#: includes/functions/functions.php:614
+#: includes/functions/functions.php:629
 msgid "DuckDuckGo"
 msgstr "DuckDuckGo"
 
-#: includes/functions/functions.php:605
+#: includes/functions/functions.php:620
 msgid "clearch.org"
 msgstr "clearch.org"
 
-#: includes/functions/functions.php:596
+#: includes/functions/functions.php:611
 msgid "Bing"
 msgstr "Bing"
 
-#: includes/functions/functions.php:587
+#: includes/functions/functions.php:602
 msgid "Baidu"
 msgstr "Baidu"
 
-#: includes/functions/functions.php:578
+#: includes/functions/functions.php:593
 msgid "Ask.com"
 msgstr "Ask.com"
 
-#: includes/log/authors.php:151 includes/log/categories.php:134
-#: includes/log/exclusions.php:221 includes/log/hit-statistics.php:109
-#: includes/log/tags.php:146 includes/log/widgets/hits.php:60
+#: includes/log/hit-statistics.php:109 includes/log/exclusions.php:221
+#: includes/log/categories.php:134 includes/log/tags.php:146
+#: includes/log/widgets/hits.php:60 includes/log/authors.php:145
 msgid "Hits in the last %s days"
 msgstr "Impactos en los últimos %s días"
 
-#: includes/classes/class-wp-statistics-editor.php:76
+#: includes/classes/class-wp-statistics-editor.php:85
 msgid "This post is not yet published."
 msgstr "Esta entrada aun no ha sido publicada."
 
@@ -3065,56 +3206,56 @@ msgstr "Esta entrada aun no ha sido publicada."
 msgid "Top 10 Visitors Today"
 msgstr "Top 10 de visitas de hoy"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:57
-#: includes/classes/class-wp-statistics-dashboard.php:172
 #: includes/log/last-search.php:28
+#: includes/classes/class-wp-statistics-dashboard.php:172
+#: includes/classes/class-wp-statistics-admin-pages.php:62
 msgid "Latest Search Words"
 msgstr "Las últimas palabras de búsqueda"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:103
 #: includes/classes/class-wp-statistics-dashboard.php:164
+#: includes/classes/class-wp-statistics-admin-pages.php:108
 msgid "Summary"
 msgstr "Resumen"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:39
-#: includes/classes/class-wp-statistics-dashboard.php:156
+#: includes/log/widgets/quickstats.php:185 includes/log/widgets/summary.php:185
 #: includes/classes/class-wp-statistics-widget.php:111
 #: includes/classes/class-wp-statistics-widget.php:338
-#: includes/log/widgets/quickstats.php:185 includes/log/widgets/summary.php:185
+#: includes/classes/class-wp-statistics-dashboard.php:156
+#: includes/classes/class-wp-statistics-admin-pages.php:44
 msgid "Search Engine Referrals"
 msgstr "Referencias por motores de búsqueda"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:121
+#: includes/log/top-referring.php:92 includes/log/top-referring.php:133
 #: includes/classes/class-wp-statistics-dashboard.php:147
-#: includes/log/top-referring.php:92 includes/log/top-referring.php:135
+#: includes/classes/class-wp-statistics-admin-pages.php:126
 msgid "Top Referring Sites"
 msgstr "Principales sitios de referencia"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:66
-#: includes/classes/class-wp-statistics-dashboard.php:138
 #: includes/log/last-visitor.php:38
+#: includes/classes/class-wp-statistics-dashboard.php:138
+#: includes/classes/class-wp-statistics-admin-pages.php:71
 msgid "Recent Visitors"
 msgstr "Visitantes recientes"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:90
 #: includes/classes/class-wp-statistics-dashboard.php:129
+#: includes/classes/class-wp-statistics-admin-pages.php:95
 msgid "Top 10 Pages"
 msgstr "Top 10 páginas"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:18
-#: includes/classes/class-wp-statistics-dashboard.php:120
-#: includes/classes/class-wp-statistics-editor.php:63
 #: includes/log/hit-statistics.php:7
+#: includes/classes/class-wp-statistics-dashboard.php:120
+#: includes/classes/class-wp-statistics-admin-pages.php:23
+#: includes/classes/class-wp-statistics-editor.php:68
 msgid "Hit Statistics"
 msgstr "Estadísticas de impactos"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:77
 #: includes/classes/class-wp-statistics-dashboard.php:111
+#: includes/classes/class-wp-statistics-admin-pages.php:82
 msgid "Today's Visitors Map"
 msgstr "Mapa de visitantes de hoy"
 
-#: includes/classes/class-wp-statistics-admin-pages.php:132
 #: includes/classes/class-wp-statistics-dashboard.php:102
+#: includes/classes/class-wp-statistics-admin-pages.php:137
 msgid "Top 10 Countries"
 msgstr "Top 10 países"
 
@@ -3126,8 +3267,8 @@ msgstr "10 mejores navegadores"
 msgid "Quick Stats"
 msgstr "Estadísticas rápidas"
 
-#: includes/classes/class-wp-statistics-ajax.php:274
 #: includes/functions/purge-hits.php:43
+#: includes/classes/class-wp-statistics-ajax.php:274
 msgid "Number of hits must be greater than or equal to 10!"
 msgstr "¡El número de impactos debe ser mayor que o igual que 10!"
 
@@ -3139,6 +3280,7 @@ msgstr "¡No se encuentran datos de plataforma para borrar!"
 msgid "%s platform data deleted successfully."
 msgstr "datos de %s plataforma eliminados satisfactoriamente."
 
+#: includes/optimization/wps-optimization.php:6
 #: includes/classes/class-wp-statistics-ajax.php:84
 #: includes/classes/class-wp-statistics-ajax.php:121
 #: includes/classes/class-wp-statistics-ajax.php:158
@@ -3146,9 +3288,8 @@ msgstr "datos de %s plataforma eliminados satisfactoriamente."
 #: includes/classes/class-wp-statistics-ajax.php:247
 #: includes/classes/class-wp-statistics-ajax.php:279
 #: includes/classes/class-wp-statistics-ajax.php:431
-#: includes/optimization/wps-optimization.php:6
 msgid "Access denied!"
-msgstr "Acceso denegado!"
+msgstr "¡Acceso denegado!"
 
 #: includes/classes/class-wp-statistics-ajax.php:81
 #: includes/classes/class-wp-statistics-ajax.php:118
