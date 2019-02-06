@@ -31,22 +31,24 @@ $meets_query = new WP_Query( $args ); ?>
 						while ( have_rows('slider') ) : the_row(); ?>
 
 							<div class="slide">
-								<img src="<?php the_sub_field('bild'); ?>" alt="Parrot image">
+								<img src="<?= get_sub_field('bild')['sizes']['large']; ?>" alt="Parrot image">
 								<div>
 
 									<?php
 									if( get_sub_field('headline') ) : ?>
-										<h4><?php the_sub_field('headline'); ?></h4>
+										<h4><?= get_sub_field('headline'); ?></h4>
 									<?php
 									endif;
 
 									if( get_sub_field('text') ) : ?>
-										<p><?php the_sub_field('text'); ?></p>
+										<p><?= get_sub_field('text'); ?></p>
 									<?php
 									endif;
 
 									if( get_sub_field('button') ) : ?>
-										<a href="<?php if( get_sub_field('link') ) : the_sub_field('link'); else: echo '#'; endif; ?>"><?php the_sub_field('button'); ?></a>
+										<a href="<?php if( get_sub_field('link') ) : the_sub_field('link'); else: echo '#'; endif; ?>">
+											<?= get_sub_field('button'); ?>
+										</a>
 									<?php
 									endif; ?>
 
@@ -84,8 +86,7 @@ $meets_query = new WP_Query( $args ); ?>
 						} ?>
 					</p>
 					<?php
-					if( $top_info['top']['lank'] ) {
-						?>
+					if( $top_info['top']['lank'] ) { ?>
 						<button class="lank_1" target="_blank" href="<?= $top_info['top']['lank']; ?>">Läs mer</button>
 						<?php
 					} ?>
