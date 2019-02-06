@@ -40,7 +40,7 @@
 
                 if( $images ): ?>
                     <div class="image">
-                        <img src="<?php echo $images[0]['url']; ?>" alt="Post image">
+                        <img src="<?= $images[0]['url']; ?>" alt="Post image">
                     </div>
                 <?php
                 endif;
@@ -79,7 +79,7 @@
 
                         if( !empty( $location['address'] ) ) : ?>
                             <h5>Var:</h5>
-                            <p><?php echo $location['address'] ?></p>
+                            <p><?= $location['address'] ?></p>
                         <?php
                         endif;
 
@@ -115,7 +115,7 @@
 
         <h4>Karta:</h4>
         <div class="acf-map">
-            <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+            <div class="marker" data-lat="<?= $location['lat']; ?>" data-lng="<?= $location['lng']; ?>"></div>
         </div>
 
     <?php
@@ -129,8 +129,8 @@
         <ul>
             <?php foreach( $images as $image ): ?>
                 <li>
-                    <a target="_blank" href="<?php echo $image['url']; ?>">
-                        <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <a target="_blank" href="<?= $image['url']; ?>">
+                        <img src="<?= $image['sizes']['large']; ?>" alt="<?= $image['alt']; ?>" />
 						<div class="caption">
 							<span><?= $image['caption'] ?></span>
 						</div>

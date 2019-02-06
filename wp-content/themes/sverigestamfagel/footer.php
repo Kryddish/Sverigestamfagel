@@ -17,13 +17,13 @@
 		<div class="container">
 
 			<div class="social-menu">
-				<a href="#">Facebook</a>
-				<a href="#">Instagram</a>
+				<a class="icon-facebook-official" href="#">Facebook</a>
+				<a class="icon-instagram" href="#">Instagram</a>
 			</div>
 
 			<div class="email">
 				Har du frågor?</br>
-				<a href="mailto:info@sverigestamfagel.se"><i class="fa fa-envelope"></i> <?php _e( 'Maila oss!', 'stf' ); ?></a>
+				<a class="icon-mail-alt" href="mailto:info@sverigestamfagel.se"><?= __( 'Maila oss!', 'stf' ); ?></a>
 			</div>
 			<div class="donate">
 				Vill du stödja vår förening?</br>

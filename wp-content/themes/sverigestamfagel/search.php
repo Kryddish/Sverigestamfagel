@@ -2,15 +2,15 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			
+
 			<div>
-				<?php dynamic_sidebar( 'banner' ); ?> 				
+				<?php dynamic_sidebar( 'banner' ); ?>
 			</div>
 
 			<div class="archive-post">
 				<div class="posts-container">
 
-					<h2>Sökning: <?php echo get_search_query(); ?></h2>
+					<h2>Sökning: <?= get_search_query(); ?></h2>
 
 					<?php
 					global $wp_query;
@@ -22,12 +22,12 @@
 						while ( $wp_query->have_posts() ) : $wp_query->the_post();
 
 							get_template_part( 'template-parts/content/content' );
-						
+
 						endwhile;
 					else :
 						get_template_part( 'template-parts/content/content', 'none' );
 					endif; ?>
-					
+
 					<div class="posts-navigation">
 						<?php
 						$big = 999999999;
@@ -44,10 +44,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="side-archive">				
+			<div class="side-archive">
 				<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			</div>
-			
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

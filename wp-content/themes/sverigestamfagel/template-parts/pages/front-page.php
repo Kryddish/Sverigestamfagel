@@ -56,12 +56,16 @@ $meets_query = new WP_Query( $args ); ?>
 						<?php
 						endwhile;
 					else : ?>
-						<img src="<?php echo get_stylesheet_directory_uri() . '/dist/img/parrot.png'?>" alt="Parrot image">
+						<img src="<?= get_stylesheet_directory_uri() . '/dist/img/parrot.png'?>" alt="Parrot image">
 					<?php
 					endif; ?>
 				</ul>
-				<button class="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-				<button class="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+				<button class="previous">
+					<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				</button>
+				<button class="next">
+					<i class="fa fa-chevron-right" aria-hidden="true"></i>
+				</button>
 			</div>
 
 			<div class="container">
@@ -135,7 +139,7 @@ $meets_query = new WP_Query( $args ); ?>
 				foreach( $posts as $post ) : setup_postdata( $post ); ?>
 					<article <?php post_class(); ?>>
 						<header>
-							<span class="category"><?php echo get_the_category()[0]->name; ?></span>
+							<span class="category"><?= get_the_category()[0]->name; ?></span>
 							<span class="date"><?= get_the_date(); ?></span>
 						</header>
 						<a href="<?php the_permalink(); ?>">

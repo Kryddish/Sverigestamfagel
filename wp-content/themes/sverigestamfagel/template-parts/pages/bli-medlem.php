@@ -50,7 +50,7 @@
 									<div>
 										<i class="icon icon-<?= $step['icon'] ?>"></i>
 									</div>
-									<p><?php echo $step['text'] ?></p>
+									<p><?= $step['text'] ?></p>
 								</div>
 
 							<?php
@@ -61,7 +61,7 @@
 
 				</div>
 				<div class="slide form">
-					<?php echo do_shortcode('[contact-form-7 title="Bli medlem"]'); ?>
+					<?= do_shortcode('[contact-form-7 title="Bli medlem"]'); ?>
 				</div>
 				<div class="slide confirmation">
 					<div class="content">

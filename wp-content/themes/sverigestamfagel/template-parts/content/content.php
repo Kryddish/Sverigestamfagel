@@ -53,9 +53,9 @@ $location = get_field( 'location' ); ?>
 				</h6>
 			</footer>
 		<?php
-		
+
 		if( !empty( $location['adress'] ) ) : ?>
-			<h6 class="location"><?php echo $location['adress']; ?></h6>
+			<h6 class="location"><?= $location['adress']; ?></h6>
 		<?php
 		endif; ?>
 

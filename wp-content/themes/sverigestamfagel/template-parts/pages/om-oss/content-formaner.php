@@ -1,7 +1,7 @@
 <h2>Medlemsförmåner</h2>
 <p>
-    Som medlem i STF får du inte bara träffa folk med samma intresse och 
-    dela erfarenheter, du får får också en del förmåner så som rabatter eller tidningen fågelhobby. 
+    Som medlem i STF får du inte bara träffa folk med samma intresse och
+    dela erfarenheter, du får får också en del förmåner så som rabatter eller tidningen fågelhobby.
     Nedan kan du läsa mer om dessa.
 </p>
 
@@ -29,11 +29,11 @@
 
     <div class="top-rebates">
         <img class="animail" src="https://lauradhave.files.wordpress.com/2017/07/animaillogoafter-2.gif?w=1000" alt="">
-        <p>	
+        <p>
             Medlemmar i STF har 10% rabatt på allt inom fågelkategorin på Animails hemida.
         </p>
         <img class="sveland" src="http://resources.mynewsdesk.com/image/upload/c_limit,dpr_1.0,f_auto,h_700,q_auto,w_690/vp6bnuiruqflwti18l60.jpg" alt="">
-        <p>	
+        <p>
             Som medlem i STF har du 15% rabatt på fågelförsäkringar. Rabatten gäller vid nyförsäkringar.
         </p>
     </div><!-- .top-rebates -->
@@ -53,7 +53,7 @@
     <div class="rings-content">
         <h2>Ringar</h2>
         <p>
-            Föder du upp fåglar och vill ringmärka dem? Som medlem kan du köpa öppna och slutna ringar via Riksförbundet Svensk Fågelhobby. Tänk på att de fåglar 
+            Föder du upp fåglar och vill ringmärka dem? Som medlem kan du köpa öppna och slutna ringar via Riksförbundet Svensk Fågelhobby. Tänk på att de fåglar
             som är upptagna på Cites lista 1 och EU:s bilaga A måste ringmärkas med slutna ringar för att kunna säljas.
         </p>
         <p>
@@ -72,5 +72,3 @@
     </p>
     <button>Bli medlem</button>
 </div><!-- .bird-register -->
-
-<?php include( get_stylesheet_directory() . '/template-parts/instagram.php' ); ?>
