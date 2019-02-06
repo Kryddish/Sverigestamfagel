@@ -63,10 +63,10 @@ $meets_query = new WP_Query( $args ); ?>
 					endif; ?>
 				</ul>
 				<button class="previous">
-					<i class="fa fa-chevron-left" aria-hidden="true"></i>
+					<i class="icon-left-open" aria-hidden="true"></i>
 				</button>
 				<button class="next">
-					<i class="fa fa-chevron-right" aria-hidden="true"></i>
+					<i class="icon-right-open" aria-hidden="true"></i>
 				</button>
 			</div>
 

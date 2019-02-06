@@ -131,25 +131,18 @@ add_action( 'widgets_init', 'stf_widgets_init' );
  */
 function stf_scripts() {
 
+	// Google fonts
+	wp_enqueue_style( 'sverigestamfagel-fonts', 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|Open+Sans:400,700' );
+
 	// Stylesheet
 	wp_enqueue_style( 'stf-style', get_template_directory_uri() . '/dist/css/style.css', array(), filemtime( get_stylesheet_directory() . '/dist/css/style.css' ) );
 
-	// Google fonts
-	wp_enqueue_style( 'sverigestamfagel-fonts', 'https://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700|Open+Sans:400,700' );
-	wp_enqueue_script( 'stf-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY', '1.0', true );
-
 	//JS Bundle
-	wp_enqueue_script( 'stf-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery') );
+	wp_enqueue_script( 'stf-bundle', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), filemtime( get_stylesheet_directory() . '/dist/js/bundle.js'), true);
 	wp_localize_script( 'stf-bundle', 'stf', array(
 		'expand' => __( 'Expand child menu', 'stf'),
 		'collapse' => __( 'Collapse child menu', 'stf'),
 	));
-
-	// Jquery Lazy plugin
-	wp_enqueue_script( 'stf-bundle', get_template_directory_uri() . '/dist/js/jquery.lazy.min.js', array('jquery'), '1.0', true );
-
-	// Font awesome JS
-	wp_enqueue_script( 'stf-fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/js/all.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -192,7 +185,10 @@ require get_template_directory() . '/inc/shortcodes.php';
  */
 require get_template_directory() . '/inc/filters.php';
 
-function my_awesome_func( $data ) {
+/**
+ * Auto deployment to staging site
+ */
+function auto_deployment( $data ) {
 	$output = shell_exec( 'bash ./deploy.sh' );
 
 	if( $output ) echo $output;
@@ -202,10 +198,13 @@ function my_awesome_func( $data ) {
 add_action( 'rest_api_init', function () {
 	register_rest_route( 'webhook', '/deploy', array(
 		'methods' => 'POST',
-		'callback' => 'my_awesome_func',
+		'callback' => 'auto_deployment',
 	) );
 } );
 
+/**
+ * Custom pagination for archive
+ */
 function custom_pagination($pages = '', $range = 2) {
      $showitems = ($range * 2)+1;
 

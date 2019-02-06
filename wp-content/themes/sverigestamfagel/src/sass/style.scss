@@ -13,7 +13,8 @@ Tags: Underscores STF
  * Imports
  */
 @import "autoload/hamburgers/hamburgers.scss";
-@import "../icons/css/fontello";
+@import "../../dist/css/animation.css";
+@import "../../dist/css/fontello.css";
 
 
 @import "common/variables-site/variables-site";

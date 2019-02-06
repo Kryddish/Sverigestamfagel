@@ -4,7 +4,7 @@
         scrollTop = $('html, body').scrollTop(),
         navbar = $('.main-navigation'),
         navHeight = navbar.height(),
-        navTop = navbar.offset().top;
+		navTop = navbar.offset().top;
 
     if (!isMobile()) {
         $(window).scroll(function () {
@@ -29,9 +29,6 @@
             'padding-bottom': navHeight - 4
         });
     }
-
-    // Lazy load images
-    $('.lazy').Lazy();
 
 })(jQuery);
 

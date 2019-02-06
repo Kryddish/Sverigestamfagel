@@ -33,6 +33,17 @@ hr {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+
+	&.lazy {
+		transition: filter 1s;
+		background: #fff center center no-repeat;
+		background-size: cover;
+		filter: blur(3px);
+	}
+
+	&.is-loaded {
+		filter: none; /* remove the blur on fullres image */
+	}
 }
 
 figure {

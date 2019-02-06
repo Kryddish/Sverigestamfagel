@@ -47,8 +47,15 @@ gulp.task('clean', cb => {
 });
 
 gulp.task('icons', () => {
+	let options = {
+		host: 'http://fontello.com', // Host for response
+		font: 'icons/font', // Destination dir for Fonts and Glyphs
+		css: 'css', // Destination dir for CSS Styles,
+		assetsOnly: true, // extract from ZipFile only CSS Styles and Fonts exclude config.json, LICENSE.txt, README.txt and demo.html
+	}
+
 	return gulp.src(src + 'icons/config.json')
-		.pipe($.fontello())
+		.pipe($.fontello(options))
 		.pipe(print())
 		.pipe(gulp.dest('dist'))
 });
@@ -125,7 +132,7 @@ gulp.task('watch', () => {
 
 
 // Build
-gulp.task('build', gulp.series('clean', gulp.parallel('js', 'sass', 'img', 'icons')));
+gulp.task('build', gulp.series('clean', 'icons', gulp.parallel('js', 'sass', 'img')));
 
 
 // Default task (runs at initiation: gulp --verbose)

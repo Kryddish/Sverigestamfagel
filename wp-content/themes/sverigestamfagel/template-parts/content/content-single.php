@@ -9,46 +9,39 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
     <header class="entry-header">
         <h3 class="title"><?php the_title(); ?></h3>
         <h5 class="category">
-
             <?php
             $categories = get_the_category();
-
-            foreach($categories as $category) :
-                if( reset($categories) === $category) {
+            foreach ($categories as $category) :
+                if ( reset($categories) === $category) {
                     echo $category->name;
                 } else {
                     echo ', ' . $category->name;
                 }
             endforeach; ?>
-
         </h5>
     </header><!-- .entry-footer -->
     <div class="entry">
+		<?php
+		if( get_the_post_thumbnail_url() ) : ?>
+			<div class="image">
+				<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
+			</div>
+		<?php
+		else:
+			$images = get_field('images');
 
-            <?php
-            if( get_the_post_thumbnail_url() ) : ?>
-                <div class="image">
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
-                </div>
-            <?php
-            else:
-                $images = get_field('images');
-
-                if( $images ): ?>
-                    <div class="image">
-                        <img src="<?= $images[0]['url']; ?>" alt="Post image">
-                    </div>
-                <?php
-                endif;
-
-            endif; ?>
+			if( $images ): ?>
+				<div class="image">
+					<img src="<?= $images[0]['url']; ?>" alt="Post image">
+				</div>
+			<?php
+			endif;
+		endif; ?>
 
         <div class="event">
-
             <?php
             if( get_field( 'time' ) || get_field( 'date' ) || get_field( 'location' ) ) : ?>
 
@@ -62,7 +55,6 @@
 
                             <h5 class="date">När:</h5>
                             <p>
-
                                 <?php
                                 if( get_field( 'time' ) ) : ?>
                                     Kl. <?php the_field( 'time' ); ?><br>
@@ -71,7 +63,6 @@
                                 if( get_field( 'date' ) ) :
                                     the_field( 'date' );
                                 endif; ?>
-
                             </p>
 
                         <?php
@@ -81,28 +72,21 @@
                             <h5>Var:</h5>
                             <p><?= $location['address'] ?></p>
                         <?php
-                        endif;
+						endif;
 
                     endif; ?>
-
                 </div>
-
             <?php
             endif; ?>
 
             <div class="info">
                 <?php
-                if( get_the_excerpt() ) : ?>
-
-
-                        <?php the_content(); ?>
-
-
+				if( get_the_excerpt() ) :
+					the_content(); ?>
                 <?php
                 else : ?>
-
                     <h5>
-                        <?php _e('Inget innehåll hittades.', 'stf'); ?>
+                        <?= __('Inget innehåll hittades.', 'stf'); ?>
                     </h5>
                 <?php
                 endif; ?>
@@ -122,24 +106,26 @@
     endif;
 
     $images = get_field('images');
-
     if( $images ): ?>
-
         <h4>Bilder:</h4>
         <ul>
-            <?php foreach( $images as $image ): ?>
+			<?php
+			foreach( $images as $image ): ?>
                 <li>
                     <a target="_blank" href="<?= $image['url']; ?>">
-                        <img src="<?= $image['sizes']['large']; ?>" alt="<?= $image['alt']; ?>" />
-						<div class="caption">
-							<span><?= $image['caption'] ?></span>
-						</div>
+                        <img class="lazy" data-src="<?= $image['sizes']['large'] ?>" src="<?= $image['sizes']['medium'] ?>" style="background-image: url(<?= $image['sizes']['medium'] ?>);" alt="<?= $image['alt']; ?>" />
+						<?php
+						if ($image['caption']): ?>
+							<div class="caption">
+								<span><?= $image['caption'] ?></span>
+							</div>
+							<?php
+						endif; ?>
                     </a>
                 </li>
-            <?php endforeach; ?>
+				<?php
+			endforeach; ?>
         </ul>
-
     <?php
     endif; ?>
-
 </article>
