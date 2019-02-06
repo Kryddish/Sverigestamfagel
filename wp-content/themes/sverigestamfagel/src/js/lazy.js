@@ -3,7 +3,7 @@
 	$(window).scroll(function () {
 		$('.lazy').each(function(index, image) {
 			if($(image).visible()) {
-				setTimeout(lazyLoad(image), 1000);
+				lazyLoad(image);
 			}
 		});
 	});

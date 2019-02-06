@@ -113,7 +113,7 @@
 			foreach( $images as $image ): ?>
                 <li>
                     <a target="_blank" href="<?= $image['url']; ?>">
-                        <img class="lazy" data-src="<?= $image['sizes']['large'] ?>" src="<?= $image['sizes']['medium'] ?>" style="background-image: url(<?= $image['sizes']['medium'] ?>);" alt="<?= $image['alt']; ?>" />
+                        <img class="lazy" data-src="<?= $image['sizes']['large'] ?>" src="<?= $image['sizes']['small'] ?>" style="background-image: url(<?= $image['sizes']['small'] ?>);" alt="<?= $image['alt']; ?>" />
 						<?php
 						if ($image['caption']): ?>
 							<div class="caption">

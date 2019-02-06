@@ -240,3 +240,6 @@ function custom_pagination($pages = '', $range = 2) {
          echo "</div>\n";
      }
 }
+
+// Custom image sizes
+add_image_size( 'small', 100, 100 );
