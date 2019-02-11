@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-01-28 15:26:29+0000\n"
+"PO-Revision-Date: 2019-02-07 14:37:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2138,7 +2138,7 @@ msgstr "Widget %s"
 
 #: wp-admin/widgets.php:117
 msgid "Drag widgets here to remove them from the sidebar but keep their settings."
-msgstr "Arraste widgets daqui para removê-los da barra lateral, mantendo as suas configurações."
+msgstr "Arraste widgets para aqui para removê-los da barra lateral sem perder as respectivas opções."
 
 #: wp-admin/widgets.php:114
 msgid "Inactive Widgets"

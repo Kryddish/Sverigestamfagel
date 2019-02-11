@@ -16,7 +16,7 @@ $location = get_field( 'location' ); ?>
 	<?php
 	if( get_the_post_thumbnail() ) : ?>
 		<a class="image" href="<?php the_permalink(); ?>">
-			<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
+			<img src="<?php the_post_thumbnail_url('large'); ?>" alt="Post image">
 		</a>
 	<?php
 	else:
