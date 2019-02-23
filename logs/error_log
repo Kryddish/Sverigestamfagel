@@ -1,1 +1,0 @@
-[Fri Sep 21 22:28:05.517208 2018] [core:error] [pid 3855] [client 127.0.0.1:50568] AH00124: Request exceeded the limit of 10 internal redirects due to probable configuration error. Use 'LimitInternalRecursion' to increase the limit if necessary. Use 'LogLevel debug' to get a backtrace.
