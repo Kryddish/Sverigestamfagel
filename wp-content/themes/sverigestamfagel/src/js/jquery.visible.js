@@ -1,3 +1,4 @@
+/* jshint ignore:start */
 (function($){
 
     /**
@@ -81,3 +82,4 @@
     };
 
 })(jQuery);
+/* jshint ignore:end */
