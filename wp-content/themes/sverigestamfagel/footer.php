@@ -17,8 +17,8 @@
 		<div class="container">
 
 			<div class="social-menu">
-				<a class="icon-facebook-official" href="https://www.facebook.com/groups/6200961175/">Facebook</a>
-				<a class="icon-instagram" href="https://www.instagram.com/sverigestamfagelforening/">Instagram</a>
+				<a target="_blank" class="icon-facebook-official" href="https://www.facebook.com/groups/6200961175/">Facebook</a>
+				<a target="_blank" class="icon-instagram" href="https://www.instagram.com/sverigestamfagelforening/">Instagram</a>
 			</div>
 
 			<div class="email">
