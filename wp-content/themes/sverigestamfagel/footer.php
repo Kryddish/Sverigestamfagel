@@ -17,8 +17,8 @@
 		<div class="container">
 
 			<div class="social-menu">
-				<a class="icon-facebook-official" href="#">Facebook</a>
-				<a class="icon-instagram" href="#">Instagram</a>
+				<a class="icon-facebook-official" href="https://www.facebook.com/groups/6200961175/">Facebook</a>
+				<a class="icon-instagram" href="https://www.instagram.com/sverigestamfagelforening/">Instagram</a>
 			</div>
 
 			<div class="email">
@@ -27,14 +27,14 @@
 			</div>
 			<div class="donate">
 				Vill du stödja vår förening?</br>
-				Swisha till <a href="tel:+46721234567">+46 72 123 45 67</a>
+				Swisha till <b>123 148 36 84</b>
 			</div>
 		</div>
 		<div class="site-info">
 			<span>
 				<?php _e( '© 2019 Sveriges Tamfågelförening. All rights reserved', 'stf' ); ?>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="#">Emmelie</a>', '<a href="https://github.com/spizeak">Max</a>' ); ?>
+				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="#">Emmelie</a>', '<a href="https://www.linkedin.com/in/max-trewhitt-965109127/">Max</a>' ); ?>
 			</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
