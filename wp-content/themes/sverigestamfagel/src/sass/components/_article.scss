@@ -1,0 +1,36 @@
+.c-article {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 50px 20px;
+
+	&__sidebar {
+		width: 30%;
+		padding: 20px 40px;
+		background-color: #fff;
+		border: 1px solid #eee;
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+
+			.current {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__content {
+		width: 70%;
+		padding: 20px 50px;
+		margin-left: 20px;
+		background-color: #fff;
+		border: 1px solid #eee;
+
+		h1 {
+			text-align: center;
+			margin: 0;
+		}
+	}
+}
