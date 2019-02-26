@@ -94,7 +94,7 @@ get_header(); ?>
 			if( isset( $_GET['type'] ) && $_GET['type'] !== 'any' )
 				$title = $post_types[$_GET['type']]; ?>
 
-			<h2><?= $title ?></h2>
+			<h2 class="archive-heading"><?= $title ?></h2>
 			<div class="posts-container">
 				<?php
 				if( $archive_query->have_posts() ):

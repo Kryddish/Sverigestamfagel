@@ -1,8 +1,16 @@
 .posts-container {
+	:first-child {
+		margin-top: 0;
+	}
+
     @media screen and (min-width: $mobile) {
         width: 55%;
         float: left;
     }
+}
+
+.archive-heading {
+	margin-top: 0;
 }
 
 .page-content {
