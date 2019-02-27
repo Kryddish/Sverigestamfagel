@@ -1,13 +1,5 @@
-<?php
-/**
- * The template for displaying all single posts.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package stf
- */
+<?php get_header(); ?>
 
-get_header(); ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY"></script>
 
 	<div id="primary" class="content-area">
@@ -18,11 +10,11 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content/content', 'single' ); ?>
 
-			<?php
+				<?php
 			endwhile; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_footer();
