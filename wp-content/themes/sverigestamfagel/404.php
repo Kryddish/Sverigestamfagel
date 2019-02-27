@@ -20,11 +20,11 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php esc_html_e( 'Det verkar som att ingenting hittades på denna plats. Kanske prova göra en sökning eller använda länkarna i menyn?', 'stf' ); ?></p>
 					<Img src='<?= get_stylesheet_directory() . "/dist/img/birb.jpg" ?>' />
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+				</div>
+			</section>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+	</div>
 
 <?php
 get_footer();

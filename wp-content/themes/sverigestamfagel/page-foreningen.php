@@ -13,11 +13,10 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/pages/om-oss/foreningen' );
 
-		endwhile; // End of the loop.
-		?>
+		endwhile; ?>
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+	</main>
+</div>
 
 <?php
 get_footer();

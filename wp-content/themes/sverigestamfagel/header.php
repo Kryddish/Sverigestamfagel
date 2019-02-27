@@ -1,36 +1,10 @@
-<?php
-/**
- * The header for our theme.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package stf
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-
-<?php if( is_single() ) :?>
-	<style type="text/css">
-		.acf-map {
-			width: 100%;
-			height: 400px;
-			border: #ccc solid 1px;
-			margin: 20px 0;
-		}
-
-		.acf-map img {
-			max-width: inherit !important;
-		}
-	</style>
-<?php endif; ?>
-
-<?php wp_head(); ?>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<?php wp_head(); ?>
 </head>
 
 <body style="background-image: url(<?= get_stylesheet_directory_uri() . '/dist/img/foggy_birds.png'; ?>);" tabindex="-1" <?php body_class(); ?>>
@@ -39,32 +13,28 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="top-header">
 				<div class="site-branding">
-
 					<?php the_custom_logo(); ?>
 
 					<div class="text">
 						<h2 class="site-title">
 							<?php bloginfo( 'name' ); ?>
 						</h2>
-
 						<?php
 						$description = get_bloginfo( 'description', 'display' );
 
 							if ( $description || is_customize_preview() ) : ?>
 								<h5 class="site-description">
-									<?= $description; /* WPCS: xss ok. */ ?>
+									<?= $description; ?>
 								</h5>
-							<?php
+								<?php
 							endif; ?>
-
-					</div><!-- .text -->
-				</div><!-- .site-branding -->
+					</div>
+				</div>
 
 				<div class="contact-header">
 					<a class="icon-mail-alt" href="mailto:info@sverigestamfagel.se"> info@sverigestamfagel.se</a>
-				</div><!-- .contact-header -->
-
-			</div><!-- .top-header -->
+				</div>
+			</div>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="mobile-navbar">
@@ -80,7 +50,7 @@
 					'theme_location' => 'primary',
 					'menu_id' => 'primary-menu'
 				) ); ?>
-			</nav><!-- .main-navigation -->
+			</nav>
 
-		</header><!-- .site-header -->
+		</header>
 		<div id="content" class="site-content">
