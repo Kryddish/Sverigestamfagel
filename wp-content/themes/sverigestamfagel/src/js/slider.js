@@ -9,7 +9,7 @@
     delay = 7 * 1000; // Time in milliseconds
 
     // Start timer
-    var timer = setInterval(nextSlide, delay);    
+    var timer = setInterval(nextSlide, delay);
 
     // Remove arrows if no more than one image
     if(slides.length === 1) {
@@ -24,7 +24,7 @@
     slides.css({ 'width': 100 / slides.length + '%' });
 
     // Add class to first slide
-    $(slides[index]).find('div').addClass('current');
+    $(slides[index]).addClass('current');
 
     /* Add event listeners */
     prevBtn.click(function() {
@@ -43,14 +43,14 @@
     function prevSlide() {
 
         // Remove current class
-        $(slides[index]).find('div').removeClass('current');
+        $(slides[index]).removeClass('current');
 
         if(left < 0) {
             index--;
             left += 100;
 
             // Add current class to next slide
-            $(slides[index]).find('div').addClass('current');
+            $(slides[index]).addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left + '%'
@@ -60,7 +60,7 @@
             left = -(slides.length * 100) + 100;
 
             // Add current class to last slide
-            $(slides[index]).find('div').addClass('current');
+            $(slides[index]).addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left + '%'
@@ -71,14 +71,14 @@
     function nextSlide() {
 
         // Remove current class
-        $(slides[index]).find('div').removeClass('current');
+        $(slides[index]).removeClass('current');
 
         if(left > -((slides.length * 100) - 100)) {
             index++;
             left -= 100;
 
             // Add current class to next slide
-            $(slides[index]).find('div').addClass('current');
+            $(slides[index]).addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left + '%'
@@ -88,7 +88,7 @@
             left = 0;
 
             // Add current class to last slide
-            $(slides[index]).find('div').addClass('current');
+            $(slides[index]).addClass('current');
 
             $('.stf-slider ul').css({
                 'left': left

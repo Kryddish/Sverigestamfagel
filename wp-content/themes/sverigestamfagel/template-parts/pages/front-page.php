@@ -32,7 +32,8 @@ $meets_query = new WP_Query( $args ); ?>
 
 							<div class="slide">
 								<img src="<?= get_sub_field('bild')['sizes']['large']; ?>" alt="Parrot image">
-								<div>
+								<div class="overlay"></div>
+								<div class="text">
 
 									<?php
 									if( get_sub_field('headline') ) : ?>

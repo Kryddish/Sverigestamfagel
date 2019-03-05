@@ -6,8 +6,8 @@
         align-items: center;
         justify-content: center;
         align-items: flex-start;
-       
-        img {       
+
+        img {
             width: 22%;
         }
         .magazine-text {
@@ -17,23 +17,23 @@
             }
         }
     }
-    
+
     .rebates {
         margin-bottom: 3em;
         padding: 3em;
         background-color: rgba(55, 171, 113, 0.38);
         text-align: center;
-    
+
         h2 {
             margin-top: 0;
         }
-        
-    
+
+
         .animail {
             width: 15%;
             border-radius: 40px;
         }
-    
+
         .top-rebates {
         text-align: left;
         display: flex;
@@ -41,13 +41,13 @@
         align-items: center;
         justify-content: center;
         align-items: flex-start;
-    
+
             p {
                 padding-left: 2em;
                 padding-right: 2em;
             }
         }
-    
+
         .sveland {
             width: 20%;
             border-radius: 20px;
@@ -59,17 +59,17 @@
             justify-content: center;
             align-items: flex-start;
             padding-top: 3em;
-    
+
             p {
                 padding: 0 2em;
             }
         }
         .zoosajten {
             width: 20%;
-            border-radius: 20px;        
+            border-radius: 20px;
         }
     }
-    
+
     .rings {
         display: flex;
         flex-direction: row;
@@ -77,12 +77,12 @@
         align-items: center;
         justify-content: center;
         align-items: flex-start;
-    
+
         .rings-content {
             padding-left: 2em;
         }
     }
-    
+
     .bird-register {
        text-align: left;
 
@@ -105,10 +105,9 @@
         }
        }
     }
-    
+
     .page-content {
         width: 100%;
         text-align: center;
-        @import "../extra/instagram";
     }
 }
