@@ -1,5 +1,5 @@
 .o-pagination {
-    padding: 10px 0;
+	margin: 30px 0 0;
     position: relative;
     transform: translateX(-50%);
     left: 50%;
@@ -7,12 +7,24 @@
 
     a,
     span {
+		border: 1px solid #000;
+		border-radius: 5px;
+		margin: 0 5px;
+		line-height: 16px;
+		line-height: 1rem;
         @include font-size(1);
         display: inline-block;
-        padding: 0 10px;
+        padding: 10px 14px;
 
-        &.current {
-            color: $color__interactive;
-        }
+        &.current, &:hover {
+			color: #fff;
+			background-color: $color__interactive;
+			text-decoration: none;
+		}
+
+		&.current {
+			@include font-size(1.2);
+			line-height: 1.1rem;
+		}
     }
 }
