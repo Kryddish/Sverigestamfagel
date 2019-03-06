@@ -243,3 +243,4 @@ function custom_pagination($pages = '', $range = 2) {
 
 // Custom image sizes
 add_image_size( 'small', 100, 100 );
+add_image_size( 'single-hero', 1200, 800 );
