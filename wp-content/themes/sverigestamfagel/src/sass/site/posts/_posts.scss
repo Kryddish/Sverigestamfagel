@@ -3,9 +3,12 @@
 		margin-top: 0;
 	}
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $tablet) {
         width: 55%;
-        float: left;
+    }
+
+    @media screen and (max-width: $tablet) {
+        order: 2;
     }
 }
 
@@ -17,6 +20,16 @@
     h4 {
         margin: 0;
         padding: 0;
+    }
+
+    &.sidebar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
 }
 

@@ -114,7 +114,7 @@ $meets_query = new WP_Query( $args ); ?>
 			</div>
 		</section>
 		<hr>
-		<div class="page-content">
+		<div class="page-content sidebar">
 			<?php $posts_per_page = get_field( 'news_count' ) ? get_field( 'news_count' ) : 8; ?>
 
 			<div class="posts-container">

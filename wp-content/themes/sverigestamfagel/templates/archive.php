@@ -95,101 +95,104 @@ get_header(); ?>
 				$title = $post_types[$_GET['type']]; ?>
 
 			<h2 class="archive-heading"><?= $title ?></h2>
-			<div class="posts-container">
-				<?php
-				if( $archive_query->have_posts() ):
-
-					// Prepare array for pagination by slicing correct piece
-					$posts = array_slice( $archive_query->posts, ($paged-1) * $posts_per_page, $posts_per_page );
-
-					foreach( $posts as $key => $post ): setup_postdata( $post );
-						$key++;
-
-						get_template_part( 'template-parts/content/content' );
-
-						if( $key % $posts_per_page === 0 )
-							break;
-
-					endforeach;
-					wp_reset_postdata();
-				else: ?>
-					<h5><?= __( 'Inga inlägg hittades.', 'stf' ) ?></h5>
+			<div class="page-content sidebar">
+				<div class="posts-container">
 					<?php
-				endif;
+					if( $archive_query->have_posts() ):
 
-				// Calculate amount of pages and print pagination links
-				$pages = count( $archive_query->posts ) / $posts_per_page;
-				custom_pagination( $pages ); ?>
-			</div>
+						// Prepare array for pagination by slicing correct piece
+						$posts = array_slice( $archive_query->posts, ($paged-1) * $posts_per_page, $posts_per_page );
 
-			<div class="c-sidebar c-sidebar--search">
+						foreach( $posts as $key => $post ): setup_postdata( $post );
+							$key++;
 
-				<form role="search" method="get" class="search-form">
-					<label>
-						<span class="screen-reader-text">Sök efter:</span>
-						<input type="search" class="search-field" placeholder="Sök …" value="<?= $search ?>" name="q">
-					</label>
-					<input name="search" type="submit" class="search-submit" value="Sök">
-				</form>
+							get_template_part( 'template-parts/content/content' );
 
-				<?php
-				if (count($post_types) > 1): ?>
-					<h6><?= __('Typ av inlägg', 'stf') ?></h6>
-					<?php
-					if( !isset( $_GET['type'] ) or $_GET['type'] === 'any' ): ?>
-						<div>
-							<a class="current" href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
-						</div>
-						<?php
+							if( $key % $posts_per_page === 0 )
+								break;
+
+						endforeach;
+						wp_reset_postdata();
 					else: ?>
-						<div>
-							<a href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
-						</div>
+						<h5><?= __( 'Inga inlägg hittades.', 'stf' ) ?></h5>
 						<?php
 					endif;
 
-					foreach( $post_types as $key => $value ):
-						if( isset( $_GET['type'] ) and $_GET['type'] === $key ): ?>
+					// Calculate amount of pages and print pagination links
+					$pages = count( $archive_query->posts ) / $posts_per_page;
+					custom_pagination( $pages ); ?>
+				</div>
+
+				<div class="c-sidebar c-sidebar--search">
+
+					<form role="search" method="get" class="search-form">
+						<label>
+							<span class="screen-reader-text">Sök efter:</span>
+							<input type="search" class="search-field" placeholder="Sök …" value="<?= $search ?>" name="q">
+						</label>
+						<input name="search" type="submit" class="search-submit" value="Sök">
+					</form>
+
+					<?php
+					if (count($post_types) > 1): ?>
+						<h6><?= __('Typ av inlägg', 'stf') ?></h6>
+						<?php
+						if( !isset( $_GET['type'] ) or $_GET['type'] === 'any' ): ?>
 							<div>
-								<a class="current" href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+								<a class="current" href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
 							</div>
 							<?php
 						else: ?>
 							<div>
-								<a href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+								<a href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
 							</div>
 							<?php
 						endif;
-					endforeach;
-				endif;
-				if (count($categories) > 0): ?>
-					<h6><?= __('Kategorier', 'stf') ?></h6>
-					<?php
-					if( !isset( $_GET['category'] ) or $_GET['category'] === '' ): ?>
-						<div>
-							<a class="current" href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
-						</div>
-					<?php
-					else: ?>
-						<div>
-							<a href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
-						</div>
-						<?php
+
+						foreach( $post_types as $key => $value ):
+							if( isset( $_GET['type'] ) and $_GET['type'] === $key ): ?>
+								<div>
+									<a class="current" href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+								</div>
+								<?php
+							else: ?>
+								<div>
+									<a href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
+								</div>
+								<?php
+							endif;
+						endforeach;
 					endif;
-					foreach ( $categories as $category ):
-						if( isset( $_GET['category'] ) and $_GET['category'] === $category->slug ): ?>
+					if (count($categories) > 0): ?>
+						<h6><?= __('Kategorier', 'stf') ?></h6>
+						<?php
+						if( !isset( $_GET['category'] ) or $_GET['category'] === '' ): ?>
 							<div>
-								<a class="current" href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+								<a class="current" href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 							</div>
 						<?php
 						else: ?>
 							<div>
-								<a href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+								<a href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 							</div>
 							<?php
 						endif;
-					endforeach;
-				endif; ?>
+						foreach ( $categories as $category ):
+							if( isset( $_GET['category'] ) and $_GET['category'] === $category->slug ): ?>
+								<div>
+									<a class="current" href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+								</div>
+							<?php
+							else: ?>
+								<div>
+									<a href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
+								</div>
+								<?php
+							endif;
+						endforeach;
+					endif; ?>
+				</div>
+
 			</div>
 
 		</main><!-- #main -->

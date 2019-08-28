@@ -1,16 +1,16 @@
 .c-sidebar {
-    border: 1px solid rgba($color: #000, $alpha: 0.2);
+    border: 1px solid rgba(#000, 0.2);
     background: #fff;
     padding: 20px 40px;
     width: 40%;
-    float: right;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $tablet) {
         margin: 50px 0;
     }
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         width: 100%;
+        margin-bottom: 50px;
     }
 
     article {
@@ -33,7 +33,8 @@
         }
 
         h6 {
-            @include font-size(1.2);
+			@include font-size(1.2);
+			line-height: 28px;
             margin-top: 0;
             letter-spacing: 1px;
         }
@@ -41,6 +42,7 @@
         header {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 5px;
 
             span {
                 @include font-size(0.8);
@@ -51,6 +53,12 @@
             .category {
                 color: $color__interactive;
                 font-weight: bold;
+            }
+
+            .date {
+                color: grey;
+                font-family: $font__open;
+                @include font-size(0.6);
             }
         }
     }

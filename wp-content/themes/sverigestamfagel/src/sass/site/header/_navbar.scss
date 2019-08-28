@@ -4,7 +4,7 @@
 	clear: left;
 	background-color: $color__skin;
 
-	@media screen and (max-width: $mobile) {
+	@media screen and (max-width: $tablet) {
 		z-index: 100;
 		position: fixed;
 		top: 0;
@@ -22,7 +22,7 @@
 	}
 
 	.menu-navigation-container {
-		@media screen and (min-width: $mobile) {
+		@media screen and (min-width: $tablet) {
 			max-width: $page;
 			margin: auto;
 		}
@@ -35,7 +35,7 @@
 		list-style: none;
 		margin: 0;
 
-		@media screen and (max-width: $mobile) {
+		@media screen and (max-width: $tablet) {
 			display: none;
 			height: calc(100vh - 60px);
 			background-color: $color__skin;
@@ -43,7 +43,7 @@
 			justify-content: center;
 		}
 
-		@media screen and (min-width: $mobile) {
+		@media screen and (min-width: $tablet) {
 			flex-wrap: wrap;
 		}
 
@@ -60,13 +60,13 @@
 					background-color: #41CA86;
 				}
 
-				@media screen and (min-width: $mobile) {
+				@media screen and (min-width: $tablet) {
 					background-color: #41CA86;
 				}
 			}
 
 			&.cta {
-				@media screen and (min-width: $mobile) {
+				@media screen and (min-width: $tablet) {
 					margin-left: 1.5em;
 				}
 
@@ -75,7 +75,7 @@
 					padding: 0.5em 1.5em;
 					text-transform: uppercase;
 
-					@media screen and (min-width: $mobile) {
+					@media screen and (min-width: $tablet) {
 						background-color: #41CA86;
 						position: relative;
 						top: 50%;
@@ -103,7 +103,7 @@
 				text-decoration: none;
 				color: #fff;
 
-				@media screen and (max-width: $mobile) {
+				@media screen and (max-width: $tablet) {
 					text-align: center;
 					padding: .8em 0;
 				}
@@ -113,7 +113,7 @@
 				}
 
 				&:hover {
-					@media screen and (min-width: $mobile) {
+					@media screen and (min-width: $tablet) {
 						background-color: #41CA86;
 					}
 				}
@@ -130,7 +130,7 @@
 			}
 
 			&.menu-item-has-children {
-				@media screen and (max-width: $mobile) {
+				@media screen and (max-width: $tablet) {
 					cursor: pointer;
 				}
 
@@ -146,19 +146,19 @@
 					top: 100%;
 					left: 0;
 
-					@media screen and (min-width: $mobile) {
+					@media screen and (min-width: $tablet) {
 						position: absolute;
 						transform: scaleY(0);
 						opacity: 0;
 					}
 
-					@media screen and (max-width: $mobile) {
+					@media screen and (max-width: $tablet) {
 						display: none;
 					}
 				}
 
 				&.toggle {
-					@media screen and (max-width: $mobile) {
+					@media screen and (max-width: $tablet) {
 						ul {
 							display: block;
 						}
@@ -178,7 +178,7 @@
 				}
 
 				.sub-menu {
-					@media screen and (min-width: $mobile) {
+					@media screen and (min-width: $tablet) {
 						transform: scaleY(1);
 						opacity: 1;
 					}
