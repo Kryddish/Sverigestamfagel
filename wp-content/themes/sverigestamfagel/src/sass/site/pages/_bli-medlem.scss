@@ -1,21 +1,16 @@
 .page.bli-medlem {
     article {
         background-color: #E5E5E5;
-        padding: 30px;
         border-radius: 10px;
+        padding: 30px 60px;
 
-        @media screen and (min-width: $mobile) {
-			margin: 50px 0;
-			padding: 20px;
+        @media screen and (min-width: $tablet) {
+            padding: 50px 100px;
+            max-width: 700px;
+            margin: auto;
         }
 
         .container {
-            margin: auto;
-
-            @media screen and (min-width: $mobile) {
-                width: 50%;
-            }
-
             h4 {
                 margin-top: 0;
                 margin-bottom: 20px;
@@ -130,7 +125,8 @@
 							&.acceptance {
 								line-height: 24px;
 								display: flex;
-								align-items: center;
+                                align-items: center;
+                                margin-bottom: 25px;
 
 								.text {
 									margin-left: 5px;
