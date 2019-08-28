@@ -1,24 +1,18 @@
-# Translation of Plugins - Regenerate Thumbnails - Development (trunk) in Swedish
-# This file is distributed under the same license as the Plugins - Regenerate Thumbnails - Development (trunk) package.
+# Translation of Plugins - Regenerate Thumbnails - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Regenerate Thumbnails - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-01-05 22:29:25+0000\n"
+"PO-Revision-Date: 2019-05-10 15:36:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: sv_SE\n"
-"Project-Id-Version: Plugins - Regenerate Thumbnails - Development (trunk)\n"
+"Project-Id-Version: Plugins - Regenerate Thumbnails - Stable (latest release)\n"
 
 #: regenerate-thumbnails.php:491
 msgctxt "bulk actions dropdown"
-msgid "Regenerate Thumbnails"
-msgstr "Återskapa miniatyrer"
-
-#: regenerate-thumbnails.php:256 regenerate-thumbnails.php:429
-#: regenerate-thumbnails.php:445 regenerate-thumbnails.php:469
-msgctxt "action for a single image"
 msgid "Regenerate Thumbnails"
 msgstr "Återskapa miniatyrer"
 
@@ -31,6 +25,16 @@ msgstr "Återskapa miniatyrer"
 msgctxt "admin page title"
 msgid "Regenerate Thumbnails"
 msgstr "Återskapa miniatyrer"
+
+#: regenerate-thumbnails.php:225
+msgid "Delete thumbnail files for old unregistered sizes in order to free up server space. This may result in broken images in your posts and pages."
+msgstr "Ta bort miniatyrer för äldre, oregistrerade storlekar för att frigöra utrymme på servern. Detta kan leda till att vissa bilder kommer att saknas på olika sidor och i olika inlägg."
+
+#: regenerate-thumbnails.php:256 regenerate-thumbnails.php:429
+#: regenerate-thumbnails.php:445 regenerate-thumbnails.php:469
+msgctxt "action for a single image"
+msgid "Regenerate Thumbnails"
+msgstr "Återskapa miniatyr"
 
 #: includes/class-regeneratethumbnails-regenerator.php:608
 msgid "Attachment %d"
@@ -165,6 +169,10 @@ msgstr "Om du har åtkomst till <a href=\"{url-cli}\">kommandorad</a> för din w
 msgid "<code>{filename}</code> {width}×{height} pixels"
 msgstr "<code>{filename}</code> {width}×{height} pixlar"
 
+#: regenerate-thumbnails.php:253
+msgid "Another alternative is to use the <a href=\"{url-photon}\">Photon</a> functionality that comes with the <a href=\"{url-jetpack}\">Jetpack</a> plugin. It generates thumbnails on-demand using WordPress.com's infrastructure. <em>Disclaimer: The author of this plugin, Regenerate Thumbnails, is an employee of the company behind WordPress.com and Jetpack but I would recommend it even if I wasn't.</em>"
+msgstr "Ett annat alternativ är att använda funktionen <a href=\"{url-photon}\">Photon</a> som medföljer tillägget <a href=\"{url-jetpack}\">Jetpack</a>. Funktionen genererar miniatyrer vid behov inom infrastrukturen för WordPress.com. <em>För kännedom: Författaren av detta tillägg, Regenerate Thumbnails, är anställd på företaget bakom WordPress.com och Jetpack, men jag skulle rekommendera samma sak även om så inte var fallet.</em>"
+
 #: regenerate-thumbnails.php:251
 msgid "Alternatives"
 msgstr "Alternativ"
@@ -239,7 +247,7 @@ msgstr "Hoppa över återskapning av befintliga miniatyrer med rätt storlek (sn
 msgid "Loading…"
 msgstr "Laddar&hellip;"
 
-#: includes/class-regeneratethumbnails-rest-controller.php:254
+#: includes/class-regeneratethumbnails-rest-controller.php:258
 msgid "The page number requested is larger than the number of pages available."
 msgstr "Sidnumret som begärdes är större än antal sidor tillgängliga."
 
