@@ -108,19 +108,9 @@
 					padding: .8em 0;
 				}
 
-				&:after {
-					content: ' +';
-				}
-
 				&:hover {
 					@media screen and (min-width: $tablet) {
 						background-color: #41CA86;
-					}
-				}
-
-				&:only-child {
-					&:after {
-						content: '';
 					}
 				}
 			}
@@ -162,21 +152,11 @@
 						ul {
 							display: block;
 						}
-
-						> a:after {
-							content: " -";
-						}
 					}
 				}
 			}
 
 			&:hover {
-				&.menu-item-has-children {
-					>a:after {
-						content: " -";
-					}
-				}
-
 				.sub-menu {
 					@media screen and (min-width: $tablet) {
 						transform: scaleY(1);
