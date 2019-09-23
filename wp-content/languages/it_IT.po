@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.2.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-08-12 15:50:35+0000\n"
+"PO-Revision-Date: 2019-09-21 19:20:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3213,12 +3213,12 @@ msgstr "Categoria"
 #. translators: label for ordering posts by title in descending order
 #: wp-includes/js/dist/components.js:35098
 msgid "Z → A"
-msgstr "Z \t A"
+msgstr "Z ⟶ A"
 
 #. translators: label for ordering posts by title in ascending order
 #: wp-includes/js/dist/components.js:35094
 msgid "A → Z"
-msgstr "A \t Z"
+msgstr "A ⟶ Z"
 
 #: wp-includes/js/dist/components.js:35090
 msgid "Oldest to Newest"
@@ -10496,7 +10496,7 @@ msgstr "Stai personalizzando %s"
 
 #: wp-includes/comment.php:3324
 msgid "<strong>ERROR</strong>: The comment could not be saved. Please try again later."
-msgstr "<strong>ERRORE</strong>: il commento non può essere salvato. Riprovare più tardi."
+msgstr "<strong>ERRORE</strong>: il commento non può essere salvato. Riprova più tardi."
 
 #: wp-includes/update.php:159 wp-includes/update.php:383
 #: wp-includes/update.php:568
@@ -12027,7 +12027,7 @@ msgstr "File media"
 #: wp-includes/js/dist/block-library.js:11729
 #: wp-includes/js/dist/block-library.js:13034
 msgid "Attachment Page"
-msgstr "Allegato pagina"
+msgstr "Pagina dell’allegato"
 
 #: wp-includes/widgets/class-wp-widget-media-image.php:103
 #: wp-includes/media-template.php:698 wp-includes/media-template.php:780

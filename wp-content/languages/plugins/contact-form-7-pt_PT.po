@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-08-06 10:02:13+0000\n"
+"PO-Revision-Date: 2019-09-23 09:29:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -84,6 +84,19 @@ msgstr "Ligar à API da Constant Contact"
 #: modules/constant-contact.php:487
 msgid "Constant Contact Integration"
 msgstr "Integração com Constant Contact"
+
+#. translators: 1: response code, 2: message, 3: body, 4: URL
+#: includes/functions.php:384
+msgid "HTTP Response: %1$s %2$s %3$s from %4$s"
+msgstr "Resposta HTTP: %1$s %2$s %3$s de %4$s"
+
+#: modules/constant-contact.php:557
+msgid "Set this URL as the redirect URI."
+msgstr "Defina o URL como o URI de redirecionamento."
+
+#: modules/constant-contact.php:9
+msgid "Email Marketing"
+msgstr "Email marketing"
 
 #: includes/config-validator.php:590
 msgid "It is not allowed to use files outside the wp-content directory."
@@ -170,10 +183,6 @@ msgstr "A editar mensagens"
 msgid "https://contactform7.com/editing-messages/"
 msgstr "https://contactform7.com/editing-messages/"
 
-#: admin/includes/editor.php:130
-msgid "You can edit the mail template here. For details, see %s."
-msgstr "Aqui poderá editar o modelo do correio. Para mais detalhes, veja %s."
-
 #: admin/includes/editor.php:57
 msgid "You can edit the form template here. For details, see %s."
 msgstr "Aqui poderá editar o modelo do formulário. Para mais detalhes, veja %s."
@@ -189,6 +198,10 @@ msgstr "https://contactform7.com/editing-form-template/"
 #: admin/admin.php:131
 msgid "How to resolve?"
 msgstr "Como resolver?"
+
+#: admin/includes/editor.php:130
+msgid "You can edit the mail template here. For details, see %s."
+msgstr "Aqui pode editar o modelo do email. Para detalhes, consulte %s."
 
 #. translators: %s: link labeled 'making a donation'
 #: admin/includes/welcome-panel.php:35

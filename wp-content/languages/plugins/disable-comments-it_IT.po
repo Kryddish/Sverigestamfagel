@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Disable Comments - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-05-11 11:09:59+0000\n"
+"PO-Revision-Date: 2019-09-21 16:39:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -110,6 +110,10 @@ msgstr "Su alcune tipologie di contenuto"
 #: includes/tools-page.php:104
 msgid "Warning"
 msgstr "Attenzione"
+
+#: includes/settings-page.php:56
+msgid "%1$s: This option is global and will affect your entire site. Use it only if you want to disable comments <em>everywhere</em>. A complete description of what this option does is <a href=\"%2$s\" target=\"_blank\">available here</a>."
+msgstr "%1$s: questa opzione è globale e avrà effetto su tutto il tuo sito. Usala solo se vuoi disabilitare i commenti <em>ovunque</em>. Una descrizione completa sull'effetto di questa opzione è <a href=\"%2$s\" target=\"_blank\">disponibile qui</a>."
 
 #: includes/settings-page.php:55
 msgid "Disable all comment-related controls and settings in WordPress."

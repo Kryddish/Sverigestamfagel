@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.2.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-08-22 09:38:21+0000\n"
+"PO-Revision-Date: 2019-09-05 10:41:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6772,7 +6772,7 @@ msgstr "Begränsa resultatet till alla objekt förutom de med ett specifikt öve
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:2460
 msgid "Limit result set to items with particular parent IDs."
-msgstr "Begränsa resultat till objekt som hör till specifika överordnades ID:n."
+msgstr "Begränsa sökresultatet till objekt som tillhör specifika överordnade ID:n."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:1436
 #: wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php:721
