@@ -29,6 +29,7 @@ deploy.sh
 # Misc
 wp-content/upgrade
 wp-content/uploads
+wp-content/wflogs
 
 # Themes
 wp-content/themes/sverigestamfagel/twentynineteen
