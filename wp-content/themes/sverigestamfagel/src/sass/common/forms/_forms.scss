@@ -1,3 +1,74 @@
 @import "buttons";
-
 @import "fields";
+
+.wpcf7-form {
+	p {
+		position: relative;
+	}
+
+	input,
+	select,
+	textarea {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 16px;
+		resize: vertical;
+
+		&:focus {
+			box-shadow: 0px 0px 5px 1px rgba(grey, 0.3);
+		}
+	}
+
+	textarea {
+		@include font-size(0.9);
+		resize: none;
+		min-height: 130px;
+	}
+
+	input[type=submit] {
+		background-color: $color__interactive;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	input[type=submit]:hover {
+		background: rgba(51, 161, 106, 0.9);
+	}
+
+	.container {
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		padding: 20px;
+	}
+}
+
+.wpcf7-form-control-wrap {
+	display: block;
+}
+
+span.wpcf7-not-valid-tip {
+	@include font-size(0.8);
+	margin-top: -10px;
+	line-height: (0.9 * 20px);
+	margin-bottom: 10px;
+}
+
+.wpcf7-form input.wpcf7-not-valid,
+.wpcf7-form textarea.wpcf7-not-valid {
+	border: 1px solid rgba(red, 0.5);
+}
+
+span.wpcf7-character-count {
+	@include font-size(0.7);
+	position: absolute;
+	top: 10px;
+	right: 0;
+	width: auto;
+}

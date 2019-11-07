@@ -186,6 +186,11 @@ require get_template_directory() . '/inc/shortcodes.php';
 require get_template_directory() . '/inc/filters.php';
 
 /**
+ * Custom validation
+ */
+require get_template_directory() . '/inc/contact-form-7.php';
+
+/**
  * Auto deployment to staging site
  */
 function auto_deployment( $data ) {

@@ -87,10 +87,10 @@ $meets_query = new WP_Query( $args ); ?>
 				<h4>Senaste nyheterna</h4>
 
 				<?php
-				$posts = get_posts( array(
+				$posts = get_posts([
 					'post_type' 		=> 	'articles',
 					'posts_per_page'	=>  $posts_per_page
-				) );
+				]);
 
 				foreach( $posts as $post ) : setup_postdata( $post ); ?>
 					<article <?php post_class(); ?>>
