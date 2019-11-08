@@ -1,0 +1,16 @@
+{
+	"name": "SpiZeak/filebird-hacked",
+	"description": "The Wordpress plugin Filebird by ninjateam but without the 10 folder limit.",
+	"keywords": ["wordpress", "gutenberg", "filebird", "folder", "plugin"],
+	"homepage": "https://github.com/SpiZeak/filebird-hacked",
+	"license": "MIT",
+	"authors": [
+	  {
+		"name": "Max Trewhitt",
+		"email": "max@trewhitt.se"
+	  }
+	],
+	"require": {
+	  "php": ">=5.3.2"
+	}
+  }

@@ -1,7 +1,7 @@
 const
 
 	// Development URL (FILL THIS)
-	proxy = 'Sverigestamfagel.local',
+	proxy = 'sverigestamfagel.local',
 
 	gulp = require('gulp'),
 	$ = require('gulp-load-plugins')(),
@@ -86,7 +86,7 @@ gulp.task('sass', cb => {
 // Optimize images through gulp-image
 gulp.task('img', cb => {
 	pump([
-		gulp.src(img + '**/*.{jpg,JPG,jpeg,JPEG,png,PNG}'),
+		gulp.src(img + '**/*.{jpg,JPG,jpeg,JPEG,png,PNG,svg,SVG}'),
 		imagemin(),
 		gulp.dest(dist + 'img/')
 	], cb);
@@ -126,7 +126,7 @@ gulp.task('watch', () => {
 	});
 	gulp.watch(root + '**/*.scss', gulp.parallel('sass'));
 	gulp.watch(js + '**/*.js', gulp.parallel('js'));
-	gulp.watch(img + '**/*.{jpg,JPG,jpeg,JPEG,png,PNG}', gulp.parallel('img'));
+	gulp.watch(img + '**/*.{jpg,JPG,jpeg,JPEG,png,PNG,svg,SVG}', gulp.parallel('img'));
 	gulp.watch(root + '**/*.{js,scss,php}').on('change', browserSync.reload);
 });
 

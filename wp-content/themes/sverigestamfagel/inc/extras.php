@@ -7,13 +7,7 @@
  * @package stf
  */
 
-/**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- * @return array
- */
-function stf_body_classes( $classes ) {
+add_filter( 'body_class', function( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -25,35 +19,29 @@ function stf_body_classes( $classes ) {
 	}
 
 	return $classes;
-}
-add_filter( 'body_class', 'stf_body_classes' );
+});
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function stf_pingback_header() {
+add_action( 'wp_head', function() {
 	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', bloginfo( 'pingback_url' ), '">';
+		echo '<link rel="pingback" href="', bloginfo('pingback_url'), '">';
 	}
-}
-add_action( 'wp_head', 'stf_pingback_header' );
+});
 
 // Register Google API
-function my_acf_init() {
-	
+add_action('acf/init', function() {
 	acf_update_setting('google_api_key', 'AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY');
-}
-
-add_action('acf/init', 'my_acf_init');
+});
 
 // Custom excerpt length
-function custom_excerpt_length( $length ) {
+add_filter( 'excerpt_length', function( $length ) {
 	return 40;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+}, 999);
 
-//Page Slug Body Class
-function add_slug_body_class( $classes ) {
+// Page Slug Body Class
+add_filter( 'body_class', function( $classes ) {
 	global $post;
 
 	if ( isset( $post ) ) {
@@ -61,83 +49,36 @@ function add_slug_body_class( $classes ) {
 	}
 
 	return $classes;
-}
-add_filter( 'body_class', 'add_slug_body_class' );
+});
 
-// function custom_post_type_archive( $query ) {
-
-// 	$post_types = 
-// 	get_post_types( array(
-// 		'public' => true
-// 	) );
-// 	unset($post_types['attachment'], $post_types['page']);
-
-// 	if( $query->is_main_query()  && is_home() ) {
-// 		$query->set( 'post_type', $post_types );
-// 	}
-// 	else {
-// 		if( !$query->is_main_query() ) {
-// 			return;
-// 		}
-// 		elseif( is_category() ) {
-// 			$query->set( 'post_type', $post_types );
-// 		}
-// 		elseif( is_date() ) {
-
-// 			// Prevent default date filtering
-// 			unset($query->query_vars['year']);
-// 			unset($query->query_vars['monthnum']);
-// 			unset($query->query_vars['day']);
-
-// 			// Query date posts
-// 			if( !empty($query->query['monthnum']) && !empty($query->query['day']) ) {
-// 				$queryDate = date( 'Ymd', mktime(0, 0, 0, $query->query['monthnum'], $query->query['day'], $query->query['year']) );
-
-// 				$query->set( 'meta_query', array(
-// 					array(
-// 						'key' => 'date',
-// 						'value' => $queryDate,
-// 						'compare' => '=',
-// 						'type' => 'DATE'
-// 					)
-// 				) );
-// 			}
-// 			else {
-
-// 				// Query month posts
-// 				if( !empty($query->query['monthnum']) ) {
-// 					$queryDate = mktime(0, 0, 0, $query->query['monthnum']+1, 0, $query->query['year']);
-					
-// 					$start_date = date('Y'.$query->query['monthnum'].'01'); // First day of the month
-// 					$end_date = date('Y'.$query->query['monthnum'].'t'); // 't' gets the last day of the month
-// 				}
-// 				else {
-// 					$queryDate = mktime(0, 0, 0, 0, 0, $query->query['year']);
-					
-// 					$start_date = date($query->query['year'].'0101'); // First day of the month
-// 					$end_date = date($query->query['year'].'12t'); // 't' gets the last day of the month
-// 				}
-
-// 				$query->set( 'meta_query', array(
-// 					array(
-// 						'key'       => 'date',
-// 						'value'     => array($start_date, $end_date),
-// 						'compare'   => 'BETWEEN',
-// 						'type'      => 'DATE'
-// 					)
-// 				) );
-// 			}
-			
-// 			$query->set( 'posts_per_page', 5 );
-// 			$query->set( 'post_type', $post_types );
-
-// 			// echo '<pre>' . print_r($query, true) . '</pre>';
-// 		}
-// 	}
-// }
-// add_action( 'pre_get_posts', 'custom_post_type_archive' );
-
-function new_excerpt_more( $more ) {
+add_filter('excerpt_more', function( $more ) {
 	return '...';
+});
+
+function get_file_icon( $path ) {
+    $extension = end( explode('.', $path) );
+
+    switch ($extension) {
+
+        // PDF
+        case 'pdf':
+            $icon = get_template_directory_uri()."/dist/img/icons/pdf.svg";
+            break;
+
+        // Microsoft Word
+        case 'wbk': case 'dot': case 'doc': case 'docx':
+            $icon = get_template_directory_uri()."/dist/img/icons/doc.svg";
+            break;
+
+        // Microsoft Excel
+        case 'xlsx': case 'xlsm': case 'xlsb': case 'xltx': case 'xltm': case 'xls': case 'xlt': case 'xml': case 'xlam': case 'xla': case 'xlw': case 'xlr':
+            $icon = get_template_directory_uri()."/dist/img/icons/xls.svg";
+            break;
+
+        default:
+			$icon = get_template_directory_uri()."/dist/img/icons/file.svg";
+            break;
+    }
+
+    return $icon;
 }
-add_filter('excerpt_more', 'new_excerpt_more');
