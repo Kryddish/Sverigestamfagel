@@ -49,10 +49,23 @@
 	img {
 		margin-left: 50px;
 		object-fit: contain;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.wrapper {
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			padding: 0 25px;
+		}
 	}
 
 	.form {
-		width: 80%;
+		@media screen and (min-width: 768px) {
+			width: 80%;
+		}
 	}
 }
 

@@ -1,5 +1,5 @@
 <div class="contact-form">
-	<div>
+	<div class="wrapper">
 		<h2>Kontakta oss:</h2>
 		<p>Har du några funderingar? Skriv tills oss nedan så svarar vi så snabbt vi kan.</p>
 
