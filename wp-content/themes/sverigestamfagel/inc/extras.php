@@ -32,7 +32,7 @@ add_action( 'wp_head', function() {
 
 // Register Google API
 add_action('acf/init', function() {
-	acf_update_setting('google_api_key', 'AIzaSyCas882K6W9VfSaxZZ_m4JwfwIajyqWtlY');
+	acf_update_setting('google_api_key', get_field('google_api_key', 'option'));
 });
 
 // Custom excerpt length
