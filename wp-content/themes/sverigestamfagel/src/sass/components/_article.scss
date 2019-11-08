@@ -4,18 +4,18 @@
 	justify-content: center;
 	padding: 50px 20px;
 
-	:last-child {
-		margin-bottom: 0;
-	}
-
 	&__sidebar {
 		width: 30%;
-		padding: 20px 40px;
+		padding: 50px 40px;
 		background-color: #fff;
 		border: 1px solid #eee;
 
 		@media screen and (max-width: 768px) {
 			display: none;
+		}
+
+		h5 {
+			margin-top: 0;
 		}
 
 		ul {
@@ -24,7 +24,13 @@
 			list-style-type: none;
 
 			.current {
+				font-weight: bold;
 				text-decoration: underline;
+			}
+
+			a {
+				font-size: 18px;
+				font-family: $font__open;
 			}
 		}
 	}
@@ -39,6 +45,10 @@
 			padding: 30px 50px 60px;
 			width: 70%;
 			margin-left: 20px;
+		}
+
+		:last-child {
+			margin-bottom: 0;
 		}
 
 		h1 {
