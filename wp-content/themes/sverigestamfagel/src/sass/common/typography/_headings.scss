@@ -5,7 +5,6 @@ h4,
 h5,
 h6 {
 	margin-top: .75em;
-	margin-bottom: 30px;
 	font-family: $font__averia;
 	clear: both;
 }
@@ -13,29 +12,35 @@ h6 {
 h1 {
 	@include font-size(2.6);
 	line-height: 70px;
+	margin-bottom: 30px;
 }
 
 h2 {
 	@include font-size(2.4);
 	line-height: (2.6 * 20px);
+	margin-bottom: 30px;
 }
 
 h3 {
 	@include font-size(2.2);
 	line-height: (2.4 * 20px);
+	margin-bottom: 30px;
 }
 
 h4 {
 	@include font-size(1.8);
 	line-height: (2 * 20px);
+	margin-bottom: 15px;
 }
 
 h5 {
 	@include font-size(1.4);
 	line-height: (1.6 * 20px);
+	margin-bottom: 15px;
 }
 
 h6 {
 	@include font-size(1);
 	line-height: 20px;
+	margin-bottom: 15px;
 }
