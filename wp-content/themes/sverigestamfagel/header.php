@@ -1,3 +1,8 @@
+<?php
+$title = get_field('title', 'option') ?: get_bloginfo( 'name' );
+$description = get_field('subheading', 'option') ?: get_bloginfo( 'description', 'display' );
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -16,18 +21,12 @@
 					<?php the_custom_logo(); ?>
 
 					<div class="text">
-						<h2 class="site-title">
-							<?php bloginfo( 'name' ); ?>
-						</h2>
+						<h2 class="site-title"><?= $title ?></h2>
 						<?php
-						$description = get_bloginfo( 'description', 'display' );
-
-							if ( $description || is_customize_preview() ) : ?>
-								<h5 class="site-description">
-									<?= $description; ?>
-								</h5>
-								<?php
-							endif; ?>
+						if ($description): ?>
+							<h5 class="site-description"><?= $description; ?></h5>
+							<?php
+						endif; ?>
 					</div>
 				</div>
 
@@ -46,10 +45,10 @@
 					</button>
 				</div>
 				<?php
-				wp_nav_menu( array(
+				wp_nav_menu([
 					'theme_location' => 'primary',
 					'menu_id' => 'primary-menu'
-				) ); ?>
+				]); ?>
 			</nav>
 
 		</header>

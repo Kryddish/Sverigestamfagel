@@ -12,9 +12,12 @@
 $location = get_field( 'location' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('stf-post'); ?>>
-
 	<?php
-	if( get_the_post_thumbnail() ) : ?>
+	if (strtotime(get_the_date()) > strtotime(date('Y-m-d'))): ?>
+		<h1>HELLO</h1>
+		<?php
+	endif;
+	if (get_the_post_thumbnail()) : ?>
 		<a class="image" href="<?php the_permalink(); ?>">
 			<img src="<?php the_post_thumbnail_url('large'); ?>" alt="Post image">
 		</a>
@@ -22,7 +25,7 @@ $location = get_field( 'location' ); ?>
 	else:
 		$images = get_field('images');
 
-		if( $images ): ?>
+		if ($images): ?>
 			<a class="image" href="<?php the_permalink(); ?>">
 				<img src="<?= $images[0]['url']; ?>" alt="Post image">
 			</a>
@@ -32,7 +35,6 @@ $location = get_field( 'location' ); ?>
 	endif; ?>
 
 	<div class="text">
-
 		<header>
 			<h5>
 				<a href="<?php the_permalink(); ?>">
@@ -54,11 +56,9 @@ $location = get_field( 'location' ); ?>
 			</footer>
 		<?php
 
-		if( !empty( $location['adress'] ) ) : ?>
+		if (!empty($location['adress'])) : ?>
 			<h6 class="location"><?= $location['adress']; ?></h6>
 		<?php
 		endif; ?>
-
 	</div>
-
 </article>
