@@ -15,11 +15,12 @@ get_header(); ?>
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h3 class="page-title"><?php esc_html_e( 'Ojdå, Har du flugit vilse?', 'stf' ); ?></h3>
-				</header><!-- .page-header -->
+				</header>
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'Det verkar som att ingenting hittades på denna plats. Kanske prova göra en sökning eller använda länkarna i menyn?', 'stf' ); ?></p>
-					<Img src='<?= get_stylesheet_directory() . "/dist/img/birb.jpg" ?>' />
+					<p>
+						<?php esc_html_e( 'Det verkar som att ingenting hittades på denna plats. Kanske prova göra en sökning eller använda länkarna i menyn?', 'stf' ); ?>
+					</p>
 				</div>
 			</section>
 

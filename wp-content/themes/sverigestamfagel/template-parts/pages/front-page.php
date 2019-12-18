@@ -30,18 +30,18 @@ $meets_query = new WP_Query( $args ); ?>
 				<div>
 					<h2>
 						<?php
-						if( $top_info['top']['headline'] ) {
+						if ( $top_info['top']['headline'] ) {
 							echo $top_info['top']['headline'];
 						} ?>
 					</h2>
 					<p>
 						<?php
-						if( $top_info['top']['text'] ) {
+						if ( $top_info['top']['text'] ) {
 							echo $top_info['top']['text'];
 						} ?>
 					</p>
 					<?php
-					if( $top_info['top']['lank'] ) { ?>
+					if ( $top_info['top']['lank'] ) { ?>
 						<a class="lank_1" target="_blank" href="<?= $top_info['top']['lank']; ?>">Läs mer</a>
 						<?php
 					} ?>
@@ -96,7 +96,9 @@ $meets_query = new WP_Query( $args ); ?>
 					<article <?php post_class(); ?>>
 						<header>
 							<span class="category"><?= get_the_category()[0]->name; ?></span>
-							<span class="date"><?= get_the_date(); ?></span>
+							<span class="date">
+								<?= get_the_date(); ?>
+							</span>
 						</header>
 						<a href="<?php the_permalink(); ?>">
 							<h6><?php the_title(); ?></h6>

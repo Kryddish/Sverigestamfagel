@@ -13,8 +13,10 @@ $location = get_field( 'location' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('stf-post'); ?>>
 	<?php
-	if (strtotime(get_the_date()) > strtotime(date('Y-m-d'))): ?>
-		<h1>HELLO</h1>
+	if (strtotime(get_field('date')) > strtotime("now")): ?>
+		<div class="banner">
+			<h6>Kommande</h6>
+		</div>
 		<?php
 	endif;
 	if (get_the_post_thumbnail()) : ?>
@@ -29,9 +31,8 @@ $location = get_field( 'location' ); ?>
 			<a class="image" href="<?php the_permalink(); ?>">
 				<img src="<?= $images[0]['url']; ?>" alt="Post image">
 			</a>
-		<?php
+			<?php
 		endif;
-
 	endif; ?>
 
 	<div class="text">
@@ -44,21 +45,22 @@ $location = get_field( 'location' ); ?>
 		</header>
 
 		<?php the_excerpt(); ?>
-			<footer>
-				<h6 class="date">
-					<?php
-					if( get_field( 'date' ) ) :
-						the_field( 'date' );
-					else :
-						echo get_the_date();
-					endif;?>
-				</h6>
-			</footer>
-		<?php
 
+		<footer>
+			<h6 class="date">
+				<?php
+				if( get_field( 'date' ) ) :
+					the_field( 'date' );
+				else :
+					echo get_the_date();
+				endif;?>
+			</h6>
+		</footer>
+
+		<?php
 		if (!empty($location['adress'])) : ?>
 			<h6 class="location"><?= $location['adress']; ?></h6>
-		<?php
+			<?php
 		endif; ?>
 	</div>
 </article>
