@@ -11,6 +11,7 @@
  * Fields
  */
 $posts_per_page = get_field( 'meets_count' ) ? get_field( 'meets_count' ) : 3;
+$more_link = get_field('more_link');
 
 $args = [
 	'post_type' => 'meets',
@@ -80,7 +81,13 @@ $meets_query = new WP_Query( $args ); ?>
 					get_template_part( 'template-parts/content/content' );
 
 				endforeach;
-				wp_reset_postdata(); ?>
+				wp_reset_postdata();
+				if ($more_link): ?>
+					<a class="button" target="<?= $more_link['target'] ?>" href="<?= $more_link['url'] ?>">
+						<?= $more_link['title'] ?>
+					</a>
+					<?php
+				endif;?>
 			</div>
 
 			<div class="c-sidebar">

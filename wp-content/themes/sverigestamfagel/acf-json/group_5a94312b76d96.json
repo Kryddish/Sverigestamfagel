@@ -41,6 +41,21 @@
             "step": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_5dfa79339f1d5",
+            "label": "Fler aktiviteter - Länk",
+            "name": "more_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -60,5 +75,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1551272698
+    "modified": 1576696150
 }
