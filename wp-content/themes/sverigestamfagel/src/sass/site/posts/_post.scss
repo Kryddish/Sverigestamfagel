@@ -93,11 +93,12 @@
 
             .date {
                 font-family: $font__open;
-                font-weight: 400;
+                font-weight: bold;
                 color: #787878;
                 letter-spacing: .1em;
                 text-transform: uppercase;
-                @include font-size(0.6);
+                @include font-size(0.8);
+                margin: 0;
             }
         }
     }
