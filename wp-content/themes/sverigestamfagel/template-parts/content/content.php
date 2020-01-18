@@ -13,7 +13,7 @@ $location = get_field( 'location' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('stf-post'); ?>>
 	<?php
-	if (strtotime(get_field('date')) > strtotime("now")): ?>
+	if (get_field('date') and strtotime(get_field('date')) > time()): ?>
 		<div class="banner">
 			<h6>Kommande</h6>
 		</div>
@@ -47,7 +47,7 @@ $location = get_field( 'location' ); ?>
 		<?php the_excerpt(); ?>
 
 		<footer>
-			<h6 class="date">
+			<h6 class="date <?= strtotime(get_field('date')) > time() ? 'highlight' : '' ?>">
 				<?php
 				if( get_field( 'date' ) ) :
 					the_field( 'date' );
