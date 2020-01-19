@@ -194,7 +194,7 @@ require get_template_directory() . '/inc/contact-form-7.php';
  * Auto deployment to staging site
  */
 function auto_deployment( $data ) {
-	$output = shell_exec( 'bash ./deploy.sh' );
+	$output = shell_exec( 'screen -d -m bash ./deploy.sh && echo "Deployment finished."' );
 
 	if( $output ) echo $output;
 	else echo 'Deployment failed.';
