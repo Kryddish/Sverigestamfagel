@@ -138,27 +138,19 @@ get_header(); ?>
 						<h6><?= __('Typ av inlägg', 'stf') ?></h6>
 						<?php
 						if( !isset( $_GET['type'] ) or $_GET['type'] === 'any' ): ?>
-							<div>
-								<a class="current" href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
-							</div>
+							<a class="current" href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
 							<?php
 						else: ?>
-							<div>
-								<a href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
-							</div>
+							<a href="<?= add_query_arg( 'type', 'any' ) ?>">Alla</a>
 							<?php
 						endif;
 
 						foreach( $post_types as $key => $value ):
 							if( isset( $_GET['type'] ) and $_GET['type'] === $key ): ?>
-								<div>
-									<a class="current" href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
-								</div>
+								<a class="current" href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
 								<?php
 							else: ?>
-								<div>
-									<a href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
-								</div>
+								<a href="<?= add_query_arg( 'type', $key ) ?>"><?= $value ?></a>
 								<?php
 							endif;
 						endforeach;
@@ -167,26 +159,18 @@ get_header(); ?>
 						<h6><?= __('Kategorier', 'stf') ?></h6>
 						<?php
 						if( !isset( $_GET['category'] ) or $_GET['category'] === '' ): ?>
-							<div>
-								<a class="current" href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
-							</div>
+							<a class="current" href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 						<?php
 						else: ?>
-							<div>
-								<a href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
-							</div>
+							<a href="<?= add_query_arg( 'category', '' ) ?>"><?= __('Alla', 'stf') ?></a>
 							<?php
 						endif;
 						foreach ( $categories as $category ):
 							if( isset( $_GET['category'] ) and $_GET['category'] === $category->slug ): ?>
-								<div>
-									<a class="current" href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
-								</div>
+								<a class="current" href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
 							<?php
 							else: ?>
-								<div>
-									<a href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
-								</div>
+								<a href="<?= add_query_arg( 'category', $category->slug ) ?>"><?= $category->name ?></a>
 								<?php
 							endif;
 						endforeach;
