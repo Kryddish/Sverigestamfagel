@@ -1,7 +1,7 @@
 <div class="contact-form">
 	<div class="wrapper">
 		<h2>Kontakta oss:</h2>
-		<p>Har du några funderingar? Skriv tills oss nedan så svarar vi så snabbt vi kan.</p>
+		<p>Har du några funderingar? Skriv till oss nedan så svarar vi så snabbt vi kan.</p>
 
 		<div class="form">
 			<?= do_shortcode( '[contact-form-7 title="Kontakt"]' ); ?>
