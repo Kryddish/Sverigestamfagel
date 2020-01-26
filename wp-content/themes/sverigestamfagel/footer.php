@@ -20,7 +20,7 @@
 			<span>
 				<?php _e( '© 2019 Sveriges Tamfågelförening. All rights reserved', 'stf' ); ?>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="https://www.linkedin.com/in/emmelie-sundell-41bba2128/">Emmelie</a>', '<a href="https://www.linkedin.com/in/max-trewhitt-965109127/">Max</a>' ); ?>
+				<?php printf( esc_html__( 'Utvecklad av %1$s och %2$s.', 'stf' ), '<a href="https://www.linkedin.com/in/emmelie-sundell-41bba2128/">Emmelie</a>', '<a href="https://max.trewhitt.se">Max</a>' ); ?>
 			</span>
 		</div>
 	</footer>
@@ -30,3 +30,4 @@
 
 </body>
 </html>
+R
