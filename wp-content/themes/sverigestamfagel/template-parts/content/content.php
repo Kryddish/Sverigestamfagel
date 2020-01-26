@@ -8,9 +8,6 @@
  */
 ?>
 
-<?php
-$location = get_field( 'location' ); ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class('stf-post'); ?>>
 	<?php
 	if (get_field('date') and strtotime(get_field('date')) > time()): ?>
@@ -43,23 +40,21 @@ $location = get_field( 'location' ); ?>
 				</a>
 			</h5>
 		</header>
-
-		<?php the_excerpt(); ?>
-
+		<p><?= get_the_excerpt() ?></p>
 		<footer>
 			<h6 class="date <?= strtotime(get_field('date')) > time() ? 'highlight' : '' ?>">
 				<?php
-				if( get_field( 'date' ) ) :
-					the_field( 'date' );
-				else :
-					echo get_the_date();
-				endif;?>
+				if (get_field('date')) {
+					echo date('j F, Y', strtotime(get_field('date')));
+				} else {
+					echo get_the_date('j F, Y');
+				} ?>
 			</h6>
 		</footer>
 
 		<?php
-		if (!empty($location['adress'])) : ?>
-			<h6 class="location"><?= $location['adress']; ?></h6>
+		if (!empty(get_field('location')['adress'])) : ?>
+			<h6 class="location"><?= get_field('location')['adress']; ?></h6>
 			<?php
 		endif; ?>
 	</div>
