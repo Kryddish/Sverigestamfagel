@@ -1,14 +1,12 @@
 <div class="header">
-    <h2>STF:s Styrelse. </h2>
+    <h2><?= get_the_title() ?></h2>
     <p>
-        Vill du komma i kontakt med någon i styrelsen? Här når du oss enskilt,
-        annars maila till <a href="mailto:<?= get_bloginfo( 'admin_email' ); ?>"><?= get_bloginfo( 'admin_email' ); ?></a>
-        eller använd <a href="<?= site_url(); ?>/kontakt">kontaktformuläret</a>.
+        Vill du komma i kontakt med någon i styrelsen? Här nedan finns kontaktuppgifter till oss,
+        alternativt använd <a href="<?= site_url(); ?>/kontakt">kontaktformuläret</a>.
     </p>
 </div>
 
 <div class="board-members">
-
     <?php
     if( have_rows('members') ):
         while ( have_rows('members') ) : the_row(); ?>
@@ -38,7 +36,6 @@
                     </p>
                 </div>
             </div>
-
         <?php
         endwhile;
     endif; ?>
