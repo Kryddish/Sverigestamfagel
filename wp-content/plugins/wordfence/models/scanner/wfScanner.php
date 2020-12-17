@@ -498,6 +498,11 @@ class wfScanner {
 				);
 				break;
 			case self::STAGE_SERVER_STATE:
+				if ($this->scanType() != self::SCAN_TYPE_QUICK) {
+					$always = array(
+						'checkSkippedFiles',
+					);
+				}
 				$options = array(
 					'scansEnabled_checkHowGetIPs',
 					'scansEnabled_diskSpace',
@@ -520,11 +525,6 @@ class wfScanner {
 				);
 				break;
 			case self::STAGE_MALWARE_SCAN:
-				if ($this->scanType() != self::SCAN_TYPE_QUICK) {
-					$always = array(
-						'checkSkippedFiles',
-					);
-				}
 				$options = array(
 					'scansEnabled_malware',
 					'scansEnabled_fileContents',
@@ -819,7 +819,7 @@ class wfScanner {
 		$reputationChecks = array(
 			'spamvertizeCheck' => __('Enable scan option to check if this website is being "Spamvertised".', 'wordfence'),
 			'checkSpamIP' => __('Enable scan option to check if your website IP is generating spam.', 'wordfence'),
-			'scansEnabled_checkGSB' => __('Enable scan option to check if your website is on a domain blacklist.', 'wordfence'),
+			'scansEnabled_checkGSB' => __('Enable scan option to check if your website is on a domain blocklist.', 'wordfence'),
 		);
 
 		foreach ($reputationChecks as $option => $optionLabel) {

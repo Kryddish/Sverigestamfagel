@@ -29,7 +29,7 @@ if (!isset($collapseable)) {
 				<ul class="wf-block-list">
 					<?php
 					$options = array(
-						array('key' => 'scansEnabled_checkGSB', 'label' => __('Check if this website is on a domain blacklist', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_CHECK_SITE_BLACKLISTED), 'premium' => true, 'subtitleHTML' => __('<em>Reputation check</em>', 'wordfence')),
+						array('key' => 'scansEnabled_checkGSB', 'label' => __('Check if this website is on a domain blocklist', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_CHECK_SITE_BLACKLISTED), 'premium' => true, 'subtitleHTML' => __('<em>Reputation check</em>', 'wordfence')),
 						array('key' => 'spamvertizeCheck', 'label' => __('Check if this website is being "Spamvertised"', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_CHECK_SITE_SPAMVERTIZED), 'premium' => true, 'subtitleHTML' => __('<em>Reputation check</em>', 'wordfence')),
 						array('key' => 'checkSpamIP', 'label' => __('Check if this website IP is generating spam', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_CHECK_IP_SPAMMING), 'premium' => true, 'subtitleHTML' => __('<em>Reputation check</em>', 'wordfence')),
 						array('key' => 'scansEnabled_checkHowGetIPs', 'label' => __('Scan for misconfigured How does Wordfence get IPs', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_CHECK_MISCONFIGURED_HOW_GET_IPS)),
@@ -46,7 +46,7 @@ if (!isset($collapseable)) {
 						array('key' => 'scansEnabled_comments', 'label' => __('Scan comments for known dangerous URLs and suspicious content', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_COMMENT_URLS)),
 						array('key' => 'scansEnabled_suspiciousOptions', 'label' => __('Scan WordPress core, plugin, and theme options for known dangerous URLs and suspicious content', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_MALWARE_OPTIONS)),
 						array('key' => 'scansEnabled_oldVersions', 'label' => __('Scan for out of date, abandoned, and vulnerable plugins, themes, and WordPress versions', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_UPDATES)),
-						array('key' => 'scansEnabled_suspiciousAdminUsers', 'label' => __('Scan for admin users created outside of WordPress', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_UNKNOWN_ADMINS)),
+						array('key' => 'scansEnabled_suspiciousAdminUsers', 'label' => __('Scan for suspicious admin users created outside of WordPress', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_UNKNOWN_ADMINS)),
 						array('key' => 'scansEnabled_passwds', 'label' => __('Check the strength of passwords', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_PASSWORD_STRENGTH)),
 						array('key' => 'scansEnabled_diskSpace', 'label' => __('Monitor disk space', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_DISK_SPACE)),
 						array('key' => 'scansEnabled_wafStatus', 'label' => __('Monitor Web Application Firewall status', 'wordfence'), 'helpLink' => wfSupportController::supportURL(wfSupportController::ITEM_SCAN_OPTION_WAF_STATUS)),

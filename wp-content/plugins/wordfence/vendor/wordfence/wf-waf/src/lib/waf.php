@@ -245,14 +245,14 @@ auEa+7b+FGTKs7dUo2BNGR7OVifK4GZ8w/ajS0TelhrSRi3BBQCGXLzUO/UURUAh
 					if ($path && $paramKey && $ruleID) {
 						$this->whitelistRuleForParam($path, $paramKey, $ruleID, array(
 							'timestamp'   => time(),
-							'description' => 'Whitelisted by via false positive dialog',
+							'description' => 'Allowlisted by via false positive dialog',
 							'source'	  => 'false-positive',
 							'ip'          => $request->getIP(),
 						));
 						$whitelistCount++;
 					}
 				}
-				exit("Successfully whitelisted $whitelistCount params.");
+				exit("Successfully allowlisted $whitelistCount params.");
 			}
 		}
 
@@ -1261,7 +1261,7 @@ HTML
 
 						$data = array(
 							'timestamp' => time(),
-							'description' => 'Whitelisted while in Learning Mode.',
+							'description' => 'Allowlisted while in Learning Mode.',
 							'source' => 'learning-mode',
 							'ip' => $this->getRequest()->getIP(),
 						);
@@ -1986,7 +1986,7 @@ class wfWAFCronFetchIPListEvent extends wfWAFCronEvent {
 			
 			if ($response instanceof wfWAFHTTPResponse && $response->getBody()) {
 				$jsonData = wfWAFUtils::json_decode($response->getBody(), true);
-				if (array_key_exists('data', $jsonData) && array_key_exists('watchedIPList', $jsonData['data'])) {
+				if (is_array($jsonData) && array_key_exists('data', $jsonData) && is_array($jsonData['data']) && array_key_exists('watchedIPList', $jsonData['data'])) {
 					$waf->getStorageEngine()->setConfig('watchedIPs', $jsonData['data']['watchedIPList'], 'transient');
 				}
 			}
