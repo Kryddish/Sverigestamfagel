@@ -2,54 +2,78 @@
 # This file is distributed under the same license as the Plugins - User Role Editor - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-07-19 17:34:49+0000\n"
+"PO-Revision-Date: 2020-11-28 20:26:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: sv_SE\n"
 "Project-Id-Version: Plugins - User Role Editor - Stable (latest release)\n"
 
-#: includes/classes/grant-roles.php:454
+#: includes/classes/capability.php:84
+msgid "Wrong Request"
+msgstr "Fel begäran"
+
+#: includes/classes/editor.php:1029
+msgid "Wrong role ID"
+msgstr "Fel roll-ID"
+
+#: includes/classes/editor.php:1001
+msgid "There are no roles for deletion"
+msgstr "Det finns inga roller för borttagning"
+
+#: includes/classes/grant-roles.php:455
 msgid "Revoke"
 msgstr "Återkalla"
 
-#: includes/classes/grant-roles.php:449 includes/classes/grant-roles.php:451
+#: includes/classes/grant-roles.php:450 includes/classes/grant-roles.php:452
 msgid "Revoke role&hellip;"
 msgstr "Återkalla roll&hellip;"
 
-#: includes/classes/grant-roles.php:447
+#: includes/classes/grant-roles.php:448
 msgid "Add"
 msgstr "Lägg till"
 
-#: includes/classes/grant-roles.php:442 includes/classes/grant-roles.php:444
+#: includes/classes/grant-roles.php:443 includes/classes/grant-roles.php:445
 msgid "Add role&hellip;"
 msgstr "Lägg till roll&hellip;"
 
-#: includes/classes/editor.php:1061
+#: includes/classes/editor.php:1072
 msgid "Wrong request. Default role can not be empty"
 msgstr "Felaktig förfrågan. Standardroll kan inte vara tom"
 
-#: includes/classes/editor.php:977
+#: includes/classes/editor.php:1068
+msgid "This method is only for a single site of WordPress multisite installation."
+msgstr "Denna metod är endast för en enskild webbplats på en WordPress-multisite installation."
+
+#: includes/classes/editor.php:975
 msgid "You can not delete role"
 msgstr "Du kan inte ta bort roll"
 
-#: includes/classes/editor.php:973
+#: includes/classes/editor.php:971
 msgid "Role does not exist"
 msgstr "Roll finns inte"
 
-#: includes/classes/editor.php:964
-msgid "Empty or not valid list of roles for deletion"
-msgstr "Tom eller ej giltig lista över roller för borttagning"
+#: includes/classes/screen-help.php:85
+msgid "Super administrator only may create, edit and delete users under WordPress multi-site by default. Turn this option on in order to remove this limitation."
+msgstr "Endast superadministratör kan skapa, redigera och ta bort användare under WordPress-multisite som standard. Slå på detta alternativ för att ta bort denna begränsning."
+
+#: includes/classes/screen-help.php:66
+msgid "select roles below to assign them to the new user automatically as an addition to the primary role. Note for multisite environment: take into account that other default roles should exist at the site, in order to be assigned to the new registered users."
+msgstr "välj roller nedan för att automatiskt tilldela dem till nya användare i tillägg till den primära rollen. Observera att för multisite behöver du ta hänsyn till att andra standardroller behöver finnas på webbplatsen för att kunna tilldelas nyregistrerade användare."
+
+#: includes/classes/screen-help.php:22
+msgid "Capabilities like \"level_0\", \"level_1\" are deprecated and are not used by WordPress. They are left at the user roles for the compatibility purpose with old themes and plugins code. Turning on this option will show those deprecated capabilities."
+msgstr "Behörigheter som ”level_0” och ”level_1” är föråldrade och används inte av WordPress. De finns kvar bland användarrollerna för att äldre kod i teman och tillägg ska fungera. Om du aktiverar detta alternativ visas de föråldrade behörigheterna."
+
+#: includes/classes/editor.php:192
+msgid "Wrong request!"
+msgstr "Fel begäran!"
 
 #: includes/classes/capability.php:54
 msgid "Error: this word is used by WordPress as a role ID"
 msgstr "Fel: detta ord är använt av WordPress som ett roll-ID"
-
-#: includes/classes/editor.php:203
-msgid "Wrong request!"
-msgstr "Fel begäran!"
 
 #: includes/settings-template.php:107
 msgid "columns"
@@ -63,23 +87,23 @@ msgstr "Visa behörigheter i"
 msgid "Tools"
 msgstr "Verktyg"
 
-#: includes/classes/view.php:322
+#: includes/classes/view.php:339
 msgid "Columns:"
 msgstr "Kolumner:"
 
-#: includes/classes/view.php:319
+#: includes/classes/view.php:336
 msgid "Granted Only"
 msgstr "Endast beviljade"
 
-#: includes/classes/view.php:303
+#: includes/classes/view.php:320
 msgid "Granted"
 msgstr "Beviljade"
 
-#: includes/classes/view.php:303
+#: includes/classes/view.php:320
 msgid "Total"
 msgstr "Totalt"
 
-#: includes/classes/view.php:303
+#: includes/classes/view.php:320
 msgid "Group"
 msgstr "Grupp"
 
@@ -87,34 +111,34 @@ msgstr "Grupp"
 msgid "Switch&nbsp;To"
 msgstr "Byt&nbsp;till"
 
-#: includes/classes/user-role-editor.php:782
+#: includes/classes/user-role-editor.php:790
 msgid "If any plugins (such as WooCommerce, S2Member and many others) have changed user roles and capabilities during installation, all those changes will be LOST!"
 msgstr "Om något tillägg (såsom WooCommerce, S2Member och många andra) har ändrat användarroller och behörigheter under installationen, kommer alla dessa ändringar att gå förlorade!"
 
-#: includes/classes/user-role-editor.php:781
+#: includes/classes/user-role-editor.php:789
 msgid " Resetting will restore default user roles and capabilities from WordPress core."
 msgstr " En återställning kommer att återställa standardanvändarroller och behörigheter från WordPress-kärnan."
 
-#: includes/classes/user-role-editor.php:780
+#: includes/classes/user-role-editor.php:788
 msgid "DANGER!"
 msgstr "FARA!"
 
-#: includes/classes/user-role-editor.php:731
-#: includes/classes/user-role-editor.php:778
+#: includes/classes/user-role-editor.php:739
+#: includes/classes/user-role-editor.php:786
 msgid "No"
 msgstr "Nej"
 
-#: includes/classes/user-role-editor.php:730
-#: includes/classes/user-role-editor.php:777
+#: includes/classes/user-role-editor.php:738
+#: includes/classes/user-role-editor.php:785
 msgid "Yes"
 msgstr "Ja"
 
-#: includes/classes/user-role-editor.php:729
-#: includes/classes/user-role-editor.php:776
+#: includes/classes/user-role-editor.php:737
+#: includes/classes/user-role-editor.php:784
 msgid "Confirm"
 msgstr "Bekräfta"
 
-#: includes/classes/user-role-editor.php:281
+#: includes/classes/user-role-editor.php:289
 msgid "To:"
 msgstr "Till:"
 
@@ -150,7 +174,7 @@ msgstr "Verktyg: Återställ: Användarroller initierades"
 msgid "Show confirmation dialog before save changes made to a current role."
 msgstr "Visa bekräftelsedialogrutan innan du sparar ändringar som gjorts i en aktuell roll."
 
-#: includes/classes/screen-help.php:25 includes/settings-template.php:86
+#: includes/settings-template.php:86 includes/classes/screen-help.php:25
 msgid "Confirm role update"
 msgstr "Bekräfta rolluppdatering"
 
@@ -162,23 +186,23 @@ msgstr "Ytterligare alternativ"
 msgid "Hide admin bar"
 msgstr "Dölj adminmeny"
 
-#: includes/classes/grant-roles.php:488
+#: includes/classes/grant-roles.php:489
 msgid "Select role(s) which you wish to grant!"
 msgstr "Välj roll/roller som du vill bevilja!"
 
-#: includes/classes/grant-roles.php:487
+#: includes/classes/grant-roles.php:488
 msgid "Select users to which you wish to grant roles!"
 msgstr "Välj användare som du vill bevilja roller!"
 
-#: includes/classes/grant-roles.php:486
+#: includes/classes/grant-roles.php:487
 msgid "Grant roles to selected users"
 msgstr "Bevilja roller till valda användare"
 
-#: includes/classes/view.php:272
+#: includes/classes/view.php:289
 msgid "Working..."
 msgstr "Bearbetar…"
 
-#: includes/classes/grant-roles.php:440
+#: includes/classes/grant-roles.php:441
 msgid "Grant Roles"
 msgstr "Bevilja roller"
 
@@ -218,11 +242,11 @@ msgstr "Kan inte redigera användaren eller ogiltiga data på användarlistan"
 msgid "Not enough permissions"
 msgstr "Inte tillräckliga behörigheter"
 
-#: includes/classes/capability.php:211
+#: includes/classes/capability.php:212
 msgid "capabilities were removed successfully"
 msgstr "behörigheterna togs bort"
 
-#: includes/classes/capability.php:196 includes/classes/capability.php:201
+#: includes/classes/capability.php:197 includes/classes/capability.php:202
 msgid "There are no capabilities available for deletion!"
 msgstr "Det finns inga behörigheter att ta bort!"
 
@@ -252,7 +276,7 @@ msgstr "Inlägg"
 
 #: includes/classes/capabilities-groups-manager.php:113
 msgid "Themes"
-msgstr "Tema"
+msgstr "Teman"
 
 #: includes/classes/capabilities-groups-manager.php:110
 msgid "All"
@@ -302,35 +326,35 @@ msgstr "Ändra behörigheter för användare"
 
 #: includes/classes/user-view.php:71
 msgid "Network Super Admin"
-msgstr "Nätverkets super admin"
+msgstr "Nätverkets superadmin"
 
 #: includes/classes/capabilities-groups-manager.php:126
 msgid "Custom capabilities"
 msgstr "Anpassade behörigheter"
 
-#: includes/classes/view.php:316
+#: includes/classes/view.php:333
 msgid "Quick filter:"
 msgstr "Snabbfilter:"
 
-#: includes/classes/tools.php:30 includes/classes/role-view.php:393
+#: includes/classes/tools.php:30 includes/classes/role-view.php:396
 msgid "Apply to All Sites"
 msgstr "Tillämpa på alla webbplatser"
 
-#: includes/classes/role-view.php:380
+#: includes/classes/role-view.php:383
 msgid "If checked, then apply action to ALL sites of this Network"
 msgstr "Om markerad, aktiveras åtgärden på ALLA webbplatser i nätverket"
 
-#: includes/classes/user-view.php:154 includes/classes/role-view.php:366
+#: includes/classes/user-view.php:154 includes/classes/role-view.php:369
 msgid "Show capabilities in human readable form"
-msgstr "Visa behörigheter i läsbar form (text)"
+msgstr "Visa behörigheter i mänsklig läsbar form"
 
-#: includes/classes/role-view.php:410
+#: includes/classes/role-view.php:413
 msgid "Select Role and change its capabilities:"
 msgstr "Välj roll och ändra dess behörigheter:"
 
 #: includes/settings-template.php:207
 msgid "Allow non super administrators to create, edit, and delete users"
-msgstr "Tillåter användare som inte är super admininstratörer att skapa, redigera och ta bort användare"
+msgstr "Tillåt icke superadministratörer att skapa, redigera och ta bort användare"
 
 #: includes/settings-template.php:181
 msgid "Note for multisite environment: take into account that other default roles should exist at the site, in order to be assigned to the new registered users."
@@ -357,90 +381,90 @@ msgstr "Om"
 msgid "User Role Editor - Options"
 msgstr "User Role Editor – Alternativ"
 
-#: includes/classes/user-role-editor.php:751
+#: includes/classes/user-role-editor.php:759
 msgid " Capability name (ID) must contain latin characters, digits, hyphens or underscore only!"
-msgstr "Namnet på behörighet (ID) får endast innehålla latinska bokstäver, siffror, bindestreck eller understreck!"
+msgstr "Namnet på behörighet (ID) får endast innehålla latinska tecken, siffror, bindestreck eller understreck!"
 
-#: includes/classes/user-role-editor.php:750
+#: includes/classes/user-role-editor.php:758
 msgid " Capability name (ID) can not be empty!"
 msgstr "Namnet på behörighet (ID) får inte vara tomt!"
 
-#: includes/classes/user-role-editor.php:749
+#: includes/classes/user-role-editor.php:757
 msgid "Warning! Be careful - removing critical capability could crash some plugin or other custom code"
 msgstr "Varning! Var försiktig &ndash; att ta bort kritiska behörigheter kan göra att vissa tillägg eller anpassad kod slutar fungera"
 
-#: includes/classes/user-role-editor.php:747
+#: includes/classes/user-role-editor.php:755
 msgid "Set New Default Role"
-msgstr "Ange ny standardroll"
+msgstr "Ställ in ny standardroll"
 
-#: includes/classes/user-role-editor.php:746
+#: includes/classes/user-role-editor.php:754
 msgid "Default Role"
 msgstr "Standardroll"
 
-#: includes/classes/user-role-editor.php:745
-#: includes/classes/user-role-editor.php:785
+#: includes/classes/user-role-editor.php:753
+#: includes/classes/user-role-editor.php:793
 msgid "Continue?"
 msgstr "Fortsätta?"
 
-#: includes/classes/user-role-editor.php:783
+#: includes/classes/user-role-editor.php:791
 msgid "For more information on how to undo undesired changes and restore plugin capabilities go to"
 msgstr "För mer information om hur man ångrar oönskade ändringar och återställer tilläggets behörigheter, gå till"
 
-#: includes/classes/tools.php:36 includes/classes/user-role-editor.php:779
+#: includes/classes/tools.php:36 includes/classes/user-role-editor.php:787
 msgid "Reset"
 msgstr "Återställ"
 
-#: includes/classes/user-role-editor.php:744
-#: includes/classes/user-role-editor.php:748
+#: includes/classes/user-role-editor.php:752
+#: includes/classes/user-role-editor.php:756
 msgid "Delete Capability"
 msgstr "Ta bort behörighet"
 
-#: includes/classes/user-role-editor.php:743
+#: includes/classes/user-role-editor.php:751
 msgid "Add Capability"
 msgstr "Lägg till behörighet"
 
-#: includes/classes/user-role-editor.php:742
+#: includes/classes/user-role-editor.php:750
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: includes/classes/user-role-editor.php:741
+#: includes/classes/user-role-editor.php:749
 msgid "Delete Role"
 msgstr "Ta bort roll"
 
-#: includes/classes/user-role-editor.php:739
+#: includes/classes/user-role-editor.php:747
 msgid "Add Role"
 msgstr "Lägg till roll"
 
-#: includes/classes/user-role-editor.php:738
+#: includes/classes/user-role-editor.php:746
 msgid " WordPress does not support numeric Role name (ID). Add latin characters to it."
-msgstr "WordPress stöder inte numeriskt rollnamn (ID). Lägg till latinska bokstäver i det."
+msgstr "WordPress stöder inte numeriskt rollnamn (ID). Lägg till latinska tecken i det."
 
-#: includes/classes/user-role-editor.php:737
+#: includes/classes/user-role-editor.php:745
 msgid " Role name (ID) must contain latin characters, digits, hyphens or underscore only!"
-msgstr "Rollnamn (ID) måste innehålla bara latinska tecken, siffror, bindestreck eller understreck!"
+msgstr "Rollnamn (ID) får endast innehålla latinska tecken, siffror, bindestreck eller understreck!"
 
-#: includes/classes/user-role-editor.php:736
+#: includes/classes/user-role-editor.php:744
 msgid " Role name (ID) can not be empty!"
 msgstr "Rollnamn (ID) kan inte vara tomt!"
 
-#: includes/classes/user-role-editor.php:735
-#: includes/classes/user-role-editor.php:740
+#: includes/classes/user-role-editor.php:743
+#: includes/classes/user-role-editor.php:748
 msgid "Rename Role"
 msgstr "Byt namn på roll"
 
-#: includes/classes/user-role-editor.php:734
+#: includes/classes/user-role-editor.php:742
 msgid "Add New Role"
 msgstr "Lägg till ny roll"
 
-#: includes/classes/user-role-editor.php:733
+#: includes/classes/user-role-editor.php:741
 msgid "Please confirm permissions update"
 msgstr "Bekräfta behörighetsuppdatering"
 
-#: includes/classes/user-role-editor.php:732
+#: includes/classes/user-role-editor.php:740
 msgid "Update"
 msgstr "Uppdatera"
 
-#: includes/classes/user-role-editor.php:609
+#: includes/classes/user-role-editor.php:617
 msgid "You do not have sufficient permissions to manage options for User Role Editor."
 msgstr "Du har inte tillräckliga behörigheter för att hantera alternativ för User Role Editor."
 
@@ -453,45 +477,45 @@ msgstr "Standardroller är uppdaterade"
 msgid "User Role Editor options are updated"
 msgstr "Inställningarna för User Role Editor har uppdaterats"
 
-#: includes/classes/user-role-editor.php:548
-#: includes/classes/capabilities-groups-manager.php:121
 #: includes/settings-template.php:36
+#: includes/classes/capabilities-groups-manager.php:121
+#: includes/classes/user-role-editor.php:556
 msgid "Multisite"
 msgstr "Multisite"
 
-#: includes/classes/user-role-editor.php:542 includes/settings-template.php:31
+#: includes/settings-template.php:31 includes/classes/user-role-editor.php:550
 msgid "Default Roles"
 msgstr "Standardroller"
 
-#: includes/classes/user-role-editor.php:536 includes/settings-template.php:26
+#: includes/settings-template.php:26 includes/classes/user-role-editor.php:544
 msgid "Additional Modules"
 msgstr "Ytterligare moduler"
 
-#: includes/classes/user-role-editor.php:530
-#: includes/classes/capabilities-groups-manager.php:112
 #: includes/settings-template.php:20
+#: includes/classes/capabilities-groups-manager.php:112
+#: includes/classes/user-role-editor.php:538
 msgid "General"
 msgstr "Allmänt"
 
-#: includes/classes/user-role-editor.php:481
-#: includes/classes/user-role-editor.php:494
+#: includes/classes/user-role-editor.php:489
+#: includes/classes/user-role-editor.php:502
 msgid "Settings"
 msgstr "Inställningar"
 
-#: includes/classes/user-role-editor.php:355
-#: includes/classes/user-role-editor.php:357
+#: includes/classes/user-role-editor.php:363
+#: includes/classes/user-role-editor.php:365
 msgid "You do not have permission to edit this user."
 msgstr "Du saknar behörighet att redigera den här användaren."
 
-#: includes/classes/user-role-editor.php:283
+#: includes/classes/user-role-editor.php:291
 msgid "Provide new role"
 msgstr "Ange ny roll"
 
-#: includes/classes/user-role-editor.php:282
+#: includes/classes/user-role-editor.php:290
 msgid "No rights"
 msgstr "Inga rättigheter"
 
-#: includes/classes/user-role-editor.php:280
+#: includes/classes/user-role-editor.php:288
 msgid "Change role for users without role"
 msgstr "Ändra roll för användare utan roll"
 
@@ -504,7 +528,7 @@ msgid "Edit"
 msgstr "Redigera"
 
 #: includes/classes/user-other-roles.php:200
-#: includes/classes/user-role-editor.php:383
+#: includes/classes/user-role-editor.php:391
 msgid "Capabilities"
 msgstr "Behörigheter"
 
@@ -525,24 +549,24 @@ msgstr "Tillåt icke-super-administratörer att skapa, redigera och ta bort anv�
 msgid "Other default roles for new registered user"
 msgstr "Andra standardroller för nyregistrerade användare"
 
-#: includes/classes/screen-help.php:47 includes/settings-template.php:141
+#: includes/settings-template.php:141 includes/classes/screen-help.php:47
 msgid "Count users without role"
 msgstr "Räkna användare utan roll"
 
-#: includes/classes/screen-help.php:27 includes/settings-template.php:94
+#: includes/settings-template.php:94 includes/classes/screen-help.php:27
 msgid "Edit user capabilities"
 msgstr "Redigera användarbehörigheter"
 
-#: includes/classes/user-view.php:164 includes/classes/role-view.php:376
-#: includes/classes/screen-help.php:21 includes/settings-template.php:78
+#: includes/settings-template.php:78 includes/classes/user-view.php:164
+#: includes/classes/role-view.php:379 includes/classes/screen-help.php:21
 msgid "Show deprecated capabilities"
 msgstr "Visa föråldrade behörigheter"
 
-#: includes/classes/screen-help.php:18 includes/settings-template.php:70
+#: includes/settings-template.php:70 includes/classes/screen-help.php:18
 msgid "Show capabilities in the human readable form"
 msgstr "Visa behörigheter i läsbar form (text)"
 
-#: includes/classes/screen-help.php:15 includes/settings-template.php:61
+#: includes/settings-template.php:61 includes/classes/screen-help.php:15
 msgid "Show Administrator role at User Role Editor"
 msgstr "Visa administratörsroll i User Role Editor"
 
@@ -559,47 +583,47 @@ msgstr "Nekad: %s"
 msgid "&mdash; No role for this site &mdash;"
 msgstr "&mdash; Ingen roll för denna webbplats &mdash;"
 
-#: includes/classes/role-view.php:74
+#: includes/classes/role-view.php:75
 msgid "None"
 msgstr "Ingen"
 
-#: includes/classes/role-view.php:109
+#: includes/classes/role-view.php:112
 msgid "Delete All Unused Roles"
 msgstr "Ta bort alla oanvända roller"
 
-#: includes/classes/lib.php:391
+#: includes/classes/lib.php:385
 msgid "FAQ"
 msgstr "Vanliga frågor"
 
-#: includes/classes/lib.php:390 includes/classes/user-role-editor.php:507
+#: includes/classes/lib.php:384 includes/classes/user-role-editor.php:515
 msgid "Changelog"
 msgstr "Ändringslogg"
 
-#: includes/classes/lib.php:389
+#: includes/classes/lib.php:383
 msgid "Plugin download"
 msgstr "Ladda ner tillägget"
 
-#: includes/classes/lib.php:388
+#: includes/classes/lib.php:382
 msgid "Plugin webpage"
 msgstr "Tilläggets webbplats"
 
-#: includes/classes/lib.php:387
+#: includes/classes/lib.php:381
 msgid "Author's website"
-msgstr "Upphovsmanens webbplats"
+msgstr "Författarens webbplats"
 
-#: includes/classes/lib.php:386
+#: includes/classes/lib.php:380
 msgid "Version:"
 msgstr "Version:"
 
-#: includes/classes/capability.php:207
+#: includes/classes/capability.php:208
 msgid "Capability %s was removed successfully"
 msgstr "Behörigheten %s har tagits bort"
 
-#: includes/classes/capability.php:102
+#: includes/classes/capability.php:101
 msgid "Capability %s exists already"
 msgstr "Behörigheten %s finns redan"
 
-#: includes/classes/capability.php:100
+#: includes/classes/capability.php:99
 msgid "Capability %s was added successfully"
 msgstr "Behörigheten %s har lagts till"
 
@@ -607,405 +631,400 @@ msgstr "Behörigheten %s har lagts till"
 msgid "Error: Capability name must contain latin characters and digits only!"
 msgstr "Fel: Namnet på behörigheten får endast innehålla latinska tecken och siffror!"
 
-#: includes/classes/editor.php:1377
+#: includes/classes/editor.php:1363
 msgid "Export"
 msgstr "Exportera"
 
-#: includes/classes/editor.php:1376
+#: includes/classes/editor.php:1362
 msgid "Delete themes"
-msgstr "Radera teman"
+msgstr "Ta bort teman"
 
-#: includes/classes/editor.php:1375
+#: includes/classes/editor.php:1361
 msgid "Edit theme options"
 msgstr "Redigera temainställningar"
 
-#: includes/classes/editor.php:1374
+#: includes/classes/editor.php:1360
 msgid "Promote users"
 msgstr "Befordra användare"
 
-#: includes/classes/editor.php:1373
+#: includes/classes/editor.php:1359
 msgid "Add users"
 msgstr "Lägg till användare"
 
-#: includes/classes/editor.php:1372
+#: includes/classes/editor.php:1358
 msgid "Remove users"
 msgstr "Ta bort användare"
 
-#: includes/classes/editor.php:1371
+#: includes/classes/editor.php:1357
 msgid "List users"
 msgstr "Lista användare"
 
-#: includes/classes/editor.php:1370
+#: includes/classes/editor.php:1356
 msgid "Update core"
 msgstr "Uppdatera kärna"
 
-#: includes/classes/editor.php:1369
+#: includes/classes/editor.php:1355
 msgid "Install themes"
-msgstr "Installera tema"
+msgstr "Installera teman"
 
-#: includes/classes/editor.php:1368
+#: includes/classes/editor.php:1354
 msgid "Update themes"
-msgstr "Uppdatera tema"
+msgstr "Uppdatera teman"
 
-#: includes/classes/editor.php:1367
+#: includes/classes/editor.php:1353
 msgid "Install plugins"
 msgstr "Installera tillägg"
 
-#: includes/classes/editor.php:1366
+#: includes/classes/editor.php:1352
 msgid "Delete plugins"
 msgstr "Ta bort tillägg"
 
-#: includes/classes/editor.php:1365
+#: includes/classes/editor.php:1351
 msgid "Update plugins"
 msgstr "Uppdatera tillägg"
 
-#: includes/classes/editor.php:1364
+#: includes/classes/editor.php:1350
 msgid "Edit dashboard"
 msgstr "Redigera adminpanel"
 
-#: includes/classes/editor.php:1363
+#: includes/classes/editor.php:1349
 msgid "Unfiltered upload"
-msgstr "Ofiltrerade uppladdning"
+msgstr "Ofiltrerad uppladdning"
 
-#: includes/classes/editor.php:1362
+#: includes/classes/editor.php:1348
 msgid "Create users"
 msgstr "Skapa användare"
 
-#: includes/classes/editor.php:1361
+#: includes/classes/editor.php:1347
 msgid "Delete users"
 msgstr "Ta bort användare"
 
-#: includes/classes/editor.php:1360
+#: includes/classes/editor.php:1346
 msgid "Read private pages"
 msgstr "Läs privata sidor"
 
-#: includes/classes/editor.php:1359
+#: includes/classes/editor.php:1345
 msgid "Edit private pages"
 msgstr "Redigera privata sidor"
 
-#: includes/classes/editor.php:1358
+#: includes/classes/editor.php:1344
 msgid "Delete private pages"
 msgstr "Ta bort privata sidor"
 
-#: includes/classes/editor.php:1357
+#: includes/classes/editor.php:1343
 msgid "Read private posts"
 msgstr "Läs privata inlägg"
 
-#: includes/classes/editor.php:1356
+#: includes/classes/editor.php:1342
 msgid "Edit private posts"
 msgstr "Redigera privata inlägg"
 
-#: includes/classes/editor.php:1355
+#: includes/classes/editor.php:1341
 msgid "Delete private posts"
 msgstr "Ta bort privata inlägg"
 
-#: includes/classes/editor.php:1354
+#: includes/classes/editor.php:1340
 msgid "Delete published posts"
 msgstr "Ta bort publicerade inlägg"
 
-#: includes/classes/editor.php:1353
+#: includes/classes/editor.php:1339
 msgid "Delete others posts"
 msgstr "Ta bort andras inlägg"
 
-#: includes/classes/editor.php:1352
+#: includes/classes/editor.php:1338
 msgid "Delete posts"
 msgstr "Ta bort inlägg"
 
-#: includes/classes/editor.php:1351
+#: includes/classes/editor.php:1337
 msgid "Delete published pages"
 msgstr "Ta bort publicerade sidor"
 
-#: includes/classes/editor.php:1350
+#: includes/classes/editor.php:1336
 msgid "Delete others pages"
 msgstr "Ta bort andras sidor"
 
-#: includes/classes/editor.php:1349
+#: includes/classes/editor.php:1335
 msgid "Delete pages"
 msgstr "Ta bort sidor"
 
-#: includes/classes/editor.php:1348
+#: includes/classes/editor.php:1334
 msgid "Publish pages"
 msgstr "Publicera sidor"
 
-#: includes/classes/editor.php:1347
+#: includes/classes/editor.php:1333
 msgid "Edit published pages"
 msgstr "Redigera publicerade sidor"
 
-#: includes/classes/editor.php:1346
+#: includes/classes/editor.php:1332
 msgid "Edit others pages"
 msgstr "Redigera andras sidor"
 
-#: includes/classes/editor.php:1345
+#: includes/classes/editor.php:1331
 msgid "Level 0"
 msgstr "Nivå 0"
 
-#: includes/classes/editor.php:1344
+#: includes/classes/editor.php:1330
 msgid "Level 1"
 msgstr "Nivå 1"
 
-#: includes/classes/editor.php:1343
+#: includes/classes/editor.php:1329
 msgid "Level 2"
 msgstr "Nivå 2"
 
-#: includes/classes/editor.php:1342
+#: includes/classes/editor.php:1328
 msgid "Level 3"
 msgstr "Nivå 3"
 
-#: includes/classes/editor.php:1341
+#: includes/classes/editor.php:1327
 msgid "Level 4"
 msgstr "Nivå 4"
 
-#: includes/classes/editor.php:1340
+#: includes/classes/editor.php:1326
 msgid "Level 5"
 msgstr "Nivå 5"
 
-#: includes/classes/editor.php:1339
+#: includes/classes/editor.php:1325
 msgid "Level 6"
 msgstr "Nivå 6"
 
-#: includes/classes/editor.php:1338
+#: includes/classes/editor.php:1324
 msgid "Level 7"
 msgstr "Nivå 7"
 
-#: includes/classes/editor.php:1337
+#: includes/classes/editor.php:1323
 msgid "Level 8"
 msgstr "Nivå 8"
 
-#: includes/classes/editor.php:1336
+#: includes/classes/editor.php:1322
 msgid "Level 9"
 msgstr "Nivå 9"
 
-#: includes/classes/editor.php:1335
+#: includes/classes/editor.php:1321
 msgid "Level 10"
 msgstr "Nivå 10"
 
-#: includes/classes/editor.php:1334
+#: includes/classes/editor.php:1320
 msgid "Read"
 msgstr "Läsa"
 
-#: includes/classes/editor.php:1333
+#: includes/classes/editor.php:1319
 msgid "Edit pages"
 msgstr "Redigera sidor"
 
-#: includes/classes/editor.php:1332
+#: includes/classes/editor.php:1318
 msgid "Publish posts"
 msgstr "Publicera inlägg"
 
-#: includes/classes/editor.php:1331
+#: includes/classes/editor.php:1317
 msgid "Edit published posts"
 msgstr "Redigera publicerade inlägg"
 
-#: includes/classes/editor.php:1330
+#: includes/classes/editor.php:1316
 msgid "Edit others posts"
 msgstr "Redigera andras inlägg"
 
-#: includes/classes/editor.php:1329
+#: includes/classes/editor.php:1315
 msgid "Edit posts"
 msgstr "Redigera inlägg"
 
-#: includes/classes/editor.php:1328
+#: includes/classes/editor.php:1314
 msgid "Unfiltered html"
 msgstr "Ofiltrerad html"
 
-#: includes/classes/editor.php:1327
+#: includes/classes/editor.php:1313
 msgid "Import"
 msgstr "Importera"
 
-#: includes/classes/editor.php:1326
+#: includes/classes/editor.php:1312
 msgid "Upload files"
 msgstr "Ladda upp filer"
 
-#: includes/classes/editor.php:1325
+#: includes/classes/editor.php:1311
 msgid "Manage links"
 msgstr "Hantera länkar"
 
-#: includes/classes/editor.php:1324
+#: includes/classes/editor.php:1310
 msgid "Manage categories"
 msgstr "Hantera kategorier"
 
-#: includes/classes/editor.php:1323
+#: includes/classes/editor.php:1309
 msgid "Moderate comments"
-msgstr "Granska kommentarer"
+msgstr "Moderera kommentarer"
 
-#: includes/classes/editor.php:1322
+#: includes/classes/editor.php:1308
 msgid "Manage options"
 msgstr "Hantera alternativ"
 
-#: includes/classes/editor.php:1321
+#: includes/classes/editor.php:1307
 msgid "Edit files"
 msgstr "Redigera filer"
 
-#: includes/classes/editor.php:1320
+#: includes/classes/editor.php:1306
 msgid "Edit users"
 msgstr "Redigera användare"
 
-#: includes/classes/editor.php:1319
+#: includes/classes/editor.php:1305
 msgid "Edit plugins"
 msgstr "Redigera tillägg"
 
-#: includes/classes/editor.php:1318
+#: includes/classes/editor.php:1304
 msgid "Activate plugins"
 msgstr "Aktivera tillägg"
 
-#: includes/classes/editor.php:1317
+#: includes/classes/editor.php:1303
 msgid "Edit themes"
 msgstr "Redigera tema"
 
-#: includes/classes/editor.php:1316
+#: includes/classes/editor.php:1302
 msgid "Switch themes"
 msgstr "Byta tema"
 
-#: includes/classes/editor.php:1314
+#: includes/classes/editor.php:1300
 msgid "Subscriber"
 msgstr "Prenumerant"
 
-#: includes/classes/editor.php:1313
+#: includes/classes/editor.php:1299
 msgid "Contributor"
 msgstr "Medarbetare"
 
-#: includes/classes/editor.php:1312
+#: includes/classes/editor.php:1298
 msgid "Author"
 msgstr "Författare"
 
-#: includes/classes/editor.php:1311
+#: includes/classes/editor.php:1297
 msgid "Editor"
 msgstr "Redaktör"
 
-#: includes/classes/editor.php:1080
+#: includes/classes/editor.php:1091
 msgid "This role does not exist - "
 msgstr "Denna roll finns inte – "
 
-#: includes/classes/editor.php:1078
+#: includes/classes/editor.php:1089
 msgid "Can not set Administrator role as a default one"
 msgstr "Kan inte ställa in rollen administratör som standard"
 
-#: includes/classes/editor.php:1073
+#: includes/classes/editor.php:1084
 msgid "Default role for new users is set to %s successfully"
 msgstr "Standardrollen för nya användare är inställd till %s"
 
-#: includes/classes/editor.php:1075
+#: includes/classes/editor.php:1086
 msgid "Error encountered during default role change operation"
 msgstr "Ett fel inträffade under åtgärden för ändring av standardroll"
 
-#: includes/classes/editor.php:1027
+#: includes/classes/editor.php:1040
 msgid "Role %s is deleted successfully"
-msgstr "Roll %s är raderad"
+msgstr "Roll %s är borttagen utan problem"
 
-#: includes/classes/editor.php:1025
+#: includes/classes/editor.php:1038
 msgid "Unused roles are deleted successfully"
-msgstr "Oanvända roller är raderade"
+msgstr "Oanvända roller är borttagna utan problem"
 
-#: includes/classes/editor.php:1030
-msgid "Error encountered during role delete operation"
-msgstr "Ett fel inträffade vid borttagning av roll"
-
-#: includes/classes/editor.php:900
+#: includes/classes/editor.php:906
 msgid "Role %s is renamed to %s successfully"
 msgstr "Roll %s är namnändrad till %s"
 
-#: includes/classes/editor.php:888
+#: includes/classes/editor.php:893
 msgid "Role %s does not exists"
 msgstr "Rollen %s finns inte"
 
-#: includes/classes/editor.php:881
+#: includes/classes/editor.php:886
 msgid "Error: Empty role display name is not allowed."
 msgstr "Fel: Tomt visningsnamn är inte tillåtet."
 
-#: includes/classes/editor.php:782
+#: includes/classes/editor.php:778
 msgid "Error: Role ID is empty!"
 msgstr "Fel: roll-ID är tomt!"
 
-#: includes/classes/editor.php:851
+#: includes/classes/editor.php:853
 msgid "Role %s is created successfully"
 msgstr "Roll %s har skapats"
 
-#: includes/classes/editor.php:849
+#: includes/classes/editor.php:846
 msgid "Error is encountered during new role create operation"
 msgstr "Ett fel inträffade vid skapandet av en ny roll"
 
-#: includes/classes/editor.php:828
+#: includes/classes/editor.php:827
 msgid "Role %s exists already"
 msgstr "Rollen %s finns redan"
 
-#: includes/classes/editor.php:797
+#: includes/classes/editor.php:793
 msgid "Error: WordPress does not support numeric Role name (ID). Add latin characters to it."
 msgstr "Fel: WordPress stöder inte numeriskt rollnamn (ID). Lägg till latinska tecken i det."
 
-#: includes/classes/editor.php:791
+#: includes/classes/editor.php:787
 msgid "Error: Role ID must contain latin characters, digits, hyphens or underscore only!"
 msgstr "Fel: Roll-ID får bara innehålla latinska tecken, siffror, bindestreck eller understreck!"
 
-#: includes/classes/capability.php:79 includes/classes/capability.php:189
-#: includes/classes/user-role-editor.php:642 includes/classes/editor.php:749
-#: includes/classes/editor.php:817 includes/classes/editor.php:871
-#: includes/classes/editor.php:959 includes/classes/editor.php:1013
-#: includes/classes/editor.php:1051
+#: includes/classes/editor.php:745 includes/classes/editor.php:814
+#: includes/classes/editor.php:874 includes/classes/editor.php:1020
+#: includes/classes/editor.php:1062 includes/classes/user-role-editor.php:650
+#: includes/classes/capability.php:79 includes/classes/capability.php:190
 msgid "Insufficient permissions to work with User Role Editor"
 msgstr "Otillräckliga behörigheter att arbeta med User Role Editor"
 
-#: includes/classes/editor.php:1151
+#: includes/classes/editor.php:1136
 msgid "User Roles are restored to WordPress default values. "
 msgstr "Användarroller återställs till standardvärden för WordPress."
 
-#: includes/classes/editor.php:698
+#: includes/classes/editor.php:694
 msgid "Error occurred during user update"
 msgstr "Fel uppstod under användaruppdatering"
 
-#: includes/classes/editor.php:696
+#: includes/classes/editor.php:692
 msgid "User capabilities are updated successfully"
 msgstr "Användarbehörighet har uppdaterats"
 
-#: includes/classes/editor.php:692
+#: includes/classes/editor.php:688
 msgid "Error occurred during role(s) update"
 msgstr "Ett fel uppstod under uppdateringen av roll/roller"
 
-#: includes/classes/editor.php:689
+#: includes/classes/editor.php:685
 msgid "Roles are updated for all network"
 msgstr "Rollerna är uppdaterade för alla nätverk"
 
-#: includes/classes/editor.php:687
+#: includes/classes/editor.php:683
 msgid "Role is updated successfully"
 msgstr "Rollen har uppdaterats"
 
-#: includes/classes/editor.php:206
+#: includes/classes/editor.php:195
 msgid "does not exist"
 msgstr "finns inte"
 
-#: includes/classes/editor.php:205
+#: includes/classes/editor.php:194
 msgid "Role"
 msgstr "Roll"
 
-#: includes/classes/editor.php:203 includes/classes/editor.php:205
+#: includes/classes/editor.php:192 includes/classes/editor.php:194
 msgid "Error: "
 msgstr "Fel:"
 
 #. Plugin Name of the plugin
-#: includes/classes/user-role-editor.php:558
-#: includes/classes/user-role-editor.php:589 includes/classes/editor.php:1243
 #: includes/classes/capabilities-groups-manager.php:75
+#: includes/classes/editor.php:1229 includes/classes/user-role-editor.php:566
+#: includes/classes/user-role-editor.php:597
 msgid "User Role Editor"
 msgstr "User Role Editor"
 
-#: includes/classes/role-view.php:254
+#: includes/classes/role-view.php:257
 msgid "Capability name (ID): "
 msgstr "Namnet på behörigheten (ID):"
 
-#: includes/classes/role-view.php:229
+#: includes/classes/role-view.php:232
 msgid "Select Role:"
 msgstr "Välj roll:"
 
-#: includes/classes/role-view.php:213
+#: includes/classes/role-view.php:216
 msgid "Make copy of: "
 msgstr "Gör en kopia av:"
 
-#: includes/classes/role-view.php:211 includes/classes/role-view.php:222
+#: includes/classes/role-view.php:214 includes/classes/role-view.php:225
 msgid "Display Role Name: "
 msgstr "Visa rollnamn:"
 
-#: includes/classes/role-view.php:209 includes/classes/role-view.php:220
+#: includes/classes/role-view.php:212 includes/classes/role-view.php:223
 msgid "Role name (ID): "
 msgstr "Rollnamn (ID):"
 
-#: includes/classes/editor.php:1282
+#: includes/classes/editor.php:1268
 msgid "Error: wrong request"
 msgstr "Fel: felaktig förfrågan"
