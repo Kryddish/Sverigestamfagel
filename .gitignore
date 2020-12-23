@@ -36,3 +36,8 @@ wp-content/themes/sverigestamfagel/twentynineteen
 wp-content/themes/sverigestamfagel/dist
 wp-content/themes/sverigestamfagel/node_modules
 wp-content/themes/sverigestamfagel/src/sass/maps/style.css.map
+
+# Cache
+wp-content/cache
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php

@@ -78,6 +78,13 @@ gulp.task('img', cb => {
 	], cb);
 });
 
+// Icons
+gulp.task('icons', function () {
+	return gulp.src('src/icons/config.json')
+		.pipe($.fontello())
+		.pipe(gulp.dest('dist'));
+});
+
 
 // Javascript
 gulp.task('js', cb => {
@@ -118,7 +125,7 @@ gulp.task('watch', () => {
 
 
 // Build
-gulp.task('build', gulp.series('clean', gulp.parallel('js', 'sass', 'img')));
+gulp.task('build', gulp.series('clean', gulp.parallel('js', 'sass', 'img', 'icons')));
 
 
 // Default task (runs at initiation: gulp --verbose)
