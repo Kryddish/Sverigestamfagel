@@ -14,21 +14,25 @@ License: This plugin is licensed under GPL.
 function has_published_children()
 {
 	//globalize the query var, and locate the page ID
-	global $wp_query; $page_id = $wp_query->queried_object->ID;
+	global $wp_query;
+	$page_id = $wp_query->queried_object->ID;
 
-	$children = get_pages('child_of='.$page_id.'&sort_column=menu_order,post_title');
-	foreach((array)$children as $child) {
-		if($child->post_status == 'publish') return TRUE; break;
+	$children = get_pages('child_of=' . $page_id . '&sort_column=menu_order,post_title');
+	foreach ((array)$children as $child) {
+		if ($child->post_status == 'publish') return TRUE;
+		break;
 	}
 }
 
 //This function checks to see if the page is top-level (has_parent)
 //Returns true if the page has a parent, returns false if it doesn't.
-function has_parent() {
+function has_parent()
+{
 	//globalize the query var, and locate any parent pages
-	global $wp_query; $page_parent = $wp_query->queried_object->post_parent;
+	global $wp_query;
+	$page_parent = $wp_query->queried_object->post_parent;
 
-	if($page_parent) return TRUE;
+	if ($page_parent) return TRUE;
 	else return FALSE;
 }
 
@@ -37,43 +41,48 @@ function has_parent() {
  */
 function has_children($post = null)
 {
-    if(!$post) $post = $GLOBALS['post'];
+	if (!$post) $post = $GLOBALS['post'];
 
-    $children = get_pages(['child_of' => $post->ID]);
+	$children = get_pages(['child_of' => $post->ID]);
 
-    (count($children) == 0) ? $result = false : $result = true;
+	(count($children) == 0) ? $result = false : $result = true;
 
-    return $result;
+	return $result;
 }
 
 //This function returns the ID of the first published child page
 function get_first_published_child_id()
 {
 	//globalize the query var, and locate the page ID
-	global $wp_query; $page_id = $wp_query->queried_object->ID;
+	global $wp_query;
+	$page_id = $wp_query->queried_object->ID;
 
-	$children = get_pages('child_of='.$page_id.'&sort_column=menu_order,post_title');
-	foreach((array)$children as $child) {
-		if($child->post_status == 'publish') return $child->ID; break;
+	$children = get_pages('child_of=' . $page_id . '&sort_column=menu_order,post_title');
+	foreach ((array)$children as $child) {
+		if ($child->post_status == 'publish') return $child->ID;
+		break;
 	}
 }
 
 //Hook the function into the template_redirect action
-add_action('template_redirect','redirect_to_first_child');
+add_action('template_redirect', 'redirect_to_first_child');
 function redirect_to_first_child()
 {
 	//globalize the query var, and locate the page ID
-	global $wp_query; $page_id = $wp_query->queried_object->ID;
+	global $wp_query;
+	if (!isset($wp_query->queried_object->ID)) return;
+
+	$page_id = $wp_query->queried_object->ID;
 
 	//If all these conditions are met...
 	//Is a page ... has children ... has published children ... does not have a parent...
-	if(is_page() && has_children() && has_published_children() && !has_parent()) {
+	if (is_page() && has_children() && has_published_children() && !has_parent()) {
 		//Get the children (that sounds weird) ...
-		$children = get_pages('child_of='.$page_id.'&sort_column=menu_order,post_title');
+		$children = get_pages('child_of=' . $page_id . '&sort_column=menu_order,post_title');
 		//Get the permalink for the first child ...
 		$redirect = get_permalink(get_first_published_child_id());
 		//And do the redirect.
-		Header( "HTTP/1.1 301 Moved Permanently" );
-		Header( "Location: $redirect" );
+		Header("HTTP/1.1 301 Moved Permanently");
+		Header("Location: $redirect");
 	}
 }
