@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying posts.
  *
@@ -15,7 +16,7 @@
             <?php
             $categories = get_the_category();
             foreach ($categories as $category) :
-                if ( reset($categories) === $category) {
+                if (reset($categories) === $category) {
                     echo $category->name;
                 } else {
                     echo ', ' . $category->name;
@@ -24,55 +25,55 @@
         </h5>
     </header><!-- .entry-footer -->
     <div class="entry">
-		<?php
-		if( get_the_post_thumbnail_url() ) : ?>
-			<div class="image">
-				<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
-			</div>
-		<?php
-		else:
-			$images = get_field('images');
+        <?php
+        if (get_the_post_thumbnail_url()) : ?>
+            <div class="image">
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="Post image">
+            </div>
+            <?php
+        else :
+            $images = get_field('images');
 
-			if( $images ): ?>
-				<div class="image">
-					<img src="<?= $images[0]['url']; ?>" alt="Post image">
-				</div>
-			<?php
-			endif;
-		endif; ?>
+            if ($images) : ?>
+                <div class="image">
+                    <img src="<?= $images[0]['url']; ?>" alt="Post image">
+                </div>
+        <?php
+            endif;
+        endif; ?>
 
         <div class="event">
             <?php
-            if( get_field( 'time' ) || get_field( 'date' ) || get_field( 'location' ) ) : ?>
+            if (get_field('time') || get_field('date') || get_field('location')) : ?>
 
                 <div class="text">
 
                     <?php
-                    $location = get_field( 'location' );
+                    $location = get_field('location');
 
-                    if( get_post_type_object('meets') ) :
-                        if( get_field( 'time' ) || get_field( 'date' ) ) : ?>
+                    if (get_post_type_object('meets')) :
+                        if (get_field('time') || get_field('date')) : ?>
 
                             <h5 class="date">När:</h5>
                             <p>
                                 <?php
-                                if( get_field( 'time' ) ) : ?>
-                                    Kl. <?php the_field( 'time' ); ?><br>
+                                if (get_field('time')) : ?>
+                                    Kl. <?php the_field('time'); ?><br>
                                 <?php
                                 endif;
-                                if( get_field( 'date' ) ) :
-                                    the_field( 'date' );
+                                if (get_field('date')) :
+                                    the_field('date');
                                 endif; ?>
                             </p>
 
                         <?php
                         endif;
 
-                        if( !empty( $location['address'] ) ) : ?>
+                        if (!empty($location['address'])) : ?>
                             <h5>Var:</h5>
                             <p><?= $location['address'] ?></p>
-                        <?php
-						endif;
+                    <?php
+                        endif;
 
                     endif; ?>
                 </div>
@@ -81,8 +82,8 @@
 
             <div class="info">
                 <?php
-				if( get_the_excerpt() ) :
-					the_content(); ?>
+                if (get_the_excerpt()) :
+                    the_content(); ?>
                 <?php
                 else : ?>
                     <h5>
@@ -95,7 +96,7 @@
     </div>
 
     <?php
-    if( !empty($location) ): ?>
+    if (!empty($location)) : ?>
 
         <h4>Karta:</h4>
         <div class="acf-map">
@@ -106,25 +107,25 @@
     endif;
 
     $images = get_field('images');
-    if( $images ): ?>
+    if ($images) : ?>
         <h4>Bilder:</h4>
         <ul>
-			<?php
-			foreach( $images as $image ): ?>
+            <?php
+            foreach ($images as $image) : ?>
                 <li>
                     <a target="_blank" href="<?= $image['url']; ?>">
                         <img class="lazy" data-src="<?= $image['sizes']['large'] ?>" src="<?= $image['sizes']['small'] ?>" style="background-image: url(<?= $image['sizes']['small'] ?>);" alt="<?= $image['alt']; ?>" />
-						<?php
-						if ($image['caption']): ?>
-							<div class="caption">
-								<span><?= $image['caption'] ?></span>
-							</div>
-							<?php
-						endif; ?>
+                        <?php
+                        if ($image['caption']) : ?>
+                            <div class="caption">
+                                <span><?= $image['caption'] ?></span>
+                            </div>
+                        <?php
+                        endif; ?>
                     </a>
                 </li>
-				<?php
-			endforeach; ?>
+            <?php
+            endforeach; ?>
         </ul>
     <?php
     endif; ?>
