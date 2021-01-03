@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying posts.
  *
@@ -12,24 +13,24 @@
 	<div class="container">
 		<h4>
 			<?php
-			if( have_rows('headings') ):
-				while( have_rows('headings') ): the_row();
+			if (have_rows('headings')) :
+				while (have_rows('headings')) : the_row();
 					the_sub_field('intro');
 				endwhile;
 			endif; ?>
 		</h4>
 		<h4>
-		<?php
-			if( have_rows('headings') ):
-				while( have_rows('headings') ): the_row();
+			<?php
+			if (have_rows('headings')) :
+				while (have_rows('headings')) : the_row();
 					the_sub_field('form');
 				endwhile;
 			endif; ?>
 		</h4>
 		<h4>
 			<?php
-			if( have_rows('headings') ):
-				while( have_rows('headings') ): the_row();
+			if (have_rows('headings')) :
+				while (have_rows('headings')) : the_row();
 					the_sub_field('confirm');
 				endwhile;
 			endif; ?>
@@ -38,13 +39,13 @@
 			<div class="holder">
 				<div class="slide info">
 					<?php
-					if( have_rows('intro') ):
+					if (have_rows('intro')) :
 
-						while ( have_rows('intro') ) : the_row(); // ACF loop
+						while (have_rows('intro')) : the_row(); // ACF loop
 
 							$steps = get_sub_field('step');
 
-							foreach( $steps as $step ) : ?>
+							foreach ($steps as $step) : ?>
 
 								<div class="step">
 									<div>
@@ -53,7 +54,7 @@
 									<p><?= $step['text'] ?></p>
 								</div>
 
-							<?php
+					<?php
 							endforeach;
 
 						endwhile;
@@ -69,7 +70,7 @@
 							Enklaste sättet att betala medlemsavgiften är med Swish.<br>
 							Telefonnummer: <b>123 148 36 84</b>
 						</p>
-						<img class="qr-code" src="<?= get_template_directory_uri() . '/dist/img/getswish_qr.png' ?>" alt="">
+						<img class="qr-code" src="<?= get_field('qr_code', 'option')['sizes']['large'] ?>" alt="">
 						<p>
 							Behöver du hjälp med betalningen?<br>
 							Hör av dig till oss via <a href="mailto:info@sverigestamfagel.se">info@sverigestamfagel.se</a>
@@ -82,7 +83,7 @@
 			<hr>
 			<span>
 				<?php
-				if( get_field('info') ) :
+				if (get_field('info')) :
 					the_field('info');
 				endif; ?>
 			</span>
