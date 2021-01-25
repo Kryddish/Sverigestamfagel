@@ -235,9 +235,10 @@ add_image_size('small', 100, 100);
 // After submit
 add_action('wpcf7_mail_sent', function ($contact_form) {
 	if ($contact_form->title === 'Bli medlem') {
-		$full_name = $_POST['your-name'];
-		$first_name = explode(' ', $full_name)[0];
-		$last_name = explode(' ', $full_name)[1];
+		preg_match('/[^ ]{2,} *[^ ]{2,}( *[^ ]{2,})*/', $_POST['your-name'], $matches);
+
+		$first_name = explode(' ', $matches[0])[0];
+		$last_name = str_replace(' ', '', end($matches));
 		$email = $_POST['your-email'];
 
 		if (!username_exists($email) && !email_exists($email)) {
