@@ -262,3 +262,31 @@ add_action('wpcf7_mail_sent', function ($contact_form) {
 }, 10, 3);
 
 require('inc/endpoints.php');
+
+add_filter('user_contactmethods', function ($contactmethods) {
+	$contactmethods['number'] = 'Medlemsnummer';
+	return $contactmethods;
+}, 10, 1);
+
+
+add_filter('manage_users_columns', function ($columns) {
+	$new_column = [
+		'number' => 'Medlemsnummer'
+	];
+
+	$offset = 3;
+	$columns = array_slice($columns, 0, $offset, true) +
+		$new_column +
+		array_slice($columns, $offset, NULL, true);
+
+	return $columns;
+});
+
+add_filter('manage_users_custom_column', function ($val, $column_name, $user_id) {
+	switch ($column_name) {
+		case 'number':
+			return get_the_author_meta('number', $user_id);
+		default:
+	}
+	return $val;
+}, 10, 3);
